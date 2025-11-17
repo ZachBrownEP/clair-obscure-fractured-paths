@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ChevronLeft, ChevronRight, BookOpen, Gamepad2 } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { hasLinearStory } from '@/lib/story/linearLoader'
@@ -36,8 +37,18 @@ export default async function StoryRoutePage({
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="max-w-4xl mx-auto px-4 md:px-8 py-16">
+    <div className="min-h-screen bg-background relative">
+      {/* Faded background image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/story-background.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-10"
+          priority
+        />
+      </div>
+      <main className="max-w-4xl mx-auto px-4 md:px-8 py-16 relative z-10">
         {/* Back link */}
         <Link
           href="/"
@@ -97,31 +108,7 @@ export default async function StoryRoutePage({
               Choose Your Experience
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
-              {/* Interactive Path */}
-              <Link
-                href={`/stories/${routeId}/play`}
-                className="block glass p-6 rounded-lg hover:bg-card/70 transition-all group"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="text-primary group-hover:scale-110 transition-transform">
-                    <Gamepad2 size={28} />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-light text-foreground mb-2 group-hover:text-primary transition-colors">
-                      Interactive Path
-                    </h4>
-                    <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                      Make choices that shape the story. Navigate branching paths and discover multiple endings.
-                    </p>
-                    <div className="flex items-center gap-2 text-primary text-sm">
-                      <span>Begin Playing</span>
-                      <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Story Journey */}
+              {/* Story Journey - Now First */}
               {hasLinearStory(routeId) ? (
                 <Link
                   href={`/stories/${routeId}/read`}
@@ -162,6 +149,30 @@ export default async function StoryRoutePage({
                   </div>
                 </div>
               )}
+
+              {/* Interactive Path - Now Second */}
+              <Link
+                href={`/stories/${routeId}/play`}
+                className="block glass p-6 rounded-lg hover:bg-card/70 transition-all group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="text-primary group-hover:scale-110 transition-transform">
+                    <Gamepad2 size={28} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-light text-foreground mb-2 group-hover:text-primary transition-colors">
+                      Interactive Path
+                    </h4>
+                    <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                      Make choices that shape the story. Navigate branching paths and discover multiple endings.
+                    </p>
+                    <div className="flex items-center gap-2 text-primary text-sm">
+                      <span>Begin Playing</span>
+                      <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -171,18 +182,18 @@ export default async function StoryRoutePage({
           <h3 className="text-lg font-light text-foreground mb-3">
             About This Route
           </h3>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-            <strong className="text-foreground">Interactive Path:</strong> Your choices will shape {route.character}'s journey and determine which ending you reach.
-            Alignment choices between Painter and Writer philosophies, as well as acts of compassion,
-            will influence available paths and story outcomes. Multiple endings await discovery.
-          </p>
           {hasLinearStory(routeId) && (
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">
               <strong className="text-foreground">Story Journey:</strong> Experience {route.character}'s canonical path through
               a linear narrative divided into chapters and pages. Perfect for those who want to immerse themselves
               in the complete story without branching choices.
             </p>
           )}
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            <strong className="text-foreground">Interactive Path:</strong> Your choices will shape {route.character}'s journey and determine which ending you reach.
+            Alignment choices between Painter and Writer philosophies, as well as acts of compassion,
+            will influence available paths and story outcomes. Multiple endings await discovery.
+          </p>
         </div>
       </main>
     </div>
