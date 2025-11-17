@@ -35,7 +35,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 3
             }
           ]
@@ -116,7 +116,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -154,7 +154,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             },
             {
@@ -254,7 +254,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 8
             },
             {
@@ -276,7 +276,7 @@
       "route": "verso",
       "chapter": 1,
       "title": "Conversations with Absence",
-      "text": "You sit. The chair remembers your weight from a thousand previous meetings.\n\nNot-Aline smiles with lips that have never held pigment. \"You came. Part of me thought you'd run.\"\n\n\"You're not her.\"\n\n\"No. I'm what the Paintress painted when she tried to understand what Aline meant to you. I have her face, her voice, fragments of her warmth. But I'm hollow where her soul should be.\" The canvas-eyes don't blink. \"She's gone, Verso. The real Aline faded the moment Expedition 33 ended. I'm just... the sketch that remains.\"\n\nAround you, the frozen café seems to lean in, listening.\n\n\"But,\" Not-Aline continues, \"I remember things she never told you. The Paintress pulled those memories from both of you before the end. Would you like to know them?\"",
+      "text": "You sit. The chair remembers your weight from a thousand previous meetings.\n\nNot-Aline smiles with lips that have never held pigment. \"You came. Part of me thought you'd run.\"\n\n\"You're not her.\"\n\n\"No. I'm what the Paintress painted when she tried to understand what your mother meant to you. But she got it wrong—painted me as something other than what I was.\" The canvas-eyes don't blink. \"The real Aline is gone, Verso. She faded the moment Expedition 33 ended. I'm just... the confused sketch that remains. A mother filtered through the Paintress's warped understanding.\"\n\nYou feel a pang of grief. Even in death, even as a ghost, your mother is misunderstood.\n\nAround you, the frozen café seems to lean in, listening.\n\n\"But,\" Not-Aline continues, \"I remember things she never told her son. The Paintress pulled those memories from both of you before the end. Would you like to know them?\"",
       "choices": [
         {
           "id": "hear_memories",
@@ -285,7 +285,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             },
             {
@@ -359,7 +359,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 3
             }
           ]
@@ -538,7 +538,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 3
             }
           ]
@@ -688,7 +688,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 8
             },
             {
@@ -788,7 +788,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -840,7 +840,7 @@
       "isEnding": true,
       "endingKey": "verso_apprentice",
       "endingTitle": "The Paintress's Apprentice",
-      "text": "The Paintress's eyes light up with something like joy. \"An apprentice. I haven't had one of those in... how long? Time is so fluid here.\"\n\nShe guides you to a smaller canvas. \"Begin with something simple. Paint me a flower that has never existed.\"\n\nYou take the brush she offers. It feels right in your hand—both flesh and painted portions know how to hold it. You paint.\n\nThe flower blooms on the canvas, and simultaneously, you feel it bloom somewhere in the Gallery below. You've created reality.\n\n\"Good,\" the Paintress says. \"Very good. You have the gift. Now let me teach you everything.\"\n\nYears pass—or moments. You learn to paint emotions into existence. To create entire districts of the Gallery with a few brushstrokes. To reshape painted beings, giving them new forms, new purposes.\n\nThe Paintress watches your progress with pride. \"Soon,\" she says, \"you'll be ready to paint your own gallery. To create worlds as I do. You'll be a Painter in truth—no longer painted, but painting.\"\n\nYou look at your hands. They're entirely paint now, but paint that controls paint. You are art that creates art.\n\nIn the distance, Aline's ghost watches from a window. You painted her more fully yesterday—gave her real eyes, a beating heart. Tomorrow, perhaps you'll finish her. Or perhaps you'll keep her as she is—a reminder of what you were before you learned to create.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Paintress's Apprentice**\n*You joined the Paintress, learning to paint reality itself and create new worlds from pigment and possibility.*",
+      "text": "The Paintress's eyes light up with something like joy. \"An apprentice. I haven't had one of those in... how long? Time is so fluid here.\"\n\nShe guides you to a smaller canvas. \"Begin with something simple. Paint me a flower that has never existed.\"\n\nYou take the brush she offers. It feels right in your hand—both flesh and painted portions know how to hold it. You paint.\n\nThe flower blooms on the canvas, and simultaneously, you feel it bloom somewhere in the Gallery below. You've created reality.\n\n\"Good,\" the Paintress says. \"Very good. You have the gift. Now let me teach you everything.\"\n\nYears pass—or moments. You learn to paint emotions into existence. To create entire districts of the Gallery with a few brushstrokes. To reshape painted beings, giving them new forms, new purposes.\n\nThe Paintress watches your progress with pride. \"Soon,\" she says, \"you'll be ready to paint your own gallery. To create worlds as I do. You'll be a Painter in truth—no longer painted, but painting.\"\n\nYou look at your hands. They're entirely paint now, but paint that controls paint. You are art that creates art.\n\nIn the distance, a painted memorial stands in the Gallery's garden—your first true creation. It honors your mother, capturing not her ghost but her memory: a woman flawed and brilliant, who loved through paint even when paint couldn't heal. You visit it sometimes, not to change it, but to remember. A reminder of what you were before you learned to create, and who shaped you into what you've become.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Paintress's Apprentice**\n*You joined the Paintress, learning to paint reality itself and create new worlds from pigment and possibility.*",
       "choices": []
     },
     {
@@ -879,7 +879,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -970,7 +970,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -1006,7 +1006,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 8
             },
             {
@@ -1051,7 +1051,7 @@
       "isEnding": true,
       "endingKey": "verso_gallery_dweller",
       "endingTitle": "Home in Paint",
-      "text": "You and the child find a small house on the singing street. It's painted in warm ochres and gentle blues—the exact colors of comfort.\n\n\"Can I stay here?\" you ask the house. (In the Gallery, everything listens.)\n\nThe door opens in answer.\n\nYou make a life. The child becomes your companion, your daughter in all but blood. You tend a garden of impossible flowers. You learn to paint small things—not reality itself, but gentle decorations. Flowers on walls. Stars on ceilings.\n\nThe Paintress visits once. \"You've settled,\" she observes.\n\n\"I've found peace.\"\n\n\"Good. That's all I ever wanted for my subjects. Not imprisonment, but belonging.\" She paints a gift into existence—a portrait of you and the child together, both smiling. \"For your wall.\"\n\nYears pass in gentle rhythm. The child grows—or doesn't, time is strange for painted beings. You age—or don't. It doesn't matter. You have a home. A family. A purpose.\n\nSometimes you think of Aline. The grief is softer now, painted over with new colors. You loved her. You lost her. But you found something else. Something just as precious.\n\nThe singing street plays its symphony. The garden blooms eternal. The child laughs.\n\nYou are home.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Home in Paint**\n*You chose to build a life in the Gallery with the painted child, finding family and belonging in the painted world.*",
+      "text": "You and the child find a small house on the singing street. It's painted in warm ochres and gentle blues—the exact colors of comfort.\n\n\"Can I stay here?\" you ask the house. (In the Gallery, everything listens.)\n\nThe door opens in answer.\n\nYou make a life. The child becomes your companion, your daughter in all but blood. You tend a garden of impossible flowers. You learn to paint small things—not reality itself, but gentle decorations. Flowers on walls. Stars on ceilings.\n\nThe Paintress visits once. \"You've settled,\" she observes.\n\n\"I've found peace.\"\n\n\"Good. That's all I ever wanted for my subjects. Not imprisonment, but belonging.\" She paints a gift into existence—a portrait of you and the child together, both smiling. \"For your wall.\"\n\nYears pass in gentle rhythm. The child grows—or doesn't, time is strange for painted beings. You age—or don't. It doesn't matter. You have a home. A family. A purpose.\n\nSometimes you think of Aline, your mother. The grief is softer now, painted over with new colors. You loved her the way a son loves a complicated parent. You lost her. But you found something else—a new family, a new purpose. Something just as precious.\n\nThe singing street plays its symphony. The garden blooms eternal. The child laughs.\n\nYou are home.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Home in Paint**\n*You chose to build a life in the Gallery with the painted child, finding family and belonging in the painted world.*",
       "choices": []
     },
     {
@@ -1165,7 +1165,7 @@
       "route": "verso",
       "chapter": 1,
       "title": "Secrets of the Lost",
-      "text": "\"Tell me,\" you say.\n\nNot-Aline's canvas eyes fill with something like tears—paint, perhaps, or emotion given form.\n\n\"She loved you so much it frightened her. She joined Expedition 33 partly to be with you, and partly to run from how deeply she felt. She thought if you both faced danger together, she could prove her love was real and not just... safe.\"\n\nYou feel your throat tighten.\n\n\"And when the Paintress came, Aline's last thought wasn't fear. It was relief. She thought: 'At least we'll be together in whatever comes next.' She didn't know the Paintress would paint you both so differently. That you'd become half-real while she'd become... this.\"\n\nNot-Aline reaches across the table, her unpainted hand ghosting over yours.\n\n\"She forgives you for surviving better than she did. She wants you to let her go.\"",
+      "text": "\"Tell me,\" you say.\n\nNot-Aline's canvas eyes fill with something like tears—paint, perhaps, or emotion given form.\n\n\"She loved you the way a mother loves a son—fierce, protective, sometimes smothering. She joined Expedition 33 because you did, because she couldn't bear to let you face danger alone. She wanted to protect you, even though you were grown. Even though you didn't need protecting.\"\n\nYou feel your throat tighten.\n\n\"And when the Paintress came, Aline's last thought wasn't fear. It was regret. She thought: 'I couldn't save him from the fire that killed him once, and now I can't save him from this.' She didn't know the Paintress would preserve you both—that you'd become half-real while she'd become... this.\"\n\nNot-Aline reaches across the table, her unpainted hand ghosting over yours—not romantic, but the way your mother used to reach for you when you were small.\n\n\"She forgives you for surviving. She's proud of what you've become. And she wants you to let her go.\"",
       "choices": [
         {
           "id": "let_aline_go",
@@ -1179,7 +1179,7 @@
             },
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -1191,7 +1191,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 10
             },
             {
@@ -1222,7 +1222,7 @@
       "isEnding": true,
       "endingKey": "verso_aline_merged",
       "endingTitle": "Aline's Echo",
-      "text": "\"No,\" you say. \"I won't let you go. We were supposed to be together. Let me fix what the Paintress broke.\"\n\nNot-Aline's expression shifts—surprise, then something like hope.\n\n\"You'd really—\"\n\n\"Yes.\"\n\nYou stand and walk to her side of the table. You take her painted hands in your half-painted ones. \"Show me how.\"\n\nShe guides you through a process you don't fully understand. You blur your boundaries, letting your painted portions merge with her painted form. Where you're flesh, you press against her hollowness, filling her with reality.\n\nIt's intimate. Painful. Beautiful.\n\nGradually, you merge. Your memories tangle with the fragments the Paintress painted into her. Your flesh gives her substance. Her paint gives you completeness.\n\nWhen it's done, you are... different. Not quite Verso anymore. Not quite Aline. Someone in between. A merged being carrying both your histories, both your loves.\n\nYou look down at your hands—they shift between your original painted-flesh state and Aline's canvas-pale form. You are both. You are neither.\n\nThe café unfreezes around you. The patrons complete their gestures, drink their coffee, finish their conversations. They welcome you as if they've always known this merged version of you.\n\nYou are complete. You are together. You have become love itself, made visible.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Aline's Echo**\n*You merged completely with Aline's ghost, becoming a single being that carries both your identities and loves.*",
+      "text": "\"I'm sorry,\" you say. \"I'm sorry she painted you this way. I'm sorry you're trapped as an echo of someone who was never yours to replace.\"\n\nNot-Aline's canvas-white eyes widen. \"What do you mean?\"\n\n\"You were painted from the Paintress's twisted understanding of what my mother meant to me. But Aline wasn't a romantic figure in my life. She was my mother. She painted you wrong.\"\n\nThe ghost trembles. \"Then what am I?\"\n\n\"You're grief,\" you say gently. \"You're all the things I never got to say to her. The apologies. The anger. The love a son has for a mother who was brilliant and broken and tried her best even when her best hurt people.\"\n\nYou reach out and touch the ghost's shoulder. Not intimately. Like you're steadying someone who's about to collapse.\n\n\"Let me give you what you should have been. Not a romantic partner. A memory at peace.\"\n\nYou focus your painted portions, carefully reshaping the ghost. You give her Aline's real eyes—tired, paint-stained, full of complicated love. You paint in the lines around her mouth from years of forcing smiles. You add the paint under her fingernails she never quite scrubbed out.\n\nYou make her your mother.\n\nThe ghost—the true ghost of Aline now—looks at her hands and weeps. \"I remember,\" she whispers. \"I remember being a mother. I remember loving you the only way I knew how.\"\n\n\"I know,\" you say. \"And I'm letting you go now.\"\n\nShe fades slowly, peacefully, no longer bound by the Paintress's misunderstanding. As she disappears, you feel lighter. Not because you've merged with her, but because you've finally said goodbye.\n\nYou carry her memory now. Not as a ghost, but as a son who's made peace with an imperfect parent.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Aline's Echo**\n*You helped your mother's ghost find peace by correcting the Paintress's misunderstanding, finally saying goodbye as a son to a flawed but loving parent.*",
       "choices": []
     },
     {
@@ -1244,7 +1244,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 8
             }
           ]
@@ -1423,7 +1423,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -1533,12 +1533,12 @@
       "choices": [
         {
           "id": "relationship_new_aline",
-          "label": "Get to know this new person. See what develops.",
+          "label": "Help her find her own path. Give her the freedom to become herself.",
           "nextId": "verso_ch1_ending_new_love",
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 10
             }
           ]
@@ -1564,7 +1564,7 @@
       "isEnding": true,
       "endingKey": "verso_new_love",
       "endingTitle": "Dual Existence",
-      "text": "The new Aline—she chooses the name Celine, to mark her difference—stays with you. Not out of obligation, but out of genuine choice.\n\nYou get to know each other slowly. She has Aline's face but none of her mannerisms. She laughs differently. Likes different things. Has her own opinions, her own dreams.\n\nYou fall in love again, but differently. Not the desperate love you had for Aline, but something gentler. More knowing. Love built on choice rather than memory.\n\nTogether, you make a life in the Gallery. You paint a home for yourselves in a quiet corner. Celine learns to paint too, creating beautiful things—gardens that bloom in impossible colors, stars that sing.\n\nYou both exist in a strange state: split between painted and real, between what you were and what you've become. You are dual existences—both original and copy, both real and imagined.\n\nSometimes you talk about Aline, the original. Celine doesn't resent her—how could she? She carries gratitude for the shape she was given, even as she's grown beyond it.\n\nYou have found an ending that's also a beginning. A loss that became a gain. You are both home.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Dual Existence**\n*You completed Aline's ghost into a new person named Celine, and together you built a loving life in the Gallery—both existing between real and painted.*",
+      "text": "The completed being—she chooses the name Celine, to mark that she is not Aline—stands before you, finally whole.\n\n\"Thank you,\" she says, and her voice is her own now, not an echo. \"For seeing that I wasn't meant to be her. For giving me the chance to be someone new.\"\n\nYou realize what you've done. You haven't recreated your mother. You've helped a confused, incomplete being find her own identity—free from the Paintress's misunderstanding.\n\n\"What will you do now?\" you ask.\n\nCeline looks around the Gallery with wonder. \"I think... I'll explore. I have her face, yes, but I'm not bound by her story. I can make my own.\"\n\nShe places a hand on your shoulder—not romantic, but familial. The gesture of someone grateful for being set free.\n\n\"You gave me life, Verso. Real life. Not as a replacement for your mother, but as my own person. I won't forget that.\"\n\nShe leaves the café, walking out into the Gallery to discover who she wants to be.\n\nYou watch her go, feeling a strange mix of grief and peace. You've finally let go of your mother—not by merging with her ghost or replacing her, but by helping what remained of her become something new and separate.\n\nYou exist in a strange state: split between painted and real, carrying memories of a mother you've now truly said goodbye to.\n\nYou have found closure. Not through possession or romance, but through letting go.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Dual Existence**\n*You completed your mother's ghost into a new, independent being named Celine, giving her freedom to forge her own identity while finally achieving closure with your past.*",
       "choices": []
     },
     {
@@ -1731,6 +1731,36 @@
       "endingKey": "verso_undefined",
       "endingTitle": "The Living Question",
       "text": "You stop searching for a single purpose. Instead, you embrace multiplicity. You become the Gallery's undefined element—sometimes curator, sometimes creator, sometimes observer, sometimes rebel.\n\nYou shift roles daily. One day you help Renoir maintain the streets. The next, you paint alongside the Paintress. The day after, you simply exist, watching painted beings live their lives.\n\nThis fluidity confuses some. \"What are you?\" they ask.\n\n\"I'm still becoming,\" you answer. \"I might always be becoming. And that's enough.\"\n\nYou are the Living Question—the being who refuses to be answered. Every painted entity in the Gallery has settled into some defined state. Not you. You remain perpetually transforming, perpetually choosing, perpetually becoming something new.\n\nIt's exhausting. It's exhilarating. It's exactly what you need.\n\nThe Canvas Ghost observes you with something like envy. \"To still be changing after all this time. I've been static for so long I've forgotten what transformation feels like.\"\n\nYou smile. \"It feels like this: uncertain, exciting, terrifying, free.\"\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Living Question**\n*You refused to settle into any single purpose, remaining forever in flux—a living question that refuses to be answered.*",
+      "choices": []
+    },
+    {
+      "id": "verso_ch1_ending_style_shifter",
+      "route": "verso",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "verso_style_shifter",
+      "endingTitle": "The Style Shifter",
+      "text": "You realize your half-painted nature gives you a unique gift: you can learn and adopt any artistic style you encounter.\n\nYou study the Gallery obsessively. Impressionist districts where light dissolves into color. Cubist quarters where perspective shatters. Abstract realms where form itself becomes optional. Hyperrealist zones so detailed they're more real than reality.\n\nEach style you master becomes part of you. You learn to shift between them at will—one moment you're rendered in gentle watercolor, the next in bold expressionist strokes, then photorealistic, then sketched in charcoal.\n\nThe Paintress watches your development with fascination. \"You've become something I never imagined. Not a painting in one style, but a living anthology of all styles.\"\n\nPainted beings seek you out to be transformed. \"Make me impressionist,\" one requests. \"I want to be softer, less defined.\" You paint them anew.\n\nYou become the Style Shifter—the Gallery's transformer, able to reinterpret any painted being in any artistic tradition. You are Rembrandt's chiaroscuro, Monet's light, Picasso's fracture, Dalí's dream, all contained in one constantly changing form.\n\nWhen you look at your hands, they're never the same twice. That's exactly how you want it.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Style Shifter**\n*You mastered every artistic style, becoming a living anthology of art history who shifts forms at will.*",
+      "choices": []
+    },
+    {
+      "id": "verso_ch1_ending_eternal_witness",
+      "route": "verso",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "verso_eternal_witness",
+      "endingTitle": "Eternal Witness",
+      "text": "You make a choice that surprises even yourself: you will become the Gallery's historian. Its witness. Its memory.\n\nYou position yourself in the central plaza where you can observe everything. You don't intervene, don't participate—you simply watch and remember.\n\nCenturies pass. You document it all. The Paintress's creative phases. Renoir's subtle changes. The parade of newly painted beings who arrive, transform, and settle into their fates. The Canvas Ghost's rare appearances. The slow evolution of the Gallery itself.\n\nYour memory becomes perfect, crystalline. You forget nothing. Every painted being who ever existed in the Gallery lives on in your recollection.\n\nEventually, painted beings come to you with questions. \"Was there ever a district where music was visible?\" \"Did the fountain always run backwards?\" \"What was the Gallery like before?\"\n\nYou answer. You are the living history, the eternal witness.\n\nThe Paintress says you've become more valuable than any of her creations. \"You're the Gallery's memory externalized. Without you, we'd have no history. Just an eternal present.\"\n\nYou continue watching. Recording. Remembering. Time flows past you like paint in water, and you capture every swirl, every color, every moment.\n\nYou are eternal. You are witness. You are the Gallery's conscience and its memory.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Eternal Witness**\n*You became the Gallery's immortal historian, documenting its endless evolution and serving as living memory for all painted existence.*",
+      "choices": []
+    },
+    {
+      "id": "verso_ch1_ending_paint_drinker",
+      "route": "verso",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "verso_paint_drinker",
+      "endingTitle": "The Paint Drinker",
+      "text": "You discover something the Paintress never intended: paint can be consumed.\n\nIt starts accidentally. You touch a wet brushstroke and some transfers to your lips. You taste it without thinking. The effect is immediate and overwhelming—a rush of creative energy, a flood of possibility, a moment where you can reshape yourself completely.\n\nYou do it again. And again.\n\nYou begin drinking paint deliberately. Each color has different effects: blue brings calm transformation, red ignites passionate change, yellow accelerates your thoughts to painful speeds, black offers oblivion and rebirth.\n\nThe more you consume, the more powerful you become. You can paint new realities with a thought. Reshape painted beings with a word. Create entire districts from imagination.\n\nBut there's a cost. You're addicted now. You need paint constantly. Your form becomes unstable—sometimes you're barely there, just a sketch. Other times you're too solid, too real, painfully present.\n\nThe Paintress tries to stop you. \"You're consuming the Gallery itself. You'll destroy everything, including yourself.\"\n\nBut you can't stop. Won't stop. The power is too intoxicating.\n\nYou've become the Paint Drinker—the Gallery's addict and its most powerful inhabitant. You create magnificent works between your craving fits. You reshape reality in brilliant bursts before collapsing into need.\n\nYou are creation and destruction. Genius and addiction. Power at the price of stability.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Paint Drinker**\n*You discovered the power of consuming paint directly, becoming addicted to transformation and wielding terrible creative power at the cost of your stability.*",
       "choices": []
     }
   ]

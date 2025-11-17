@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Cinzel, Cinzel_Decorative } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { Toaster } from 'sonner'
 import BackgroundMusic from '@/components/background-music'
 import './globals.css'
 
@@ -55,6 +56,17 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${_geist.className} ${_cinzel.variable} ${_cinzelDecorative.variable} font-sans antialiased`}>
         <BackgroundMusic />
+        <Toaster
+          position="bottom-right"
+          theme="dark"
+          toastOptions={{
+            style: {
+              background: 'hsl(var(--card))',
+              border: '1px solid hsl(var(--border))',
+              color: 'hsl(var(--foreground))',
+            },
+          }}
+        />
         {children}
         <Analytics />
       </body>

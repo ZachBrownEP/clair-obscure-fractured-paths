@@ -5,7 +5,7 @@ export type StoryRouteId = "verso" | "maelle";
 // Effects that can be applied when a choice is made
 export interface StoryChoiceEffectStat {
   type: "stat";
-  key: "painterAlignment" | "writerAlignment" | "compassion";
+  key: "painterAlignment" | "writerAlignment" | "balance";
   delta: number;
 }
 
@@ -46,6 +46,22 @@ export interface StoryNode {
   endingTitle?: string;
 }
 
+// Record of a choice made by the player
+export interface ChoiceHistoryEntry {
+  nodeId: string;
+  nodeTitle?: string;
+  choiceId: string;
+  choiceLabel: string;
+  timestamp: number;
+  statChanges?: {
+    painterAlignment?: number;
+    writerAlignment?: number;
+    balance?: number;
+  };
+  flagsSet?: Record<string, boolean>;
+  chapter: number;
+}
+
 // The player's current state in a story
 export interface StoryState {
   routeId: StoryRouteId;
@@ -53,11 +69,13 @@ export interface StoryState {
   stats: {
     painterAlignment: number; // 0-100
     writerAlignment: number; // 0-100
-    compassion: number; // 0-100
+    balance: number; // 0-100
   };
   flags: Record<string, boolean>;
   seenNodes: string[];
   currentChapter: number;
+  choiceHistory: ChoiceHistoryEntry[]; // Track all choices made
+  startTime?: number; // When playthrough started
 }
 
 // Route metadata

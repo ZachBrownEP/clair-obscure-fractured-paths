@@ -182,7 +182,7 @@ export default async function StoryRoutePage({
           )}
           <p className="text-sm text-muted-foreground leading-relaxed">
             <strong className="text-foreground">Interactive Path:</strong> Your choices will shape {route.character}'s journey and determine which ending you reach.
-            Alignment choices between Painter and Writer philosophies, as well as acts of compassion,
+            Alignment choices between Painter and Writer philosophies, as well as balanced approaches,
             will influence available paths and story outcomes. Multiple endings await discovery.
           </p>
         </div>

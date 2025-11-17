@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { BookOpen, Map, Trophy, ChevronRight } from 'lucide-react'
+import { BookOpen, Map, Trophy, ChevronRight, Award, History, BarChart3, GitBranch, Bookmark, GitMerge } from 'lucide-react'
 import HeroSection from '@/components/hero-section'
 import EnhancedBackground from '@/components/enhanced-background'
 
@@ -66,39 +66,111 @@ export default function Home() {
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               Delve deeper into the lore and world of Fractured Paths
             </p>
-            <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-4 max-w-7xl mx-auto">
               <Link href="/codex">
-                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
                   <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
                     <BookOpen size={24} />
                   </div>
                   <h3 className="text-lg font-light text-foreground mb-2">Lore Codex</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground flex-1">
                     Characters, locations, factions, and the magic that binds them.
                   </p>
                 </div>
               </Link>
 
               <Link href="/map">
-                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
                   <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
                     <Map size={24} />
                   </div>
                   <h3 className="text-lg font-light text-foreground mb-2">World Map</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground flex-1">
                     Explore the fractured lands and discover hidden connections.
                   </p>
                 </div>
               </Link>
 
               <Link href="/endings">
-                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
                   <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
                     <Trophy size={24} />
                   </div>
                   <h3 className="text-lg font-light text-foreground mb-2">Endings Gallery</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground flex-1">
                     View the fates you have unlocked across all routes.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/achievements">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
+                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
+                    <Award size={24} />
+                  </div>
+                  <h3 className="text-lg font-light text-foreground mb-2">Achievements</h3>
+                  <p className="text-sm text-muted-foreground flex-1">
+                    Track your accomplishments and milestones.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/history">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
+                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
+                    <History size={24} />
+                  </div>
+                  <h3 className="text-lg font-light text-foreground mb-2">Choice History</h3>
+                  <p className="text-sm text-muted-foreground flex-1">
+                    Review your decisions across all journeys.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/progress">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
+                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
+                    <BarChart3 size={24} />
+                  </div>
+                  <h3 className="text-lg font-light text-foreground mb-2">Your Progress</h3>
+                  <p className="text-sm text-muted-foreground flex-1">
+                    View your statistics and journey analytics.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/tree">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
+                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
+                    <GitBranch size={24} />
+                  </div>
+                  <h3 className="text-lg font-light text-foreground mb-2">Decision Tree</h3>
+                  <p className="text-sm text-muted-foreground flex-1">
+                    Visualize your path through the story.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/bookmarks">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
+                  <div className="text-amber-500 mb-3 group-hover:scale-110 transition-transform flex justify-center">
+                    <Bookmark size={24} />
+                  </div>
+                  <h3 className="text-lg font-light text-foreground mb-2">Bookmarks</h3>
+                  <p className="text-sm text-muted-foreground flex-1">
+                    Save and revisit your favorite scenes.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/timelines">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
+                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
+                    <GitMerge size={24} />
+                  </div>
+                  <h3 className="text-lg font-light text-foreground mb-2">What If Mode</h3>
+                  <p className="text-sm text-muted-foreground flex-1">
+                    Explore alternate timelines and outcomes.
                   </p>
                 </div>
               </Link>

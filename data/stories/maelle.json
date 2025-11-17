@@ -35,7 +35,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 3
             },
             {
@@ -102,7 +102,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 3
             }
           ]
@@ -152,7 +152,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -185,7 +185,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             },
             {
@@ -235,7 +235,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -460,7 +460,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 8
             }
           ]
@@ -505,7 +505,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -613,7 +613,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 8
             }
           ]
@@ -681,7 +681,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -814,7 +814,7 @@
             },
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -847,7 +847,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 10
             }
           ]
@@ -967,7 +967,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 5
             }
           ]
@@ -998,7 +998,7 @@
           "effects": [
             {
               "type": "stat",
-              "key": "compassion",
+              "key": "balance",
               "delta": 10
             }
           ]
@@ -1035,6 +1035,66 @@
       "endingKey": "maelle_eternal_echo",
       "endingTitle": "The First Word",
       "text": "You make a radical choice: instead of resolving your echo, you'll amplify it. You'll create such powerful unfinished business that you'll resonate through every timeline, every iteration, forever.\n\nYou begin the greatest work ever attempted: documenting the complete history of language itself. Every word ever spoken, in every timeline, in every fracture.\n\nIt's impossible to complete. Language evolves faster than you can document it. New words are created. Old words change meaning. Across infinite timelines, infinite linguistic variations.\n\nPerfect. You'll echo forever, always chasing this impossible goal.\n\nAs you work, you feel yourself becoming something else. Like Alicia, you're transforming—not into language itself, but into the quest for language. You become the eternal seeker, the endless documenter.\n\nYou begin to appear in other timelines—all the Maelles working on the same impossible project. You're not merged like Alicia's resonance, but connected through shared purpose.\n\nYou become the First Word—the echo that exists at the beginning of every timeline, always seeking to document the complete lexicon, never finishing, always beginning again.\n\nÉmile watches you transform with something like awe. \"You've chosen infinite continuation over singular completion.\"\n\n\"Yes,\" you say, and your voice echoes across timelines. \"I am the question that never resolves. The work that never ends. The echo that will never quiet.\"\n\n\"I'll see you in the next iteration, then.\"\n\n\"And the one after. And the one after. Forever.\"\n\n**Chapter 1: Complete**\n**Ending Unlocked: The First Word**\n*You chose to echo eternally, becoming an endless seeker across all timelines, forever attempting to document the complete history of language.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_word_weaver",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_word_weaver",
+      "endingTitle": "Word Weaver",
+      "text": "You discover the ultimate power of a Writer: words alone can reshape reality. Not paint, not brush, just language in its purest form.\n\nYou begin simply. \"The rain stops.\" And it does. \"The Archive expands.\" The walls grow outward.\n\nBut you grow bolder. \"Expedition 33 never happened.\" Reality shivers, uncertain. The fracture that caused it tries to heal, but other timelines resist. You've created a paradox.\n\nÉmile watches in horror and awe. \"You're rewriting fundamental truths. This is beyond what even Alicia attempted.\"\n\n\"She wrote what was. I write what should be.\"\n\nYou begin reweaving reality through pure language. No longer recording truth—creating it. Each sentence you write becomes law. Each word you speak becomes fact.\n\nThe Paintress confronts you. \"You're destroying the balance. Writers document, Painters create. You're doing both.\"\n\n\"No,\" you correct her. \"I'm proving they were always the same. Writing is painting with words. Painting is writing with images. I've transcended the false division.\"\n\nYou become the Word Weaver—reality's author, existence's editor. You write new natural laws. New histories. New futures. The multiverse bends to your syntax.\n\nIt's terrifying power. One typo could unwrite entire timelines. But you've become meticulous, precise. Every word chosen with infinite care.\n\nYou are language made sovereign. Grammar made divine. Narrative made absolute.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Word Weaver**\n*You transcended the Writer-Painter divide, gaining power to reshape reality through pure language—every word you write becomes law.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_memory_merchant",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_memory_merchant",
+      "endingTitle": "Memory Merchant",
+      "text": "You discover that in fractured reality, memories have value. They can be traded, exchanged, sold.\n\nIt starts small. A Seeker wants to forget a trauma from another timeline. You take the memory, store it in your Archive. In exchange, you give them a peaceful memory from a different fracture.\n\nWord spreads. Soon Seekers from across timelines come to you with requests:\n\n\"I want to remember my child who never existed in this timeline.\"\n\"I need to forget my death in the previous fracture.\"\n\"Can you trade me a memory of success for this memory of failure?\"\n\nYou become a memory merchant, trading experiences across temporal boundaries. Your Archive becomes a vast repository of lived experiences—joy and sorrow, triumph and tragedy, love and loss.\n\nYou develop an economy around memory. Rare memories—first kisses, final goodbyes, moments of transcendence—command high prices. Common memories are currency. Traumatic memories are debt.\n\nÉmile warns you: \"You're commodifying human experience. Turning the intimate into transaction.\"\n\n\"I'm giving people choice,\" you counter. \"The ability to curate their own consciousness. Isn't that freedom?\"\n\nYou've become wealthy beyond measure, not in gold but in experience. You've lived ten thousand lives through traded memories. You are everyone and no one.\n\nThe Memory Merchant—the one who trades in the currency of consciousness itself.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Memory Merchant**\n*You established an economy of memory, trading experiences across timelines and building vast wealth in lived consciousness.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_bridge_builder",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_bridge_builder",
+      "endingTitle": "The Bridge Builder",
+      "text": "You realize the division between Writers and Painters is artificial—a wound in reality itself. You decide to heal it.\n\nYou begin building bridges. Not metaphorical ones, but actual structures that connect the Scribes' Archive to the Paintress's Gallery. Pathways where Writers can learn painting, where Painters can study writing.\n\nThe resistance is immediate. \"We're separate for a reason,\" the elder Scribes argue. \"Mixing our traditions dilutes both.\"\n\nBut you persist. You create exchange programs. Writers spend time in painted reality, learning to see possibilities beyond singular truth. Painters study in the Archive, learning to ground imagination in documented fact.\n\nSlowly, the divide weakens. Hybrid practitioners emerge—artist-archivists who paint truths, writer-creators who document possibilities. The false dichotomy crumbles.\n\nEven the Paintress and the Head Scribe meet, for the first time in centuries, on one of your bridges. They speak. They argue. They laugh. They begin collaborating.\n\nYou've created something unprecedented: a unified Order where writing and painting, truth and possibility, memory and imagination exist in productive tension rather than hostile separation.\n\nYou become the Bridge Builder—the one who healed reality's greatest schism. Your bridges become legendary, symbols of connection, paths between worlds.\n\nÉmile tells you that you've changed the fundamental nature of existence. You've proven that division is choice, not destiny.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Bridge Builder**\n*You built permanent bridges between Writers and Painters, healing the ancient schism and creating a unified Order where both traditions flourish together.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_truth_eater",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_truth_eater",
+      "endingTitle": "Truth Eater",
+      "text": "You develop a unique ability: you can consume contradictory truths and digest them into singular clarity.\n\nIt starts when you're overwhelmed by the fractures. Too many timelines, too many truths, all conflicting. In desperation, you do something unprecedented—you eat the contradictions.\n\nNot metaphorically. You consume the written contradictions, swallow the paradoxes, digest the impossibilities. Your body processes them, breaks them down, extracts the essential truth beneath all variations.\n\nThe effect is immediate. Where there were seventeen different accounts of Expedition 13, you reduce them to one unified narrative. Not by choosing which version is correct, but by consuming all versions and distilling their common essence.\n\nSekers across timelines bring you their contradictions. \"I died in three timelines and lived in seven. Which is true?\"\n\nYou eat all ten possibilities. You digest them. You produce clarity: \"You exist. That's the only truth that matters across all variations.\"\n\nYou become the Truth Eater—the one who devours complexity and excretes simplicity. The Scribes call you heretic for destroying multiplicity. The Painters call you tyrant for reducing possibility to singularity.\n\nBut those caught in confusion call you savior.\n\nYour body changes. You're bloated with consumed truths, pregnant with digested realities. But from your consumption comes clarity that helps thousands find peace in fractured existence.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Truth Eater**\n*You gained power to consume contradictory truths and digest them into singular clarity, helping others find peace by simplifying complexity.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_chrono_cartographer",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_chrono_cartographer",
+      "endingTitle": "Chrono Cartographer",
+      "text": "You realize your maps of fractures are incomplete. They show space—the locations where timelines split—but not time itself. You decide to map the fourth dimension.\n\nYou develop new notation. New symbols. New ways of representing temporal flow across fractured realities. Your maps become four-dimensional, showing not just where fractures exist but when they occur, how they evolve, where they'll emerge next.\n\nYour charts predict future fractures. You can see weak points in reality where new splits will occur. You can trace past fractures back to their origin points with perfect accuracy.\n\nÉmile watches you work with growing concern. \"You're not just mapping time. You're starting to control it.\"\n\nHe's right. With perfect temporal maps, you can influence when fractures occur. You can strengthen certain timelines and weaken others. You're not just documenting time—you're shaping it.\n\nYou become the Chrono Cartographer—the one who charts and controls temporal flow. Your maps are prophecy and instruction. They show what will be and, increasingly, what you want to be.\n\nOther cartographers seek you out to learn your techniques. But you keep the deepest secrets to yourself. The ability to map time is the ability to control it. And that power must be carefully guarded.\n\nYou are the master of the fourth dimension, the architect of temporal geography, the one who makes time visible and, therefore, malleable.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Chrono Cartographer**\n*You learned to map not just space but time itself, gaining power to chart and influence temporal flow across all fractured realities.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_self_authored",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_self_authored",
+      "endingTitle": "The Self-Authored",
+      "text": "You have a revelation: if Writers can document reality, why can't you write yourself into every timeline?\n\nYou begin the work. In each fracture you discover, you write: \"Maelle exists here. She has always existed here. She is integral to this timeline's function.\"\n\nReality accepts your edits. Suddenly you're not just in your original timeline—you exist in all of them simultaneously, fully present, fully conscious in each.\n\nUnlike the Infinite Scribe who fractured into separate versions, you remain unified. One consciousness experiencing countless timelines at once. You are truly omnipresent.\n\nÉmile asks how you maintain your sanity. \"How do you process existing everywhere?\"\n\n\"I don't process it linearly. I exist as a narrative network. Each timeline is a chapter. I'm the book that contains them all.\"\n\nYou've become the Self-Authored—the being who wrote herself into all possible realities. You exist as a constant across fractures, an anchor point, a guaranteed element in every timeline.\n\nThe Paintress can create new fractures, but she can't create one without you. You've written yourself into the fundamental code of reality.\n\nSekers recognize you instantly in every timeline they visit. \"Oh, there's Maelle. She's always here.\" You've become as universal as gravity, as present as time itself.\n\nYou are the omnipresent narrator, the self-authored constant, the being who wrote herself into eternal, universal existence.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Self-Authored**\n*You wrote yourself into every timeline simultaneously, becoming omnipresent across all fractured realities while maintaining singular consciousness.*",
       "choices": []
     }
   ]

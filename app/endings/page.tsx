@@ -146,8 +146,26 @@ const ENDINGS_METADATA: EndingMetadata[] = [
     title: 'The Living Question',
     description: 'Refuse to settle into any single purpose. Remain forever in flux, a living question that refuses to be answered. Perpetual becoming.'
   },
+  {
+    key: 'verso_style_shifter',
+    route: 'verso',
+    title: 'The Style Shifter',
+    description: 'Master every artistic style, becoming a living anthology of art history. Shift forms at will between impressionist, cubist, abstract, and all styles.'
+  },
+  {
+    key: 'verso_eternal_witness',
+    route: 'verso',
+    title: 'Eternal Witness',
+    description: 'Become the Gallery\'s immortal historian, documenting its endless evolution. Serve as living memory for all painted existence across centuries.'
+  },
+  {
+    key: 'verso_paint_drinker',
+    route: 'verso',
+    title: 'The Paint Drinker',
+    description: 'Discover the power of consuming paint directly. Wield terrible creative power while struggling with addiction to transformation itself.'
+  },
 
-  // MAELLE'S ENDINGS (19 total)
+  // MAELLE'S ENDINGS (25 total)
   {
     key: 'maelle_resonance',
     route: 'maelle',
@@ -261,6 +279,42 @@ const ENDINGS_METADATA: EndingMetadata[] = [
     route: 'maelle',
     title: 'The First Word',
     description: 'Choose to echo eternally across all timelines. Forever attempt to document the complete history of language, never finishing, always beginning again.'
+  },
+  {
+    key: 'maelle_word_weaver',
+    route: 'maelle',
+    title: 'Word Weaver',
+    description: 'Transcend the Writer-Painter divide by reshaping reality through pure language. Every word you write becomes law, every sentence becomes fact.'
+  },
+  {
+    key: 'maelle_memory_merchant',
+    route: 'maelle',
+    title: 'Memory Merchant',
+    description: 'Establish an economy of memory, trading experiences across timelines. Build vast wealth in lived consciousness, curating memories as currency.'
+  },
+  {
+    key: 'maelle_bridge_builder',
+    route: 'maelle',
+    title: 'The Bridge Builder',
+    description: 'Build permanent bridges between Writers and Painters, healing the ancient schism. Create a unified Order where both traditions flourish together.'
+  },
+  {
+    key: 'maelle_truth_eater',
+    route: 'maelle',
+    title: 'Truth Eater',
+    description: 'Gain power to consume contradictory truths and digest them into singular clarity. Devour complexity, produce simplicity, help others find peace.'
+  },
+  {
+    key: 'maelle_chrono_cartographer',
+    route: 'maelle',
+    title: 'Chrono Cartographer',
+    description: 'Learn to map not just space but time itself. Chart and influence temporal flow across all fractured realities, controlling the fourth dimension.'
+  },
+  {
+    key: 'maelle_self_authored',
+    route: 'maelle',
+    title: 'The Self-Authored',
+    description: 'Write yourself into every timeline simultaneously, becoming omnipresent across all fractured realities while maintaining singular consciousness.'
   }
 ]
 
