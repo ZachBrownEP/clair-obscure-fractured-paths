@@ -7,7 +7,7 @@ export default function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [isMuted, setIsMuted] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
-  const [hasInteracted, setHasInteracted] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
     // Load mute preference from localStorage
@@ -24,31 +24,49 @@ export default function BackgroundMusic() {
     const audio = audioRef.current
     audio.volume = 0.3 // Set to 30% volume for background music
 
-    // Try to autoplay on mount if not muted
-    if (!hasInteracted && !isMuted) {
-      const playPromise = audio.play()
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            // Autoplay succeeded
-            setHasInteracted(true)
-          })
-          .catch((error) => {
-            console.log('Autoplay prevented by browser:', error)
-            // Autoplay was prevented - audio will start on first user interaction
-          })
+    // Attempt to start playback immediately
+    const attemptPlay = async () => {
+      try {
+        await audio.play()
+        setIsPlaying(true)
+        console.log('Autoplay started successfully')
+      } catch (error) {
+        console.log('Autoplay prevented by browser, waiting for user interaction:', error)
+
+        // Add a one-time listener for any user interaction to start playback
+        const startOnInteraction = async () => {
+          try {
+            await audio.play()
+            setIsPlaying(true)
+            console.log('Playback started after user interaction')
+            // Remove listeners after successful play
+            document.removeEventListener('click', startOnInteraction)
+            document.removeEventListener('keydown', startOnInteraction)
+            document.removeEventListener('touchstart', startOnInteraction)
+          } catch (err) {
+            console.log('Failed to play:', err)
+          }
+        }
+
+        document.addEventListener('click', startOnInteraction, { once: true })
+        document.addEventListener('keydown', startOnInteraction, { once: true })
+        document.addEventListener('touchstart', startOnInteraction, { once: true })
       }
     }
-  }, [isLoaded, hasInteracted, isMuted])
+
+    if (!isMuted) {
+      attemptPlay()
+    }
+  }, [isLoaded, isMuted])
 
   useEffect(() => {
-    if (!audioRef.current || !isLoaded || !hasInteracted) return
+    if (!audioRef.current || !isLoaded) return
 
     const audio = audioRef.current
 
     if (isMuted) {
       audio.pause()
-    } else {
+    } else if (isPlaying) {
       const playPromise = audio.play()
       if (playPromise !== undefined) {
         playPromise.catch((error) => {
@@ -59,12 +77,9 @@ export default function BackgroundMusic() {
 
     // Save mute state to localStorage
     localStorage.setItem('backgroundMusicMuted', String(isMuted))
-  }, [isMuted, isLoaded, hasInteracted])
+  }, [isMuted, isLoaded, isPlaying])
 
   const toggleMute = () => {
-    if (!hasInteracted) {
-      setHasInteracted(true)
-    }
     setIsMuted(!isMuted)
   }
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { use, useEffect, useMemo, useState } from 'react'
 import { useRouter, useSearchParams, notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight, ArrowLeft, ArrowRight, Home, Gamepad2 } from 'lucide-react'
@@ -10,19 +10,20 @@ import { motion, AnimatePresence } from 'framer-motion'
 import EnhancedBackground from '@/components/enhanced-background'
 
 interface StoryReaderProps {
-  params: {
+  params: Promise<{
     route: string
-  }
+  }>
 }
 
 export default function StoryReader({ params }: StoryReaderProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const { route } = use(params)
 
   // Load the story
   const story = useMemo(() => {
-    return getLinearStory(params.route as 'verso' | 'maelle')
-  }, [params.route])
+    return getLinearStory(route as 'verso' | 'maelle')
+  }, [route])
 
   if (!story) {
     notFound()
@@ -58,7 +59,7 @@ export default function StoryReader({ params }: StoryReaderProps) {
     const urlParams = new URLSearchParams()
     urlParams.set('chapter', chapterIndex.toString())
     urlParams.set('page', pageNum.toString())
-    router.push(`/stories/${params.route}/read?${urlParams.toString()}`, { scroll: false })
+    router.push(`/stories/${route}/read?${urlParams.toString()}`, { scroll: false })
   }
 
   // Navigation functions
@@ -141,7 +142,7 @@ export default function StoryReader({ params }: StoryReaderProps) {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <p className="text-muted-foreground">Chapter or page not found</p>
-          <Link href={`/stories/${params.route}`} className="text-primary hover:underline">
+          <Link href={`/stories/${route}`} className="text-primary hover:underline">
             Return to story
           </Link>
         </div>
@@ -187,7 +188,7 @@ export default function StoryReader({ params }: StoryReaderProps) {
               </button>
 
               <Link
-                href={`/stories/${params.route}/play`}
+                href={`/stories/${route}/play`}
                 className="glass px-8 py-4 rounded-lg hover:bg-card/70 transition-all text-foreground hover:text-accent"
               >
                 <div className="flex items-center gap-2 justify-center">
@@ -197,7 +198,7 @@ export default function StoryReader({ params }: StoryReaderProps) {
               </Link>
 
               <Link
-                href={`/stories/${params.route}`}
+                href={`/stories/${route}`}
                 className="glass px-8 py-4 rounded-lg hover:bg-card/70 transition-all text-foreground hover:text-primary"
               >
                 <div className="flex items-center gap-2 justify-center">
@@ -227,7 +228,7 @@ export default function StoryReader({ params }: StoryReaderProps) {
       <main className="max-w-4xl mx-auto px-4 md:px-8 py-8 relative z-10">
         {/* Back link */}
         <Link
-          href={`/stories/${params.route}`}
+          href={`/stories/${route}`}
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-6"
         >
           <ChevronLeft size={18} />

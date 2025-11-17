@@ -18,9 +18,9 @@ export default function Home() {
               Choose your path through the fractured world of Clair Obscur
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 mb-20 max-w-5xl mx-auto">
-            <Link href="/stories/verso" className="block">
-              <div className="glass rounded-xl p-8 hover:bg-card/70 transition-all cursor-pointer group h-full">
+          <div className="grid md:grid-cols-2 gap-6 mb-20 max-w-5xl mx-auto justify-items-center">
+            <Link href="/stories/verso" className="block w-full max-w-md md:max-w-none">
+              <div className="glass rounded-xl p-8 hover:bg-card/70 transition-all cursor-pointer group h-full text-center">
                 <h2 className="text-3xl font-light text-foreground mb-3 group-hover:text-primary transition-colors">
                   Verso's Story
                 </h2>
@@ -30,7 +30,7 @@ export default function Home() {
                 <p className="text-foreground leading-relaxed mb-6">
                   Follow Verso's journey through shadowed corridors and painted realities. Navigate the threshold between worlds and uncover the secrets of the Canvas Ghost.
                 </p>
-                <div className="flex items-center gap-2 text-primary group-hover:gap-3 transition-all">
+                <div className="flex items-center justify-center gap-2 text-primary group-hover:gap-3 transition-all">
                   <span className="text-sm uppercase tracking-wider font-light">
                     Begin Journey
                   </span>
@@ -39,8 +39,8 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/stories/maelle" className="block">
-              <div className="glass rounded-xl p-8 hover:bg-card/70 transition-all cursor-pointer group h-full">
+            <Link href="/stories/maelle" className="block w-full max-w-md md:max-w-none">
+              <div className="glass rounded-xl p-8 hover:bg-card/70 transition-all cursor-pointer group h-full text-center">
                 <h2 className="text-3xl font-light text-foreground mb-3 group-hover:text-primary transition-colors">
                   Maelle's Story
                 </h2>
@@ -50,7 +50,7 @@ export default function Home() {
                 <p className="text-foreground leading-relaxed mb-6">
                   Trace Maelle's path as a seeker of truth through fractured timelines. Navigate between versions of reality and discover the resonance that connects all possible worlds.
                 </p>
-                <div className="flex items-center gap-2 text-primary group-hover:gap-3 transition-all">
+                <div className="flex items-center justify-center gap-2 text-primary group-hover:gap-3 transition-all">
                   <span className="text-sm uppercase tracking-wider font-light">
                     Begin Journey
                   </span>
@@ -68,8 +68,8 @@ export default function Home() {
             </p>
             <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
               <Link href="/codex">
-                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group">
-                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center">
+                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
                     <BookOpen size={24} />
                   </div>
                   <h3 className="text-lg font-light text-foreground mb-2">Lore Codex</h3>
@@ -80,8 +80,8 @@ export default function Home() {
               </Link>
 
               <Link href="/map">
-                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group">
-                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center">
+                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
                     <Map size={24} />
                   </div>
                   <h3 className="text-lg font-light text-foreground mb-2">World Map</h3>
@@ -92,8 +92,8 @@ export default function Home() {
               </Link>
 
               <Link href="/endings">
-                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group">
-                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform">
+                <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center">
+                  <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
                     <Trophy size={24} />
                   </div>
                   <h3 className="text-lg font-light text-foreground mb-2">Endings Gallery</h3>
