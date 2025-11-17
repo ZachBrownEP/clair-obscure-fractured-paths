@@ -23,12 +23,13 @@ const storyData: Record<string, StoryData> = {
   maelle: maelleData as StoryData
 }
 
-export default function StoryPlayPage({
+export default async function StoryPlayPage({
   params
 }: {
-  params: { route: string }
+  params: Promise<{ route: string }>
 }) {
-  const data = storyData[params.route]
+  const { route: routeId } = await params
+  const data = storyData[routeId]
 
   if (!data) {
     notFound()
