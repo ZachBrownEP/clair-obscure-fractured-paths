@@ -4,9 +4,9 @@
     "baseRouteId": "verso",
     "name": "The Fractured Canvas (Verso – Canon Route)",
     "character": "Verso",
-    "subtitle": "A journey through painted realities",
-    "description": "Follow Verso's canonical journey as they navigate the threshold between worlds, uncover the secrets of the Canvas Ghost, and discover the true nature of their artistic power.",
-    "totalChapters": 4
+    "subtitle": "A fan-made sequel told in linear chapters",
+    "description": "After the collapse of Aline's Canvas, Verso awakens half-paint, half-real in a fractured Lumière. Guided by Canvas Ghosts and the last Writer, he must walk between worlds and decide which truths the city will keep.",
+    "totalChapters": 3
   },
   "chapters": [
     {
@@ -17,12 +17,12 @@
         {
           "id": "verso_prologue_p1",
           "pageNumber": 1,
-          "text": "The rain had not stopped for three days.\n\nIn the shadow of Lumière's broken spires, Verso stood before a canvas that refused to stay blank. Each brushstroke they made dissolved into mist, as if the painted world itself was rejecting their touch.\n\nThey had been called the Canvas Ghost once—a title earned through years of bringing painted realities to life. But now, in the wake of the Collapse, even their gift felt fractured.\n\nThe studio walls bore witness to their struggle: dozens of abandoned paintings, each one a failed attempt to capture what they had seen in their dreams. A threshold. A doorway between worlds. And on the other side, something waiting."
+          "text": "When Aline's Canvas shattered, the painted world dissolved like wet pigment.\n\nThe sky bled back into blankness. Streets peeled away. Faces, colors, and entire years ran together and drained into the dark.\n\nBut not everything vanished.\n\nThree things remained suspended in the void:\n\nVerso — the soul echo that had anchored the Canvas.\nAline — dragged into the liminal realm she once shaped.\nA memory fragment of Maelle — a lingering resonance of Alicia's ideal self.\n\nTime has no meaning here.\nColor is absent.\nReality is faint, like a draft left unfinished."
         },
         {
           "id": "verso_prologue_p2",
           "pageNumber": 2,
-          "text": "\"You're pushing too hard,\" came a voice from the doorway.\n\nVerso didn't turn. They recognized the measured tone of Maelle, the truth-seeker who had somehow become their closest confidant in this strange new world.\n\n\"The visions are getting stronger,\" Verso said, finally setting down their brush. \"Every night, I see the same thing. A canvas that exists between realities. A place where all possibilities converge.\"\n\nMaelle stepped closer, her eyes studying the dissolving paint. \"The Resonance Chamber?\"\n\n\"No.\" Verso's voice was barely a whisper. \"Something older. Something that was there before the Collapse. Before the Monoliths. Before everything we know.\"\n\nThe rain continued its relentless rhythm against the windows. And in that moment, neither of them knew that their search for answers would lead them both to the very edge of existence itself."
+          "text": "Verso wakes first.\n\nHe comes back to awareness the way a painting dries: slowly, feeling every crack and pull.\n\nFor the first time since the fire that killed him, he feels something shocking:\n\nPain.\n\nNot symbolic pain. Not painted bruises imitating emotion. Real, physical pain.\n\nAline's collapse has forced him halfway back into the real world —\n\nbut only halfway.\n\nHe is tethered between life and unlife, between form and concept.\n\nSomething else wakes with him.\n\nIn the void around him, a faint scratching sound begins to echo.\n\nInk on paper.\n\nThe remnant of the Writers' magic.\n\nA force that had been dormant for decades now stirs, sensing the Canvas has fallen.\n\nIt whispers, not in sound, but in intention:\n\n\"A Painter has broken the world.\nA Writer must rewrite it.\""
         }
       ]
     },
@@ -34,51 +34,106 @@
         {
           "id": "verso_ch1_p1",
           "pageNumber": 1,
-          "text": "Lumière looked different in the daylight, though \"daylight\" was a generous term for the pale gray that filtered through the perpetual cloud cover.\n\nVerso walked the cobblestone streets they had known since childhood, but everything felt foreign now. The artist quarter, once vibrant with color and life, stood silent. Most of the studios had been abandoned after the Collapse, their owners either lost to the Monolith's count or fled to safer territories.\n\nOnly a few remained. The stubborn ones. The believers.\n\n\"Verso!\"\n\nThey turned to see Élodie rushing toward them, her paint-stained apron fluttering in the wind. The elderly painter had been Verso's first teacher, back when they were still learning to mix colors."
+          "text": "Verso tries to open his eyes.\n\nCold stone presses against his back. Rain needles his skin.\n\nNot Canvas rain — not the carefully tuned droplets that Aline painted to fall harder when a scene needed drama. This rain is indifferent. It falls because clouds are heavy, because air is cold, because the world has decided to continue without asking what mood he is in.\n\nHe is back in the real world.\n\nOr a version of it."
         },
         {
           "id": "verso_ch1_p2",
           "pageNumber": 2,
-          "text": "\"Élodie,\" Verso embraced her warmly. \"I didn't expect to find you still here.\"\n\n\"Where else would I go?\" She laughed, but there was a brittleness to it. \"This is my home. The Monoliths can't take that from me. Not yet, anyway.\"\n\nThey walked together through the empty streets, past shuttered galleries and silent fountains.\n\n\"I heard you've been having visions,\" Élodie said quietly. \"Maelle told me. She's worried about you.\"\n\n\"She shouldn't be. The visions... they're showing me something important.\"\n\n\"Or they're showing you what you want to see.\" Élodie stopped, placing a weathered hand on Verso's arm. \"I've lived through three Monolith years. I've seen what happens when people chase visions. When they try to find meaning in the Collapse.\"\n\n\"This is different.\"\n\n\"They all say that.\""
+          "text": "He pushes himself upright.\n\nHis body does not move as a single thing.\n\nHis right side is flesh: chilled, bruised, still carrying the memory of a fire he should not have survived. His left side is pigment: layered oils that shed the rain in beads, glistening without ever becoming wet.\n\nHalf skin.\nHalf pigment.\n\nHalf alive.\nHalf painted.\n\nHe is an unstable creation. A glitch between mediums.\n\nThe Canvas that held him together is gone. Whatever rules once allowed a painted boy to walk among living people should have gone with it.\n\nAnd yet… here he is.\n\nBreathing.\n\nFlickering."
         },
         {
           "id": "verso_ch1_p3",
           "pageNumber": 3,
-          "text": "But Verso knew Élodie was wrong. These weren't desperate fantasies or delusions born of trauma. The visions came with a clarity that cut through everything—sharper than memory, more real than waking life.\n\nIn the visions, Verso saw themselves standing before an enormous canvas that stretched beyond sight. It was neither blank nor painted, but existed in a state between the two. A quantum superposition of all possible images.\n\nAnd in that in-between space, they saw the truth: that reality itself was painted. That every world, every timeline, every choice was just another brushstroke on an infinite canvas.\n\nThe Canvas Ghost. That's what they had called Verso. But they were beginning to understand that the title meant something far deeper than anyone had realized.\n\nThey weren't just a painter who could bring painted worlds to life.\n\nThey were someone who could see the painted nature of this world."
+          "text": "He looks around.\n\nLumière sprawls out ahead — but it's wrong.\n\nBroad stone bridges stretch across the river, solid and practical instead of ornamented with impossible statues. The cathedral rises in the distance, its façade solemn and bare.\n\nNo Monolith.\n\nThe streets are empty, but intact. No dripping murals swallowing whole buildings. No floating canvases turning alleys into corridors of someone else's imagination.\n\nThis city has been rebuilt not from Aline's memory, but from something deeper:\n\nRecords.\nMaps.\nOld stories.\n\nThe \"true\" Lumière.\n\nThe one no one has seen for decades."
+        },
+        {
+          "id": "verso_ch1_p4",
+          "pageNumber": 4,
+          "text": "He staggers to his feet.\n\nHis painted heel leaves no footprint. His human heel splashes in a shallow puddle.\n\n\"Of course,\" he mutters. \"Of course it couldn't just be simple.\"\n\nHe lifts his left hand. The painted skin glows faintly even in the grey light, colors shifting between ochre and umber with each pulse of his heart.\n\nHe remembers the void.\n\nThe moment the Canvas collapsed.\n\nAline's face, half-mad with grief and determination.\n\nMaelle's shout.\n\nThe sound the world made when too many stories tried to end at once.\n\nHe remembers thinking: *This is it.*\n\nApparently, it wasn't."
+        },
+        {
+          "id": "verso_ch1_p5",
+          "pageNumber": 5,
+          "text": "He tries to move.\n\nThe city hums beneath his feet, like something not entirely awake.\n\nIn some corners, the light bends at wrong angles. A window briefly shows a view of a sea that no longer exists. A lamppost flickers, its design changing twice before settling.\n\nLumière isn't just \"real\" again.\n\nIt is arguing with itself.\n\nOne version remembers the war the Painters won.\nAnother remembers the world the Writers documented.\n\nThe compromise in front of him holds both uneasily.\n\nVerso feels that argument inside his own body.\n\nHis flesh half remembers hospitals, smoke, and the taste of oxygen masks.\nHis painted half remembers decks of ships, monoliths, and the scent of fresh oil.\n\nHe is a walking disagreement."
+        },
+        {
+          "id": "verso_ch1_p6",
+          "pageNumber": 6,
+          "text": "A bell tolls somewhere in the distance.\n\nThe sound arrives late, like an echo from a memory that had to fight its way through too many rewrites.\n\nThunder does not follow.\n\nInstead, he hears a quieter sound underneath the rain.\n\nA scratching, almost too soft to catch.\n\nInk on paper.\n\nHe doesn't know yet that the Writers' magic has begun to stir again — that the world's narrative is trying to reassert itself over the chaos of paint.\n\nHe only knows this:\n\nIf he stays here, sitting on the stones where he woke, the city will rewrite itself around him.\n\nAnd he might be written out.\n\nVerso stands properly, squaring the shoulders he still half-remembers borrowing from a better version of himself.\n\nHe turns toward the bell.\n\n\"Fine,\" he says to no one, to the rain, to the broken skyline. \"If the world came back, I'm going to see what it remembers.\"\n\nHe starts walking."
         }
       ]
     },
     {
       "id": "verso_ch2",
       "number": 2,
-      "title": "CHAPTER 2 — The Threshold Opens",
+      "title": "CHAPTER 2 — The Ghosts of Those Who Were Painted",
       "pages": [
         {
           "id": "verso_ch2_p1",
           "pageNumber": 1,
-          "text": "The breakthrough came at midnight.\n\nVerso had been working in their studio, attempting once again to capture the vision on canvas. But this time, instead of fighting the dissolving paint, they let it flow. Let it become what it wanted to be.\n\nAnd the paint listened.\n\nIt swirled across the canvas in patterns that defied physics—colors bleeding into each other and then separating again, creating depth where there should be only flatness. The image that emerged was both familiar and alien: a doorway, yes, but not one made of wood or stone.\n\nThis was a doorway made of possibility itself."
+          "text": "The bell draws him to the cathedral district.\n\nThe closer he gets, the more reality wavers.\n\nStreets are mostly stable — cobblestones solid beneath his steps — but occasionally a doorway will flash with impossible color, showing a glimpse of a painting that no longer exists.\n\nHe passes a bakery that remembers having a mural of saints on its walls. For a heartbeat, the mural reappears. The next second, it's just chipped plaster again.\n\nThe city is full of almosts.\n\nVerso knows how that feels."
         },
         {
           "id": "verso_ch2_p2",
           "pageNumber": 2,
-          "text": "Verso reached out, their fingers trembling, and touched the painted surface.\n\nThe canvas was warm. Alive.\n\nAnd then it opened.\n\nNot physically—the canvas remained flat against the easel. But something shifted in the air around it, a ripple in reality that Verso could feel in their bones.\n\nThrough the painted doorway, they saw... another Lumière. The same streets, the same buildings, but different. In this version, the artist quarter was alive with activity. Painters worked at easels set up in the open air. Children laughed and ran between the studios. The sky was blue.\n\n\"Is this real?\" Verso whispered.\n\nThe doorway pulsed in response, and Verso understood: it was as real as anything else. Another brushstroke. Another possible world."
+          "text": "The cathedral stands ahead.\n\nStripped of the Monolith, it looks smaller than in his memories — human-sized, almost shy.\n\nStone steps lead up to heavy doors, their surfaces scarred where something once anchored itself. The air around the building tastes of old incense and older arguments.\n\nHe takes one step into the square.\n\n\"About time,\" a voice says.\n\nVerso spins.\n\nSciel stands near a broken column, scythe resting against her shoulder like it never left her hands.\n\nShe looks exactly wrong.\n\nThe world around her is muted stone and soft rain. She is sharp lines and deliberate color, saturated just a little too much.\n\nThe rain doesn't touch her at all."
+        },
+        {
+          "id": "verso_ch2_p3",
+          "pageNumber": 3,
+          "text": "\"You look like death,\" she says cheerfully.\n\nHe stares. \"You're—\"\n\n\"Dead? Gone? Confusing?\" She shrugs. \"Yeah. Pick one. We're in a city that can't decide what year it is; I figure I'm allowed to be inconsistent too.\"\n\nLight starts to gather a few steps away.\n\nAt first, he thinks it's a trick of the wet cobblestones. Then the light pulls itself inward, condensing into a form.\n\nLune materializes the way a photograph develops: cloak first, then careful hands, then eyes that have always seen too much.\n\nShe blinks like someone waking from a very long, very strange dream.\n\n\"We're… thin,\" she murmurs, checking the edges of her own existence. \"But we're here.\"\n\nVerso's throat tightens.\n\n\"How?\""
+        },
+        {
+          "id": "verso_ch2_p4",
+          "pageNumber": 4,
+          "text": "Sciel taps her temple with the blunt end of her weapon.\n\n\"You happened,\" she says. \"When the Canvas collapsed, most of it went with Aline. But some pieces didn't belong to her anymore. Some were anchored to you, idiot. Congratulations — your unresolved issues are now people.\"\n\nLune nods. \"We're Canvas Ghosts,\" she says. \"Resonant souls. Fragments that refused to fully fade because something in you refused to let go.\"\n\nVerso wants to laugh or cry or both.\n\nHe settles for, \"You followed me.\"\n\nSciel grins. \"Someone had to keep you from moping yourself into nonexistence.\"\n\nLune's gaze softens. \"Besides,\" she says, \"if the world is breaking again, someone needs to help you read the cracks.\""
+        },
+        {
+          "id": "verso_ch2_p5",
+          "pageNumber": 5,
+          "text": "Verso feels a presence at his back.\n\nHe turns.\n\nFor just a moment, he sees her.\n\nA girl his age, standing behind his shoulder the way she always did when a scene needed defiance. Short hair, determined stance, eyes full of stubborn, impossible hope.\n\nMaelle.\n\nOnly… she isn't fully there.\n\nHer outline is a shimmer in the rain, a distortion more than a person. Every time he tries to focus on her, the world corrects itself, pushing her image to the side like a smudge.\n\nHe reaches out.\n\nHis painted fingers brush against air that feels like static and memory.\n\nThe shimmer strains toward him, then snaps back, tethered to a distance he can't cross."
+        },
+        {
+          "id": "verso_ch2_p6",
+          "pageNumber": 6,
+          "text": "\"She can't reform here,\" Lune says quietly. \"Maelle isn't just paint. She's tied to Alicia. To a real body. A real timeline. Until those two reconcile, she exists as a resonance. A possibility.\"\n\nSciel nudges his arm. \"In less poetic terms,\" she says, \"she's an echo that hasn't quite found where to bounce back from yet.\"\n\nThe shimmer by his shoulder flickers.\n\nVerso speaks anyway.\n\n\"I'll find you,\" he says. \"Both of you. I don't care how many fractures I have to walk through. I'm not leaving you stuck between pages forever.\"\n\nThe echo doesn't answer, but it steadies for a heartbeat longer, as if listening.\n\nThen the bell tolls again.\n\nCloser this time.\n\nThey all turn toward the sound.\n\nSomeone else is coming."
         }
       ]
     },
     {
       "id": "verso_ch3",
       "number": 3,
-      "title": "CHAPTER 3 — Between Worlds",
+      "title": "CHAPTER 3 — The Writer's Return",
       "pages": [
         {
           "id": "verso_ch3_p1",
           "pageNumber": 1,
-          "text": "Maelle found Verso three hours later, still standing before the canvas, tears streaming down their face.\n\n\"What happened?\" She touched Verso's shoulder gently, and they finally turned to look at her.\n\n\"I saw it,\" Verso said. \"The world as it could have been. Should have been. Before the Collapse.\"\n\nMaelle studied the painting. To her eyes, it was beautiful—masterful, even. But she saw only paint and canvas. \"What are you going to do?\"\n\nVerso looked back at the doorway, still shimmering with possibility. \"I'm going to find out if I can go through. And if I can... I'm going to find out why our world broke.\"\n\n\"That's dangerous.\"\n\n\"Everything is dangerous now. At least this danger might lead somewhere.\""
+          "text": "He appears from between two half-repaired buildings.\n\nA man in a dark coat walks into the cathedral square as if he owns the space between each step.\n\nThe coat is covered in shifting letters.\n\nLines of ink twist around his arms, coiling and uncoiling with slow intent.\n\nHis eyes are black — not empty, but full. Like someone poured fresh ink into them and never let it dry.\n\nHe takes in Verso's mismatched body, Sciel's saturated outline, Lune's careful watchfulness.\n\nHe nods once, as if a private hypothesis has just been confirmed.\n\n\"Good,\" he says. \"The fracture kept the interesting ones.\""
         },
         {
           "id": "verso_ch3_p2",
           "pageNumber": 2,
-          "text": "They prepared carefully. Maelle insisted on documenting everything, her writer's instinct demanding that this moment be preserved, whatever came of it.\n\n\"If you don't come back,\" she said, \"at least people will know you tried.\"\n\n\"I'll come back,\" Verso promised. \"I have to. There's too much left to paint.\"\n\nThey stood before the canvas together, and Verso explained what they were about to attempt. Not a physical journey—that would be impossible. But a transference of consciousness. A way to see through the doorway, to experience the other world directly.\n\n\"Like the Resonance,\" Maelle said, understanding. \"Like how I see between timelines.\"\n\n\"Exactly. We're more similar than I realized.\"\n\nVerso closed their eyes, placed both palms against the painted doorway, and let themselves fall forward into possibility."
+          "text": "He stops a few paces away.\n\n\"My name,\" he says, \"is Jules.\"\n\nThe rain seems to pause on the syllables.\n\nVerso's stomach drops.\n\nJules Dessendre.\n\nHe's heard the name muttered in half-arguments and cut-short stories. Aline's long-lost brother. The Writer who refused to become a Painter. The family shame. The ghost Aline pretended never existed.\n\n\"You're supposed to be dead,\" Verso says.\n\n\"I was supposed to be a lot of things,\" Jules replies. \"Dead. Erased. Wrong. We all disappoint someone.\" The ink around his cuffs curls into shapes that almost form words before collapsing again. \"Writers don't die the way Paintress propaganda said we did. We get unwritten, which is much messier.\"\n\nSciel squints at him. \"He looks like a villain,\" she says.\n\n\"He looks tired,\" Lune counters.\n\nThey're both right."
+        },
+        {
+          "id": "verso_ch3_p3",
+          "pageNumber": 3,
+          "text": "Jules looks past them, up at the cathedral.\n\nThe building jitters at the edges, its roofline skipping between two designs.\n\n\"When your mother lost control,\" he says, \"she didn't just paint a prison. She tore down the wall that kept our magics from killing each other. Painters reshape form. Writers define meaning. They were never meant to share a playground.\"\n\nHe gestures toward the sky.\n\nClouds rearrange themselves mid-drift.\n\n\"The fall of the Canvas destabilized the boundary between image and narrative. The world is now half Painter logic, half Writer logic. It keeps trying to settle on one version of events… and failing.\"\n\nHe looks back at Verso.\n\n\"New Canvases and new Narratives are forming on their own now. Unsupervised. Unstable. Little pockets of reality arguing with themselves about who's right.\""
+        },
+        {
+          "id": "verso_ch3_p4",
+          "pageNumber": 4,
+          "text": "\"If we leave them alone,\" Lune says slowly, \"what happens?\"\n\n\"They spread,\" Jules replies. \"A fracture here in the cathedral square. Another in the old gallery district. More in people.\" His gaze hardens. \"A baker who remembers having three children in one version of his life and none in another. A soldier who died in a painting but lived in the records. The world can't hold both forever.\"\n\nSciel spins her scythe once, metal singing softly. \"So what, we're supposed to fix the entire world?\"\n\n\"Not we,\" Jules says. \"Him.\"\n\nHe points at Verso.\n\nVerso feels it — the weight of that gesture, like someone just wrote his name onto the first page of a story he never agreed to star in.\n\n\"Painters are too invested in how things look,\" Jules explains. \"Writers are too invested in how things are supposed to be. You're the only thing I've ever seen that is both and neither. Half-paint, half-real. The canvas that walked. The boy who died and then refused to stay dead.\"\n\nInk creeps a little farther up his neck as he speaks.\n\n\"You can step into a fracture and survive both its truths. No one else can.\""
+        },
+        {
+          "id": "verso_ch3_p5",
+          "pageNumber": 5,
+          "text": "Verso laughs once.\n\nIt doesn't sound very convincing.\n\n\"You want me,\" he says, \"to fix the things my mother broke.\"\n\nJules doesn't flinch at the word.\n\n\"I want you to decide what moves forward,\" he says. \"Right now, the world is a stack of drafts. Painter versions. Writer versions. Neither is entirely right. Neither is entirely wrong. If we let them keep piling up, they'll crush everything beneath them.\n\nIf someone like you walks into each fracture and chooses what stays — blends, rewrites, or cuts — the world might survive this.\"\n\nSciel snorts. \"So he's your editor.\"\n\nLune gives Verso a small, apologetic smile. \"He's everyone's editor, apparently.\"\n\nVerso stares at his mismatched hands.\n\nOne can smear paint.\nThe other can bleed.\n\nBoth are shaking."
+        },
+        {
+          "id": "verso_ch3_p6",
+          "pageNumber": 6,
+          "text": "Jules steps closer.\n\nThe letters on his coat quiet down, as if giving him the floor.\n\n\"So,\" he says, \"here's the choice, Verso.\"\n\nHe points down one unseen road, out toward the parts of Lumière that are already fraying.\n\n\"Do nothing. Let the fractures grow. Watch the world tear itself into smaller and smaller arguments until no one can agree on what they are or how they got here. Eventually, there will be nothing left but noise.\"\n\nHe points toward the cathedral instead.\n\n\"Or help me. Walk into the places where reality is cracking and decide what they remember. Help me write a world that can live with what it's done. Not a perfect one. Just one that holds together.\"\n\nThe rain has slowed to a mist.\n\nThe faint scratching of ink in the back of Verso's mind grows louder.\n\nHe thinks of Maelle's unreachable shimmer.\nOf Aline lost somewhere between realities.\nOf the people in this city who don't even know they're standing on overlapping stories.\n\nHe takes a breath he doesn't strictly need.\n\n\"Fine,\" he says. \"Show me the first fracture.\"\n\nJules' shoulders relax, just enough to be noticeable.\n\n\"Cathedral district,\" he says. \"Where faith, propaganda, and paint first became indistinguishable. Seems as good a place as any to start.\"\n\nVerso nods.\n\nSciel spins her scythe into a ready grip.\n\nLune adjusts her cloak, steadying herself against the invisible pull of the world's argument.\n\nTogether, they walk toward the broken heart of Lumière.\n\nThe world, holding its breath, walks with them."
         }
       ]
     }
