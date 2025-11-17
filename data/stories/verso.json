@@ -1,0 +1,528 @@
+{
+  "route": {
+    "id": "verso",
+    "name": "The Fractured Canvas",
+    "character": "Verso",
+    "subtitle": "A journey through painted realities",
+    "description": "Follow Verso's path through shadowed corridors and painted realities. Navigate the threshold between worlds and uncover the secrets of the Canvas Ghost.",
+    "startNodeId": "verso_ch1_intro",
+    "totalChapters": 12
+  },
+  "nodes": [
+    {
+      "id": "verso_ch1_intro",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Rain and Remembrance",
+      "text": "Rain hits the stone in uneven rhythms. Half your hand is flesh. Half is pigment—layered oils that shift between ochre and umber with each pulse of your uncertain heart.\n\nLumière sprawls before you, but it's wrong. The architecture remembers a different city, rebuilt in someone else's memory. The café where you met Aline stands three stories taller. The fountain in the square runs backwards.\n\nYou shouldn't be here. The Paintress took you both during Expedition 33. Yet here you stand, neither fully real nor entirely painted.",
+      "choices": [
+        {
+          "id": "inspect_hand",
+          "label": "Examine your hand more closely. Understand what you've become.",
+          "nextId": "verso_ch1_inspect_hand",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "explore_square",
+          "label": "Step into the backwards fountain square. Someone might be waiting.",
+          "nextId": "verso_ch1_square",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 3
+            }
+          ]
+        },
+        {
+          "id": "seek_cafe",
+          "label": "Go to the café. Find where Aline's memory still lives.",
+          "nextId": "verso_ch1_cafe",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            },
+            {
+              "type": "flag",
+              "key": "visited_cafe_first",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_inspect_hand",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Between States",
+      "text": "You hold your hand to the rain. Where flesh meets paint, there's no seam—just a gradual shift from one state to another. The painted portion doesn't get wet. The rain slides off it like oil on canvas.\n\nYou flex your fingers. The painted ones move with the same weight, the same resistance. You feel through them, but the sensation is… translated. Like reading emotion in a language you half-remember.\n\nA figure appears at the corner of your vision. Tall, wrapped in cloth that might be shadow. It watches you the way curators watch paintings.",
+      "choices": [
+        {
+          "id": "approach_figure",
+          "label": "Approach the figure. Demand answers.",
+          "nextId": "verso_ch1_curator",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 3
+            }
+          ]
+        },
+        {
+          "id": "observe_figure",
+          "label": "Observe it from a distance. Learn before acting.",
+          "nextId": "verso_ch1_observe",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 3
+            },
+            {
+              "type": "flag",
+              "key": "observed_curator",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "flee_figure",
+          "label": "Move away quietly. This isn't your confrontation yet.",
+          "nextId": "verso_ch1_square"
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_square",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Reversed Waters",
+      "text": "The fountain pulls water upward, droplets climbing against gravity to disappear into a stone basin that shouldn't exist. You recognize the sculpture—La Fontaine des Souvenirs. But in the real Lumière, it was destroyed decades ago.\n\nA child sits on the fountain's edge, legs swinging. She's entirely painted, her form shifting between brushstroke styles—impressionist one moment, hyperrealist the next. She notices you and smiles.\n\n\"You're like me,\" she says. \"But older. Did you forget how to choose your style?\"",
+      "choices": [
+        {
+          "id": "talk_to_child",
+          "label": "Sit beside her. Ask what she means.",
+          "nextId": "verso_ch1_child_talk",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "ask_about_fountain",
+          "label": "Ask her about the fountain. Why it runs backwards.",
+          "nextId": "verso_ch1_fountain_lore",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 3
+            }
+          ]
+        },
+        {
+          "id": "leave_quickly",
+          "label": "This is wrong. Leave before she pulls you deeper.",
+          "nextId": "verso_ch1_cafe"
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_cafe",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Café of Ghosts",
+      "text": "The Café d'Or towers impossibly high, each added floor a different architectural period stacked like sediment. You enter through doors that remember your hands.\n\nInside, patrons sit frozen mid-conversation. Not still—frozen, caught between moments like insects in amber. Their coffee steams eternally. Their gestures hang incomplete.\n\nAt your usual table, a figure waits. She wears Aline's face, but her eyes are canvas-white, unpainted.",
+      "choices": [
+        {
+          "id": "sit_with_aline",
+          "label": "Sit across from her. Face what the Paintress left behind.",
+          "nextId": "verso_ch1_aline_conversation",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            },
+            {
+              "type": "flag",
+              "key": "confronted_aline_ghost",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "examine_patrons",
+          "label": "Study the frozen patrons. Understand this place before engaging.",
+          "nextId": "verso_ch1_cafe_study",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "leave_cafe",
+          "label": "This is too much. Return to the square.",
+          "nextId": "verso_ch1_square"
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_curator",
+      "route": "verso",
+      "chapter": 1,
+      "title": "The Curator Speaks",
+      "text": "You stride toward the figure, rain forgotten. \"What are you? What is this place?\"\n\nThe figure regards you with something approximating amusement. When it speaks, its voice echoes from multiple directions.\n\n\"I am Renoir. I maintain the Gallery Between. You are Verso—a failed canvas that learned to walk.\" The cloth shifts, revealing eyes that spiral like oil in water. \"The Paintress brought you here thirty-three expeditions ago. You've been walking through her unfinished paintings ever since.\"\n\n\"That's impossible. I remember—\"\n\n\"You remember being painted to remember. Every thought you think, she thought first. But...\" Renoir tilts its head. \"You've changed. Somehow you're writing over her brushstrokes. Dangerous. Unprecedented.\"",
+      "choices": [
+        {
+          "id": "demand_escape",
+          "label": "Tell me how to escape this place.",
+          "nextId": "verso_ch1_escape_route",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "ask_about_paintress",
+          "label": "Who is the Paintress? What does she want?",
+          "nextId": "verso_ch1_paintress_lore",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "learned_paintress_truth",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "accept_nature",
+          "label": "If I'm a painting that walks, perhaps that's enough.",
+          "nextId": "verso_ch1_acceptance",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_child_talk",
+      "route": "verso",
+      "chapter": 1,
+      "title": "The Painted Child",
+      "text": "You sit beside the child, watching water defy nature. Up close, you see her edges blur and refocus constantly.\n\n\"I was painted to be someone's daughter,\" she says matter-of-factly. \"But they forgot to paint parents. So I live here, where the fountain remembers everyone.\"\n\nShe points to the climbing water. \"See? Each drop is a memory going home. The real city forgot this fountain, so it came here. The Painted Gallery keeps everything that reality throws away.\"\n\n\"How long have you been here?\"\n\nShe shrugs, her shoulders dissolving into brushstrokes before resolidifying. \"Time is different when you're made of paint. But I think... a long time. Long enough to see others like you arrive. Most don't stay. They either fade into the backgrounds or find doors out.\"",
+      "choices": [
+        {
+          "id": "ask_about_doors",
+          "label": "Tell me about these doors. I need to find one.",
+          "nextId": "verso_ch1_doors_info",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "learned_about_doors",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "offer_help",
+          "label": "You shouldn't be alone here. Come with me.",
+          "nextId": "verso_ch1_child_companion",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 8
+            },
+            {
+              "type": "flag",
+              "key": "befriended_painted_child",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "thank_and_leave",
+          "label": "Thank her and move on. Some questions answer themselves.",
+          "nextId": "verso_ch1_cafe"
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_aline_conversation",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Conversations with Absence",
+      "text": "You sit. The chair remembers your weight from a thousand previous meetings.\n\nNot-Aline smiles with lips that have never held pigment. \"You came. Part of me thought you'd run.\"\n\n\"You're not her.\"\n\n\"No. I'm what the Paintress painted when she tried to understand what Aline meant to you. I have her face, her voice, fragments of her warmth. But I'm hollow where her soul should be.\" The canvas-eyes don't blink. \"She's gone, Verso. The real Aline faded the moment Expedition 33 ended. I'm just... the sketch that remains.\"\n\nAround you, the frozen café seems to lean in, listening.\n\n\"But,\" Not-Aline continues, \"I remember things she never told you. The Paintress pulled those memories from both of you before the end. Would you like to know them?\"",
+      "choices": [
+        {
+          "id": "hear_memories",
+          "label": "Yes. Tell me what I lost.",
+          "nextId": "verso_ch1_aline_memories",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            },
+            {
+              "type": "flag",
+              "key": "learned_aline_secret",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "refuse_memories",
+          "label": "No. I won't let the Paintress shape my grief.",
+          "nextId": "verso_ch1_rejection",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 8
+            }
+          ]
+        },
+        {
+          "id": "question_purpose",
+          "label": "Why are you telling me this? What do you want?",
+          "nextId": "verso_ch1_aline_purpose",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_escape_route",
+      "route": "verso",
+      "chapter": 1,
+      "title": "The Price of Freedom",
+      "text": "Renoir's form ripples like heat shimmer. \"Escape? You misunderstand your situation. You ARE the Gallery now. You're painted into its walls, woven into its logic. To leave would require unpaintingyourself. Becoming less than you are.\"\n\n\"There must be a way.\"\n\n\"There is,\" Renoir admits. \"Find the Canvas Ghost. It exists between painted and real, neither and both. It knows doors that lead... elsewhere. But it extracts prices. Memory. Identity. Pieces of your soul transcribed into pigment.\"\n\nThe rain stops. In the sudden silence, you hear something distant—brushstrokes on canvas, impossibly loud.\n\n\"The Paintress is working again,\" Renoir says. \"She's noticed you. That limits our time.\"",
+      "choices": [
+        {
+          "id": "seek_canvas_ghost",
+          "label": "Where can I find the Canvas Ghost?",
+          "nextId": "verso_ch1_canvas_ghost_path",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "seeking_canvas_ghost",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "face_paintress",
+          "label": "Let her notice me. I'll confront her directly.",
+          "nextId": "verso_ch1_paintress_confrontation",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "hide_from_paintress",
+          "label": "Help me hide. I need more time to understand.",
+          "nextId": "verso_ch1_hiding",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_acceptance",
+      "route": "verso",
+      "chapter": 1,
+      "title": "The Mediator's Path",
+      "text": "Something shifts in Renoir's regard. \"Acceptance. Unusual. Most fight their painted nature or drown in despair.\"\n\nYou look at your half-painted hand again. \"I'm not what I was. Fighting that won't return the past. But perhaps... perhaps there's power in being both. Flesh and pigment. Real and imagined.\"\n\n\"A mediator,\" Renoir says softly. \"One who exists in the threshold. That path has been walked before, though never by someone like you. The Canvas Ghost itself began as such a mediator.\"\n\nThe world around you seems to breathe, the painted city acknowledging your choice.\n\n\"If you truly walk this path,\" Renoir continues, \"you must learn to paint reality as surely as the Paintress painted you. And you must learn to write truth into pigment, like the Writers of old. Neither Painter nor Writer, but something between.\"\n\nThe rain returns, but now you feel it on both flesh and painted skin equally.",
+      "choices": [
+        {
+          "id": "learn_from_renoir",
+          "label": "Teach me. I'll master this threshold.",
+          "nextId": "verso_ch1_mediator_training",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "chose_mediator_path",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "explore_balance",
+          "label": "I'll find my own way. Balance must be discovered, not taught.",
+          "nextId": "verso_ch1_solo_mediator",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 5
+            },
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_canvas_ghost_path",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Directions in Paint",
+      "text": "\"The Canvas Ghost has no fixed location,\" Renoir explains. \"It exists where painted and real overlap most completely. The café where memories freeze. The fountain where time flows backwards. The gallery where art breathes.\"\n\n\"You've seen such places already. The Ghost watches those who enter its territories. If you prove... interesting... it may appear to you.\"\n\nRenoir gestures, and the rain around you crystallizes into shapes—maps written in water and light. \"Go deeper into the Painted Gallery. Each threshold you cross will draw its attention. But be warned: the Canvas Ghost is not benevolent. It is curious. And its curiosity has destroyed greater souls than yours.\"",
+      "choices": [
+        {
+          "id": "enter_deeper_gallery",
+          "label": "I'll take the risk. Lead me deeper.",
+          "nextId": "verso_ch1_deeper_gallery"
+        },
+        {
+          "id": "reconsider_approach",
+          "label": "Perhaps confronting the Ghost isn't wise yet. I need to prepare.",
+          "nextId": "verso_ch1_square"
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_deeper_gallery",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Into the Threshold",
+      "text": "Renoir guides you through streets that fold like paper. Buildings peel away to reveal canvas beneath canvas, infinite layers of attempted realities.\n\nYou pass through a marketplace where vendors sell memories in jars. A library where books write themselves, their pages filled with stories that never happened. A bridge that spans the gap between yesterday and tomorrow.\n\nWith each step, you feel yourself changing. The painted portion of your body spreads slightly, but so does the flesh. You're becoming more of both, not less.\n\nFinally, you reach a door. It's simple—wooden, unremarkable. But it stands alone in an empty plaza, connected to nothing.\n\n\"Beyond this,\" Renoir says, \"is where the Canvas Ghost dwells. I cannot follow. This threshold is yours alone to cross.\"\n\nYou reach for the handle. It's warm under your half-painted fingers.",
+      "choices": [
+        {
+          "id": "open_door",
+          "label": "Open the door. Face the Canvas Ghost.",
+          "nextId": "verso_ch1_canvas_ghost_meeting",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "met_canvas_ghost",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "turn_back",
+          "label": "Not yet. I'm not ready for what waits beyond.",
+          "nextId": "verso_ch1_square"
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_canvas_ghost_meeting",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Audience with the Ghost",
+      "text": "The door opens onto whiteness. Not empty—white. The white of fresh canvas stretched tight, waiting for the first brushstroke.\n\nYou step through.\n\nThe Canvas Ghost stands before you, if 'stands' is the right word. It's a figure composed of negative space, the absence of paint that defines all paintings. Where it moves, reality blurs and refocuses.\n\n\"Verso,\" it says without sound. \"The painting that learned to bleed. The flesh that learned to fade. You stand at the perfect threshold.\"\n\nIts form shifts—now humanoid, now abstract, now something between. \"You seek escape from the Painted Gallery. But you are the Gallery. To leave would be to cease. Is that what you truly want? Or do you seek transformation? Evolution? To become something neither Painter nor Writer ever imagined?\"\n\nThe whiteness around you pulses like a heartbeat.",
+      "choices": [
+        {
+          "id": "choose_transformation",
+          "label": "I choose transformation. Teach me to be both and neither.",
+          "nextId": "verso_ch1_ending_mediator",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "ending_mediator_unlocked",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "choose_escape",
+          "label": "I choose escape, whatever the cost. I'll be real again.",
+          "nextId": "verso_ch1_ending_escape",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "ending_escape_unlocked",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "reject_both",
+          "label": "I reject both options. There must be another way.",
+          "nextId": "verso_ch1_ending_rebel",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "ending_rebel_unlocked",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_ending_mediator",
+      "route": "verso",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "verso_mediator",
+      "endingTitle": "The Mediator",
+      "text": "The Canvas Ghost's form stabilizes into something almost comprehensible. \"The threshold path. Difficult. Lonely. But perhaps the most honest.\"\n\nIt reaches out with appendages that might be hands. Where it touches you, flesh becomes paint becomes flesh again, cycling endlessly. The sensation is neither painful nor pleasant—it simply is.\n\n\"You will walk between worlds now,\" the Ghost explains. \"Neither trapped nor free. Neither real nor imagined. You will mediate between Painters who reshape reality and Writers who record truth. Your existence will be the bridge.\"\n\nThe whiteness fills your vision.\n\nWhen it clears, you stand in Lumière again. The real Lumière. But you can still see the Painted Gallery overlaid on it like a translucent film. Two cities, one location. You exist in both.\n\nYour hand is completely yours again—but it shifts between flesh and paint with each breath. You've become the threshold itself.\n\nIn the distance, you see both Renoir and the painted child waving. In another distance, you see the real city going about its day, unaware of the painted world that mirrors it.\n\nYou smile. For the first time since Expedition 33, you know exactly what you are.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Mediator**\n*Your alignment has shaped you into something new—a bridge between worlds.*",
+      "choices": []
+    },
+    {
+      "id": "verso_ch1_ending_escape",
+      "route": "verso",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "verso_escape",
+      "endingTitle": "Return to Flesh",
+      "text": "\"Escape requires sacrifice,\" the Canvas Ghost says. \"You must unpaint yourself. Strip away every brushstroke the Paintress added. You will forget the Gallery. Forget what you learned here. Forget who you met.\"\n\n\"I accept.\"\n\n\"Even,\" the Ghost continues, \"if it means forgetting Aline entirely? The Paintress painted those memories into you. Remove her work, and the real memories become unreachable. Locked behind doors you no longer have keys to.\"\n\nYou hesitate. But only for a moment.\n\n\"I accept.\"\n\nThe Ghost nods. \"Then let us begin the unpainting.\"\n\nIt hurts. Each brushstroke removed is a small death. You feel yourself becoming less—less complex, less aware, less everything. The painted portion of your hand fades. The memories of the fountain, the café, the child... they blur and wash away like watercolors in rain.\n\nWhen it's done, you stand in regular Lumière. The fountain runs normally. The café is two stories tall as it should be. You remember coming here for... something. Expedition 33, maybe?\n\nYour hand is entirely flesh. You flex it experimentally. It works fine.\n\nYou should probably head home. It's getting late.\n\nAs you walk away, you don't notice the figure watching from an alley—wrapped in cloth that might be shadow, its spiral eyes sad.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Return to Flesh**\n*You chose the real over the painted, forgetting what you were to reclaim what you had been.*",
+      "choices": []
+    },
+    {
+      "id": "verso_ch1_ending_rebel",
+      "route": "verso",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "verso_rebel",
+      "endingTitle": "The Third Door",
+      "text": "\"Neither transformation nor escape,\" you say. \"I reject the binary. You offer me two paths because you cannot imagine a third. But I'm already proof that the impossible happens.\"\n\nThe Canvas Ghost makes a sound that might be laughter. \"Rebellion. How very... Writer of you. To insist on truth even when reality offers alternatives.\"\n\n\"And how very Painter of me,\" you counter, \"to imagine a door that doesn't exist and walk through it anyway.\"\n\nThe whiteness around you cracks. Actually cracks, like dried paint on old canvas.\n\n\"You're going to break the Gallery,\" the Ghost says, but it doesn't sound concerned. It sounds... delighted. \"You're going to paint yourself new rules and write them into reality. I should stop you.\"\n\n\"But you won't.\"\n\n\"No,\" the Ghost agrees. \"I want to see what happens.\"\n\nYou reach into the white and pull. The canvas tears. Beyond it is neither the Painted Gallery nor the real world—it's something else. Somewhere raw and undefined.\n\nYou step through.\n\nThe Gallery shudders. Rules you don't yet understand rewrite themselves around your existence. You're still part flesh, part paint, but now you're also part... else. Part possibility. Part becoming.\n\nBehind you, the Canvas Ghost watches through the tear. \"The third door,\" it murmurs. \"Leading anywhere. Everywhere. Nowhere yet painted or written. Verso, the Impossible Made Walking.\"\n\nYou don't know where you'll emerge. But for the first time, that doesn't frighten you.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Third Door**\n*You refused the offered paths and created your own, breaking the Gallery's rules through sheer will.*",
+      "choices": []
+    }
+  ]
+}

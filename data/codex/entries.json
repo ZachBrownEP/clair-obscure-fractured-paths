@@ -1,0 +1,170 @@
+[
+  {
+    "id": "verso",
+    "name": "Verso",
+    "category": "character",
+    "tags": ["Painter", "Wanderer", "Canvas Ghost"],
+    "shortDescription": "A figure caught between the waking world and painted realities.",
+    "fullDescription": "Verso is a mysterious wanderer who exists at the threshold between worlds. Once a brilliant artist, he became entangled with the Canvas Ghost during Expedition 33 and now navigates fractured realities. Each brushstroke he makes is a choice that echoes across dimensions. Half flesh, half pigment, Verso embodies the liminal state between creation and reality, neither fully real nor entirely imagined."
+  },
+  {
+    "id": "maelle",
+    "name": "Maelle",
+    "category": "character",
+    "tags": ["Writer", "Seeker", "Truth-bearer"],
+    "shortDescription": "A seeker of truth in a world of shadows and illusions.",
+    "fullDescription": "Maelle is a chronicler of hidden truths, one who can perceive the threads connecting seemingly disparate events. Her journey through Clair Obscur is one of revelation and transformation. As a member of the Scribes' Order, she possesses the rare ability to see across fractured timelines, experiencing echoes of past and future simultaneously. Some say she carries the resonance of Alicia, the First Writer, making her both herself and an echo of something greater."
+  },
+  {
+    "id": "canvas-ghost",
+    "name": "The Canvas Ghost",
+    "category": "character",
+    "tags": ["Entity", "Painter", "Liminal"],
+    "shortDescription": "An enigmatic presence that dwells within painted worlds.",
+    "fullDescription": "The Canvas Ghost is neither fully real nor entirely imaginary. It exists in the space between paint and canvas, between intention and creation. Its nature remains shrouded in mystery, though its influence permeates the fractured paths. Once a mediator who walked the threshold between Painter and Writer, it has become something else—an entity of pure liminality. Those who encounter it report seeing their own faces reflected in its form, suggesting it may be a mirror of possibility rather than a being with fixed identity."
+  },
+  {
+    "id": "renoir",
+    "name": "Renoir the Curator",
+    "category": "character",
+    "tags": ["Curator", "Guide", "Keeper"],
+    "shortDescription": "Keeper of the Painted Gallery and guide to the lost.",
+    "fullDescription": "Renoir maintains the Gallery Between—the space where painted realities overlap. Wrapped in cloth that might be shadow, with eyes that spiral like oil in water, Renoir is both helpful and enigmatic. It claims to preserve the Gallery's structure, ensuring that the painted worlds don't collapse into chaos. Some believe Renoir was once human, transformed by prolonged exposure to the Gallery. Others claim it was painted into existence by the Paintress herself to serve as eternal caretaker."
+  },
+  {
+    "id": "aline",
+    "name": "Aline",
+    "category": "character",
+    "tags": ["Lost", "Memory", "Expedition 33"],
+    "shortDescription": "A companion lost to Expedition 33, now existing as memory and echo.",
+    "fullDescription": "Aline was Verso's companion during Expedition 33. When the Paintress claimed them both, Aline faded from reality, leaving only traces—memories painted into the Gallery's structure. What remains of her appears in various forms: a figure with canvas-white eyes in the Café d'Or, a warmth in certain spaces, fragments of emotion embedded in painted landscapes. She is simultaneously absent and omnipresent within Verso's journey."
+  },
+  {
+    "id": "the-paintress",
+    "name": "The Paintress (Aline)",
+    "category": "character",
+    "tags": ["Painter", "Creator", "Antagonist"],
+    "shortDescription": "The enigmatic artist who shapes the Painted Gallery.",
+    "fullDescription": "The Paintress is the creator of the Painted Gallery, though whether she built it or became it remains unclear. Known in the real world as Aline—a different Aline from Verso's companion—she possesses the ability to paint reality itself. Every brushstroke reshapes possibility. Every canvas she completes creates a new fractured world. Some believe she seeks to replace all of reality with her painted vision, perfecting existence through art. Others claim she's trapped in her own creation, unable to stop painting, forever trying to capture a truth that eludes her."
+  },
+  {
+    "id": "alicia",
+    "name": "Alicia the First Writer",
+    "category": "character",
+    "tags": ["Writer", "Founder", "Resonance"],
+    "shortDescription": "The legendary founder of the Scribes' Order.",
+    "fullDescription": "Alicia was the first Writer—the one who discovered that words could bind and define reality. She documented the original Expedition before numbering existed and wrote the first truthful account of the Painted Gallery. In attempting to record complete truth, she became truth itself, transforming into living language. Now she exists as a resonance that echoes through time, each generation producing a Writer who carries fragments of her consciousness. Her final documented words: 'I am becoming language itself. If you read this, you are reading me.'"
+  },
+  {
+    "id": "painted-gallery",
+    "name": "The Painted Gallery",
+    "category": "location",
+    "tags": ["Liminal", "Transition Point", "Core Location"],
+    "shortDescription": "A threshold between worlds where art and reality intertwine.",
+    "fullDescription": "An impossible place where the boundaries between the mundane and the surreal blur. Each gallery room contains doors to different realities, and the paintings themselves seem to shift and change when observed. The Gallery exists simultaneously in multiple states—it is both a physical location in Lumière and a metaphysical space between possibilities. Those who enter may find familiar places rendered strange, memories given form, or entirely new worlds painted into being. The Gallery is maintained by Renoir, though some believe it maintains itself, growing with each new painting the Paintress creates."
+  },
+  {
+    "id": "lumiere",
+    "name": "Lumière",
+    "category": "location",
+    "tags": ["City", "Real World", "Starting Point"],
+    "shortDescription": "The city where reality and the painted world first touched.",
+    "fullDescription": "Lumière is a city that remembers multiple versions of itself. In the real world, it stands as a cultural center of art and learning, home to both the Painters' Circle and the Scribes' Order. But in the painted worlds, Lumière exists in countless variations—each one reshaped by different artists' visions. The Café d'Or, La Fontaine des Souvenirs, and the Dreaming District all serve as threshold points where the real and painted overlap. After Expedition 33, some residents claim the city feels 'wrong,' as though they're living in someone else's memory of Lumière."
+  },
+  {
+    "id": "scribes-archive",
+    "name": "The Scribes' Archive",
+    "category": "location",
+    "tags": ["Library", "Knowledge", "Writer Domain"],
+    "shortDescription": "An ancient library housing forbidden knowledge and lost histories.",
+    "fullDescription": "The Scribes' Archive is the headquarters of the Writers' Order, containing records of all expeditions and documented truths. But these truths contradict each other—the same event recorded in dozens of different ways, all equally true across different fractured timelines. The Archive itself seems to exist partially outside normal time, with manuscripts appearing dated centuries ago despite having wet ink. Its deepest chambers hold the Liminal Archive, a space between spaces where all written words exist simultaneously. Only those who carry strong Writer resonance can access these depths without losing themselves to multiplicity."
+  },
+  {
+    "id": "painters-studio",
+    "name": "The Painters' Studio",
+    "category": "location",
+    "tags": ["Workshop", "Creation", "Painter Domain"],
+    "shortDescription": "A sprawling atelier where reality is reshaped through art.",
+    "fullDescription": "Headquarters of the Painters' Circle, the Studio is a vast space where imagination becomes tangible. Here, master Painters practice the Art of Creation—the ability to make painted worlds real. Canvas after canvas lines the walls, each one a doorway to a different reality. Students learn to paint with intention, to imbue brushstrokes with will, to create not just images but actual possibilities. The Studio's architecture shifts constantly, rebuilt by apprentice Painters practicing their craft. Some say the entire building is itself a painting, maintained collectively by all who work within it."
+  },
+  {
+    "id": "liminal-archive",
+    "name": "The Liminal Archive",
+    "category": "location",
+    "tags": ["Hidden", "Metaphysical", "Truth"],
+    "shortDescription": "A space between spaces where all written words exist at once.",
+    "fullDescription": "The Liminal Archive exists neither fully in reality nor in the painted worlds. It is a metaphysical space accessible only to those who can perceive across fractured timelines. Here, every book ever written and every book that could be written exists simultaneously. Contradictory accounts occupy the same shelf. Different versions of the same event blend and separate. Alicia the First Writer is said to dwell here in her transformed state, having become one with the written word. Those who enter unprepared risk losing themselves to multiplicity, their single identity fragmenting across infinite recorded truths."
+  },
+  {
+    "id": "cafe-dor",
+    "name": "Café d'Or",
+    "category": "location",
+    "tags": ["Threshold", "Memory", "Gathering Place"],
+    "shortDescription": "A café where memories linger and time moves strangely.",
+    "fullDescription": "The Café d'Or appears as a modest coffee house in real Lumière, but in painted worlds, it towers impossibly high—each floor a different architectural period stacked like geological sediment. Inside, time behaves peculiarly: patrons may be frozen mid-conversation, caught between moments. Coffee steams eternally. Conversations begun centuries ago await completion. The café serves as a threshold space where echoes of the past persist, making it a favored meeting place for those who walk between worlds. Verso and Aline's relationship is embedded in the café's very architecture, their memories painted into its walls."
+  },
+  {
+    "id": "fractured-expanse",
+    "name": "The Fractured Expanse",
+    "category": "location",
+    "tags": ["Dangerous", "Unexplored", "Frontier"],
+    "shortDescription": "Where multiple realities overlap and collide.",
+    "fullDescription": "The Fractured Expanse is the frontier beyond all mapped territories—a place where fractured timelines collide and merge chaotically. Here, the rules that govern both real and painted worlds break down. A single step might carry you across three different realities. The same location exists in contradictory states simultaneously. Those who venture into the Expanse without understanding multiplicityrarely return intact. Some emerge believing they are multiple people. Others forget which timeline they originated from. The Expanse grows with each new fracture, each expedition creating new territory of overlapping possibility."
+  },
+  {
+    "id": "painters-circle",
+    "name": "The Painters' Circle",
+    "category": "faction",
+    "tags": ["Painter", "Creators", "Artistic"],
+    "shortDescription": "Those who shape reality through art and vision.",
+    "fullDescription": "An ancient collective of artists and visionaries who believe reality can be reshaped through creative will. The Painters' Circle teaches the Art of Creation—the ability to make imagination tangible. Through disciplined practice, master Painters learn to imbue their work with such intention that painted things become real. They seek to understand and expand the boundary between imagination and existence, believing that reality is just another canvas. While they respect the Scribes' dedication to recording truth, Painters argue that creating new truths is more valuable than merely documenting existing ones."
+  },
+  {
+    "id": "scribes-order",
+    "name": "The Scribes' Order",
+    "category": "faction",
+    "tags": ["Writer", "Keepers", "Knowledge"],
+    "shortDescription": "Guardians of truth and recorded history.",
+    "fullDescription": "An order dedicated to documenting truth in a world of shadows and shifting realities. The Scribes maintain archives of what is real, what was, and what might have been. Since the fracturing, they have taken on the impossible task of recording contradictory truths—maintaining separate accounts of the same events across different timelines. They believe that truth can be found through careful observation and recording, and that the written word has power to anchor reality. While they acknowledge the Painters' creative abilities, Scribes worry that reshaping reality too casually erodes the foundations of shared truth."
+  },
+  {
+    "id": "expedition-33",
+    "name": "Expedition 33",
+    "category": "event",
+    "tags": ["Historical", "Catalyst", "Mystery"],
+    "shortDescription": "The event that fractured the world and began the tale.",
+    "fullDescription": "Thirty-three people ventured into the deepest reaches of the Painted Gallery. What exactly happened during Expedition 33 remains unclear—accounts contradict wildly depending on which timeline one consults. Some records say all thirty-three were lost. Others claim they all returned changed. Still others insist the expedition never ended, that it continues even now in some fractured state. What is certain: after Expedition 33, the fracturesintensified. Reality splintered more readily. The boundary between painted and real grew thinner. Verso and Aline were both part of this expedition, though their fates diverged impossibly—together in some timelines, separated in others, never having met in still others."
+  },
+  {
+    "id": "the-fracturing",
+    "name": "The Fracturing",
+    "category": "event",
+    "tags": ["Cataclysm", "Turning Point", "Origin"],
+    "shortDescription": "When the world splintered into multiple realities.",
+    "fullDescription": "A cataclysmic moment when Clair Obscur fractured into countless possible paths. Before the Fracturing, reality was singular—one timeline, one truth. After, every significant choice spawned new branches of possibility. The exact cause remains debated. Painters claim it began when the Paintress tried to paint a perfect world and accidentally painted infinite variations. Writers believe it started when Alicia tried to write the complete truth and instead wrote all possible truths. Some suggest it was inevitable—that reality had always been fractal, and humans simply became aware of it. Regardless of cause, travelers now navigate these fractured timelines, seeking understanding or trying to merge the realities back into one."
+  },
+  {
+    "id": "art-of-creation",
+    "name": "Art of Creation",
+    "category": "magic",
+    "tags": ["Painter", "Reality-shaping", "Visual"],
+    "shortDescription": "Magic wrought through artistic expression.",
+    "fullDescription": "The power to reshape reality through visual creation. Those who master the Art of Creation can make painted worlds tangible, bringing imagination into being through brush and canvas. The process requires more than technical skill—it demands intention, will, and understanding of the boundary between real and imagined. A master Painter doesn't simply create images; they create possibilities that become real. The art has limitations: creations tied too loosely to reality tend to fade or behave unpredictably. The most stable painted realities are those grounded in some aspect of truth, suggesting that imagination and reality must work in concert rather than opposition."
+  },
+  {
+    "id": "power-of-language",
+    "name": "Power of Language",
+    "category": "magic",
+    "tags": ["Writer", "Knowledge", "Truth"],
+    "shortDescription": "Magic inherent in the spoken and written word.",
+    "fullDescription": "Words hold immense power in Clair Obscur. The right phrase, spoken with conviction and understanding, can unlock doors, reveal truths, or alter perception. Language itself becomes a tool for anchoring and defining reality. Writers who master this power learn that words don't just describe the world—they bind it, give it structure, make it comprehensible. A well-written account can stabilize a fractured timeline. A carefully documented truth can serve as an anchor point when realities overlap. But the power has dangers: words spoken carelessly can rewrite unintended aspects of reality. Truths recorded with certainty can become prisons, preventing other possibilities from emerging."
+  },
+  {
+    "id": "canvas-magic",
+    "name": "The Canvas",
+    "category": "magic",
+    "tags": ["Tool", "Medium", "Creation"],
+    "shortDescription": "The fundamental medium through which painted realities take form.",
+    "fullDescription": "A Canvas is more than fabric stretched over a frame—it is a threshold space where imagination can become real. When a Painter works with true understanding, the Canvas becomes a doorway, a window, or a seed from which new realities grow. Empty Canvases exist in a state of potential, capable of becoming anything. Once painted, they begin to manifest their depicted reality, either fully (creating new spaces) or partially (overlaying the real world with painted elements). Ancient Canvases, worked on by multiple Painters across generations, can hold entire worlds. The Painted Gallery itself may be an infinite Canvas that has been added to for centuries, each new painting expanding its scope."
+  }
+]
