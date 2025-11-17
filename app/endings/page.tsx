@@ -2,78 +2,68 @@
 
 import Link from 'next/link'
 import { ChevronLeft, Lock, CheckCircle } from 'lucide-react'
+import { useEndingsProgress } from '@/lib/hooks/useEndingsProgress'
 
-interface Ending {
+interface EndingMetadata {
   key: string
   route: 'verso' | 'maelle'
   title: string
   description: string
-  unlocked: boolean
 }
 
-// Define all possible endings
-const ENDINGS: Ending[] = [
+// Define all possible endings metadata
+const ENDINGS_METADATA: EndingMetadata[] = [
   {
     key: 'verso_mediator',
     route: 'verso',
     title: 'The Mediator',
-    description: 'Walk the threshold between worlds. Neither trapped nor free, neither real nor imagined.',
-    unlocked: false
+    description: 'Walk the threshold between worlds. Neither trapped nor free, neither real nor imagined. You exist as a bridge between Painter and Writer, flesh and pigment in harmony.'
   },
   {
     key: 'verso_escape',
     route: 'verso',
     title: 'Return to Flesh',
-    description: 'Choose the real over the painted, forgetting what you were to reclaim what you had been.',
-    unlocked: false
+    description: 'Choose the real over the painted, forgetting what you were to reclaim what you had been. Unpainted and whole, but at the cost of memory.'
   },
   {
     key: 'verso_rebel',
     route: 'verso',
     title: 'The Third Door',
-    description: 'Reject the binary. Paint yourself new rules and write them into reality.',
-    unlocked: false
+    description: 'Reject the binary. Paint yourself new rules and write them into reality. Break the Gallery itself through sheer impossible will.'
   },
   {
     key: 'maelle_resonance',
     route: 'maelle',
     title: 'The Living Archive',
-    description: 'Merge with Alicia completely, becoming the embodiment of all recorded truth.',
-    unlocked: false
+    description: 'Merge with Alicia completely, becoming the embodiment of all recorded truth across all timelines. You are language itself now.'
   },
   {
     key: 'maelle_dual_self',
     route: 'maelle',
     title: 'The Dual Self',
-    description: 'Achieve balance between individual identity and the resonance with Alicia.',
-    unlocked: false
+    description: 'Achieve balance between individual identity and the resonance with Alicia. Remain Maelle while carrying the echo of the First Writer.'
   },
   {
     key: 'maelle_cartographer',
     route: 'maelle',
     title: 'Keeper of Maps',
-    description: 'Share your knowledge, becoming the guide who helps others navigate fractured timelines.',
-    unlocked: false
+    description: 'Share your knowledge, becoming the guide who helps others navigate fractured timelines. Your maps chart all possible paths.'
   },
   {
     key: 'maelle_guardian',
     route: 'maelle',
     title: 'The Lonely Truth',
-    description: 'Protect the knowledge of fractures alone, eternal guardian watching over multiplicity.',
-    unlocked: false
+    description: 'Protect the knowledge of fractures alone, eternal guardian watching over multiplicity. The burden of truth carried in solitude.'
   }
 ]
 
 export default function EndingsPage() {
-  // In a real implementation, this would check localStorage or a state management system
-  // for which endings have been unlocked
-  const endings = ENDINGS
+  const { isUnlocked, totalUnlocked, isLoading } = useEndingsProgress()
 
-  const versoEndings = endings.filter(e => e.route === 'verso')
-  const maelleEndings = endings.filter(e => e.route === 'maelle')
+  const versoEndings = ENDINGS_METADATA.filter(e => e.route === 'verso')
+  const maelleEndings = ENDINGS_METADATA.filter(e => e.route === 'maelle')
 
-  const totalEndings = endings.length
-  const unlockedCount = endings.filter(e => e.unlocked).length
+  const totalEndings = ENDINGS_METADATA.length
 
   return (
     <div className="min-h-screen bg-background">
@@ -98,7 +88,7 @@ export default function EndingsPage() {
             <span className="text-sm text-muted-foreground">
               Unlocked:{' '}
               <span className="text-primary font-light text-lg">
-                {unlockedCount}/{totalEndings}
+                {isLoading ? '...' : `${totalUnlocked}/${totalEndings}`}
               </span>
             </span>
           </div>
@@ -114,46 +104,50 @@ export default function EndingsPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-4">
-            {versoEndings.map(ending => (
-              <div
-                key={ending.key}
-                className={`glass rounded-xl p-6 transition-all ${
-                  ending.unlocked
-                    ? 'hover:bg-card/70 cursor-pointer'
-                    : 'opacity-60'
-                }`}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 mt-1">
-                    {ending.unlocked ? (
-                      <CheckCircle size={24} className="text-primary" />
-                    ) : (
-                      <Lock size={24} className="text-muted-foreground" />
-                    )}
-                  </div>
+            {versoEndings.map(ending => {
+              const unlocked = isUnlocked(ending.route, ending.key)
 
-                  <div className="flex-1">
-                    <h3 className="text-xl font-light text-foreground mb-2">
-                      {ending.unlocked ? ending.title : '???'}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {ending.unlocked
-                        ? ending.description
-                        : 'Complete this path to unlock this ending.'}
-                    </p>
+              return (
+                <div
+                  key={ending.key}
+                  className={`glass rounded-xl p-6 transition-all ${
+                    unlocked
+                      ? 'hover:bg-card/70 cursor-pointer border-primary/20'
+                      : 'opacity-60'
+                  }`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      {unlocked ? (
+                        <CheckCircle size={24} className="text-primary" />
+                      ) : (
+                        <Lock size={24} className="text-muted-foreground" />
+                      )}
+                    </div>
 
-                    {ending.unlocked && (
-                      <Link
-                        href={`/stories/verso/play`}
-                        className="inline-block mt-4 text-sm text-primary hover:text-primary/80 transition-colors"
-                      >
-                        Experience again →
-                      </Link>
-                    )}
+                    <div className="flex-1">
+                      <h3 className="text-xl font-light text-foreground mb-2">
+                        {unlocked ? ending.title : '???'}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {unlocked
+                          ? ending.description
+                          : 'Complete Verso\'s path to unlock this ending.'}
+                      </p>
+
+                      {unlocked && (
+                        <Link
+                          href={`/stories/verso/play`}
+                          className="inline-block mt-4 text-sm text-primary hover:text-primary/80 transition-colors"
+                        >
+                          Experience again →
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </section>
 
@@ -167,46 +161,50 @@ export default function EndingsPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-4">
-            {maelleEndings.map(ending => (
-              <div
-                key={ending.key}
-                className={`glass rounded-xl p-6 transition-all ${
-                  ending.unlocked
-                    ? 'hover:bg-card/70 cursor-pointer'
-                    : 'opacity-60'
-                }`}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 mt-1">
-                    {ending.unlocked ? (
-                      <CheckCircle size={24} className="text-primary" />
-                    ) : (
-                      <Lock size={24} className="text-muted-foreground" />
-                    )}
-                  </div>
+            {maelleEndings.map(ending => {
+              const unlocked = isUnlocked(ending.route, ending.key)
 
-                  <div className="flex-1">
-                    <h3 className="text-xl font-light text-foreground mb-2">
-                      {ending.unlocked ? ending.title : '???'}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {ending.unlocked
-                        ? ending.description
-                        : 'Complete this path to unlock this ending.'}
-                    </p>
+              return (
+                <div
+                  key={ending.key}
+                  className={`glass rounded-xl p-6 transition-all ${
+                    unlocked
+                      ? 'hover:bg-card/70 cursor-pointer border-accent/20'
+                      : 'opacity-60'
+                  }`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      {unlocked ? (
+                        <CheckCircle size={24} className="text-accent" />
+                      ) : (
+                        <Lock size={24} className="text-muted-foreground" />
+                      )}
+                    </div>
 
-                    {ending.unlocked && (
-                      <Link
-                        href={`/stories/maelle/play`}
-                        className="inline-block mt-4 text-sm text-primary hover:text-primary/80 transition-colors"
-                      >
-                        Experience again →
-                      </Link>
-                    )}
+                    <div className="flex-1">
+                      <h3 className="text-xl font-light text-foreground mb-2">
+                        {unlocked ? ending.title : '???'}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {unlocked
+                          ? ending.description
+                          : 'Complete Maelle\'s path to unlock this ending.'}
+                      </p>
+
+                      {unlocked && (
+                        <Link
+                          href={`/stories/maelle/play`}
+                          className="inline-block mt-4 text-sm text-accent hover:text-accent/80 transition-colors"
+                        >
+                          Experience again →
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </section>
 
