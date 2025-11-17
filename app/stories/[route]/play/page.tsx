@@ -40,6 +40,7 @@ export default function StoryPlayPage({
       nodes={data.nodes}
       startNodeId={data.route.startNodeId}
       totalChapters={data.route.totalChapters}
+      routeName={data.route.name}
     />
   )
 }

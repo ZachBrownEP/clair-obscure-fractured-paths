@@ -324,81 +324,221 @@ npm start
 
 ## State Management & Persistence
 
-### Current Implementation
+### ✅ Implemented Features
 
-- **In-memory state**: Story progress is tracked during a session
-- **No persistence**: Progress resets on page reload
+The app now includes full localStorage persistence for story progress and ending unlocks.
 
-### Future Enhancement
+### Story Progress Persistence
 
-To add localStorage persistence:
+**Location:** `/lib/story/persistence.ts`
 
-1. Create a hook `/lib/hooks/useStoryProgress.ts`:
+Each story route saves progress automatically:
+
+- **What's saved per route:**
+  - Current node ID
+  - Alignment stats (Painter, Writer, Compassion)
+  - Flags set by choices
+  - Seen nodes history
+  - Current chapter
+
+- **Storage key format:** `fractured_paths_route_{routeId}`
+
+**How it works:**
+
+1. On page load, `StoryEngine` checks for saved progress:
 ```typescript
-export function useStoryProgress(routeId: StoryRouteId) {
-  const [state, setState] = useState<StoryState>(() => {
-    const saved = localStorage.getItem(`story-${routeId}`)
-    return saved ? JSON.parse(saved) : getInitialState(routeId)
-  })
+const [state, setState] = useState<StoryState>(() =>
+  loadStoryState(routeId, startNodeId)
+)
+```
 
-  useEffect(() => {
-    localStorage.setItem(`story-${routeId}`, JSON.stringify(state))
-  }, [state, routeId])
+2. Every state change auto-saves to localStorage:
+```typescript
+useEffect(() => {
+  saveStoryState(state)
+}, [state])
+```
 
-  return [state, setState]
+3. **Restart button** clears saved progress:
+```typescript
+const handleRestart = () => {
+  clearStoryState(routeId)
+  setState(getInitialState(routeId, startNodeId))
 }
 ```
 
-2. Update `StoryEngine` to use this hook instead of plain `useState`
+### Ending Unlock Tracking
+
+**Location:** `/lib/story/persistence.ts`
+
+When a player reaches an ending node (`isEnding: true`), it's automatically unlocked:
+
+```typescript
+// In StoryEngine.tsx
+if (nextNode?.isEnding && nextNode.endingKey) {
+  unlockEnding(routeId, nextNode.endingKey)
+}
+```
+
+**Data structure:**
+```typescript
+interface EndingUnlock {
+  route: StoryRouteId
+  endingKey: string
+  unlockedAt: string // ISO timestamp
+}
+```
+
+**Storage key:** `fractured_paths_endings`
+
+**Unlocked endings are:**
+- Stored as an array in localStorage
+- Idempotent (no duplicates)
+- Persistent across all routes
+- Displayed in the `/endings` gallery
+
+### Endings Gallery Integration
+
+**Location:** `/app/endings/page.tsx`
+
+The endings page uses `useEndingsProgress` hook to:
+
+1. Load all unlocked endings from localStorage
+2. Display locked vs unlocked states
+3. Show unlock counts: "3/7 Unlocked"
+
+**Locked endings show:**
+- "???" as title
+- Generic "Complete this path to unlock" message
+- Lock icon
+
+**Unlocked endings show:**
+- Full title and description
+- CheckCircle icon
+- "Experience again →" link
+
+### SSR Handling
+
+All localStorage access is SSR-safe:
+
+```typescript
+const isClient = typeof window !== 'undefined'
+
+if (!isClient) return getInitialState(...)
+```
+
+This prevents errors during Next.js server-side rendering.
+
+### Adding New Endings
+
+To add a new ending:
+
+1. **In story JSON**, create an ending node:
+```json
+{
+  "id": "new_ending_node",
+  "route": "verso",
+  "chapter": 5,
+  "isEnding": true,
+  "endingKey": "verso_new_ending",
+  "endingTitle": "The New Path",
+  "text": "Your ending narrative...",
+  "choices": []
+}
+```
+
+2. **In `/app/endings/page.tsx`**, add metadata to `ENDINGS_METADATA`:
+```typescript
+{
+  key: 'verso_new_ending',
+  route: 'verso',
+  title: 'The New Path',
+  description: 'Description shown after unlock...'
+}
+```
+
+That's it! The ending will auto-unlock when reached and appear in the gallery.
+
+---
+
+## UI Features
+
+### Alignment Indicators
+
+The story play page shows three alignment stats as progress bars:
+
+- **Painter** (gold/primary) - Choices favoring artistic creation and imagination
+- **Writer** (teal/accent) - Choices favoring truth-seeking and documentation
+- **Compassion** (gray-blue/secondary) - Choices showing empathy and connection
+
+**Display:**
+- Shown below the route title during story play
+- Three horizontal bars with numeric values (0-100)
+- Updated in real-time as choices affect stats
+- Hidden on ending screens
+
+**Implementation:**
+```typescript
+<div className="grid grid-cols-3 gap-4">
+  {/* Painter, Writer, Compassion bars */}
+</div>
+```
 
 ---
 
 ## Future TODOs
 
+### ✅ Completed in Phase 2
+- [x] **Save/Load System**: Persist story progress to localStorage
+- [x] **Ending Tracking**: Unlock endings in `/endings` page based on completed routes
+- [x] **UI Polish**: Enhanced alignment indicators and ending screens
+
 ### High Priority
-- [ ] **Save/Load System**: Persist story progress to localStorage
-- [ ] **Ending Tracking**: Unlock endings in `/endings` page based on completed routes
-- [ ] **Responsive Polish**: Test and refine mobile experience
 - [ ] **Chapter 2+ Content**: Expand Verso and Maelle stories beyond Chapter 1
+- [ ] **Responsive Testing**: Comprehensive mobile/tablet testing and refinement
+- [ ] **Continue vs Start**: Show "Continue" on home page if saved progress exists
 
 ### Medium Priority
 - [ ] **Animations**: Add page transitions and choice selection animations
 - [ ] **Sound Design**: Background music and sound effects
-- [ ] **Achievement System**: Track player choices and play style
+- [ ] **Achievement System**: Track player choices and play style beyond endings
 - [ ] **Character Portraits**: Add visual character art to story nodes
 - [ ] **Map Interactivity**: Make world map clickable with location navigation
+- [ ] **Stats Dashboard**: Page showing player's overall alignment trends
 
 ### Low Priority
 - [ ] **Multiple Language Support**: i18n for story content
-- [ ] **Dark/Light Mode Toggle**: Despite dark theme being primary
+- [ ] **Export Progress**: Allow users to export/import save data
 - [ ] **Social Sharing**: Share endings or story moments
-- [ ] **Analytics**: Track popular story paths and endings
+- [ ] **Analytics**: Track popular story paths and endings (privacy-respecting)
 
 ---
 
 ## Key Files Reference
 
-### Types
+### Types & Utilities
 - `/lib/story/types.ts` - All TypeScript interfaces for story system
+- `/lib/story/persistence.ts` - localStorage utilities for progress and endings
+- `/lib/hooks/useEndingsProgress.ts` - React hook for endings gallery
 
 ### Components
-- `/components/story/StoryEngine.tsx` - Main story engine
+- `/components/story/StoryEngine.tsx` - Main story engine with persistence
 - `/components/choice-button.tsx` - Choice button with alignment indicators
 - `/components/alignment-indicator.tsx` - Shows painter/writer scores
 - `/components/progress-bar.tsx` - Chapter progress bar
 
 ### Data
-- `/data/stories/verso.json` - Verso's complete story
-- `/data/stories/maelle.json` - Maelle's complete story
-- `/data/codex/entries.json` - All codex entries
+- `/data/stories/verso.json` - Verso's complete story (3 endings)
+- `/data/stories/maelle.json` - Maelle's complete story (4 endings)
+- `/data/codex/entries.json` - All codex entries (19 entries)
 
 ### Pages
 - `/app/page.tsx` - Home page
 - `/app/stories/[route]/page.tsx` - Story detail
-- `/app/stories/[route]/play/page.tsx` - Story playthrough
-- `/app/codex/page.tsx` - Lore codex
+- `/app/stories/[route]/play/page.tsx` - Story playthrough with engine
+- `/app/codex/page.tsx` - Lore codex with filters
 - `/app/map/page.tsx` - World map
-- `/app/endings/page.tsx` - Endings gallery
+- `/app/endings/page.tsx` - Endings gallery with unlock tracking
 
 ---
 
