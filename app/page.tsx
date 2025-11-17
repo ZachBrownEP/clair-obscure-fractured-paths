@@ -1,22 +1,11 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { BookOpen, Map, Trophy, ChevronRight } from 'lucide-react'
 import HeroSection from '@/components/hero-section'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
-      {/* Faded background image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/story-background.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-10"
-          priority
-        />
-      </div>
-      <main className="relative z-10">
+    <div className="min-h-screen bg-background text-foreground">
+      <main>
         <HeroSection />
 
         <section className="px-4 md:px-8 py-16 max-w-7xl mx-auto">
