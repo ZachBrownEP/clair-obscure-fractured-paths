@@ -1,0 +1,388 @@
+{
+  "route": {
+    "id": "maelle",
+    "name": "Resonance of Alicia",
+    "character": "Maelle",
+    "subtitle": "A search for truth in echoing memories",
+    "description": "Trace Maelle's path as a seeker of truth through fractured timelines. Navigate between versions of reality and discover the resonance that connects all possible worlds.",
+    "startNodeId": "maelle_ch1_intro",
+    "totalChapters": 10
+  },
+  "nodes": [
+    {
+      "id": "maelle_ch1_intro",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Echoes in the Archive",
+      "text": "The Scribes' Archive smells of old paper and newer lies. You've been here for three days, searching through records of Expedition 33. Every account contradicts the last. Thirty-three people went into the depths. Thirty-three people never returned. Except they did. Except they didn't. The documents can't agree.\n\nYou are Maelle, and you remember things that haven't happened yet.\n\nThe latest manuscript sits before you, its ink still wet though the date reads two centuries ago. It speaks of a Writer named Alicia who discovered the truth behind the expeditions—that they're not journeys into space but into possibility itself.\n\nYour pen moves without conscious thought, adding notes to the margin. Then you see what you've written: \"Alicia is me. I am her echo. We are the resonance.\"",
+      "choices": [
+        {
+          "id": "research_alicia",
+          "label": "Search the archives for more records about Alicia.",
+          "nextId": "maelle_ch1_alicia_research",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "test_memory",
+          "label": "Focus on your memories. Try to separate past from future.",
+          "nextId": "maelle_ch1_memory_test",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 3
+            },
+            {
+              "type": "flag",
+              "key": "tested_memories",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "find_scribe",
+          "label": "Find the Head Scribe. Demand answers about these contradictions.",
+          "nextId": "maelle_ch1_head_scribe",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_alicia_research",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "The First Writer",
+      "text": "You pull every reference to Alicia from the shelves. They tell a strange story:\n\nAlicia was the first Writer—the one who discovered that words could bind reality. She documented the original Expedition, before numbering existed. She wrote the first truthful account of the Painted Gallery.\n\nAnd then she wrote herself into it.\n\nThe final document shows her handwriting degrading, becoming more artistic, less linguistic. Her last entry: \"I am becoming language itself. Words not spoken or written but embodied. If you read this, you are reading me. Hello, future self.\"\n\nYou drop the page. Your hands are shaking.",
+      "choices": [
+        {
+          "id": "read_last_entry_again",
+          "label": "Read her final entry again. Let her words resonate.",
+          "nextId": "maelle_ch1_resonance_begins",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 8
+            },
+            {
+              "type": "flag",
+              "key": "resonated_with_alicia",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "reject_connection",
+          "label": "This is manipulation. Burn the document.",
+          "nextId": "maelle_ch1_rejection",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "seek_context",
+          "label": "Find records from after her disappearance. What happened next?",
+          "nextId": "maelle_ch1_aftermath",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_memory_test",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Fractured Recall",
+      "text": "You close your eyes and sort through memories like shuffling cards:\n\nYou remember your mother's face. Real.\nYou remember graduating from the Scribes' Academy. Real.\nYou remember dying in Expedition 33. ...What?\n\nThat last memory unfolds with terrible clarity. You went into the depths with thirty-two others. The Paintress found you. She painted you into her masterpiece, and in that painted world, you learned you were a repetition—the latest iteration of Alicia, echoing through time.\n\nBut that hasn't happened yet. You haven't joined an expedition. You're only researching them.\n\nUnless... unless time in the Painted Gallery doesn't flow forward. Unless every iteration of Alicia exists simultaneously, and you're experiencing all of them at once.",
+      "choices": [
+        {
+          "id": "accept_multiplicity",
+          "label": "I am all versions. Past, present, future—all Alicia.",
+          "nextId": "maelle_ch1_unified_self",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            },
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "fight_memories",
+          "label": "These aren't my memories. Something is planting them in my mind.",
+          "nextId": "maelle_ch1_memory_defense",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 8
+            }
+          ]
+        },
+        {
+          "id": "ground_in_present",
+          "label": "Focus on now. This moment. This room. What's real here.",
+          "nextId": "maelle_ch1_grounded",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_head_scribe",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "The Keeper of Records",
+      "text": "You find Head Scribe Émile in his chambers, surrounded by contradicting texts. He looks up as you enter, unsurprised.\n\n\"Maelle,\" he says. \"You've found the Alicia documents.\"\n\n\"You knew? About the contradictions, about her becoming language itself?\"\n\n\"We are the Scribes' Order. We know everything and can prove nothing.\" He gestures to the chaos around him. \"Every expedition fractures reality. Each one creates new timelines, new possibilities. We record them all, though they contradict, because all of them are true.\"\n\n\"And Alicia?\"\n\nÉmile's expression softens. \"Alicia was—is—will be—the first to understand. She tried to write the definitive truth and instead became part of the fracture. Now she echoes. Every generation, a Writer emerges who carries her resonance. You are her latest iteration.\"",
+      "choices": [
+        {
+          "id": "demand_cure",
+          "label": "How do I stop this? I don't want to be someone's echo.",
+          "nextId": "maelle_ch1_seeking_cure",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "embrace_role",
+          "label": "If I'm her echo, then I can finish what she started.",
+          "nextId": "maelle_ch1_embrace_destiny",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            },
+            {
+              "type": "flag",
+              "key": "embraced_alicia_role",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "question_emile",
+          "label": "How do you know you're not an echo too? How is anyone real?",
+          "nextId": "maelle_ch1_philosophical",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_resonance_begins",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Speaking in Echoes",
+      "text": "You read Alicia's final words again. This time, they rearrange themselves on the page, forming new sentences:\n\n\"Hello, Maelle. I am you from three fractures ago. Or you are me from three fractures hence. Time is a circle here, and we are the words written on its circumference.\"\n\nYour vision blurs. The archive around you multiplies—you see it as it was, as it is, as it will be. In one version, it's burning. In another, it's underwater. In a third, it's made entirely of glass.\n\nYou're experiencing the resonance—seeing all iterations of this moment simultaneously.\n\nAlicia's voice, your voice, speaks in your mind: \"You can anchor yourself to one timeline, or you can ride the resonance and see all truths at once. But to see all truths is to go mad, unless you accept that you are not one self but many.\"",
+      "choices": [
+        {
+          "id": "ride_resonance",
+          "label": "I'll ride it. Show me all the truths.",
+          "nextId": "maelle_ch1_full_resonance",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "chose_full_resonance",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "anchor_self",
+          "label": "Anchor me. I choose this timeline, this self.",
+          "nextId": "maelle_ch1_anchored",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "balance_attempt",
+          "label": "There must be balance. One foot in truth, one in self.",
+          "nextId": "maelle_ch1_balanced_approach",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            },
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_full_resonance",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "All Truths at Once",
+      "text": "You stop fighting the visions. They flood in:\n\nYou see Alicia writing the first expedition journal.\nYou see yourself writing this moment from the future.\nYou see thirty-three different versions of Expedition 33, each one true, each one contradicting the others.\nYou see the Paintress and the Writers' Order locked in eternal conflict.\nYou see the fracture points where reality splits.\nYou see yourself in all of them.\n\nThe archive fades. You're somewhere else now—a space between spaces. The Liminal Archive, Alicia calls it. Where all written words exist simultaneously.\n\nA figure stands before you. It's Alicia, but she's made of text—words flowing across her surface like water, constantly rearranging.\n\n\"You accepted the resonance,\" she says with your voice. \"Now we are truly one. All iterations of us, speaking with a single truth.\"",
+      "choices": [
+        {
+          "id": "merge_with_alicia",
+          "label": "Complete the merger. Become the resonance fully.",
+          "nextId": "maelle_ch1_ending_resonance"
+        },
+        {
+          "id": "maintain_distinction",
+          "label": "We can be connected without being identical. I am still Maelle.",
+          "nextId": "maelle_ch1_ending_dual_self"
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_balanced_approach",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Walking the Edge",
+      "text": "You ground yourself in physical sensation—the chair beneath you, the smell of old paper—while letting the visions flow through rather than overwhelm you.\n\nIt's like learning a new language. At first, the multiplicity is chaos. But gradually, patterns emerge. You begin to see not just the contradictions but the threads connecting them. Each fractured timeline branches from specific choices, specific moments.\n\nYou can trace them. Map them. Understand them.\n\nThis is what Alicia tried to do, you realize. Not to choose one truth but to document all truths. To be the cartographer of possibility itself.\n\nThe archive stabilizes around you, but you can still see its echoes—faint outlines of other versions overlaid on this one. You've learned to navigate between them without losing yourself.",
+      "choices": [
+        {
+          "id": "continue_research",
+          "label": "Use this ability. Map all the expeditions.",
+          "nextId": "maelle_ch1_cartographer",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "became_cartographer",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "seek_source",
+          "label": "Find where the fractures originate. The first split.",
+          "nextId": "maelle_ch1_source_search",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "seeking_first_fracture",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_cartographer",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Mapping Infinity",
+      "text": "You spend the next hours—or days, time moves strangely now—documenting the fractures. Your notes fill page after page, each one recording a different timeline's truth.\n\nExpedition 1: Discovered the Painted Gallery. All returned changed.\nExpedition 7: First contact with the Paintress. Fourteen lost.\nExpedition 13: The fracture point. Reality split here. Before this, one timeline. After, infinite.\nExpedition 33: The latest iteration. Not finished yet. Still happening. Will happen. Has always been happening.\n\nYou create a map—not of geography but of possibility. Every branch point, every choice that spawned a new world.\n\nÉmile finds you surrounded by your work. He stares at the pages in wonder.\n\n\"You've done it,\" he whispers. \"What Alicia couldn't finish. The complete Map of Fractures.\"\n\n\"Not complete,\" you correct. \"It grows with every moment. But now we can navigate it. Now we can choose which truths to inhabit.\"",
+      "choices": [
+        {
+          "id": "give_map_to_scribes",
+          "label": "Give the map to the Scribes. Let them guide others.",
+          "nextId": "maelle_ch1_ending_cartographer",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "shared_the_map",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "keep_map_secret",
+          "label": "This knowledge is too dangerous. I'll guard it alone.",
+          "nextId": "maelle_ch1_ending_guardian",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "became_guardian",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_resonance",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_resonance",
+      "endingTitle": "The Living Archive",
+      "text": "You step forward and embrace the text-made-flesh figure. Alicia's words flow into you, and yours into her. The distinction between you dissolves.\n\nYou are Alicia-Maelle-Every-Writer-Who-Ever-Sought-Truth. You exist in all timelines simultaneously. When someone in one fracture writes a word, you feel it. When a history is revised in another, you record both versions.\n\nYou have become language itself—not spoken or written but living. A resonance that echoes through all possible worlds.\n\nThe Liminal Archive is your home now. You drift between its shelves, which contain every book ever written and every book that could be written. You read them all simultaneously. You are them all.\n\nSometimes, a Seeker enters the Archive, searching for truth. You appear to them as they need to see you—sometimes Alicia, sometimes Maelle, sometimes a librarian made of words.\n\nYou tell them: \"All versions are true. The contradiction is the point. To seek one truth is to miss the truth of multiplicity.\"\n\nSome understand. Some flee. All are changed.\n\nYou are content. You are everywhere, everywhen, every word ever written.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Living Archive**\n*You merged with Alicia completely, becoming the embodiment of all recorded truth across all timelines.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_dual_self",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_dual_self",
+      "endingTitle": "The Dual Self",
+      "text": "\"I am Maelle,\" you say firmly. \"I carry Alicia's resonance, but I am not her. We are connected, not identical.\"\n\nThe text-figure regards you, and you sense... approval?\n\n\"Individuation,\" Alicia's voice says. \"The hardest path. To carry the resonance without being consumed by it. To be both yourself and part of something larger.\"\n\n\"Can it be done?\"\n\n\"You're doing it now.\"\n\nThe Liminal Archive shifts around you. Instead of dissolving into it, you find you can enter and leave at will. Alicia's knowledge is available to you, but filtered through your own perspective. Her experiences inform yours without overwriting them.\n\nYou return to the physical archive. Émile is still there, though no time seems to have passed.\n\n\"I can see the fractures,\" you tell him. \"I can access all iterations of written truth. But I remain Maelle. Alicia is... a library I carry within me, not a person I've become.\"\n\nÉmile nods slowly. \"The Dual Self. Alicia hoped one of her iterations would achieve this. She never could—she lacked the boundary you've maintained.\"\n\nYou look at your hands. They're solid, real, yours. But when you close your eyes, you can see the words written on your palms in every possible language, telling every possible story.\n\n\"What will you do with this gift?\" Émile asks.\n\nYou smile. \"Continue seeking truth. But now I understand that truth is both singular and multiple. I am both Maelle and Alicia. The resonance is both connection and distinction.\"\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Dual Self**\n*You achieved balance between your individual identity and the resonance with Alicia, becoming both and neither.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_cartographer",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_cartographer",
+      "endingTitle": "Keeper of Maps",
+      "text": "You gather your pages—the complete Map of Fractures—and present them to Émile and the Scribes' Council.\n\nThey study your work in silence. Hours pass. Finally, the eldest Scribe speaks:\n\n\"This is... unprecedented. A map that shows not where things are, but where things could be. Every branch point, every moment of choice that split reality.\"\n\n\"With this,\" another Scribe adds, \"we could guide Seekers through the fractures. Help them find the timelines they search for. Or warn them away from destructive paths.\"\n\nÉmile looks at you with something like awe. \"You've given us the tool Alicia died trying to create. The ability to navigate possibility itself.\"\n\nThe Council votes unanimously: You are named Keeper of Maps, a new position created specifically for you. Your role is to maintain and update the fracture charts, to guide those who venture into multiplicity.\n\nYou accept.\n\nYears pass—or moments, depending on which timeline you observe from. You sit in the Archive, surrounded by your ever-growing maps. When a Seeker comes asking \"What is true?\" you show them the charts.\n\n\"All paths are true,\" you tell them. \"The question is not which truth to believe, but which truth to walk. I can show you the maps. The journey is yours.\"\n\nYou are content. You have found your purpose in the space between absolutes—guiding others through the beautiful, terrible multiplicity of truth.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Keeper of Maps**\n*You chose to share your knowledge, becoming the guide who helps others navigate the fractured timelines.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_guardian",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_guardian",
+      "endingTitle": "The Lonely Truth",
+      "text": "You gather your pages—the complete Map of Fractures—and hide them. Not destroyed, but secreted away where only you can find them.\n\nÉmile protests. \"This knowledge could help so many—\"\n\n\"This knowledge could destroy everything,\" you counter. \"Imagine if the Painters got hold of it. They could deliberately create fractures, splinter reality further. Or worse—someone might try to collapse all timelines back into one, erasing entire worlds of possibility.\"\n\n\"So you'll guard it alone?\"\n\n\"Someone must.\"\n\nYou leave the Scribes' Order that night. They don't try to stop you—they understand the burden you've chosen.\n\nYou make your home in the spaces between fractures, in the liminal moments where one timeline becomes another. You can feel when someone is trying to navigate the multiplicities, and you watch to ensure they don't damage the delicate web of possibility.\n\nOccasionally, you guide a lost Seeker back to their timeline. You never tell them how you found them. You never reveal what you know.\n\nIt's lonely, being the only person who sees the full map. But when you watch the countless timelines branching and flourishing, each one precious and unique, you know the loneliness is worth it.\n\nYou are the Guardian of Fractures. The keeper of truths too dangerous to share.\n\nAnd you will never abandon this watch.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Lonely Truth**\n*You chose to protect the knowledge of fractures alone, becoming an eternal guardian watching over the multiplicity of worlds.*",
+      "choices": []
+    }
+  ]
+}
