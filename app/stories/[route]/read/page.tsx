@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, ArrowLeft, ArrowRight, Home, Gamepad2 } from
 import { getLinearStory } from '@/lib/story/linearLoader'
 import { LinearStoryRoute } from '@/lib/story/linearTypes'
 import { motion, AnimatePresence } from 'framer-motion'
+import EnhancedBackground from '@/components/enhanced-background'
 
 interface StoryReaderProps {
   params: {
@@ -151,8 +152,9 @@ export default function StoryReader({ params }: StoryReaderProps) {
   // Story complete state
   if (isLastPage) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-background via-background to-background/80 flex items-center justify-center p-4">
-        <div className="max-w-3xl w-full">
+      <div className="min-h-screen bg-gradient-to-b from-background via-background to-background/80 flex items-center justify-center p-4 relative overflow-hidden">
+        <EnhancedBackground />
+        <div className="max-w-3xl w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -220,8 +222,9 @@ export default function StoryReader({ params }: StoryReaderProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-background/80">
-      <main className="max-w-4xl mx-auto px-4 md:px-8 py-8">
+    <div className="min-h-screen bg-gradient-to-b from-background via-background to-background/80 relative overflow-hidden">
+      <EnhancedBackground />
+      <main className="max-w-4xl mx-auto px-4 md:px-8 py-8 relative z-10">
         {/* Back link */}
         <Link
           href={`/stories/${params.route}`}

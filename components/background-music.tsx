@@ -7,6 +7,7 @@ export default function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [isMuted, setIsMuted] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [hasInteracted, setHasInteracted] = useState(false)
 
   useEffect(() => {
     // Load mute preference from localStorage
@@ -23,24 +24,47 @@ export default function BackgroundMusic() {
     const audio = audioRef.current
     audio.volume = 0.3 // Set to 30% volume for background music
 
+    // Try to autoplay on mount if not muted
+    if (!hasInteracted && !isMuted) {
+      const playPromise = audio.play()
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Autoplay succeeded
+            setHasInteracted(true)
+          })
+          .catch((error) => {
+            console.log('Autoplay prevented by browser:', error)
+            // Autoplay was prevented - audio will start on first user interaction
+          })
+      }
+    }
+  }, [isLoaded, hasInteracted, isMuted])
+
+  useEffect(() => {
+    if (!audioRef.current || !isLoaded || !hasInteracted) return
+
+    const audio = audioRef.current
+
     if (isMuted) {
       audio.pause()
     } else {
-      // Attempt to play with error handling
       const playPromise = audio.play()
       if (playPromise !== undefined) {
         playPromise.catch((error) => {
-          console.log('Autoplay prevented:', error)
-          // Autoplay was prevented, user will need to click the toggle
+          console.log('Play error:', error)
         })
       }
     }
 
     // Save mute state to localStorage
     localStorage.setItem('backgroundMusicMuted', String(isMuted))
-  }, [isMuted, isLoaded])
+  }, [isMuted, isLoaded, hasInteracted])
 
   const toggleMute = () => {
+    if (!hasInteracted) {
+      setHasInteracted(true)
+    }
     setIsMuted(!isMuted)
   }
 

@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { ChevronLeft, ChevronRight, BookOpen, Gamepad2 } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { hasLinearStory } from '@/lib/story/linearLoader'
+import EnhancedBackground from '@/components/enhanced-background'
 
 // Route metadata
 const routes = {
@@ -37,17 +37,8 @@ export default async function StoryRoutePage({
   }
 
   return (
-    <div className="min-h-screen bg-background relative">
-      {/* Faded background image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/story-background.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-10"
-          priority
-        />
-      </div>
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <EnhancedBackground />
       <main className="max-w-4xl mx-auto px-4 md:px-8 py-16 relative z-10">
         {/* Back link */}
         <Link

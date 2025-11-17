@@ -14,6 +14,7 @@ import Link from 'next/link'
 import ChoiceButton from '@/components/choice-button'
 import AlignmentIndicator from '@/components/alignment-indicator'
 import ProgressBar from '@/components/progress-bar'
+import EnhancedBackground from '@/components/enhanced-background'
 
 interface StoryEngineProps {
   routeId: StoryRouteId
@@ -107,8 +108,9 @@ export default function StoryEngine({
 
   if (!currentNode) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <p className="text-muted-foreground">Loading story...</p>
+      <div className="min-h-screen bg-background flex items-center justify-center relative overflow-hidden">
+        <EnhancedBackground />
+        <p className="text-muted-foreground relative z-10">Loading story...</p>
       </div>
     )
   }
@@ -132,10 +134,11 @@ export default function StoryEngine({
   })
 
   return (
-    <div className="min-h-screen bg-background py-8 md:py-16 px-4">
+    <div className="min-h-screen bg-background py-8 md:py-16 px-4 relative overflow-hidden">
+      <EnhancedBackground />
       <ProgressBar current={state.currentChapter} total={totalChapters} />
 
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto relative z-10">
         <div className="glass rounded-2xl p-8 md:p-12">
           {/* Header */}
           <div className="flex items-center justify-between mb-6 pb-6 border-b border-border/30">
