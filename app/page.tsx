@@ -1,16 +1,24 @@
 import Link from 'next/link'
 import { BookOpen, Map, Trophy, ChevronRight } from 'lucide-react'
 import HeroSection from '@/components/hero-section'
+import EnhancedBackground from '@/components/enhanced-background'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <main>
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      <EnhancedBackground />
+      <main className="relative z-10">
         <HeroSection />
 
         <section className="px-4 md:px-8 py-16 max-w-7xl mx-auto">
           {/* Story Routes */}
-          <div className="grid md:grid-cols-2 gap-6 mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-light text-foreground mb-4">Begin Your Journey</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Choose your path through the fractured world of Clair Obscur
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 mb-20 max-w-5xl mx-auto">
             <Link href="/stories/verso" className="block">
               <div className="glass rounded-xl p-8 hover:bg-card/70 transition-all cursor-pointer group h-full">
                 <h2 className="text-3xl font-light text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -53,9 +61,12 @@ export default function Home() {
           </div>
 
           {/* Secondary Links */}
-          <section>
-            <h2 className="text-3xl font-light text-foreground mb-8">Explore</h2>
-            <div className="grid md:grid-cols-3 gap-4">
+          <section className="text-center">
+            <h2 className="text-3xl font-light text-foreground mb-4">Explore</h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Delve deeper into the lore and world of Fractured Paths
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
               <Link href="/codex">
                 <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group">
                   <div className="text-primary mb-3 group-hover:scale-110 transition-transform">
