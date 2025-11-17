@@ -167,4 +167,9 @@
     @apply text-primary;
     text-shadow: 0 0 20px rgba(201, 168, 101, 0.3);
   }
+
+  /* Radial gradient utility */
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle, var(--tw-gradient-stops));
+  }
 }
