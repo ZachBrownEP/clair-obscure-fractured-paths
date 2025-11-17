@@ -3,98 +3,101 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Dark fantasy aesthetic with Belle Époque-inspired color system */
+/* Dark fantasy aesthetic inspired by Clair Obscur: Expedition 33 cover art */
 :root {
-  /* Primary: Deep navy background */
-  --background: oklch(0.12 0 0);
-  --foreground: oklch(0.92 0.01 280);
-  
-  /* Cards: Slightly lighter with subtle warmth */
-  --card: oklch(0.16 0.02 280);
-  --card-foreground: oklch(0.92 0.01 280);
-  
+  /* Background: Deep charcoal/black from cover */
+  --background: oklch(0.10 0.005 280);
+  --foreground: oklch(0.95 0.01 70);
+
+  /* Cards: Slightly lighter charcoal with misty gray undertones */
+  --card: oklch(0.14 0.01 260);
+  --card-foreground: oklch(0.95 0.01 70);
+
   /* Popover */
-  --popover: oklch(0.16 0.02 280);
-  --popover-foreground: oklch(0.92 0.01 280);
-  
-  /* Primary: Muted gold/cream accent */
-  --primary: oklch(0.75 0.12 70);
-  --primary-foreground: oklch(0.12 0 0);
-  
-  /* Secondary: Deep plum/mauve */
-  --secondary: oklch(0.35 0.08 310);
-  --secondary-foreground: oklch(0.92 0.01 280);
-  
-  /* Muted: Charcoal for subtle elements */
-  --muted: oklch(0.28 0.01 280);
-  --muted-foreground: oklch(0.68 0.02 280);
-  
-  /* Accent: Soft rose/mauve for highlights */
-  --accent: oklch(0.62 0.1 320);
-  --accent-foreground: oklch(0.12 0 0);
-  
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.92 0.01 280);
-  --border: oklch(0.22 0.02 280);
-  --input: oklch(0.2 0.02 280);
-  --ring: oklch(0.75 0.12 70);
-  
-  --chart-1: oklch(0.75 0.12 70);
-  --chart-2: oklch(0.62 0.1 320);
-  --chart-3: oklch(0.35 0.08 310);
-  --chart-4: oklch(0.55 0.08 280);
-  --chart-5: oklch(0.45 0.07 350);
-  
-  --radius: 0.75rem;
-  
-  --sidebar: oklch(0.16 0.02 280);
-  --sidebar-foreground: oklch(0.92 0.01 280);
-  --sidebar-primary: oklch(0.75 0.12 70);
-  --sidebar-primary-foreground: oklch(0.12 0 0);
-  --sidebar-accent: oklch(0.62 0.1 320);
-  --sidebar-accent-foreground: oklch(0.92 0.01 280);
-  --sidebar-border: oklch(0.22 0.02 280);
-  --sidebar-ring: oklch(0.75 0.12 70);
+  --popover: oklch(0.14 0.01 260);
+  --popover-foreground: oklch(0.95 0.01 70);
+
+  /* Primary: Rich antiqued gold from title text */
+  --primary: oklch(0.72 0.10 75);
+  --primary-foreground: oklch(0.10 0.005 280);
+
+  /* Secondary: Atmospheric gray-blue from clouds */
+  --secondary: oklch(0.42 0.04 240);
+  --secondary-foreground: oklch(0.95 0.01 70);
+
+  /* Muted: Deep storm gray */
+  --muted: oklch(0.25 0.02 260);
+  --muted-foreground: oklch(0.65 0.03 250);
+
+  /* Accent: Teal/cyan glow accents */
+  --accent: oklch(0.60 0.08 200);
+  --accent-foreground: oklch(0.10 0.005 280);
+
+  --destructive: oklch(0.50 0.15 15);
+  --destructive-foreground: oklch(0.95 0.01 70);
+  --border: oklch(0.20 0.02 260);
+  --input: oklch(0.18 0.02 260);
+  --ring: oklch(0.72 0.10 75);
+
+  --chart-1: oklch(0.72 0.10 75);
+  --chart-2: oklch(0.60 0.08 200);
+  --chart-3: oklch(0.42 0.04 240);
+  --chart-4: oklch(0.55 0.05 270);
+  --chart-5: oklch(0.50 0.15 15);
+
+  --radius: 0.5rem;
+
+  --sidebar: oklch(0.14 0.01 260);
+  --sidebar-foreground: oklch(0.95 0.01 70);
+  --sidebar-primary: oklch(0.72 0.10 75);
+  --sidebar-primary-foreground: oklch(0.10 0.005 280);
+  --sidebar-accent: oklch(0.60 0.08 200);
+  --sidebar-accent-foreground: oklch(0.10 0.005 280);
+  --sidebar-border: oklch(0.20 0.02 260);
+  --sidebar-ring: oklch(0.72 0.10 75);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  /* Dark mode uses same palette as root (the app is inherently dark) */
+  --background: oklch(0.10 0.005 280);
+  --foreground: oklch(0.95 0.01 70);
+  --card: oklch(0.14 0.01 260);
+  --card-foreground: oklch(0.95 0.01 70);
+  --popover: oklch(0.14 0.01 260);
+  --popover-foreground: oklch(0.95 0.01 70);
+  --primary: oklch(0.72 0.10 75);
+  --primary-foreground: oklch(0.10 0.005 280);
+  --secondary: oklch(0.42 0.04 240);
+  --secondary-foreground: oklch(0.95 0.01 70);
+  --muted: oklch(0.25 0.02 260);
+  --muted-foreground: oklch(0.65 0.03 250);
+  --accent: oklch(0.60 0.08 200);
+  --accent-foreground: oklch(0.10 0.005 280);
+  --destructive: oklch(0.50 0.15 15);
+  --destructive-foreground: oklch(0.95 0.01 70);
+  --border: oklch(0.20 0.02 260);
+  --input: oklch(0.18 0.02 260);
+  --ring: oklch(0.72 0.10 75);
+  --chart-1: oklch(0.72 0.10 75);
+  --chart-2: oklch(0.60 0.08 200);
+  --chart-3: oklch(0.42 0.04 240);
+  --chart-4: oklch(0.55 0.05 270);
+  --chart-5: oklch(0.50 0.15 15);
+  --sidebar: oklch(0.14 0.01 260);
+  --sidebar-foreground: oklch(0.95 0.01 70);
+  --sidebar-primary: oklch(0.72 0.10 75);
+  --sidebar-primary-foreground: oklch(0.10 0.005 280);
+  --sidebar-accent: oklch(0.60 0.08 200);
+  --sidebar-accent-foreground: oklch(0.10 0.005 280);
+  --sidebar-border: oklch(0.20 0.02 260);
+  --sidebar-ring: oklch(0.72 0.10 75);
 }
 
 @theme inline {
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-serif: 'Cinzel', serif;
+  --font-decorative: 'Cinzel Decorative', serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -145,9 +148,23 @@
   .glass {
     @apply backdrop-blur-md bg-card/50 border border-border/30;
   }
-  
-  /* Thin serif for headings */
+
+  /* Elegant serif for headings - inspired by Clair Obscur title */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-light;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  /* Decorative font for special titles */
+  .font-decorative {
+    font-family: var(--font-decorative);
+    letter-spacing: 0.08em;
+  }
+
+  /* Gold text effect for emphasis */
+  .text-gold {
+    @apply text-primary;
+    text-shadow: 0 0 20px rgba(201, 168, 101, 0.3);
   }
 }

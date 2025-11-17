@@ -1,14 +1,20 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { Playfair_Display } from 'next/font/google'
+import { Cinzel, Cinzel_Decorative } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
-const _playfair = Playfair_Display({ 
+const _cinzel = Cinzel({
   subsets: ["latin"],
-  variable: '--font-serif'
+  variable: '--font-serif',
+  weight: ['400', '500', '600', '700']
+});
+const _cinzelDecorative = Cinzel_Decorative({
+  subsets: ["latin"],
+  variable: '--font-decorative',
+  weight: ['400', '700', '900']
 });
 
 export const metadata: Metadata = {
@@ -35,7 +41,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1f1a2e',
+  themeColor: '#181818',
   userScalable: true,
 }
 
@@ -46,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${_geist.className} ${_playfair.variable} font-sans antialiased`}>
+      <body className={`${_geist.className} ${_cinzel.variable} ${_cinzelDecorative.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
