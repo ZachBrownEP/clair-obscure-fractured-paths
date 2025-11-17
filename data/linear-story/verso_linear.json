@@ -1,0 +1,86 @@
+{
+  "route": {
+    "id": "verso_linear",
+    "baseRouteId": "verso",
+    "name": "The Fractured Canvas (Verso – Canon Route)",
+    "character": "Verso",
+    "subtitle": "A journey through painted realities",
+    "description": "Follow Verso's canonical journey as they navigate the threshold between worlds, uncover the secrets of the Canvas Ghost, and discover the true nature of their artistic power.",
+    "totalChapters": 4
+  },
+  "chapters": [
+    {
+      "id": "verso_prologue",
+      "number": 0,
+      "title": "PROLOGUE — The World After Collapse",
+      "pages": [
+        {
+          "id": "verso_prologue_p1",
+          "pageNumber": 1,
+          "text": "The rain had not stopped for three days.\n\nIn the shadow of Lumière's broken spires, Verso stood before a canvas that refused to stay blank. Each brushstroke they made dissolved into mist, as if the painted world itself was rejecting their touch.\n\nThey had been called the Canvas Ghost once—a title earned through years of bringing painted realities to life. But now, in the wake of the Collapse, even their gift felt fractured.\n\nThe studio walls bore witness to their struggle: dozens of abandoned paintings, each one a failed attempt to capture what they had seen in their dreams. A threshold. A doorway between worlds. And on the other side, something waiting."
+        },
+        {
+          "id": "verso_prologue_p2",
+          "pageNumber": 2,
+          "text": "\"You're pushing too hard,\" came a voice from the doorway.\n\nVerso didn't turn. They recognized the measured tone of Maelle, the truth-seeker who had somehow become their closest confidant in this strange new world.\n\n\"The visions are getting stronger,\" Verso said, finally setting down their brush. \"Every night, I see the same thing. A canvas that exists between realities. A place where all possibilities converge.\"\n\nMaelle stepped closer, her eyes studying the dissolving paint. \"The Resonance Chamber?\"\n\n\"No.\" Verso's voice was barely a whisper. \"Something older. Something that was there before the Collapse. Before the Monoliths. Before everything we know.\"\n\nThe rain continued its relentless rhythm against the windows. And in that moment, neither of them knew that their search for answers would lead them both to the very edge of existence itself."
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1",
+      "number": 1,
+      "title": "CHAPTER 1 — The Return to Lumière",
+      "pages": [
+        {
+          "id": "verso_ch1_p1",
+          "pageNumber": 1,
+          "text": "Lumière looked different in the daylight, though \"daylight\" was a generous term for the pale gray that filtered through the perpetual cloud cover.\n\nVerso walked the cobblestone streets they had known since childhood, but everything felt foreign now. The artist quarter, once vibrant with color and life, stood silent. Most of the studios had been abandoned after the Collapse, their owners either lost to the Monolith's count or fled to safer territories.\n\nOnly a few remained. The stubborn ones. The believers.\n\n\"Verso!\"\n\nThey turned to see Élodie rushing toward them, her paint-stained apron fluttering in the wind. The elderly painter had been Verso's first teacher, back when they were still learning to mix colors."
+        },
+        {
+          "id": "verso_ch1_p2",
+          "pageNumber": 2,
+          "text": "\"Élodie,\" Verso embraced her warmly. \"I didn't expect to find you still here.\"\n\n\"Where else would I go?\" She laughed, but there was a brittleness to it. \"This is my home. The Monoliths can't take that from me. Not yet, anyway.\"\n\nThey walked together through the empty streets, past shuttered galleries and silent fountains.\n\n\"I heard you've been having visions,\" Élodie said quietly. \"Maelle told me. She's worried about you.\"\n\n\"She shouldn't be. The visions... they're showing me something important.\"\n\n\"Or they're showing you what you want to see.\" Élodie stopped, placing a weathered hand on Verso's arm. \"I've lived through three Monolith years. I've seen what happens when people chase visions. When they try to find meaning in the Collapse.\"\n\n\"This is different.\"\n\n\"They all say that.\""
+        },
+        {
+          "id": "verso_ch1_p3",
+          "pageNumber": 3,
+          "text": "But Verso knew Élodie was wrong. These weren't desperate fantasies or delusions born of trauma. The visions came with a clarity that cut through everything—sharper than memory, more real than waking life.\n\nIn the visions, Verso saw themselves standing before an enormous canvas that stretched beyond sight. It was neither blank nor painted, but existed in a state between the two. A quantum superposition of all possible images.\n\nAnd in that in-between space, they saw the truth: that reality itself was painted. That every world, every timeline, every choice was just another brushstroke on an infinite canvas.\n\nThe Canvas Ghost. That's what they had called Verso. But they were beginning to understand that the title meant something far deeper than anyone had realized.\n\nThey weren't just a painter who could bring painted worlds to life.\n\nThey were someone who could see the painted nature of this world."
+        }
+      ]
+    },
+    {
+      "id": "verso_ch2",
+      "number": 2,
+      "title": "CHAPTER 2 — The Threshold Opens",
+      "pages": [
+        {
+          "id": "verso_ch2_p1",
+          "pageNumber": 1,
+          "text": "The breakthrough came at midnight.\n\nVerso had been working in their studio, attempting once again to capture the vision on canvas. But this time, instead of fighting the dissolving paint, they let it flow. Let it become what it wanted to be.\n\nAnd the paint listened.\n\nIt swirled across the canvas in patterns that defied physics—colors bleeding into each other and then separating again, creating depth where there should be only flatness. The image that emerged was both familiar and alien: a doorway, yes, but not one made of wood or stone.\n\nThis was a doorway made of possibility itself."
+        },
+        {
+          "id": "verso_ch2_p2",
+          "pageNumber": 2,
+          "text": "Verso reached out, their fingers trembling, and touched the painted surface.\n\nThe canvas was warm. Alive.\n\nAnd then it opened.\n\nNot physically—the canvas remained flat against the easel. But something shifted in the air around it, a ripple in reality that Verso could feel in their bones.\n\nThrough the painted doorway, they saw... another Lumière. The same streets, the same buildings, but different. In this version, the artist quarter was alive with activity. Painters worked at easels set up in the open air. Children laughed and ran between the studios. The sky was blue.\n\n\"Is this real?\" Verso whispered.\n\nThe doorway pulsed in response, and Verso understood: it was as real as anything else. Another brushstroke. Another possible world."
+        }
+      ]
+    },
+    {
+      "id": "verso_ch3",
+      "number": 3,
+      "title": "CHAPTER 3 — Between Worlds",
+      "pages": [
+        {
+          "id": "verso_ch3_p1",
+          "pageNumber": 1,
+          "text": "Maelle found Verso three hours later, still standing before the canvas, tears streaming down their face.\n\n\"What happened?\" She touched Verso's shoulder gently, and they finally turned to look at her.\n\n\"I saw it,\" Verso said. \"The world as it could have been. Should have been. Before the Collapse.\"\n\nMaelle studied the painting. To her eyes, it was beautiful—masterful, even. But she saw only paint and canvas. \"What are you going to do?\"\n\nVerso looked back at the doorway, still shimmering with possibility. \"I'm going to find out if I can go through. And if I can... I'm going to find out why our world broke.\"\n\n\"That's dangerous.\"\n\n\"Everything is dangerous now. At least this danger might lead somewhere.\""
+        },
+        {
+          "id": "verso_ch3_p2",
+          "pageNumber": 2,
+          "text": "They prepared carefully. Maelle insisted on documenting everything, her writer's instinct demanding that this moment be preserved, whatever came of it.\n\n\"If you don't come back,\" she said, \"at least people will know you tried.\"\n\n\"I'll come back,\" Verso promised. \"I have to. There's too much left to paint.\"\n\nThey stood before the canvas together, and Verso explained what they were about to attempt. Not a physical journey—that would be impossible. But a transference of consciousness. A way to see through the doorway, to experience the other world directly.\n\n\"Like the Resonance,\" Maelle said, understanding. \"Like how I see between timelines.\"\n\n\"Exactly. We're more similar than I realized.\"\n\nVerso closed their eyes, placed both palms against the painted doorway, and let themselves fall forward into possibility."
+        }
+      ]
+    }
+  ]
+}

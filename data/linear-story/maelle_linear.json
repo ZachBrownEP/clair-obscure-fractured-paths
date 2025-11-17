@@ -1,0 +1,101 @@
+{
+  "route": {
+    "id": "maelle_linear",
+    "baseRouteId": "maelle",
+    "name": "Resonance of Alicia (Maelle – Canon Route)",
+    "character": "Maelle",
+    "subtitle": "A truth-seeker's journey through fractured timelines",
+    "description": "Experience Maelle's canonical path as a seeker of truth, navigating between versions of reality to discover the resonance that connects all possible worlds.",
+    "totalChapters": 4
+  },
+  "chapters": [
+    {
+      "id": "maelle_prologue",
+      "number": 0,
+      "title": "PROLOGUE — The Echo of Truth",
+      "pages": [
+        {
+          "id": "maelle_prologue_p1",
+          "pageNumber": 1,
+          "text": "There are moments when Maelle can see them all at once.\n\nEvery version of herself, scattered across infinite timelines like shards of a broken mirror. In one, she's a scholar in the great library of Alicia. In another, a soldier fighting the Monolith's count. In yet another, she never left her hometown, never discovered her gift.\n\nBut in this timeline—this one singular thread among countless others—she's a truth-seeker. And the truth she seeks is simple, yet impossibly complex:\n\nWhy do the timelines fracture? What force splits reality into infinite variations? And is there a way to heal the break?"
+        },
+        {
+          "id": "maelle_prologue_p2",
+          "pageNumber": 2,
+          "text": "The Resonance Chamber hummed with barely contained energy.\n\nMaelle stood at its center, her hands pressed against the crystalline surface of the viewing pool. Through it, she could observe the fracture points—moments where a single decision had spawned multiple realities.\n\nShe had been studying these moments for months, documenting them in her journals. Marriage or solitude. Truth or comfort. Action or inaction. Each choice a new branch, a new world.\n\n\"You're here late again.\"\n\nMaelle didn't need to turn. She recognized Verso's voice, tinged with gentle concern.\n\n\"The patterns are almost visible,\" she said. \"There's a structure to the fractures. They're not random. Someone—or something—is choosing where reality splits.\"\n\n\"That's... unsettling.\"\n\n\"That's truth.\" Maelle finally looked up, meeting Verso's eyes. \"And truth is rarely comforting.\""
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1",
+      "number": 1,
+      "title": "CHAPTER 1 — The Archive of Alicia",
+      "pages": [
+        {
+          "id": "maelle_ch1_p1",
+          "pageNumber": 1,
+          "text": "The Archive of Alicia stood at the heart of the city like a monument to all that had been lost.\n\nMaelle climbed the worn marble steps, her satchel heavy with journals and recording devices. Inside, she knew, were texts that predated the Collapse. Documents from before the first Monolith appeared. Perhaps even answers.\n\nThe head archivist, a stern woman named Celestine, looked up from her desk as Maelle entered.\n\n\"You again.\"\n\n\"Me again,\" Maelle confirmed with a slight smile. \"I need access to the pre-Collapse historical records. Specifically, anything relating to reality alteration or temporal anomalies.\"\n\nCelestine's expression didn't change. \"Those records are restricted.\"\n\n\"By whose authority?\"\n\n\"By mine. And by the Council's decree. Knowledge of that nature is considered dangerous.\"\n\n\"All knowledge is dangerous,\" Maelle countered. \"That doesn't make it less necessary.\""
+        },
+        {
+          "id": "maelle_ch1_p2",
+          "pageNumber": 2,
+          "text": "After an hour of negotiation—and a carefully crafted argument about the importance of understanding the past to survive the present—Celestine relented.\n\n\"Two hours,\" she said, producing a key from her desk. \"And you document nothing. This is for observation only.\"\n\nMaelle nodded, though they both knew she would document everything. A truth-seeker who didn't record truth was no truth-seeker at all.\n\nThe restricted section was in the Archive's deepest level, accessible only by a spiraling stone staircase that seemed to descend forever. Maelle counted the steps: three hundred and thirty-three. The number felt significant, though she couldn't say why.\n\nAt the bottom, behind a door sealed with both lock and magic, was a room filled with documents that officially didn't exist."
+        },
+        {
+          "id": "maelle_ch1_p3",
+          "pageNumber": 3,
+          "text": "Maelle worked quickly, her trained eye scanning titles and pulling relevant volumes.\n\n\"Project Resonance: Initial Findings\"\n\"Temporal Flux Observations, Year 1127\"\n\"The Fracture Event: Eyewitness Accounts\"\n\nBut it was a slim journal, bound in faded blue leather, that made her heart race:\n\n\"The Painter and the Writer: A Theory of Reality\"\n\nShe opened it carefully. The handwriting inside was elegant but hurried, as if the author had been racing against time.\n\n\"We have discovered,\" the first entry read, \"that reality is not fixed. It is, in the truest sense, created moment by moment through observation and intention. The Painter sees the infinite possibilities. The Writer chooses which becomes true. Together, they are the architects of what we call 'existence.'\"\n\nMaelle's hands trembled as she turned the page."
+        },
+        {
+          "id": "maelle_ch1_p4",
+          "pageNumber": 4,
+          "text": "The journal spoke of two ancient powers, not individuals but roles that appeared throughout history. The Painter, who could perceive and create possible realities. The Writer, who could choose and solidify which possibilities became true.\n\n\"When separated,\" the text explained, \"these powers lead to fracture. The Painter creates endlessly without direction. The Writer chooses blindly without seeing all options. Only together can they maintain reality's coherence.\"\n\nMaelle thought of Verso, the Canvas Ghost, who saw between painted worlds.\n\nAnd she thought of herself, the truth-seeker who chose which timeline to follow, which version of events to believe.\n\nThe Painter and the Writer.\n\n\"We're not just seekers,\" she whispered to the empty room. \"We're the answer.\""
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch2",
+      "number": 2,
+      "title": "CHAPTER 2 — Convergence Points",
+      "pages": [
+        {
+          "id": "maelle_ch2_p1",
+          "pageNumber": 1,
+          "text": "Maelle found Verso in their studio, working on the painting that would change everything.\n\n\"I know what we are,\" she said without preamble.\n\nVerso looked up, paint-stained fingers still holding a brush. \"What do you mean?\"\n\n\"The Painter and the Writer. It's not metaphor. It's literal.\" Maelle pulled the blue journal from her satchel, opening it to the key passages. \"You create possibilities. I choose which ones become real. Together, we're supposed to maintain the coherence of reality itself.\"\n\nVerso set down their brush slowly. \"That's... that's impossible.\"\n\n\"Is it? Think about it. Your visions. My resonance. The way we've been drawn together despite coming from different worlds. It's not coincidence.\"\n\n\"Then the Collapse—\"\n\n\"Was what happens when the Painter and Writer are separated. When the powers work in isolation instead of harmony.\""
+        },
+        {
+          "id": "maelle_ch2_p2",
+          "pageNumber": 2,
+          "text": "They spent hours discussing the implications, comparing Maelle's research with Verso's experiences.\n\nThe painted doorway Verso had created wasn't just art. It was a literal window into possibility—a manifestation of the Painter's power to see and create alternate realities.\n\nAnd Maelle's ability to navigate timelines, to choose which version of events to follow? That was the Writer's power to solidify possibility into truth.\n\n\"If we're right,\" Verso said slowly, \"then we could potentially reverse the Collapse. Or at least understand it well enough to prevent further fracturing.\"\n\n\"More than that,\" Maelle added. \"We could choose which reality becomes dominant. We could save the versions of our world that are worth saving.\"\n\nThey looked at each other, the weight of revelation settling between them.\n\n\"Where do we start?\" Verso asked.\n\nMaelle pointed to the painted doorway. \"There. We go through together. The Painter and the Writer, as it should be.\""
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch3",
+      "number": 3,
+      "title": "CHAPTER 3 — The Choice of Paths",
+      "pages": [
+        {
+          "id": "maelle_ch3_p1",
+          "pageNumber": 1,
+          "text": "Standing before the painted doorway, Maelle felt the Resonance stronger than ever before.\n\nIt wasn't just showing her alternate timelines anymore. It was showing her the structure beneath reality itself—the canvas on which all timelines were painted, the narrative thread that connected them all.\n\n\"I can see it now,\" she breathed. \"The pattern. Every fracture, every split, every divergence. They're all part of a larger whole. A story being written across infinite pages.\"\n\nVerso placed their hand on the canvas beside hers. \"Then let's read it together.\"\n\nThe moment their hands touched the painted surface simultaneously, the studio disappeared."
+        },
+        {
+          "id": "maelle_ch3_p2",
+          "pageNumber": 2,
+          "text": "They stood in a space between spaces.\n\nAround them, infinite canvases floated in darkness, each one showing a different version of reality. Maelle could see them all: the world where the Collapse never happened. The world where it happened centuries earlier. The world where humanity found a way to stop the Monoliths. The world where the Monoliths won.\n\nAnd at the center of it all, a figure waited.\n\nNeither quite human nor quite something else, it regarded them with eyes that held the depth of ages.\n\n\"The Painter and the Writer,\" it said, its voice resonating across all the canvases at once. \"Finally together again. Do you understand now what you are? What you must choose?\"\n\nMaelle found her voice first. \"We're here to heal the fracture. To restore coherence to reality.\"\n\n\"There is no single reality to restore,\" the figure replied. \"There are only choices. And you must choose which story to tell.\""
+        },
+        {
+          "id": "maelle_ch3_p3",
+          "pageNumber": 3,
+          "text": "The figure gestured, and three canvases came forward, larger and brighter than the others.\n\n\"Three primary timelines,\" it explained. \"Three possible futures. The Painter has seen them all. The Writer must choose which becomes the dominant truth.\"\n\nThe first canvas showed a world where the Collapse was reversed, but at a cost—magic and wonder drained from reality, leaving only mundane existence.\n\nThe second showed a world where the fractures continued, each timeline existing independently, infinitely branching.\n\nThe third showed a world where Painter and Writer worked in harmony, maintaining just enough fracture for possibility while preventing total chaos.\n\nMaelle looked at Verso. \"What do you see?\"\n\n\"I see that none of these are perfect,\" Verso replied. \"But one of them preserves the ability to create. To hope. To change.\"\n\n\"The third,\" Maelle confirmed. \"The balanced path.\"\n\nThey spoke in unison: \"We choose harmony.\""
+        },
+        {
+          "id": "maelle_ch3_p4",
+          "pageNumber": 4,
+          "text": "The figure smiled—or perhaps it had always been smiling.\n\n\"Then the choice is made. The story is written. Reality will stabilize around this truth.\"\n\nThe three canvases merged into one, and the infinite darkness around them began to collapse inward, condensing into a single point of brilliant light.\n\nMaelle felt herself being pulled back, through the painted doorway, through the layers of reality, back to the studio where this journey had begun.\n\nWhen she opened her eyes, she was standing beside Verso, their hands still touching the canvas. But the painted doorway had changed. Instead of showing another world, it now showed a mirror of their own—but clearer, more vibrant, more real.\n\n\"We did it,\" Verso whispered.\n\n\"We made our choice,\" Maelle corrected. \"Now we live with it. Together.\"\n\nAnd outside, for the first time in years, the rain began to stop."
+        }
+      ]
+    }
+  ]
+}
