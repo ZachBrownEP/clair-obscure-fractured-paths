@@ -2,10 +2,11 @@
 
 ## Project Overview
 
-**Clair Obscur: Fractured Paths** is a fan-made companion and interactive story application for the game *Clair Obscur: Expedition 33*. This web app offers two main experiences:
+**Clair Obscur: Fractured Paths** is a fan-made companion and interactive story application for the game *Clair Obscur: Expedition 33*. This web app offers three main experiences:
 
 1. **Interactive Story System** - Choice-based narratives with branching paths and multiple endings
-2. **Lore Companion / Codex** - Comprehensive documentation of characters, locations, factions, and magic
+2. **Linear Story Journeys** - Canon, page-based reading experiences for immersive storytelling
+3. **Lore Companion / Codex** - Comprehensive documentation of characters, locations, factions, and magic
 
 The app is designed to extend the world of Clair Obscur beyond the original game, allowing fans to explore additional narratives and deepen their understanding of the lore.
 
@@ -18,6 +19,7 @@ The app is designed to extend the world of Clair Obscur beyond the original game
 - **Styling:** Tailwind CSS 4
 - **UI Components:** Radix UI
 - **Icons:** Lucide React
+- **Animations:** Framer Motion
 - **Fonts:** Cinzel (serif), Cinzel Decorative (decorative), Geist (sans-serif)
 - **Deployment:** Optimized for Vercel
 
@@ -62,6 +64,9 @@ clair-obscure-fractured-paths/
 │   ├── stories/
 │   │   ├── verso.json           # Verso's story nodes and metadata
 │   │   └── maelle.json          # Maelle's story nodes and metadata
+│   ├── linear-story/
+│   │   ├── verso_linear.json    # Verso's linear story journey
+│   │   └── maelle_linear.json   # Maelle's linear story journey
 │   └── codex/
 │       └── entries.json         # Codex entries (characters, locations, etc.)
 │
@@ -79,6 +84,7 @@ clair-obscure-fractured-paths/
 | `/` | Home page with hero section and story/feature cards |
 | `/stories/[route]` | Individual story route detail page (`/stories/verso`, `/stories/maelle`) |
 | `/stories/[route]/play` | Story playthrough page with interactive engine |
+| `/stories/[route]/read` | Linear story reading experience (Story Journey mode) |
 | `/codex` | Lore codex with filterable entries |
 | `/map` | World map with location information |
 | `/endings` | Gallery of all possible story endings |
@@ -219,6 +225,240 @@ export type StoryRouteId = "verso" | "maelle" | "your-route";
 3. Add route metadata to `/app/stories/[route]/page.tsx` in the `routes` object
 4. Add to `generateStaticParams()` in both `page.tsx` files
 5. Update home page (`/app/page.tsx`) to display new route card
+
+---
+
+## Linear Story Journeys
+
+### Overview
+
+Linear Story Journeys provide a **canon, page-based reading experience** that complements the interactive branching story system. Unlike the choice-driven Interactive Path, Story Journeys present a fixed narrative divided into chapters and pages, allowing readers to immerse themselves in the complete canonical story at their own pace.
+
+### Key Differences from Interactive Stories
+
+| Feature | Interactive Path | Story Journey |
+|---------|-----------------|---------------|
+| **Format** | Node-based with choices | Chapter and page-based |
+| **Navigation** | Choice selection | Previous/Next page |
+| **Endings** | Multiple based on choices | Single canonical ending |
+| **Alignment** | Tracked (Painter, Writer, Compassion) | No tracking |
+| **Purpose** | Branching exploration | Linear storytelling |
+
+### Data Structure
+
+Linear stories are stored in `/data/linear-story/` as JSON files:
+
+```json
+{
+  "route": {
+    "id": "verso_linear",
+    "baseRouteId": "verso",
+    "name": "The Fractured Canvas (Verso – Canon Route)",
+    "character": "Verso",
+    "subtitle": "A journey through painted realities",
+    "description": "Follow Verso's canonical journey...",
+    "totalChapters": 4
+  },
+  "chapters": [
+    {
+      "id": "verso_prologue",
+      "number": 0,
+      "title": "PROLOGUE — The World After Collapse",
+      "pages": [
+        {
+          "id": "verso_prologue_p1",
+          "pageNumber": 1,
+          "text": "The rain had not stopped for three days..."
+        },
+        {
+          "id": "verso_prologue_p2",
+          "pageNumber": 2,
+          "text": "You're pushing too hard..."
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1",
+      "number": 1,
+      "title": "CHAPTER 1 — The Return to Lumière",
+      "pages": [
+        {
+          "id": "verso_ch1_p1",
+          "pageNumber": 1,
+          "text": "Lumière looked different..."
+        }
+      ]
+    }
+  ]
+}
+```
+
+### File Locations
+
+- **Types**: `/lib/story/linearTypes.ts` - TypeScript interfaces for linear stories
+- **Loader**: `/lib/story/linearLoader.ts` - Functions to load and access linear story data
+- **Data Files**:
+  - `/data/linear-story/verso_linear.json` - Verso's canonical story
+  - `/data/linear-story/maelle_linear.json` - Maelle's canonical story
+- **Reading UI**: `/app/stories/[route]/read/page.tsx` - The reading experience page
+
+### TypeScript Types
+
+```typescript
+export interface LinearPage {
+  id: string          // Unique page identifier (e.g., "verso_ch1_p1")
+  pageNumber: number  // Page number within chapter (1-indexed)
+  text: string        // Page content (supports line breaks via \n)
+}
+
+export interface LinearChapter {
+  id: string          // Unique chapter identifier
+  number: number      // Chapter number (0 for prologue, 1+ for chapters)
+  title: string       // Chapter title (e.g., "CHAPTER 1 — The Return to Lumière")
+  pages: LinearPage[]
+}
+
+export interface LinearRouteMeta {
+  id: string          // Full route ID (e.g., "verso_linear")
+  baseRouteId: string // Base route (e.g., "verso" or "maelle")
+  name: string        // Full story name
+  character: string   // Character name
+  subtitle?: string   // Optional subtitle
+  description?: string // Story description
+  totalChapters: number // Total number of chapters
+}
+
+export interface LinearStoryRoute {
+  route: LinearRouteMeta
+  chapters: LinearChapter[]
+}
+```
+
+### Reading Experience Features
+
+The reading UI (`/stories/[route]/read`) provides:
+
+1. **Chapter Navigation**
+   - Horizontal chapter pills (Prologue, Ch. 1, Ch. 2, etc.)
+   - Click any chapter to jump to its first page
+   - Current chapter highlighted
+
+2. **Page Navigation**
+   - Previous/Next buttons with disabled states at boundaries
+   - Automatic chapter transitions (last page → next chapter's first page)
+   - Keyboard shortcuts: ← (previous) and → (next)
+
+3. **Progress Tracking**
+   - Visual progress bar showing position across all pages
+   - "Page X of Y" display for current chapter
+   - Overall "Page X of Y" for entire story
+
+4. **Animations**
+   - Smooth fade-in/slide-up transitions between pages (Framer Motion)
+   - Hover effects on navigation buttons
+   - Chapter pill transitions
+
+5. **URL Deep Linking**
+   - URL params track current position: `?chapter=1&page=3`
+   - Shareable links to specific pages
+   - Browser back/forward support
+
+6. **Story Complete Screen**
+   - Special end state when reaching the final page
+   - Options to:
+     - Restart from beginning
+     - Try Interactive Path
+     - Return to character page
+
+### Adding New Linear Story Content
+
+#### For Writers (No Code Required)
+
+To add more content to an existing linear story:
+
+1. **Open the JSON file**: `/data/linear-story/verso_linear.json` or `maelle_linear.json`
+
+2. **To add a new chapter**:
+```json
+{
+  "id": "verso_ch4",
+  "number": 4,
+  "title": "CHAPTER 4 — Your Chapter Title",
+  "pages": [
+    {
+      "id": "verso_ch4_p1",
+      "pageNumber": 1,
+      "text": "Your story text here...\n\nUse \\n for line breaks."
+    }
+  ]
+}
+```
+
+3. **To add pages to an existing chapter**:
+   - Find the chapter in the `chapters` array
+   - Add new page objects to the `pages` array:
+```json
+{
+  "id": "verso_ch1_p5",
+  "pageNumber": 5,
+  "text": "New page content..."
+}
+```
+
+4. **Update `totalChapters`** in the `route` object if adding chapters
+
+5. **Formatting Guidelines**:
+   - Use `\n` for single line breaks
+   - Use `\n\n` for paragraph breaks
+   - Keep pages to a comfortable reading length (300-600 words)
+   - Number pages sequentially within each chapter (1, 2, 3...)
+   - Number chapters sequentially (0 for Prologue, 1, 2, 3...)
+
+#### For Developers
+
+To add a new character's linear story:
+
+1. **Create JSON file**: `/data/linear-story/character_linear.json`
+2. **Add to loader**: `/lib/story/linearLoader.ts`
+```typescript
+import characterLinear from '@/data/linear-story/character_linear.json'
+
+const linearStories: Record<string, LinearStoryRoute> = {
+  verso: versoLinear as LinearStoryRoute,
+  maelle: maelleLinear as LinearStoryRoute,
+  character: characterLinear as LinearStoryRoute, // Add this
+}
+```
+3. **Update route types** if needed
+4. The UI will automatically support the new story
+
+### Accessing Linear Stories
+
+```typescript
+// Check if a linear story exists for a route
+import { hasLinearStory } from '@/lib/story/linearLoader'
+if (hasLinearStory('verso')) {
+  // Story exists
+}
+
+// Load a linear story
+import { getLinearStory } from '@/lib/story/linearLoader'
+const story = getLinearStory('verso')
+
+// Get all linear story summaries
+import { getAllLinearStorySummaries } from '@/lib/story/linearLoader'
+const summaries = getAllLinearStorySummaries()
+```
+
+### UI Integration
+
+Linear stories are presented alongside interactive stories:
+
+- **Story detail pages** (`/stories/[route]`) show two options:
+  - **Interactive Path** → `/stories/[route]/play`
+  - **Story Journey** → `/stories/[route]/read`
+
+- If no linear story exists for a route, the Story Journey option shows "Coming soon"
 
 ---
 
@@ -488,10 +728,10 @@ The story play page shows three alignment stats as progress bars:
 
 ## Future TODOs
 
-### ✅ Completed in Phase 2
-- [x] **Save/Load System**: Persist story progress to localStorage
-- [x] **Ending Tracking**: Unlock endings in `/endings` page based on completed routes
-- [x] **UI Polish**: Enhanced alignment indicators and ending screens
+### ✅ Completed
+- [x] **Phase 1**: Interactive story system with branching paths and choices
+- [x] **Phase 2**: Save/Load system, ending tracking, and UI polish
+- [x] **Phase 3**: Linear Story Journeys - Canon reading mode with chapters and pages
 
 ### High Priority
 - [ ] **Chapter 2+ Content**: Expand Verso and Maelle stories beyond Chapter 1
@@ -517,7 +757,9 @@ The story play page shows three alignment stats as progress bars:
 ## Key Files Reference
 
 ### Types & Utilities
-- `/lib/story/types.ts` - All TypeScript interfaces for story system
+- `/lib/story/types.ts` - TypeScript interfaces for interactive story system
+- `/lib/story/linearTypes.ts` - TypeScript interfaces for linear story system
+- `/lib/story/linearLoader.ts` - Loader functions for linear stories
 - `/lib/story/persistence.ts` - localStorage utilities for progress and endings
 - `/lib/hooks/useEndingsProgress.ts` - React hook for endings gallery
 
@@ -528,14 +770,17 @@ The story play page shows three alignment stats as progress bars:
 - `/components/progress-bar.tsx` - Chapter progress bar
 
 ### Data
-- `/data/stories/verso.json` - Verso's complete story (3 endings)
-- `/data/stories/maelle.json` - Maelle's complete story (4 endings)
+- `/data/stories/verso.json` - Verso's interactive story (3 endings)
+- `/data/stories/maelle.json` - Maelle's interactive story (4 endings)
+- `/data/linear-story/verso_linear.json` - Verso's linear story journey
+- `/data/linear-story/maelle_linear.json` - Maelle's linear story journey
 - `/data/codex/entries.json` - All codex entries (19 entries)
 
 ### Pages
 - `/app/page.tsx` - Home page
-- `/app/stories/[route]/page.tsx` - Story detail
-- `/app/stories/[route]/play/page.tsx` - Story playthrough with engine
+- `/app/stories/[route]/page.tsx` - Story detail with mode selection
+- `/app/stories/[route]/play/page.tsx` - Interactive story playthrough with engine
+- `/app/stories/[route]/read/page.tsx` - Linear story reading experience
 - `/app/codex/page.tsx` - Lore codex with filters
 - `/app/map/page.tsx` - World map
 - `/app/endings/page.tsx` - Endings gallery with unlock tracking
