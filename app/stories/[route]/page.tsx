@@ -23,12 +23,13 @@ const routes = {
   }
 }
 
-export default function StoryRoutePage({
+export default async function StoryRoutePage({
   params
 }: {
-  params: { route: string }
+  params: Promise<{ route: string }>
 }) {
-  const route = routes[params.route as keyof typeof routes]
+  const { route: routeId } = await params
+  const route = routes[routeId as keyof typeof routes]
 
   if (!route) {
     notFound()
@@ -98,7 +99,7 @@ export default function StoryRoutePage({
             <div className="grid md:grid-cols-2 gap-4">
               {/* Interactive Path */}
               <Link
-                href={`/stories/${params.route}/play`}
+                href={`/stories/${routeId}/play`}
                 className="block glass p-6 rounded-lg hover:bg-card/70 transition-all group"
               >
                 <div className="flex items-start gap-4">
@@ -121,9 +122,9 @@ export default function StoryRoutePage({
               </Link>
 
               {/* Story Journey */}
-              {hasLinearStory(params.route) ? (
+              {hasLinearStory(routeId) ? (
                 <Link
-                  href={`/stories/${params.route}/read`}
+                  href={`/stories/${routeId}/read`}
                   className="block glass p-6 rounded-lg hover:bg-card/70 transition-all group"
                 >
                   <div className="flex items-start gap-4">
@@ -175,7 +176,7 @@ export default function StoryRoutePage({
             Alignment choices between Painter and Writer philosophies, as well as acts of compassion,
             will influence available paths and story outcomes. Multiple endings await discovery.
           </p>
-          {hasLinearStory(params.route) && (
+          {hasLinearStory(routeId) && (
             <p className="text-sm text-muted-foreground leading-relaxed">
               <strong className="text-foreground">Story Journey:</strong> Experience {route.character}'s canonical path through
               a linear narrative divided into chapters and pages. Perfect for those who want to immerse themselves
