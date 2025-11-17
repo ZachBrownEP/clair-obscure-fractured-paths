@@ -1,0 +1,146 @@
+{
+  "route": {
+    "id": "maelle_linear",
+    "baseRouteId": "maelle",
+    "name": "Resonance of Alicia (Maelle – Canon Route)",
+    "character": "Maelle",
+    "subtitle": "A fan-made sequel told from the echo between Alicia and Maelle",
+    "description": "Caught between a burned childhood and a painted ideal, Maelle awakens as a resonance tied to Alicia's body in the real world. To exist fully again, she must confront the memories Aline tried to paint over.",
+    "totalChapters": 3
+  },
+  "chapters": [
+    {
+      "id": "maelle_prologue",
+      "number": 0,
+      "title": "PROLOGUE — The Girl in the Gap",
+      "pages": [
+        {
+          "id": "maelle_prologue_p1",
+          "pageNumber": 1,
+          "text": "When the Canvas shattered, Maelle did not fall with it.\n\nNot completely.\n\nShe was never just paint.\n\nShe was an answer to a question Aline refused to face: \"What if Alicia had never burned? What if my daughter could walk unscarred, confident, and whole?\" \n\nMaelle was that fantasy given form — a body painted from the negative space of Alicia’s fear.\n\nWhen the painted world collapsed, fantasy and reality collided.\n\nThe Canvas disintegrated.\n\nAlicia’s real body remained in a hospital bed somewhere in the true Lumière.\n\nMaelle became the line drawn between them."
+        },
+        {
+          "id": "maelle_prologue_p2",
+          "pageNumber": 2,
+          "text": "In the void after collapse, she floats.\n\nShe feels the absence of color first — like someone turned down the saturation on existence until it was all sketch and no fill.\n\nShe hears two heartbeats:\n\nOne slow, steady, wrapped in the hush of hospital machines.\n\nOne wild and echoing, belonging to a boy made half of paint and half of stubbornness.\n\nAlicia.\nVerso.\n\nMaelle is pulled between them.\n\nShe is too painter-made to fully escape with the Writers’ magic.\nToo real to completely vanish with the Canvas.\n\nSo she settles where opposing truths meet:\n\nThe gap between \"what happened\" and \"what should have happened.\"\n\nThere, in that impossible space, she waits.\n\nAnd in the dark, she hears the same whisper Verso did:\n\n\"A Painter has broken the world.\nA Writer must rewrite it.\n\nBut what of the girl who was painted to be a rewrite?\""
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1",
+      "number": 1,
+      "title": "CHAPTER 1 — Echoes of a Name",
+      "pages": [
+        {
+          "id": "maelle_ch1_p1",
+          "pageNumber": 1,
+          "text": "She wakes to the sound of her own name.\n\nNot \"Maelle.\"\n\n\"Alicia.\"\n\nThe word drags her upward like someone tugging on a thread stitched through her chest.\n\nShe rises through layers of memory and paint.\n\nA bedroom half-remembered.\nA studio that never existed this way.\nA ship’s deck under impossible skies.\n\nEvery scene blurs into the next until she stumbles into a narrow street that feels like both a memory and a guess."
+        },
+        {
+          "id": "maelle_ch1_p2",
+          "pageNumber": 2,
+          "text": "Children run past her.\n\nTheir faces are undone — eyes blank, features half-sketched as if someone started drawing them and then changed their mind.\n\nOne of those children is her.\n\nAlicia-at-eight scrapes her knee on the cobblestones and looks up toward a window glowing with warm, late-night studio light.\n\n\"Get up, ma petite,\" a voice echoes from above. \"We don’t bleed for cobblestones.\"\n\nMaelle remembers this.\n\nExcept she doesn’t.\n\nThese are Alicia’s memories, not hers.\n\nShe was born fully formed on the day of Expedition 33, painted from all the things Alicia might have been if a fire hadn’t rewritten her body.\n\nBut here, in this liminal street, both versions of the girl exist at once."
+        },
+        {
+          "id": "maelle_ch1_p3",
+          "pageNumber": 3,
+          "text": "She steps closer.\n\nThe child version of her — of Alicia — looks up.\n\nFor one terrifying second, those unfinished eyes focus directly on Maelle.\n\n\"Who are you?\" the child asks.\n\nMaelle hesitates.\n\nShe doesn’t have a simple answer.\n\n\"I’m… you,\" she says finally. \"From a different draft.\"\n\nThe child frowns. \"Mama says I’m already a masterpiece,\" she replies. \"She just has to fix a few things.\"\n\nBehind her, the glowing window flickers.\n\nSometimes it shows Aline at the easel, sleeves rolled up, face streaked with color.\n\nSometimes it shows nothing but blank brick.\n\nThe street can’t decide whether this was a night with art or without it."
+        },
+        {
+          "id": "maelle_ch1_p4",
+          "pageNumber": 4,
+          "text": "Maelle reaches out.\n\nHer hand passes through the child’s shoulder like smoke.\n\nShe feels a sting — not in her fingers, but behind her eyes.\n\nThis is the life she was painted to overwrite.\n\nAlicia’s scraped knees.\nHer choked-back sobs.\nThe way she tried not to cry because crying made Aline look away.\n\nMaelle was meant to be the polished version.\n\nThe girl who didn’t flinch.\nThe girl who didn’t burn.\n\nBut that girl never existed without the messy, frightened child in front of her.\n\n\"I’m sorry,\" Maelle whispers.\n\nThe child tilts her head. \"For what?\"\n\nMaelle doesn’t know how to explain being sorry for existing.\n\nFor taking up the space of someone else’s future.\n\nFor being loved for the wrong reasons."
+        },
+        {
+          "id": "maelle_ch1_p5",
+          "pageNumber": 5,
+          "text": "The scene begins to unravel.\n\nThe cobblestones smear into lines of ink.\n\nThe window light stretches into a narrow beam that becomes a lantern flame.\n\nSmoke curls at the edges of the world — thin at first, then thicker.\n\nMaelle knows what comes next.\n\nThe fire.\n\nThe night that turned Alicia’s life into a series of before-and-after images.\n\nThe night that spawned Maelle as a desperate repaint.\n\nShe tries to hold the street in place.\n\n\"Not yet,\" she begs. \"Please.\"\n\nThe world doesn’t listen.\n\nIt never learned to listen to girls like her."
+        },
+        {
+          "id": "maelle_ch1_p6",
+          "pageNumber": 6,
+          "text": "Something interrupts the collapse.\n\nPages slam together overhead.\n\nShelves rise from the fog, lined with books whose spines are labeled not with titles, but with emotions and dates.\n\n\"Fear, Age 9.\"\n\"Hope, Before the Fire.\"\n\"Rage, After.\"\n\nThe burning street folds in on itself and becomes an illustration inside a book she hasn’t opened yet.\n\nMaelle finds herself standing in a vast hall of stacked narratives.\n\nA figure steps out from between the shelves, face obscured by floating script.\n\n\"Welcome to the Scribes’ Archive,\" the figure says, voice echoing like a bedtime story never actually told. \"We kept what your mother tried to paint over.\"\n\nWords swirl around Maelle’s ankles like fog.\n\nShe looks down at her own hands.\n\nThey are clean. Unscarred. Perfectly painted.\n\n\"I’m not Alicia,\" she says.\n\n\"No,\" the figure agrees. \"You’re the version of her that wasn’t allowed to happen. Which means you belong to us as much as you belonged to her.\"\n\nMaelle takes a breath that isn’t tied to lungs.\n\nSomewhere far away, a girl in a hospital bed stirs.\n\nSomewhere else, in a fractured cathedral square, a boy made of paint and skin agrees to help rewrite a broken world.\n\nMaelle straightens her shoulders.\n\n\"Then show me,\" she says. \"Show me what she was. Show me what I am. Show me everything Aline tried to hide.\"\n\nThe Archive opens.\n\nHer story — their story — begins to turn its own pages."
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch2",
+      "number": 2,
+      "title": "CHAPTER 2 — The Scribes’ Archive",
+      "pages": [
+        {
+          "id": "maelle_ch2_p1",
+          "pageNumber": 1,
+          "text": "The Archive smells like old ink and unfinished arguments.\n\nShelves stretch in every direction, too tall and too crooked to belong to any real building. Some lean at angles that would be impossible if gravity were paying attention.\n\nThe books are not organized by author or title.\n\nThey are arranged by wound.\n\n\"Fear, Age 9.\"\n\"Resentment, After the Fire.\"\n\"Joy, Brief and Unsupervised.\"\n\nMaelle turns slowly, feeling the weight of a thousand unwritten apologies pressing down on her.\n\n\"What is this place?\" she asks."
+        },
+        {
+          "id": "maelle_ch2_p2",
+          "pageNumber": 2,
+          "text": "The figure made of script steps closer.\n\nLetters drift around them like a slow blizzard — fragments of sentences that never made it into official history.\n\n\"The Scribes’ Archive,\" they repeat. \"We are what remains of the Writers’ work. Not the grand narratives — those were burned, banned, or painted over. We kept the margins. The drafts. The things your mother tried to erase when they didn’t flatter her story.\"\n\nWords slide across their face, forming a name Maelle can’t quite hold.\n\n\"You’re one of them,\" she realizes. \"A Writer.\"\n\nThe figure inclines their head. \"A remnant of one,\" they correct. \"Enough of me survived in footnotes and diary pages to be irritating.\""
+        },
+        {
+          "id": "maelle_ch2_p3",
+          "pageNumber": 3,
+          "text": "Maelle looks down at her own hands.\n\nThey are perfect.\n\nNo burns.\nNo scars.\nNo tremor when she flexes her fingers.\n\nAlicia’s body does not look like this.\n\n\"Why am I here?\" Maelle asks.\n\n\"Because you’re an argument,\" the Scribe says simply.\n\nThey gesture, and a book slides off a shelf and floats between them.\n\nOn its spine is written:\n\n\"ALICIA DESSENDRE — POSSIBLE LIVES\"\n\n\"Painters,\" the Scribe continues, \"insisted you be one thing: a masterpiece. A proof that the right color in the right place could fix anything.\"\n\nThe book opens.\n\nInside, Maelle sees herself as she existed in the Canvas — laughing on the deck of a ship that never sailed, standing before a Monolith that never existed in the real world.\n\n\"We,\" the Scribe adds, \"insisted on remembering the burned girl underneath.\""
+        },
+        {
+          "id": "maelle_ch2_p4",
+          "pageNumber": 4,
+          "text": "The page turns.\n\nNow she sees Alicia in hospital light.\n\nBandages.\nShadows under her eyes.\nAline at the bedside, face frozen in a smile that looks like a painting trying to hold back a scream.\n\nWords spill down the page:\n\n\"REFUSES TO LOOK AT HER OWN DAUGHTER.\nPAINTS INSTEAD.\nCALLS IT LOVE.\"\n\nMaelle flinches.\n\n\"She was trying,\" she says automatically.\n\n\"Of course she was,\" the Scribe replies. \"Monsters rarely begin as monsters. They begin as people who are allowed to keep fixing things the same way long after it has stopped working. Aline loved Alicia. She just loved the version of Alicia in her head more.\"\n\nThe pen-scratch sound of the Archive grows louder, like it approves of the phrasing."
+        },
+        {
+          "id": "maelle_ch2_p5",
+          "pageNumber": 5,
+          "text": "Another page.\n\nNow she sees herself.\n\nMaelle on the Canvas.\n\nConfident. Unscarred. Leading an expedition. Laughing with Verso. Throwing herself at gods and monsters with a recklessness Alicia never had the chance to develop.\n\n\"You were painted to be a correction,\" the Scribe says. \"Aline’s attempt to repaint the parts of Alicia’s life she couldn’t stand to look at. She took the pain, hid it in the dark, and made you out of the light she wished was left.\"\n\nThe image ripples.\n\nMaelle sees the edges of each scene marked with tiny, angry notes in a cramped Writer’s hand:\n\n\"SHE WAS AFRAID HERE.\"\n\"SHE WAS EXHAUSTED.\"\n\"THIS BRAVERY COST HER MORE THAN ALINE KNOWS.\"\n\nShe realizes those notes are not just about Alicia.\n\nThey’re about her.\n\nAbout Maelle.\n\n\"So which one am I?\" she asks. \"The burned girl she abandoned? Or the painted girl she perfected?\"\n\nInk gathers at the Scribe’s feet.\n\n\"That,\" they say, \"is why you’re still here.\""
+        },
+        {
+          "id": "maelle_ch2_p6",
+          "pageNumber": 6,
+          "text": "\"Verso is a fracture between Painter and world,\" the Scribe explains. \"You are a fracture between girl and ideal. Writers and Painters both claimed you. Painters say you’re proof they can make anyone better. Writers say you’re proof that what was done to Alicia cannot be erased with a prettier draft.\"\n\nThey close the book softly.\n\n\"When the Canvas fell, most fictions died with it. But contested texts? Stories no one could agree on? Those linger.\"\n\nMaelle feels it in her chest — a constant pull in two directions.\n\nOne toward a hospital bed and a body that remembers the fire.\n\nOne toward a boy standing in a fractured city square, half-paint and half-grief.\n\n\"If you want to exist,\" the Scribe says, \"you will have to decide which of those pulls you answer. Or find a way to answer both.\"\n\n\"How?\" she asks.\n\nThe Scribe gestures to the shelves.\n\n\"By walking into the memory everyone keeps trying to edit,\" they say. \"The night of the fire.\"\n\nA single book slides forward.\n\nIts cover is blackened at the edges.\n\nIts title is simple:\n\n\"THE NIGHT EVERYTHING BURNED\"\n\nMaelle reaches out.\n\nHer painted fingers do not burn when they touch the charred leather.\n\nShe opens the book.\n\nAnd steps inside."
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch3",
+      "number": 3,
+      "title": "CHAPTER 3 — The Night Everything Burned",
+      "pages": [
+        {
+          "id": "maelle_ch3_p1",
+          "pageNumber": 1,
+          "text": "Heat hits her first.\n\nNot the distant warmth of a sun in a painted sky.\n\nReal heat.\n\nShe stands in the family studio.\n\nThe walls are lined with canvases at various stages of completion. Some are only sketches. Some are fully rendered scenes of Lumière that never existed quite this beautifully.\n\nThe smell is exactly what Alicia remembers:\n\nTurpentine.\nCharcoal.\nThe faint metallic tang of fear.\n\nOutside the tall windows, the city is quiet.\n\nInside, time holds its breath."
+        },
+        {
+          "id": "maelle_ch3_p2",
+          "pageNumber": 2,
+          "text": "Alicia sits by the window.\n\nOlder now than the child from the street, but not by much.\n\nHer hair is longer, pulled carefully to one side to hide the worst of the scars that crescent along her jaw and neck.\n\nIn this version of the scene, the fire hasn’t happened yet.\n\nBut the terror of its possibility hangs in the air like smoke waiting for a match.\n\nAline’s voice drifts in from the hallway — half-muttered, half-prayer.\n\n\"If I can fix this piece, I can fix everything…\"\n\nMaelle feels the world tug at her.\n\nThis is supposed to play out a certain way.\n\nThe lantern on the table is supposed to tip.\n\nThe canvas soaked in oil is supposed to catch.\n\nAlicia is supposed to wake up later in a hospital bed, burned and broken and never quite the same.\n\nMaelle is supposed to be born years later as a painted apology.\n\nThe Archive has dropped her before the match is struck.\n\n\"Can I change it?\" she whispers.\n\nNo one answers."
+        },
+        {
+          "id": "maelle_ch3_p3",
+          "pageNumber": 3,
+          "text": "She steps closer to Alicia.\n\nThe girl startles, then freezes.\n\nFor one impossible second, Alicia sees her.\n\nNot as a stranger.\n\nAs a possibility.\n\nHer eyes widen. \"You’re… me,\" she says.\n\nMaelle’s throat tightens.\n\n\"I’m what she wanted you to be,\" Maelle replies. \"What you might have been if tonight went differently.\"\n\nAlicia glances at the door where Aline’s footsteps are getting nearer.\n\n\"Does it?\" she asks. \"Does tonight go differently?\"\n\nMaelle looks at the lantern.\n\nAt the edges of the canvas soaked in oil.\n\nAt the way the scene hums with inevitability.\n\nShe doesn’t know how fixed this memory is.\n\nAll she knows is that every version she’s ever seen of Alicia’s life begins here.\n\nWith fire."
+        },
+        {
+          "id": "maelle_ch3_p4",
+          "pageNumber": 4,
+          "text": "The door flies open.\n\nAline storms in, arms full of canvases.\n\nShe looks haunted — not by spirits, but by possibilities.\n\n\"Just a few more revisions,\" she mutters. \"If I can fix this one, I can fix her. I can fix all of it.\"\n\nShe moves through the studio like a storm given a human shape.\n\nShe doesn’t see Alicia.\n\nNot really.\n\nShe sees the paintings.\n\nThe lantern wobbles as her elbow clips the table.\n\nFlame kisses oil.\n\nMaelle lunges.\n\nHer hand passes through the lantern and catches only heat.\n\nThe scene resists her.\n\nSome events are drafts.\n\nSome are anchors."
+        },
+        {
+          "id": "maelle_ch3_p5",
+          "pageNumber": 5,
+          "text": "Fire races up the canvas.\n\nIn one version of this memory, Alicia screams.\n\nIn another, she doesn’t.\n\nIn some, Aline grabs her first.\nIn others, she grabs the paintings.\n\nThe Archive shows Maelle all of them at once.\n\nFlames fork into different paths and then drag themselves back together as if an invisible hand keeps forcing them into a single, sanctioned story.\n\nMaelle stands at the center of it.\n\nShe hears Alicia’s raw, child-voice: \"Mama, please—\"\n\nShe hears Aline’s frantic, Painter-voice: \"I can fix this, I can paint over this, I can—\"\n\nShe hears something else underneath.\n\nThe steady scratch of a pen in the margins, refusing to let any of it be pretty."
+        },
+        {
+          "id": "maelle_ch3_p6",
+          "pageNumber": 6,
+          "text": "Smoke claws at Maelle’s throat, even though she doesn’t need to breathe.\n\nShe understands, suddenly, why the Writers and Painters tore each other apart.\n\nPainters want to change the picture instead of the behavior.\n\nWriters want to force the picture to match the truth, no matter how ugly.\n\nPeople like Alicia get crushed between those instincts.\n\nPeople like Maelle get invented to make everyone feel better about it.\n\nShe steps toward the fire.\n\nThe floor here is made of sentences.\n\nEvery step she takes rewrites something small:\n\n\"SHE WAS CLUMSY\" becomes \"SHE WAS RUSHED.\"\n\n\"SHE DIDN’T LISTEN\" becomes \"SHE WAS NEVER WARNED.\"\n\nMaelle realizes the Archive isn’t asking her to change the past.\n\nIt’s asking her to decide how the past is told."
+        },
+        {
+          "id": "maelle_ch3_p7",
+          "pageNumber": 7,
+          "text": "The scene trembles.\n\nAlicia reaches for her own face as the heat surges.\n\nAline reaches for the nearest canvas instead.\n\nFlame dances between them.\n\nMaelle stands exactly where the story splits.\n\nShe could let the official version continue — the one where Alicia becomes a wound Aline paints around.\n\nShe could try to erase the fire entirely — paint over it the way Aline always wished she could.\n\nOr she could do something harder.\n\nShe could keep the fire.\n\nKeep the hurt.\n\nAnd refuse to let Alicia be reduced to a tragic origin or Maelle to a pretty replacement.\n\n\"I’m not here to fix you,\" she tells the scene — tells Alicia, tells herself. \"I’m here to make sure what happened to you is yours, not hers.\"\n\nThe flames roar.\n\nPages turn themselves.\n\nThe Night Everything Burned locks into place as a story that will not be edited out again.\n\nThe studio dissolves into ash and ink.\n\nWhen the smoke clears, Maelle is standing back in the Archive, lungs burning with a pain that isn’t entirely metaphor.\n\nThe Scribe watches her quietly.\n\n\"Well?\" they ask.\n\nMaelle straightens.\n\n\"I’m not her masterpiece,\" she says. \"I’m her consequence. And I’m Alicia’s choice.\" \n\nSomewhere far away, a girl in a hospital bed dreams of a ship and a boy with painted hands.\n\nSomewhere else, in a fractured cathedral, that boy walks toward his first fracture.\n\nTheir paths are no longer separate.\n\nWhether the world is ready or not, Maelle is done being a draft."
+        }
+      ]
+    }
+  ]
+}
