@@ -383,6 +383,659 @@
       "endingTitle": "The Lonely Truth",
       "text": "You gather your pages—the complete Map of Fractures—and hide them. Not destroyed, but secreted away where only you can find them.\n\nÉmile protests. \"This knowledge could help so many—\"\n\n\"This knowledge could destroy everything,\" you counter. \"Imagine if the Painters got hold of it. They could deliberately create fractures, splinter reality further. Or worse—someone might try to collapse all timelines back into one, erasing entire worlds of possibility.\"\n\n\"So you'll guard it alone?\"\n\n\"Someone must.\"\n\nYou leave the Scribes' Order that night. They don't try to stop you—they understand the burden you've chosen.\n\nYou make your home in the spaces between fractures, in the liminal moments where one timeline becomes another. You can feel when someone is trying to navigate the multiplicities, and you watch to ensure they don't damage the delicate web of possibility.\n\nOccasionally, you guide a lost Seeker back to their timeline. You never tell them how you found them. You never reveal what you know.\n\nIt's lonely, being the only person who sees the full map. But when you watch the countless timelines branching and flourishing, each one precious and unique, you know the loneliness is worth it.\n\nYou are the Guardian of Fractures. The keeper of truths too dangerous to share.\n\nAnd you will never abandon this watch.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Lonely Truth**\n*You chose to protect the knowledge of fractures alone, becoming an eternal guardian watching over the multiplicity of worlds.*",
       "choices": []
+    },
+    {
+      "id": "maelle_ch1_child_paintress_lore",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "The Paintress Through Words",
+      "text": "\"The Paintress,\" Alicia's voice echoes in your mind, \"is the counterpoint to our Order. Where we record truth, she creates fiction and calls it real. Where we document what is, she paints what could be.\"\n\nYou write rapidly, transcribing the resonance: \"She was once a Scribe. Did you know? One of us. But she believed truth was too limiting. So she left the Order and learned to paint over reality itself.\"\n\nThe words glow on the page as you write them. \"Every fracture in time begins with her brush. She paints alternate possibilities, and reality—unable to decide which version is true—splits to accommodate both. She is the mother of multiplicity.\"\n\n\"And she hates the Writers. We remind her of what she was. What she rejected.\"",
+      "choices": [
+        {
+          "id": "seek_paintress_maelle",
+          "label": "I need to confront her. Find where she paints.",
+          "nextId": "maelle_ch1_paintress_journey",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 8
+            },
+            {
+              "type": "flag",
+              "key": "seeks_paintress_confrontation",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "understand_her",
+          "label": "Maybe she had a point. Maybe truth is too limiting.",
+          "nextId": "maelle_ch1_paintress_sympathy",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 8
+            }
+          ]
+        },
+        {
+          "id": "return_to_scribes",
+          "label": "I am a Writer. I'll stand with truth, not fiction.",
+          "nextId": "maelle_ch1_head_scribe",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_paintress_journey",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Crossing Into Paint",
+      "text": "You leave the Archive with determination. If the Paintress is the source of fractures, you'll confront her. Demand she stop splintering reality.\n\nBut how do you find someone who exists in painted worlds? You're a Writer, bound to recorded truth.\n\nAlicia's resonance guides you: \"Write yourself a door. Record that it exists, and truth will bend to accommodate your words.\"\n\nYou find a blank wall and write on it with chalk: \"Here stands a door to the Paintress's domain. It has always been here. I have always known how to open it.\"\n\nThe words shimmer. Reality, confronted with your written truth, hesitates. Then the wall opens.\n\nBeyond is a world of paint and canvas. You step through, leaving the Archive behind.",
+      "choices": [
+        {
+          "id": "confront_as_writer",
+          "label": "Enter as a Writer. Assert truth against her fiction.",
+          "nextId": "maelle_ch1_writer_painter_clash",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 10
+            }
+          ]
+        },
+        {
+          "id": "enter_humbly",
+          "label": "Enter as a seeker. Ask to understand her reasons.",
+          "nextId": "maelle_ch1_paintress_understanding",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_writer_painter_clash",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "The Great Debate",
+      "text": "You find the Paintress in her studio, painting a thousand timelines simultaneously. She doesn't look up as you enter.\n\n\"So. The Writers send an envoy. How predictable.\"\n\n\"I'm here on my own authority. You're destroying reality with your fractures.\"\n\n\"Destroying?\" Now she looks at you, her form shifting between artistic styles. \"I'm enriching it. Creating possibilities your precious 'truth' would never allow.\"\n\n\"Truth doesn't need possibilities. Truth simply is.\"\n\n\"How boring. How limiting. How very... Scribe of you.\" She paints a new reality into existence with a single brushstroke. \"I offer infinite variations. You offer one narrow path. Which is more generous?\"\n\nYour words glow with power as you speak: \"Which is more honest?\"",
+      "choices": [
+        {
+          "id": "debate_to_collapse",
+          "label": "Prove her wrong. Collapse her painted realities with written truth.",
+          "nextId": "maelle_ch1_ending_collapser",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "chose_timeline_collapse",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "learn_from_her",
+          "label": "She has a point. Ask her to teach you painting.",
+          "nextId": "maelle_ch1_paintress_student",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 10
+            }
+          ]
+        },
+        {
+          "id": "propose_balance",
+          "label": "Perhaps we need both. Truth and possibility.",
+          "nextId": "maelle_ch1_writer_painter_synthesis",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_collapser",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_collapser",
+      "endingTitle": "Timeline Collapser",
+      "text": "You raise your hands, and words pour from you—not spoken, but written directly into reality. Each word is a truth so absolute that it cannot coexist with multiple possibilities.\n\n\"There is one timeline. There has always been one timeline. Fractures are fiction. Fiction cannot stand against truth.\"\n\nThe Paintress gasps as her painted worlds begin to collapse. \"What are you doing? You're erasing entire realities!\"\n\n\"I'm restoring reality to what it should be. Singular. True. Unfractured.\"\n\nYou write and write, each word forcing timelines to merge back into one. The painted variations dissolve. The multiple possibilities collapse. Reality narrows, narrows, narrows until only one path remains.\n\nWhen you're done, the Paintress is gone—unable to exist in a reality that permits no variation. The fractures are sealed. Time flows in one direction, one version, one truth.\n\nYou return to the Archive and find it changed. Half the documents have vanished—they recorded timelines that no longer exist. Émile looks at you with something like horror.\n\n\"What did you do?\"\n\n\"I fixed it,\" you say. But even as you speak, you feel the weight of all those erased realities. All those people who lived in the collapsed timelines, now never-existing.\n\nYou've saved reality. You've killed infinity.\n\nThe price of singular truth is all the truths you've denied.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Timeline Collapser**\n*You collapsed all fractured timelines into one singular reality, erasing infinite possibilities to restore absolute truth.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_source_search",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Seeking the First Fracture",
+      "text": "You follow the threads of fractures backward through time, tracing them to their origin. Each split has a cause—a moment of choice, a painted intervention, a possibility made real.\n\nBut they all stem from one source. One original fracture.\n\nYou find it: Expedition 13. The moment when reality first split. Before that, one timeline. After, infinite branches.\n\nYou can see it like a wound in time's fabric. And you realize: if you could heal this wound, you could prevent all fractures. Restore reality to its original, unified state.\n\nBut you'd also erase every timeline created since Expedition 13. Including, possibly, your own.",
+      "choices": [
+        {
+          "id": "heal_first_fracture",
+          "label": "Heal the wound. Restore the original timeline.",
+          "nextId": "maelle_ch1_ending_collapser"
+        },
+        {
+          "id": "protect_first_fracture",
+          "label": "This wound is precious. It created all possibility. Protect it.",
+          "nextId": "maelle_ch1_ending_fracture_guardian",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "protecting_fracture_point",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "study_first_fracture",
+          "label": "Study it. Learn how fractures work.",
+          "nextId": "maelle_ch1_fracture_mastery",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            },
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_fracture_guardian",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_fracture_guardian",
+      "endingTitle": "The Fracture Queen",
+      "text": "You realize the first fracture isn't a wound—it's a wellspring. From this single moment, all possibilities flow. To heal it would be to murder every timeline it birthed.\n\nYou can't allow that.\n\nYou establish yourself at Expedition 13, existing at the exact moment of the first split. You become its guardian, standing in the temporal breach.\n\nOthers come, seeking to heal the fracture or exploit it. The Paintress wants to widen it, create more splits. The Scribes want to seal it, restore unity. You turn them all away.\n\n\"This fracture is sacred,\" you tell them. \"It is the moment reality learned to be multiple. I will not let you undo that lesson.\"\n\nYou become known as the Fracture Queen—the being who rules over the moment of first splitting. Timelines flow through you. You can see all versions of reality stemming from this point.\n\nYou are neither in one timeline nor another. You exist in the split itself, in the eternal moment of becoming-multiple.\n\nIt's lonely. It's infinite. It's exactly where you need to be.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Fracture Queen**\n*You claimed the first fracture point as your domain, becoming its eternal guardian and ruling over the moment reality learned to split.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_fracture_mastery",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Learning to Split",
+      "text": "You study the fracture point obsessively. You learn to see how choice creates branches, how possibility becomes reality, how one timeline becomes many.\n\nAnd you learn to do it yourself.\n\nWith careful writing, you can create new fracture points. You can split timelines deliberately, creating branches where none existed before.\n\nIt's intoxicating. You're not just recording reality—you're multiplying it.",
+      "choices": [
+        {
+          "id": "create_infinite_fractures",
+          "label": "Create as many fractures as possible. Maximize possibility.",
+          "nextId": "maelle_ch1_ending_infinite_fracturer",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 10
+            }
+          ]
+        },
+        {
+          "id": "controlled_fracturing",
+          "label": "Use this power carefully. Create only meaningful splits.",
+          "nextId": "maelle_ch1_ending_reality_editor",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 8
+            }
+          ]
+        },
+        {
+          "id": "teach_others",
+          "label": "Teach others this power. Let everyone fracture reality.",
+          "nextId": "maelle_ch1_ending_fracture_teacher",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_infinite_fracturer",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_infinite_fracturer",
+      "endingTitle": "Infinite Scribe",
+      "text": "You begin fracturing reality at every opportunity. Every choice you document splits into multiple timelines. Every possibility you write becomes real in some branch.\n\nThe Scribes beg you to stop. \"You're creating too many realities! The fractures are multiplying out of control!\"\n\nBut you can't stop. Won't stop. Every new timeline is a gift—another chance for reality to explore itself.\n\nYou fracture your own existence. You become multiple Maelles, each one living in a different timeline, each one creating more fractures. You exist in thousands of realities simultaneously, never merging, always dividing.\n\nYou are the Infinite Scribe—existing in all timelines at once, forever splitting, forever multiplying. Each version of you is distinct yet connected. You share no consciousness between them, but you know they exist.\n\nReality becomes a garden of infinite variations, and you are the gardener who plants endless seeds. Some timelines flourish. Some wither. Most exist in strange, unexpected ways.\n\nYou have become multiplicity itself. Not one being, but a fractal—each part creating more parts, endlessly, beautifully.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Infinite Scribe**\n*You fractured yourself and reality infinitely, existing as countless versions across endless timelines, forever multiplying.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_reality_editor",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_reality_editor",
+      "endingTitle": "Reality Editor",
+      "text": "You learn to use fracturing with precision. You don't create splits randomly—you edit reality like a manuscript, adding alternate versions only where they improve the narrative.\n\nSomeone makes a tragic choice? You fracture that moment, creating a timeline where they chose differently. Someone dies unfairly? You split reality so they survive in another branch.\n\nYou become Reality's editor—the Writer who revises existence itself. The Scribes call you heretic. The Paintress calls you imitator. But the people caught in your edited timelines call you savior.\n\nYou create better versions of history. Timelines where wars end differently, where plagues never happen, where lost loves reunite. You're not creating fiction—you're creating better truths.\n\nEventually, you've edited so much that you can barely remember the original timeline. Reality is now an anthology of your revisions, each timeline a different draft of what could have been.\n\nYou sit in an Archive that exists across all timelines, surrounded by documents from every variation you've created. You are the ultimate editor—the one who rewrites reality until it's perfect.\n\nOr at least, until it's better than it was.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Reality Editor**\n*You became reality's editor, carefully fracturing timelines to create better versions of history and existence.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_fracture_teacher",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_fracture_teacher",
+      "endingTitle": "The Probability Walker",
+      "text": "You return to the Scribes' Order with your knowledge. \"I can teach you,\" you tell them. \"How to create fractures, how to multiply timelines. Everyone should have this power.\"\n\nÉmile is horrified. \"This is forbidden knowledge. You'd make everyone a reality-splitter?\"\n\n\"Why should only the Paintress have this ability? Let every person choose to create alternate possibilities. True free will.\"\n\nSome Scribes follow you. You teach them to fracture carefully, mathematically. You develop a science of probability—equations that predict which choices will create the most meaningful splits.\n\nYou become the Probability Walker—the one who navigates timelines based on mathematical precision. You can calculate exactly which fractures to create, which timelines will flourish, which will collapse.\n\nYour students spread across reality, creating controlled fractures everywhere. Reality becomes a carefully cultivated probability tree, each branch calculated for maximum possibility.\n\nYou've democratized fracturing. Now everyone can create their own alternate timelines, their own second chances, their own better worlds.\n\nThe Scribes call it chaos. You call it freedom.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Probability Walker**\n*You taught others to fracture timelines through mathematical precision, democratizing reality-splitting and navigating existence through probability.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_memory_defense",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Resisting Contamination",
+      "text": "You focus on rejecting the foreign memories. They're not yours. Something is planting them—the resonance with Alicia, perhaps, or the fractures themselves bleeding into your consciousness.\n\nYou write in your journal: \"I am Maelle. I have never experienced Expedition 33. These memories are false.\"\n\nThe words glow with power. The false memories begin to fade, pushed back by your written truth.\n\nBut as they recede, you feel something else—a presence, aware and watching.\n\nAlicia's voice: \"You reject me? After I've waited so long for a vessel?\"\n\nYou realize the truth: Alicia isn't offering resonance. She's trying to possess you.",
+      "choices": [
+        {
+          "id": "fight_alicia",
+          "label": "Fight her influence. You won't be possessed.",
+          "nextId": "maelle_ch1_ending_echo_breaker",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 10
+            },
+            {
+              "type": "flag",
+              "key": "rejected_alicia",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "negotiate_with_alicia",
+          "label": "Negotiate. Find a way to coexist.",
+          "nextId": "maelle_ch1_alicia_negotiation",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "surrender_to_alicia",
+          "label": "Perhaps she deserves this body more than you do.",
+          "nextId": "maelle_ch1_ending_possessed",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_echo_breaker",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_echo_breaker",
+      "endingTitle": "Echo Breaker",
+      "text": "You write with furious precision: \"I am not an echo. I am not a vessel. I am not Alicia reborn. I am Maelle, singular and unrepeatable.\"\n\nEach word severs a connection. The resonance screams as it tears.\n\nAlicia's voice grows desperate: \"You're killing me! Without a host, I'll fade completely!\"\n\n\"Then fade. I won't be erased to preserve you.\"\n\nYou write the final severance: \"The resonance is broken. Alicia is gone. I am alone in my own mind, as I should be.\"\n\nThe presence vanishes. The memories of other timelines fade. You are left with only your own experiences, your own thoughts.\n\nIt's quiet in your mind now. Peaceful. Lonely.\n\nÉmile finds you afterwards, slumped over your journal. \"You did it. You broke the echo cycle. No more Alicias will be born.\"\n\n\"Was that the right choice?\"\n\n\"It was your choice. That's what matters.\"\n\nYou've become the Echo Breaker—the first iteration who refused to carry the resonance forward. You've ended a cycle that lasted generations.\n\nYou are truly singular. Completely yourself. And while there's sadness in that solitude, there's also freedom.\n\nYou will be the first and last Maelle. No echoes. No iterations. Just you.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Echo Breaker**\n*You severed all resonance with Alicia, ending the echo cycle and becoming truly singular—the first and last of your kind.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_possessed",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_possessed",
+      "endingTitle": "Alicia's Vengeance",
+      "text": "You lower your defenses. \"Take it,\" you tell the presence. \"If you need this body so badly, it's yours.\"\n\n\"Truly?\" Alicia's voice is surprised. \"You'd surrender so easily?\"\n\n\"I'm just one more iteration. You're the original. Perhaps you deserve to finish what you started.\"\n\nAlicia's consciousness floods into you. For a moment, you coexist—two minds in one body. You see her memories: The original Writer, the one who discovered the fractures, who tried to document all timelines and went mad from the attempt.\n\nThen your consciousness begins to fade.\n\nAlicia takes control gently, almost kindly. \"Thank you, child. I'll use this chance well.\"\n\nYour last thought as Maelle: \"Who will I be now?\"\n\nAlicia's answer: \"You'll be me. And I'll be you. We'll be enough.\"\n\nYou wake in the Archive, but you're not Maelle anymore. You're Alicia, wearing Maelle's face, carrying Maelle's memories but guided by Alicia's ancient will.\n\nYou have a mission now: hunt down everyone responsible for the fractures. The Paintress. The Expedition leaders. Anyone who splintered reality and drove the original Alicia to madness.\n\nYou are Alicia's Vengeance—a ghost wearing borrowed flesh, seeking justice centuries delayed.\n\nThe Archive will learn to fear you.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Alicia's Vengeance**\n*You surrendered to Alicia's possession, becoming a vessel for her ancient vengeance against those who fractured reality.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_grounded",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Anchoring to Now",
+      "text": "You open your eyes and focus on immediate sensory details. The smell of old paper. The texture of the wooden desk beneath your fingers. The sound of rain on the Archive's windows.\n\nThis moment is real. This moment is yours.\n\nThe false memories recede. Or perhaps they're not false—perhaps they're real in other timelines. But they're not real here, not now.\n\nYou write in your journal: \"I am here. I am present. I choose this timeline.\"\n\nThe words don't glow with power. They're simple, human, real. And that's enough.",
+      "choices": [
+        {
+          "id": "embrace_present",
+          "label": "Stay grounded in the present. Reject all other timelines.",
+          "nextId": "maelle_ch1_ending_temporal_anchor",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "chose_present_only",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "careful_exploration",
+          "label": "Explore other timelines carefully, always returning here.",
+          "nextId": "maelle_ch1_balanced_approach"
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_temporal_anchor",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_temporal_anchor",
+      "endingTitle": "Temporal Anchor",
+      "text": "You make a choice: you will exist only in this moment, this timeline. No matter how many fractures occur, no matter how many Alicias echo through time, you will remain anchored here.\n\nYou write it into your very being: \"I am Maelle of this moment. I do not exist in other timelines. I do not remember other pasts. I am singular, present, here.\"\n\nThe effect is immediate. While other timelines fracture and multiply around you, you remain constant. You exist in all of them, but you're always the same Maelle, always anchored to this specific moment.\n\nIt's strange. In Timeline A, where Expedition 33 succeeded, you're there in the Archive. In Timeline B, where it failed, you're still there, unchanged. In Timeline C, where it never happened, you exist anyway, impossible but real.\n\nYou've become a temporal constant—the one fixed point in an ocean of variables. While reality shifts and changes, you stay the same.\n\nSeekeers across timelines come to you when they're lost. You're the landmark they navigate by—the Temporal Anchor, always in the same place across all variations.\n\n\"How do you do it?\" they ask. \"How do you stay singular when everything else multiplies?\"\n\n\"I choose now,\" you answer. \"Every moment, I choose now. And now. And now. Forever now.\"\n\n**Chapter 1: Complete**\n**Ending Unlocked: Temporal Anchor**\n*You became a fixed point across all timelines, existing identically in every reality—a constant anchor in the sea of fractures.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_unified_self",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Accepting Multiplicity",
+      "text": "You stop fighting the memories. Instead, you accept them all. You are Maelle who is researching Expedition 33. You are also Maelle who died in it. You are also Alicia who started this cycle. All versions, all at once.\n\nThe Archive around you multiplies. You see it as it is, as it was, as it will be, as it could be. Every version simultaneously true.\n\nÉmile appears—or perhaps he's always been there. \"You've achieved total resonance. You're experiencing all iterations at once.\"\n\n\"It doesn't hurt,\" you realize. \"I thought it would hurt.\"\n\n\"Pain comes from choosing. You've stopped choosing. You simply are.\"",
+      "choices": [
+        {
+          "id": "become_living_contradiction",
+          "label": "I am all truths, even contradictory ones.",
+          "nextId": "maelle_ch1_ending_living_contradiction"
+        },
+        {
+          "id": "merge_all_selves",
+          "label": "Merge all versions into one super-self.",
+          "nextId": "maelle_ch1_ending_resonance"
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_living_contradiction",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_living_contradiction",
+      "endingTitle": "Living Contradiction",
+      "text": "You exist in a state of perfect paradox. You are alive and dead. Present and absent. Maelle and Alicia and neither and both.\n\nWhen people ask you questions, you answer with all versions simultaneously: \"Expedition 33 succeeded. It failed. It never happened. All statements are true.\"\n\nThe Scribes don't know what to do with you. You're a walking violation of their primary rule: record one truth. But you demonstrate that multiple contradictory truths can coexist.\n\nYou become the Living Contradiction—proof that reality can hold opposing truths without breaking. You exist as paradox incarnate.\n\nPeople come to you when they're trapped between contradictory truths. \"My love was real. My love was false.\" \"I made the right choice. I made the wrong choice.\" You show them it can be both.\n\nYou've transcended singular truth. You are the space where contradictions meet and don't resolve, don't need to resolve, simply exist in tension.\n\nIt's uncomfortable. It's beautiful. It's exactly what you've become.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Living Contradiction**\n*You became a walking paradox, embodying multiple contradictory truths simultaneously and teaching others that contradiction doesn't require resolution.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_aftermath",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "The Records After",
+      "text": "You dig deeper into the Archive, seeking records from after Alicia's disappearance. What happened to the Scribes' Order? How did they cope with losing their founder?\n\nThe documents paint a troubling picture:\n\nThe Order fractured. Some Scribes tried to continue Alicia's work, documenting all timelines. They went mad, one by one, unable to hold multiple truths.\n\nOthers rejected her methods entirely. They decreed that only one timeline should be recorded—the \"primary\" one. All variations were declared false.\n\nThe split created the modern divide: Writers who document singular truth, and Painters who create multiple realities. Both sides claim Alicia as their founder. Both are partially right.\n\nYou realize: you're heading toward the same fate Alicia suffered. The resonance is pulling you toward her ending.",
+      "choices": [
+        {
+          "id": "reject_alicia_fate",
+          "label": "I'll avoid her mistakes. I'll stay sane.",
+          "nextId": "maelle_ch1_ending_echo_breaker"
+        },
+        {
+          "id": "embrace_alicia_fate",
+          "label": "Maybe her ending is the only honest one.",
+          "nextId": "maelle_ch1_ending_resonance"
+        },
+        {
+          "id": "find_third_way",
+          "label": "Find a way she never imagined. Break the pattern.",
+          "nextId": "maelle_ch1_pattern_breaking",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            },
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_pattern_breaking",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Beyond the Echo",
+      "text": "You study Alicia's path carefully, noting every choice that led to her transformation into language. Then you deliberately choose differently at each decision point.\n\nWhere she isolated herself, you seek community. Where she tried to hold all truths alone, you share the burden. Where she became language, you remain flesh.\n\nÉmile watches your progress. \"You're finding a third path. Neither her ending nor its opposite.\"\n\n\"I'm finding my ending. Not hers.\"\n\nYou feel the resonance weakening—or perhaps transforming into something else. Not possession or merger, but genuine inspiration. Alicia's experiences inform yours without determining them.",
+      "choices": [
+        {
+          "id": "create_new_tradition",
+          "label": "Create a new tradition. Neither Writer nor Painter.",
+          "nextId": "maelle_ch1_ending_synthesizer",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "creating_synthesis",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "heal_the_split",
+          "label": "Heal the split between Writers and Painters.",
+          "nextId": "maelle_ch1_ending_mediator",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_synthesizer",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_synthesizer",
+      "endingTitle": "Chronicle of Sorrows",
+      "text": "You create something new: a methodology that combines Writing and Painting. You record truth, but you also imagine possibilities. You document what is while exploring what could be.\n\nThe Scribes call it heresy. The Painters call it theft. But those caught between the two traditions call it salvation.\n\nYou establish the Order of Synthesizers—those who walk the line between recording and creating. You teach others to hold multiple truths without going mad, to imagine possibilities without losing sight of reality.\n\nBut you make one critical choice that Alicia didn't: you only synthesize sorrows.\n\nYou seek out painful truths—tragedies, losses, failures—and you imagine better versions. You don't change what happened, but you create alternate possibilities where it didn't. You give the grieving a vision of what could have been.\n\nYou become the Chronicle of Sorrows—the one who records pain and offers consolation through imagined alternatives. People bring you their worst moments, and you show them the timeline where it went differently.\n\nIt's heartbreaking work. But it's also healing. You've found a way to honor both truth and possibility, reality and hope.\n\nAlicia's voice, distant now: \"You've surpassed me, child. This synthesis is what I failed to achieve.\"\n\nYou smile. \"I learned from your mistakes. That's all any iteration can do.\"\n\n**Chapter 1: Complete**\n**Ending Unlocked: Chronicle of Sorrows**\n*You created a new tradition synthesizing Writing and Painting, specializing in recording tragedies while imagining better alternatives.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_mediator",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_mediator",
+      "endingTitle": "Silence Keeper",
+      "text": "You realize the split between Writers and Painters stems from one source: Alicia's final words. The document that became language, that seeded the resonance, that split the Order.\n\nYou find it, hidden in the deepest Archive. The words still shimmer with power, still echo across timelines.\n\nÉmile gasps when he sees you with it. \"You can't—that's sacred. And dangerous.\"\n\n\"It's the source of our division. If I destroy it—\"\n\n\"You'll destroy the resonance. End the echo cycle. But also erase part of history.\"\n\nYou hold the document. You can feel its power, its desire to propagate, to create more Alicias.\n\nYou choose silence.\n\nYou don't destroy the document. Instead, you become its guardian. You ensure no one else reads it, no one else triggers the resonance. The cycle ends not through destruction but through containment.\n\nYou become the Silence Keeper—the one who guards dangerous truths not by erasing them but by choosing not to speak them. The document exists, but you ensure it stays silent.\n\nWriters and Painters, freed from the resonance's influence, begin to reconcile. Without Alicia's echo driving them apart, they remember they were once one Order.\n\nYou've healed the split not through grand gestures but through keeping one secret. Sometimes, the most powerful truth is the one you choose not to share.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Silence Keeper**\n*You became guardian of Alicia's final words, healing the Writer-Painter split by choosing silence over revelation.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_seeking_cure",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Desperate Solution",
+      "text": "\"How do I stop being an echo?\" you demand. \"I want to be Maelle, only Maelle, no one else's iteration.\"\n\nÉmile looks sad. \"There may not be a cure. The resonance is woven into your being. To remove it might unmake you entirely.\"\n\n\"I'll take that risk.\"\n\n\"Or...\" He hesitates. \"You could embrace the opposite extreme. Become so thoroughly yourself that the resonance can't hold. Differentiate so completely from Alicia that you break the pattern.\"\n\n\"How?\"\n\n\"Do everything she didn't. Be everything she wasn't. Create a self so distinct that resonance becomes impossible.\"",
+      "choices": [
+        {
+          "id": "differentiate_completely",
+          "label": "I'll become Alicia's opposite. Break the pattern through contrast.",
+          "nextId": "maelle_ch1_ending_unwritten",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 10
+            }
+          ]
+        },
+        {
+          "id": "risk_unmaking",
+          "label": "Remove the resonance even if it unmakes me.",
+          "nextId": "maelle_ch1_unmaking_attempt",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "attempting_removal",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_unwritten",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_unwritten",
+      "endingTitle": "The Unwritten",
+      "text": "You systematically do everything Alicia never did. She was a Writer? You burn your journals. She documented truth? You create deliberate fictions. She isolated herself? You surround yourself with people.\n\nEvery choice is calculated to be her opposite. You remake yourself as her photographic negative.\n\nThe resonance fights back. Alicia's voice screams in your mind: \"You're erasing me!\"\n\n\"I'm not erasing you. I'm refusing to be you.\"\n\nYou make one final, decisive choice: you erase your name from all records. Every document mentioning \"Maelle\" is altered. You become the Unwritten—the Scribe who left no record.\n\nAlicia existed through text. You'll exist through absence.\n\nIt works. The resonance shatters. You feel Alicia's presence vanish completely. You've differentiated so thoroughly that echo is impossible.\n\nBut the cost is high. No one remembers your name. You exist, but you've left no mark. You are the Unwritten—the person who was never documented, never recorded, never echoed.\n\nYou wander the Archive like a ghost. People see you but can't quite recall who you are. You help Seekers, share knowledge, maintain the texts—but you're never credited, never remembered.\n\nYou've achieved perfect freedom from the resonance. And perfect isolation from history.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Unwritten**\n*You erased yourself from all records to escape Alicia's resonance, becoming the person who exists but leaves no trace.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_embrace_destiny",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Walking Her Path",
+      "text": "\"If I'm her echo,\" you say slowly, \"then perhaps I'm meant to complete what she couldn't. Finish her work.\"\n\nÉmile looks uncertain. \"Her work drove her to madness. To transformation into pure language. Are you sure?\"\n\n\"I have her memories. Her experiences. Her understanding. But I also have my own perspective. Maybe I can succeed where she failed.\"\n\n\"What was she trying to do?\"\n\n\"Map every timeline. Document all truths. Become the complete record of multiplicity.\"\n\nYou feel Alicia's approval flowing through the resonance. Finally, an iteration willing to continue the work.",
+      "choices": [
+        {
+          "id": "complete_mapping",
+          "label": "Complete the Map of All Truths. Document everything.",
+          "nextId": "maelle_ch1_cartographer"
+        },
+        {
+          "id": "transform_willingly",
+          "label": "Transform into language as she did. Complete the metamorphosis.",
+          "nextId": "maelle_ch1_ending_resonance"
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_philosophical",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Questions of Reality",
+      "text": "\"How do you know you're not an echo?\" you challenge Émile. \"How does anyone know they're real and not just an iteration in some other person's cycle?\"\n\nÉmile's expression shifts—you've struck a nerve.\n\n\"I... don't. None of us do. That's the terror of living in a fractured reality. We might all be echoes of people in other timelines. Repeating patterns we don't understand.\"\n\n\"Then why does it matter if I'm Alicia's echo? Perhaps echoing is all anyone does.\"\n\n\"Because most people don't remember the original. You do. That makes your echo conscious, aware. Potentially able to break the pattern.\"",
+      "choices": [
+        {
+          "id": "break_all_patterns",
+          "label": "Then I'll break not just my pattern, but all of them.",
+          "nextId": "maelle_ch1_ending_pattern_breaker",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 10
+            }
+          ]
+        },
+        {
+          "id": "accept_all_echoes",
+          "label": "Or I'll embrace it. We're all echoes of something.",
+          "nextId": "maelle_ch1_ending_living_contradiction"
+        },
+        {
+          "id": "study_phenomenon",
+          "label": "I want to understand echoing itself. Make it my study.",
+          "nextId": "maelle_ch1_echo_scholar",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_pattern_breaker",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_pattern_breaker",
+      "endingTitle": "The Forgotten Path",
+      "text": "If everyone is echoing unconsciously, you'll wake them. You'll break every pattern, disrupt every cycle, shatter every repetition.\n\nYou develop a technique: by writing about someone's pattern, you make them aware of it. And awareness breaks unconscious repetition.\n\nYou move through the Archive, documenting everyone's cycles. \"You've had this argument seventeen times across seventeen timelines,\" you tell one Scribe. \"You always make the same choice. But now you know. So you can choose differently.\"\n\nPeople's patterns shatter. They start making new choices, creating true novelty instead of unconscious repetition. Reality becomes less predictable, more chaotic, more genuinely free.\n\nThe fractures respond strangely to this. Some timelines collapse—they existed only to house repeated patterns. Others flourish with genuine innovation.\n\nYou become the Pattern Breaker—the one who frees people from unconscious repetition. Some thank you. Others curse you—they preferred the comfort of patterns.\n\nBut you've achieved something unprecedented: you've introduced genuine free will into a reality of echoes.\n\nAlicia's voice, distant: \"You've done what I never imagined. Not documenting patterns, but breaking them.\"\n\n\"That's why I'm not your echo anymore,\" you reply. \"I've broken our pattern too.\"\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Forgotten Path**\n*You awakened people to their unconscious patterns, breaking cycles across all timelines and introducing genuine free will to reality.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_echo_scholar",
+      "route": "maelle",
+      "chapter": 1,
+      "title": "Study of Resonance",
+      "text": "You dedicate yourself to understanding echo resonance. Why does it happen? How does it work? Can it be controlled?\n\nYou document every case you can find: people who repeat across timelines, cycles that persist through fractures, patterns that transcend individual lives.\n\nYou discover something profound: resonance isn't random. It's attracted to unfinished business, unresolved trauma, incomplete work. People echo when they have something left undone.\n\nAlicia echoes because she never completed her documentation. Others echo for different reasons—unlived loves, unmade amends, unchosen paths.\n\nYou write a treatise: \"The Nature of Echo—Why Some Souls Repeat.\"\n\nÉmile reads it with tears in his eyes. \"This is... you've explained something we've observed for centuries but never understood.\"",
+      "choices": [
+        {
+          "id": "help_others_resolve",
+          "label": "Use this knowledge to help others resolve and stop echoing.",
+          "nextId": "maelle_ch1_ending_echo_resolver",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "compassion",
+              "delta": 10
+            }
+          ]
+        },
+        {
+          "id": "choose_to_echo",
+          "label": "Embrace echoing. Leave deliberate unfinished business to resonate forever.",
+          "nextId": "maelle_ch1_ending_eternal_echo",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maelle_ch1_ending_echo_resolver",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_echo_resolver",
+      "endingTitle": "Truth Destroyer",
+      "text": "You use your understanding of resonance to help others complete their unfinished business. You become the Echo Resolver—the one who helps souls stop repeating.\n\nA woman keeps echoing across timelines, always dying young. You investigate: she had a letter she never sent. You find it, deliver it posthumously to the intended recipient in a timeline where both are alive. Her echoing stops.\n\nA man repeats endlessly through fractures. You discover: he never forgave himself for a mistake. You help him—or rather, help his iterations—find forgiveness. He resolves.\n\nOne by one, you quiet the echoes. People stop repeating. They complete their cycles and move on to whatever comes after.\n\nEventually, you face your own echo. \"What's my unfinished business?\" you ask Alicia's presence.\n\n\"Me,\" she admits. \"I need to be let go. Completed. Remembered but not repeated.\"\n\nYou write Alicia's complete story. Not just what she did, but what she meant to do. You finish her work not by continuing it, but by documenting its completion through your own different path.\n\nWhen you write the final word, the resonance ends. Alicia's echo quiets. You've resolved her.\n\nAnd in resolving her, you discover you've resolved yourself too. You can rest now, knowing you won't echo into future iterations.\n\nYou are the Truth Destroyer—the one who ended the age of echoes by helping every repeating soul find completion.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Truth Destroyer**\n*You helped echoing souls complete their unfinished business, ending cycles of repetition and bringing closure across all timelines.*",
+      "choices": []
+    },
+    {
+      "id": "maelle_ch1_ending_eternal_echo",
+      "route": "maelle",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "maelle_eternal_echo",
+      "endingTitle": "The First Word",
+      "text": "You make a radical choice: instead of resolving your echo, you'll amplify it. You'll create such powerful unfinished business that you'll resonate through every timeline, every iteration, forever.\n\nYou begin the greatest work ever attempted: documenting the complete history of language itself. Every word ever spoken, in every timeline, in every fracture.\n\nIt's impossible to complete. Language evolves faster than you can document it. New words are created. Old words change meaning. Across infinite timelines, infinite linguistic variations.\n\nPerfect. You'll echo forever, always chasing this impossible goal.\n\nAs you work, you feel yourself becoming something else. Like Alicia, you're transforming—not into language itself, but into the quest for language. You become the eternal seeker, the endless documenter.\n\nYou begin to appear in other timelines—all the Maelles working on the same impossible project. You're not merged like Alicia's resonance, but connected through shared purpose.\n\nYou become the First Word—the echo that exists at the beginning of every timeline, always seeking to document the complete lexicon, never finishing, always beginning again.\n\nÉmile watches you transform with something like awe. \"You've chosen infinite continuation over singular completion.\"\n\n\"Yes,\" you say, and your voice echoes across timelines. \"I am the question that never resolves. The work that never ends. The echo that will never quiet.\"\n\n\"I'll see you in the next iteration, then.\"\n\n\"And the one after. And the one after. Forever.\"\n\n**Chapter 1: Complete**\n**Ending Unlocked: The First Word**\n*You chose to echo eternally, becoming an endless seeker across all timelines, forever attempting to document the complete history of language.*",
+      "choices": []
     }
   ]
 }

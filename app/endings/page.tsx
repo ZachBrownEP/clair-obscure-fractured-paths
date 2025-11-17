@@ -13,6 +13,7 @@ interface EndingMetadata {
 
 // Define all possible endings metadata
 const ENDINGS_METADATA: EndingMetadata[] = [
+  // VERSO'S ENDINGS (22 total)
   {
     key: 'verso_mediator',
     route: 'verso',
@@ -31,6 +32,122 @@ const ENDINGS_METADATA: EndingMetadata[] = [
     title: 'The Third Door',
     description: 'Reject the binary. Paint yourself new rules and write them into reality. Break the Gallery itself through sheer impossible will.'
   },
+  {
+    key: 'verso_curator',
+    route: 'verso',
+    title: 'Renoir\'s Successor',
+    description: 'Become the Gallery\'s eternal curator, tending to painted reality with loving attention. Where the Paintress creates, you preserve and maintain.'
+  },
+  {
+    key: 'verso_apprentice',
+    route: 'verso',
+    title: 'The Paintress\'s Apprentice',
+    description: 'Learn to paint reality itself alongside the Paintress. Master the brush that creates worlds and beings from pigment and possibility.'
+  },
+  {
+    key: 'verso_revolutionary',
+    route: 'verso',
+    title: 'The Painted Revolutionary',
+    description: 'Lead a rebellion of painted beings against the Paintress. Establish a self-governed Gallery where every creation has agency and voice.'
+  },
+  {
+    key: 'verso_tyrant',
+    route: 'verso',
+    title: 'Canvas Tyrant',
+    description: 'Overthrow the Paintress and become the new ruler of the Gallery. Wield her techniques with ruthless efficiency and terrible beauty.'
+  },
+  {
+    key: 'verso_frozen',
+    route: 'verso',
+    title: 'The Trapped Portrait',
+    description: 'Slow down completely, becoming frozen in a single perfect moment. Join the eternal café patrons preserved in stretched time.'
+  },
+  {
+    key: 'verso_gallery_dweller',
+    route: 'verso',
+    title: 'Home in Paint',
+    description: 'Build a life in the Gallery with the painted child. Find family, belonging, and peace among impossible flowers and singing streets.'
+  },
+  {
+    key: 'verso_nomad',
+    route: 'verso',
+    title: 'Brushstroke Nomad',
+    description: 'Wander eternally between infinite Galleries, exploring every painted world and artistic style. Never settle, always seeking new wonders.'
+  },
+  {
+    key: 'verso_watercolor',
+    route: 'verso',
+    title: 'The Unfinished',
+    description: 'Enter the watercolor world and embrace incompletion. Become an eternal sketch with bleeding boundaries, forever in flux.'
+  },
+  {
+    key: 'verso_conqueror',
+    route: 'verso',
+    title: 'Reality Weaver',
+    description: 'Join a world where painted beings conquered reality. Help weave the entire world into painted existence, blending all boundaries.'
+  },
+  {
+    key: 'verso_aline_merged',
+    route: 'verso',
+    title: 'Aline\'s Echo',
+    description: 'Merge completely with Aline\'s ghost, becoming a single being that carries both identities and loves. Together at last, in a new form.'
+  },
+  {
+    key: 'verso_self_taught',
+    route: 'verso',
+    title: 'Master of Frames',
+    description: 'Develop your own unique style of existing between states. Control all boundaries and thresholds, walking the frame\'s edge with mastery.'
+  },
+  {
+    key: 'verso_ghost_partner',
+    route: 'verso',
+    title: 'Ghost\'s Equal',
+    description: 'Become partner and equal to the Canvas Ghost. Together maintain perfect balance between all states of being across the Gallery.'
+  },
+  {
+    key: 'verso_background',
+    route: 'verso',
+    title: 'Faded to Background',
+    description: 'Diffuse into the Gallery\'s background, becoming the quiet substrate on which all other existences play out. Peaceful dissolution.'
+  },
+  {
+    key: 'verso_architect',
+    route: 'verso',
+    title: 'The Gallery Architect',
+    description: 'Redesign and expand the Gallery with new districts, beings, and wonders. Where the Paintress provides foundation, you add infinite detail.'
+  },
+  {
+    key: 'verso_new_love',
+    route: 'verso',
+    title: 'Dual Existence',
+    description: 'Complete Aline\'s ghost into a new person named Celine. Build a loving life together in the Gallery, both existing between real and painted.'
+  },
+  {
+    key: 'verso_community_builder',
+    route: 'verso',
+    title: 'The Hollow Canvas',
+    description: 'Hollow yourself out to become a vessel for others. Create a sanctuary where newly painted beings can learn, heal, and transform.'
+  },
+  {
+    key: 'verso_threshold_trial',
+    route: 'verso',
+    title: 'Pigment Phoenix',
+    description: 'Die and resurrect endlessly through paint cycles. Become pure transformation itself, existing through constant death and rebirth.'
+  },
+  {
+    key: 'verso_memory_keeper',
+    route: 'verso',
+    title: 'Pigment Prophet',
+    description: 'Become keeper of all forgotten memories. See futures through what will be forgotten, guiding others through time\'s landscape.'
+  },
+  {
+    key: 'verso_undefined',
+    route: 'verso',
+    title: 'The Living Question',
+    description: 'Refuse to settle into any single purpose. Remain forever in flux, a living question that refuses to be answered. Perpetual becoming.'
+  },
+
+  // MAELLE'S ENDINGS (19 total)
   {
     key: 'maelle_resonance',
     route: 'maelle',
@@ -54,6 +171,96 @@ const ENDINGS_METADATA: EndingMetadata[] = [
     route: 'maelle',
     title: 'The Lonely Truth',
     description: 'Protect the knowledge of fractures alone, eternal guardian watching over multiplicity. The burden of truth carried in solitude.'
+  },
+  {
+    key: 'maelle_collapser',
+    route: 'maelle',
+    title: 'Timeline Collapser',
+    description: 'Collapse all fractured timelines into one singular reality. Erase infinite possibilities to restore absolute, unified truth.'
+  },
+  {
+    key: 'maelle_fracture_guardian',
+    route: 'maelle',
+    title: 'The Fracture Queen',
+    description: 'Claim the first fracture point as your domain. Rule over the moment reality learned to split, existing in the eternal breach.'
+  },
+  {
+    key: 'maelle_infinite_fracturer',
+    route: 'maelle',
+    title: 'Infinite Scribe',
+    description: 'Fracture yourself across endless timelines, existing as countless versions. Become multiplicity itself, forever splitting and dividing.'
+  },
+  {
+    key: 'maelle_reality_editor',
+    route: 'maelle',
+    title: 'Reality Editor',
+    description: 'Edit reality like a manuscript, carefully fracturing timelines to create better versions of history and existence.'
+  },
+  {
+    key: 'maelle_fracture_teacher',
+    route: 'maelle',
+    title: 'The Probability Walker',
+    description: 'Teach others to fracture timelines through mathematical precision. Navigate existence through probability and democratize reality-splitting.'
+  },
+  {
+    key: 'maelle_echo_breaker',
+    route: 'maelle',
+    title: 'Echo Breaker',
+    description: 'Sever all resonance with Alicia, ending the echo cycle forever. Become truly singular—the first and last of your kind.'
+  },
+  {
+    key: 'maelle_possessed',
+    route: 'maelle',
+    title: 'Alicia\'s Vengeance',
+    description: 'Surrender to Alicia\'s possession, becoming a vessel for her ancient vengeance against those who fractured reality.'
+  },
+  {
+    key: 'maelle_temporal_anchor',
+    route: 'maelle',
+    title: 'Temporal Anchor',
+    description: 'Become a fixed point across all timelines, existing identically in every reality. A constant anchor in the sea of fractures.'
+  },
+  {
+    key: 'maelle_living_contradiction',
+    route: 'maelle',
+    title: 'Living Contradiction',
+    description: 'Embody multiple contradictory truths simultaneously. Exist as walking paradox, teaching that contradiction needs no resolution.'
+  },
+  {
+    key: 'maelle_synthesizer',
+    route: 'maelle',
+    title: 'Chronicle of Sorrows',
+    description: 'Create a new tradition synthesizing Writing and Painting. Record tragedies while imagining better alternatives, offering consolation through possibility.'
+  },
+  {
+    key: 'maelle_mediator',
+    route: 'maelle',
+    title: 'Silence Keeper',
+    description: 'Become guardian of Alicia\'s final words. Heal the Writer-Painter split by choosing silence over revelation, protecting dangerous truths.'
+  },
+  {
+    key: 'maelle_unwritten',
+    route: 'maelle',
+    title: 'The Unwritten',
+    description: 'Erase yourself from all records to escape Alicia\'s resonance. Become the person who exists but leaves no trace in history.'
+  },
+  {
+    key: 'maelle_pattern_breaker',
+    route: 'maelle',
+    title: 'The Forgotten Path',
+    description: 'Awaken people to their unconscious patterns. Break cycles across all timelines, introducing genuine free will to reality.'
+  },
+  {
+    key: 'maelle_echo_resolver',
+    route: 'maelle',
+    title: 'Truth Destroyer',
+    description: 'Help echoing souls complete their unfinished business. End cycles of repetition by bringing closure across all timelines.'
+  },
+  {
+    key: 'maelle_eternal_echo',
+    route: 'maelle',
+    title: 'The First Word',
+    description: 'Choose to echo eternally across all timelines. Forever attempt to document the complete history of language, never finishing, always beginning again.'
   }
 ]
 
@@ -99,11 +306,11 @@ export default function EndingsPage() {
           <h2 className="text-2xl font-light text-foreground mb-6 flex items-center gap-3">
             <span>Verso's Paths</span>
             <span className="text-sm text-muted-foreground font-normal">
-              The Fractured Canvas
+              The Fractured Canvas • {versoEndings.length} Endings
             </span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {versoEndings.map(ending => {
               const unlocked = isUnlocked(ending.route, ending.key)
 
@@ -156,11 +363,11 @@ export default function EndingsPage() {
           <h2 className="text-2xl font-light text-foreground mb-6 flex items-center gap-3">
             <span>Maelle's Paths</span>
             <span className="text-sm text-muted-foreground font-normal">
-              Resonance of Alicia
+              Resonance of Alicia • {maelleEndings.length} Endings
             </span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {maelleEndings.map(ending => {
               const unlocked = isUnlocked(ending.route, ending.key)
 
