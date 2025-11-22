@@ -14,7 +14,7 @@ export default function DashboardPage() {
       <NavigationSidebar />
       <main className="relative z-10">
         {/* Header */}
-        <div className="px-4 md:px-8 pt-16 pb-8">
+        <div className="px-4 md:px-8 pt-24 pb-8">
           <PageHeader
             subtitle="Clair Obscur"
             title="Fractured Paths"

@@ -104,9 +104,9 @@ export default function DecisionTreePage() {
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
       <NavigationSidebar />
-      <div className="relative z-10">
+      <div className="relative z-10 pt-20">
         {/* Header */}
-        <header className="glass sticky top-0 z-20 border-b border-border/30">
+        <header className="glass sticky top-20 z-20 border-b border-border/30">
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
@@ -249,7 +249,7 @@ export default function DecisionTreePage() {
 
             {/* Node Details */}
             <div className="md:col-span-1">
-              <div className="glass rounded-xl p-6 sticky top-24">
+              <div className="glass rounded-xl p-6 sticky top-28">
                 {selectedNode ? (
                   <div className="space-y-4">
                     <div>

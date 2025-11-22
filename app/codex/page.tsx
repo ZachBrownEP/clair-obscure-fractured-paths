@@ -56,7 +56,7 @@ export default function CodexPage() {
       <div className="min-h-screen bg-background relative overflow-hidden">
         <EnhancedBackground />
         <NavigationSidebar />
-        <main className="max-w-4xl mx-auto px-4 md:px-8 py-16">
+        <main className="max-w-4xl mx-auto px-4 md:px-8 pt-24 pb-16">
           <button
             onClick={() => setSelectedEntry(null)}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
@@ -132,7 +132,7 @@ export default function CodexPage() {
     <div className="min-h-screen bg-background relative overflow-hidden">
       <EnhancedBackground />
       <NavigationSidebar />
-      <main className="max-w-5xl mx-auto px-4 md:px-8 py-16 relative z-10">
+      <main className="max-w-5xl mx-auto px-4 md:px-8 pt-24 pb-16 relative z-10">
         <Link
           href="/dashboard"
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"

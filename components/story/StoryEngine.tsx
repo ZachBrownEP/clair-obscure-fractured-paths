@@ -241,7 +241,7 @@ export default function StoryEngine({
   const estimatedTimeRemaining = Math.max(1, Math.round((totalNodes - visitedNodes) * 0.5)) // ~30 seconds per node
 
   return (
-    <div className="min-h-screen bg-background py-8 md:py-16 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-background pt-24 pb-8 md:pb-16 px-4 relative overflow-hidden">
       <EnhancedBackground />
       <NavigationSidebar
         showBookmarkOption={true}
