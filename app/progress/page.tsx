@@ -80,7 +80,7 @@ export default function ProgressPage() {
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
             <div className="flex items-center gap-4">
               <Link
-                href="/"
+                href="/dashboard"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <ArrowLeft size={24} />

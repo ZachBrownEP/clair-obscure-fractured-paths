@@ -42,7 +42,7 @@ export default async function StoryRoutePage({
       <main className="max-w-4xl mx-auto px-4 md:px-8 py-16 relative z-10">
         {/* Back link */}
         <Link
-          href="/"
+          href="/dashboard"
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
         >
           <ChevronLeft size={18} />

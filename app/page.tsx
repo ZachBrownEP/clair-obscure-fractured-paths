@@ -1,15 +1,15 @@
 import Link from 'next/link'
-import { BookOpen, Map, Trophy, ChevronRight, Award, History, BarChart3, GitBranch, Bookmark, GitMerge, Sparkles, Book, Gamepad2, Users } from 'lucide-react'
+import { ChevronRight, Book, Gamepad2, Trophy, Users, BarChart3, BookOpen } from 'lucide-react'
 import EnhancedBackground from '@/components/enhanced-background'
 import SubtleParticleEffect from '@/components/subtle-particle-effect'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden flex items-center">
       <EnhancedBackground />
-      <main className="relative z-10">
+      <main className="relative z-10 w-full">
         {/* Hero Section */}
-        <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-8 overflow-hidden">
+        <section className="relative px-4 md:px-8 py-16 md:py-24 overflow-hidden">
           <SubtleParticleEffect />
 
           <div className="relative max-w-5xl mx-auto text-center">
@@ -17,48 +17,58 @@ export default function Home() {
               Welcome to
             </p>
 
-            <h1 className="text-5xl md:text-7xl font-decorative text-gold mb-6 leading-tight drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]">
-              Clair Obscur: Fractured Paths
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-decorative text-gold mb-8 leading-tight drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+              Clair Obscur:<br />Fractured Paths
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
               An interactive companion experience that continues the story beyond Expedition 33
             </p>
 
-            <div className="glass rounded-xl p-8 md:p-12 max-w-4xl mx-auto mb-8 relative overflow-hidden">
-              <SubtleParticleEffect />
-              <h2 className="text-2xl md:text-3xl font-light text-foreground mb-6 relative z-10">
+            {/* Main CTA */}
+            <Link href="/dashboard">
+              <button className="glass px-12 py-5 rounded-xl hover:bg-primary/20 transition-all border-2 border-primary/30 hover:border-primary/50 font-light tracking-wide text-lg group relative overflow-hidden">
+                <span className="relative z-10 flex items-center gap-3">
+                  Enter the App
+                  <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </button>
+            </Link>
+          </div>
+        </section>
+
+        {/* What is This Section */}
+        <section className="px-4 md:px-8 py-16 max-w-6xl mx-auto">
+          <div className="glass rounded-2xl p-8 md:p-12 relative overflow-hidden">
+            <SubtleParticleEffect />
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 text-center">
                 What is Fractured Paths?
               </h2>
-              <div className="text-left space-y-4 text-foreground/90 leading-relaxed relative z-10">
-                <p>
-                  <strong className="text-primary">Clair Obscur: Expedition 33</strong> is a dark fantasy turn-based RPG that follows a group of Paintlings on a desperate quest to defeat the Painter—a mysterious figure who marks the world with a cursed number each year, condemning all who reach that age to be erased from existence.
+              <div className="space-y-6 text-foreground/90 leading-relaxed max-w-4xl mx-auto">
+                <p className="text-lg">
+                  <strong className="text-primary">Clair Obscur: Expedition 33</strong> is a dark fantasy turn-based RPG where a group of warriors battles against the Painter—a mysterious entity who condemns people to erasure based on their age each year.
                 </p>
-                <p>
-                  <strong className="text-primary">Fractured Paths</strong> is your companion to this world. This interactive experience allows you to explore <em>what happens after</em> the events of Expedition 33, diving deeper into the lives of characters like <strong>Verso</strong> and <strong>Maelle</strong> through branching narrative journeys shaped entirely by your choices.
+                <p className="text-lg">
+                  <strong className="text-primary">Fractured Paths</strong> is your companion to this world. This interactive experience lets you explore what happens <em>after</em> the events of Expedition 33, diving deeper into characters like <strong>Verso</strong> and <strong>Maelle</strong> through branching narratives shaped by your choices.
                 </p>
-                <p>
-                  This is a <strong className="text-gold">fan-made companion app</strong> designed to extend your journey beyond the main game. Experience new stories, unlock multiple endings, track your decisions, and immerse yourself in the lore of this fractured world.
+                <p className="text-lg text-center">
+                  This is a <strong className="text-gold">fan-made companion app</strong> designed to extend your journey beyond the main game.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features Overview */}
-        <section className="px-4 md:px-8 py-12 max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-              What Can You Do Here?
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Fractured Paths offers multiple ways to experience and explore the world of Clair Obscur
-            </p>
-          </div>
+        {/* Features Grid */}
+        <section className="px-4 md:px-8 py-16 max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-light text-foreground mb-12 text-center">
+            What Awaits You
+          </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Interactive Stories */}
-            <div className="glass rounded-xl p-8 relative overflow-hidden group">
+            <div className="glass rounded-xl p-8 relative overflow-hidden">
               <SubtleParticleEffect />
               <div className="relative z-10">
                 <div className="text-primary mb-4 flex justify-center">
@@ -67,14 +77,14 @@ export default function Home() {
                 <h3 className="text-xl font-light text-foreground mb-3 text-center">
                   Interactive Stories
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Make meaningful choices that shape the narrative. Every decision affects character relationships, unlocks different story paths, and leads to unique endings. Your choices have weight and consequence.
+                <p className="text-sm text-muted-foreground leading-relaxed text-center">
+                  Shape the narrative through meaningful choices. Every decision affects relationships and unlocks different paths.
                 </p>
               </div>
             </div>
 
             {/* Story Journey Mode */}
-            <div className="glass rounded-xl p-8 relative overflow-hidden group">
+            <div className="glass rounded-xl p-8 relative overflow-hidden">
               <SubtleParticleEffect />
               <div className="relative z-10">
                 <div className="text-primary mb-4 flex justify-center">
@@ -83,30 +93,30 @@ export default function Home() {
                 <h3 className="text-xl font-light text-foreground mb-3 text-center">
                   Story Journey Mode
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Prefer to read without making choices? Story Journey mode presents a canonical, linear narrative broken into chapters and pages. Perfect for a focused reading experience.
+                <p className="text-sm text-muted-foreground leading-relaxed text-center">
+                  Prefer a linear experience? Read the canonical narrative without making choices.
                 </p>
               </div>
             </div>
 
-            {/* Multiple Endings */}
-            <div className="glass rounded-xl p-8 relative overflow-hidden group">
+            {/* 47 Endings */}
+            <div className="glass rounded-xl p-8 relative overflow-hidden">
               <SubtleParticleEffect />
               <div className="relative z-10">
                 <div className="text-primary mb-4 flex justify-center">
-                  <Sparkles size={32} />
+                  <Trophy size={32} />
                 </div>
                 <h3 className="text-xl font-light text-foreground mb-3 text-center">
                   47 Unique Endings
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Discover 24 endings for Verso's story and 25 for Maelle's story. Each ending reflects the path you chose—some triumphant, others tragic, all meaningful.
+                <p className="text-sm text-muted-foreground leading-relaxed text-center">
+                  Discover 24 endings for Verso and 25 for Maelle. Each reflects your choices.
                 </p>
               </div>
             </div>
 
             {/* Alignment System */}
-            <div className="glass rounded-xl p-8 relative overflow-hidden group">
+            <div className="glass rounded-xl p-8 relative overflow-hidden">
               <SubtleParticleEffect />
               <div className="relative z-10">
                 <div className="text-primary mb-4 flex justify-center">
@@ -115,14 +125,14 @@ export default function Home() {
                 <h3 className="text-xl font-light text-foreground mb-3 text-center">
                   Dynamic Alignment
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Your choices shift character alignments (Painter, Writer, Balance). These stats influence which story branches open to you and which endings become accessible.
+                <p className="text-sm text-muted-foreground leading-relaxed text-center">
+                  Your choices shift alignments (Painter, Writer, Balance) which unlock different story branches.
                 </p>
               </div>
             </div>
 
             {/* Progress Tracking */}
-            <div className="glass rounded-xl p-8 relative overflow-hidden group">
+            <div className="glass rounded-xl p-8 relative overflow-hidden">
               <SubtleParticleEffect />
               <div className="relative z-10">
                 <div className="text-primary mb-4 flex justify-center">
@@ -131,14 +141,14 @@ export default function Home() {
                 <h3 className="text-xl font-light text-foreground mb-3 text-center">
                   Complete Tracking
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  All your progress is automatically saved. Track your endings, achievements, choice history, and statistics. Bookmark favorite scenes and revisit them anytime.
+                <p className="text-sm text-muted-foreground leading-relaxed text-center">
+                  Automatically save progress. Track endings, achievements, choice history, and statistics.
                 </p>
               </div>
             </div>
 
-            {/* Lore & Exploration */}
-            <div className="glass rounded-xl p-8 relative overflow-hidden group">
+            {/* Lore Codex */}
+            <div className="glass rounded-xl p-8 relative overflow-hidden">
               <SubtleParticleEffect />
               <div className="relative z-10">
                 <div className="text-primary mb-4 flex justify-center">
@@ -147,239 +157,33 @@ export default function Home() {
                 <h3 className="text-xl font-light text-foreground mb-3 text-center">
                   Deep Lore Codex
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Explore the Lore Codex to learn about characters, locations, factions, magic systems, and the history of the world. A living encyclopedia of Clair Obscur.
+                <p className="text-sm text-muted-foreground leading-relaxed text-center">
+                  Explore characters, locations, factions, magic, and the history of Clair Obscur.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Story Routes */}
-        <section className="px-4 md:px-8 py-16 max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-              Begin Your Journey
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Choose your path through the fractured world. Each character's story is a complete experience with its own branching paths, choices, and endings.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
-            <Link href="/stories/verso" className="block">
-              <div className="glass rounded-xl p-8 md:p-10 hover:bg-card/70 transition-all cursor-pointer group h-full relative overflow-hidden">
-                <SubtleParticleEffect />
-                <div className="relative z-10">
-                  <h2 className="text-3xl md:text-4xl font-light text-foreground mb-3 group-hover:text-primary transition-colors text-center">
-                    Verso's Story
-                  </h2>
-                  <p className="text-sm text-muted-foreground uppercase mb-6 text-center tracking-wider">
-                    The Fractured Canvas
-                  </p>
-                  <p className="text-foreground/90 leading-relaxed mb-6 text-center">
-                    Follow Verso's journey through shadowed corridors and painted realities. Navigate the threshold between worlds and uncover the secrets of the Canvas Ghost. Verso's path is one of artistic creation, existential questioning, and the burden of seeing beyond the veil.
-                  </p>
-                  <div className="space-y-2 mb-6 text-sm text-muted-foreground">
-                    <p className="flex items-center justify-center gap-2">
-                      <Trophy size={16} className="text-primary" />
-                      <span>24 Unique Endings</span>
-                    </p>
-                    <p className="flex items-center justify-center gap-2">
-                      <GitBranch size={16} className="text-primary" />
-                      <span>Multiple Story Branches</span>
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 text-primary group-hover:gap-3 transition-all">
-                    <span className="text-sm uppercase tracking-wider font-light">
-                      Enter Verso's Path
-                    </span>
-                    <ChevronRight size={18} />
-                  </div>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/stories/maelle" className="block">
-              <div className="glass rounded-xl p-8 md:p-10 hover:bg-card/70 transition-all cursor-pointer group h-full relative overflow-hidden">
-                <SubtleParticleEffect />
-                <div className="relative z-10">
-                  <h2 className="text-3xl md:text-4xl font-light text-foreground mb-3 group-hover:text-primary transition-colors text-center">
-                    Maelle's Story
-                  </h2>
-                  <p className="text-sm text-muted-foreground uppercase mb-6 text-center tracking-wider">
-                    Resonance of Alicia
-                  </p>
-                  <p className="text-foreground/90 leading-relaxed mb-6 text-center">
-                    Trace Maelle's path as a seeker of truth through fractured timelines. Navigate between versions of reality and discover the resonance that connects all possible worlds. Maelle's journey explores memory, identity, and the echoes we leave behind.
-                  </p>
-                  <div className="space-y-2 mb-6 text-sm text-muted-foreground">
-                    <p className="flex items-center justify-center gap-2">
-                      <Trophy size={16} className="text-primary" />
-                      <span>25 Unique Endings</span>
-                    </p>
-                    <p className="flex items-center justify-center gap-2">
-                      <GitBranch size={16} className="text-primary" />
-                      <span>Multiple Story Branches</span>
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-center gap-2 text-primary group-hover:gap-3 transition-all">
-                    <span className="text-sm uppercase tracking-wider font-light">
-                      Enter Maelle's Path
-                    </span>
-                    <ChevronRight size={18} />
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </section>
-
-        {/* Explore Section */}
-        <section className="px-4 md:px-8 py-16 max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-              Explore & Discover
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Delve deeper into the lore, track your progress, and uncover every secret the fractured world has to offer
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/codex">
-              <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
-                <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
-                  <BookOpen size={24} />
-                </div>
-                <h3 className="text-lg font-light text-foreground mb-2">Lore Codex</h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  Characters, locations, factions, and the magic that binds them together.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/map">
-              <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
-                <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
-                  <Map size={24} />
-                </div>
-                <h3 className="text-lg font-light text-foreground mb-2">World Map</h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  Explore the fractured lands and discover hidden connections between locations.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/endings">
-              <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
-                <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
-                  <Trophy size={24} />
-                </div>
-                <h3 className="text-lg font-light text-foreground mb-2">Endings Gallery</h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  View all the fates you've unlocked across all routes and playthroughs.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/achievements">
-              <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
-                <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
-                  <Award size={24} />
-                </div>
-                <h3 className="text-lg font-light text-foreground mb-2">Achievements</h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  Track your accomplishments and milestones throughout your journey.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/history">
-              <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
-                <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
-                  <History size={24} />
-                </div>
-                <h3 className="text-lg font-light text-foreground mb-2">Choice History</h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  Review every decision you've made across all your journeys.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/progress">
-              <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
-                <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
-                  <BarChart3 size={24} />
-                </div>
-                <h3 className="text-lg font-light text-foreground mb-2">Your Progress</h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  View detailed statistics and analytics about your journey through the world.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/tree">
-              <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
-                <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
-                  <GitBranch size={24} />
-                </div>
-                <h3 className="text-lg font-light text-foreground mb-2">Decision Tree</h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  Visualize your path through the story and see where you could go.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/bookmarks">
-              <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
-                <div className="text-amber-500 mb-3 group-hover:scale-110 transition-transform flex justify-center">
-                  <Bookmark size={24} />
-                </div>
-                <h3 className="text-lg font-light text-foreground mb-2">Bookmarks</h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  Save and revisit your favorite scenes and moments.
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/timelines">
-              <div className="glass p-6 rounded-lg hover:bg-card/70 transition-all cursor-pointer group text-center h-full flex flex-col">
-                <div className="text-primary mb-3 group-hover:scale-110 transition-transform flex justify-center">
-                  <GitMerge size={24} />
-                </div>
-                <h3 className="text-lg font-light text-foreground mb-2">What If Mode</h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  Explore alternate timelines and outcomes from different choices.
-                </p>
-              </div>
-            </Link>
-          </div>
-        </section>
-
-        {/* Footer CTA */}
+        {/* Final CTA */}
         <section className="px-4 md:px-8 py-16 max-w-4xl mx-auto text-center">
-          <div className="glass rounded-xl p-12 relative overflow-hidden">
+          <div className="glass rounded-2xl p-12 relative overflow-hidden">
             <SubtleParticleEffect />
             <div className="relative z-10">
-              <h2 className="text-3xl font-light text-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
                 Ready to Begin?
               </h2>
-              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
                 The fractured world awaits. Your choices will shape the destinies of those who survived Expedition 33.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/stories/verso">
-                  <button className="glass px-8 py-3 rounded-lg hover:bg-primary/20 transition-all border border-primary/30 hover:border-primary/50 font-light tracking-wide">
-                    Start Verso's Story
-                  </button>
-                </Link>
-                <Link href="/stories/maelle">
-                  <button className="glass px-8 py-3 rounded-lg hover:bg-primary/20 transition-all border border-primary/30 hover:border-primary/50 font-light tracking-wide">
-                    Start Maelle's Story
-                  </button>
-                </Link>
-              </div>
+              <Link href="/dashboard">
+                <button className="glass px-10 py-4 rounded-xl hover:bg-primary/20 transition-all border-2 border-primary/30 hover:border-primary/50 font-light tracking-wide text-lg group">
+                  <span className="flex items-center gap-3">
+                    Enter the App
+                    <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </section>

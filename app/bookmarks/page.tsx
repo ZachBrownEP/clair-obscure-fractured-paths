@@ -70,7 +70,7 @@ export default function BookmarksPage() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <Link
-                  href="/"
+                  href="/dashboard"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <ArrowLeft size={24} />
@@ -114,7 +114,7 @@ export default function BookmarksPage() {
                 Bookmark your favorite scenes while reading to save them here
               </p>
               <Link
-                href="/"
+                href="/dashboard"
                 className="inline-block glass px-6 py-2 rounded-lg hover:bg-card/70 transition-all text-primary"
               >
                 Start Reading

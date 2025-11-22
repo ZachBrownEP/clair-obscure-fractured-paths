@@ -10,7 +10,7 @@ export default function NavigationDropdown() {
   const pathname = usePathname()
 
   const navigationLinks = [
-    { href: '/', label: 'Home', icon: Home },
+    { href: '/dashboard', label: 'Dashboard', icon: Home },
     { href: '/stories/verso', label: "Verso's Story", icon: Book },
     { href: '/stories/maelle', label: "Maelle's Story", icon: Book },
     { href: '/codex', label: 'Lore Codex', icon: BookOpen },
