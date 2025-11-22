@@ -6,96 +6,47 @@ import { Volume2, VolumeX } from 'lucide-react'
 export default function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [isMuted, setIsMuted] = useState(false)
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
-    // Check if user has previously set a preference
-    const savedMuteState = localStorage.getItem('backgroundMusicMuted')
+    const audio = audioRef.current
+    if (!audio) return
 
-    if (savedMuteState === null) {
-      // First visit - autoplay enabled
-      setIsMuted(false)
-    } else {
-      // Use saved preference
-      setIsMuted(savedMuteState === 'true')
-    }
+    // Unmute after a brief moment - this allows autoplay to work
+    // The audio starts muted (via HTML attribute) which browsers allow,
+    // then we unmute it immediately
+    const timer = setTimeout(() => {
+      audio.muted = false
+      audio.volume = 0.3
+      console.log('Music unmuted and playing')
+    }, 100)
 
-    setIsLoaded(true)
+    return () => clearTimeout(timer)
   }, [])
 
   useEffect(() => {
-    if (!audioRef.current || !isLoaded) return
-
     const audio = audioRef.current
-    audio.volume = 0.3 // Set to 30% volume for background music
-
-    // Attempt to start playback immediately
-    const attemptPlay = async () => {
-      try {
-        await audio.play()
-        setIsPlaying(true)
-        console.log('Autoplay started successfully')
-      } catch (error) {
-        console.log('Autoplay prevented by browser, waiting for user interaction:', error)
-
-        // Add a one-time listener for any user interaction to start playback
-        const startOnInteraction = async () => {
-          try {
-            await audio.play()
-            setIsPlaying(true)
-            console.log('Playback started after user interaction')
-            // Remove listeners after successful play
-            document.removeEventListener('click', startOnInteraction)
-            document.removeEventListener('keydown', startOnInteraction)
-            document.removeEventListener('touchstart', startOnInteraction)
-          } catch (err) {
-            console.log('Failed to play:', err)
-          }
-        }
-
-        document.addEventListener('click', startOnInteraction, { once: true })
-        document.addEventListener('keydown', startOnInteraction, { once: true })
-        document.addEventListener('touchstart', startOnInteraction, { once: true })
-      }
-    }
-
-    if (!isMuted) {
-      attemptPlay()
-    }
-  }, [isLoaded, isMuted])
-
-  useEffect(() => {
-    if (!audioRef.current || !isLoaded) return
-
-    const audio = audioRef.current
+    if (!audio) return
 
     if (isMuted) {
       audio.pause()
-    } else if (isPlaying) {
-      const playPromise = audio.play()
-      if (playPromise !== undefined) {
-        playPromise.catch((error) => {
-          console.log('Play error:', error)
-        })
-      }
+    } else {
+      audio.muted = false
+      audio.volume = 0.3
+      audio.play().catch(err => console.log('Play error:', err))
     }
-
-    // Save mute state to localStorage
-    localStorage.setItem('backgroundMusicMuted', String(isMuted))
-  }, [isMuted, isLoaded, isPlaying])
+  }, [isMuted])
 
   const toggleMute = () => {
     setIsMuted(!isMuted)
   }
-
-  if (!isLoaded) return null
 
   return (
     <>
       <audio
         ref={audioRef}
         loop
+        autoPlay
+        muted
         preload="auto"
       >
         <source src="/songs/Lumière-Clair Obscur_ Expedition 33 (Original Soundtrack) 03 - Lumière.mp3" type="audio/mpeg" />
