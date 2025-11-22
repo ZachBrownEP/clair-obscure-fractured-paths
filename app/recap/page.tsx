@@ -8,11 +8,11 @@ export default function RecapPage() {
       <EnhancedBackground />
       <main className="max-w-4xl mx-auto px-4 md:px-8 py-16 relative z-10">
         <Link
-          href="/"
+          href="/dashboard"
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
         >
           <ChevronLeft size={18} />
-          Back to Home
+          Back to Dashboard
         </Link>
 
         <div className="glass rounded-3xl p-8 md:p-12 mb-8">
@@ -81,7 +81,7 @@ export default function RecapPage() {
             <section>
               <h2 className="text-2xl font-light text-primary mb-4">What They Found</h2>
               <p className="mb-4">
-                As Expedition 33 pushed deeper into the Monolith's domain, they discovered that the curse was not simply a malevolent force, but a  <strong className="text-accent">broken mechanism</strong>—an ancient system designed to maintain balance between realities that had malfunctioned over millennia.
+                As Expedition 33 pushed deeper into the Monolith's domain, they discovered that the curse was not simply a malevolent force, but a <strong className="text-accent">broken mechanism</strong>—an ancient system designed to maintain balance between realities that had malfunctioned over millennia.
               </p>
               <p className="mb-4">
                 The painted statues weren't destroyed; they existed in a liminal space between flesh and pigment, trapped in the threshold between the Painter's realm and the Writer's domain. Some could be saved, but doing so required unimaginable sacrifice.
@@ -91,17 +91,14 @@ export default function RecapPage() {
               </p>
             </section>
 
-            {/* The Legacy */}
+            {/* The Outcome */}
             <section>
-              <h2 className="text-2xl font-light text-secondary mb-4">The Legacy</h2>
+              <h2 className="text-2xl font-light text-secondary mb-4">The Resolution</h2>
               <p className="mb-4">
-                The events of Expedition 33 left ripples across the world. Some members of the expedition survived, forever changed by what they witnessed. Others were transformed, existing now in that threshold state between realities.
-              </p>
-              <p className="mb-4">
-                The world remains fractured, caught between painted dreams and written truth. But now, some understand the nature of that fracture—and perhaps, understanding is the first step toward healing.
+                The choices made by Gustave and the members of Expedition 33 would determine the fate of their world. Through their journey, they learned that the answer wasn't in destroying either the Painter or the Writer, but in finding balance—or perhaps forging a new path entirely.
               </p>
               <p>
-                The stories you'll experience in <strong>Fractured Paths</strong> follow characters whose fates were touched by Expedition 33, exploring the aftermath of those world-shaking discoveries.
+                Their story is told through the game <em>Clair Obscur: Expedition 33</em>. The fan-made companion experiences on this site explore original stories that exist in the shadows of that world, asking: what happens to those touched by the expedition's discoveries?
               </p>
             </section>
           </div>
@@ -110,25 +107,17 @@ export default function RecapPage() {
         {/* Continue Section */}
         <div className="glass rounded-lg p-6 text-center">
           <h3 className="text-xl font-light text-foreground mb-3">
-            Ready to Continue?
+            Ready to Explore Fan Stories?
           </h3>
           <p className="text-muted-foreground mb-6">
-            Choose a character path to experience the stories that unfold in the wake of Expedition 33.
+            Return to the dashboard to begin your journey through original fan-made narratives.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link
-              href="/stories/verso"
-              className="px-6 py-3 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30 rounded-lg transition-all font-light"
-            >
-              Verso's Path
-            </Link>
-            <Link
-              href="/stories/maelle"
-              className="px-6 py-3 bg-accent/20 hover:bg-accent/30 text-accent border border-accent/30 rounded-lg transition-all font-light"
-            >
-              Maelle's Path
-            </Link>
-          </div>
+          <Link
+            href="/dashboard"
+            className="inline-block px-6 py-3 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/30 rounded-lg transition-all font-light"
+          >
+            Return to Dashboard
+          </Link>
         </div>
       </main>
     </div>

@@ -10,10 +10,6 @@ export default function HeroSection() {
       {/* Radial glow effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/20 via-accent/10 to-transparent blur-3xl pointer-events-none" />
 
-      {/* Subtle light beams */}
-      <div className="absolute top-0 left-1/4 w-px h-64 bg-gradient-to-b from-gold/30 via-gold/10 to-transparent pointer-events-none" />
-      <div className="absolute top-0 right-1/4 w-px h-48 bg-gradient-to-b from-primary/30 via-primary/10 to-transparent pointer-events-none" />
-
       {/* Particle effects */}
       <ParticleEffects count={15} color="gold" intensity="subtle" />
 

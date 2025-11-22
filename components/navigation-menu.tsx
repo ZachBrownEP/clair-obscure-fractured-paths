@@ -10,7 +10,7 @@ export default function NavigationMenu() {
   const pathname = usePathname()
 
   const navItems = [
-    { href: '/', label: 'Home', icon: Home },
+    { href: '/dashboard', label: 'Dashboard', icon: Home },
     { href: '/recap', label: 'Story Recap', icon: BookMarked },
     { href: '/stories/verso', label: "Verso's Path", icon: BookOpen },
     { href: '/stories/maelle', label: "Maelle's Path", icon: BookOpen },
