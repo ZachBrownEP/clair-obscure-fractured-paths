@@ -4,13 +4,11 @@ import Link from 'next/link'
 import { ChevronRight, Book, Gamepad2, Trophy, Users, BarChart3, BookOpen } from 'lucide-react'
 import EnhancedBackground from '@/components/enhanced-background'
 import SubtleParticleEffect from '@/components/subtle-particle-effect'
-import BackgroundMusic from '@/components/background-music'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden flex items-center">
       <EnhancedBackground />
-      <BackgroundMusic />
       <main className="relative z-10 w-full">
         {/* Hero Section */}
         <section className="relative px-4 md:px-8 py-16 md:py-24 overflow-hidden">
