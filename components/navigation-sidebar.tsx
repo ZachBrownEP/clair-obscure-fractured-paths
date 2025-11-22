@@ -40,11 +40,11 @@ export default function NavigationSidebar({ onBookmark, showBookmarkOption = fal
     <>
       {/* Menu Button - Top Left */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={() => setIsOpen(!isOpen)}
         className="fixed top-6 left-6 z-50 glass p-3 rounded-lg hover:bg-card/70 transition-all border border-primary/30 hover:border-primary/50"
-        aria-label="Open navigation menu"
+        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
       >
-        <Menu size={24} className="text-primary" />
+        {isOpen ? <X size={24} className="text-primary" /> : <Menu size={24} className="text-primary" />}
       </button>
 
       {/* Backdrop with blur */}
