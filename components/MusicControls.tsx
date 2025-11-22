@@ -9,7 +9,8 @@ export default function MusicControls() {
   return (
     <button
       onClick={toggleMute}
-      className="fixed top-4 right-4 z-50 glass p-3 rounded-full hover:bg-card/70 transition-all group"
+      className="fixed top-4 right-4 z-[60] glass p-3 rounded-full hover:bg-card/70 transition-all group will-change-transform"
+      style={{ position: 'fixed' }}
       aria-label={isMuted ? 'Unmute background music' : 'Mute background music'}
       title={isMuted ? 'Play background music' : 'Pause background music'}
     >

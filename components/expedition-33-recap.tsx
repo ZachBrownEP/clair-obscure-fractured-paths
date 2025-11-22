@@ -191,48 +191,48 @@ export default function Expedition33Recap() {
           />
 
           {/* Modal Content */}
-          <div className="relative min-h-screen flex items-center justify-center p-4">
-            <div className="relative w-full max-w-4xl glass rounded-xl border border-primary/30 shadow-2xl my-8">
+          <div className="relative min-h-screen flex items-center justify-center p-2 sm:p-4 w-full overflow-x-hidden">
+            <div className="relative w-full max-w-4xl glass rounded-xl border border-primary/30 shadow-2xl my-4 sm:my-8 max-h-[95vh] overflow-y-auto overflow-x-hidden">
               <SubtleParticleEffect />
 
               {/* Header */}
-              <div className="relative z-10 flex items-center justify-between p-6 border-b border-primary/20">
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-decorative text-gold">
+              <div className="relative z-10 flex items-center justify-center p-3 sm:p-6 border-b border-primary/20 sticky top-0 bg-card/90 backdrop-blur-md">
+                <div className="text-center">
+                  <h2 className="text-lg sm:text-2xl md:text-3xl font-decorative text-gold">
                     Expedition 33: The Story
                   </h2>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-1">
                     A recap of the events from the original game
                   </p>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-muted-foreground hover:text-foreground transition-colors p-2"
+                  className="absolute right-3 sm:right-6 text-muted-foreground hover:text-foreground transition-colors p-2 flex-shrink-0"
                   aria-label="Close recap"
                 >
-                  <X size={24} />
+                  <X size={20} className="sm:w-6 sm:h-6" />
                 </button>
               </div>
 
               {/* Chapter Navigation Pills with Arrows */}
-              <div className="relative z-10 px-6 py-4 border-b border-primary/20">
-                <div className="flex items-center gap-2">
+              <div className="relative z-10 px-2 sm:px-6 py-3 sm:py-4 border-b border-primary/20 sticky top-[73px] sm:top-[97px] bg-card/90 backdrop-blur-md overflow-x-hidden">
+                <div className="flex items-center gap-1 sm:gap-2 w-full min-w-0">
                   {/* Left Arrow */}
                   <button
                     onClick={handleChapterNavigationPrevious}
                     disabled={visibleStartIndex === 0}
-                    className={`p-2 rounded-lg transition-all flex-shrink-0 ${
+                    className={`p-1 sm:p-2 rounded-lg transition-all flex-shrink-0 ${
                       visibleStartIndex === 0
                         ? 'opacity-30 cursor-not-allowed text-muted-foreground'
                         : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
                     }`}
                     aria-label="Previous chapters"
                   >
-                    <ChevronLeft size={16} />
+                    <ChevronLeft size={14} className="sm:w-4 sm:h-4" />
                   </button>
 
-                  {/* Chapter Pills */}
-                  <div className="flex gap-2 flex-1 justify-center">
+                  {/* Chapter Pills - Scrollable on mobile */}
+                  <div className="flex gap-1 sm:gap-2 flex-1 overflow-x-auto no-scrollbar snap-x snap-mandatory min-w-0 justify-center">
                     {visibleChapters.map((chapter) => {
                       const index = chapters.indexOf(chapter)
                       return (
@@ -240,14 +240,15 @@ export default function Expedition33Recap() {
                           key={chapter.number}
                           onClick={() => setCurrentChapter(index)}
                           className={`
-                            px-4 py-2 rounded-full text-xs font-light whitespace-nowrap transition-all
+                            px-2 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-light whitespace-nowrap transition-all flex-shrink-0 snap-center
                             ${currentChapter === index
                               ? 'bg-primary/20 text-primary border border-primary/50'
                               : 'bg-card/50 text-muted-foreground hover:text-foreground hover:bg-card/70'
                             }
                           `}
                         >
-                          Chapter {chapter.number}
+                          <span className="hidden sm:inline">Chapter {chapter.number}</span>
+                          <span className="sm:hidden">Ch {chapter.number}</span>
                         </button>
                       )
                     })}
@@ -257,31 +258,31 @@ export default function Expedition33Recap() {
                   <button
                     onClick={handleChapterNavigationNext}
                     disabled={visibleStartIndex >= chapters.length - 5}
-                    className={`p-2 rounded-lg transition-all flex-shrink-0 ${
+                    className={`p-1 sm:p-2 rounded-lg transition-all flex-shrink-0 ${
                       visibleStartIndex >= chapters.length - 5
                         ? 'opacity-30 cursor-not-allowed text-muted-foreground'
                         : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
                     }`}
                     aria-label="Next chapters"
                   >
-                    <ChevronRight size={16} />
+                    <ChevronRight size={14} className="sm:w-4 sm:h-4" />
                   </button>
                 </div>
               </div>
 
-              {/* Content - Removed overflow-y-auto to scroll with page */}
-              <div className="relative z-10 p-6 md:p-8">
+              {/* Content */}
+              <div className="relative z-10 p-3 sm:p-6 md:p-8">
                 <div className="max-w-3xl mx-auto">
-                  <div className="mb-4">
-                    <p className="text-sm text-primary uppercase tracking-widest mb-2">
+                  <div className="mb-3 sm:mb-4">
+                    <p className="text-xs sm:text-sm text-primary uppercase tracking-widest mb-2">
                       Chapter {chapters[currentChapter].number}
                     </p>
-                    <h3 className="text-2xl md:text-3xl font-light text-foreground mb-6">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-light text-foreground mb-4 sm:mb-6">
                       {chapters[currentChapter].title}
                     </h3>
                   </div>
 
-                  <div className="space-y-4 text-foreground/90 leading-relaxed">
+                  <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-foreground/90 leading-relaxed">
                     {chapters[currentChapter].content.map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
                     ))}
@@ -290,23 +291,23 @@ export default function Expedition33Recap() {
               </div>
 
               {/* Footer Navigation */}
-              <div className="relative z-10 flex items-center justify-between p-6 border-t border-primary/20">
+              <div className="relative z-10 flex items-center justify-between p-3 sm:p-6 border-t border-primary/20 sticky bottom-0 bg-card/90 backdrop-blur-md">
                 <button
                   onClick={handlePrevious}
                   disabled={currentChapter === 0}
                   className={`
-                    flex items-center gap-2 px-4 py-2 rounded-lg transition-all
+                    flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg transition-all
                     ${currentChapter === 0
                       ? 'opacity-50 cursor-not-allowed text-muted-foreground'
                       : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
                     }
                   `}
                 >
-                  <ChevronLeft size={20} />
-                  <span className="text-sm font-light">Previous</span>
+                  <ChevronLeft size={16} className="sm:w-5 sm:h-5" />
+                  <span className="text-xs sm:text-sm font-light hidden xs:inline">Previous</span>
                 </button>
 
-                <div className="text-sm text-muted-foreground">
+                <div className="text-xs sm:text-sm text-muted-foreground">
                   {currentChapter + 1} / {chapters.length}
                 </div>
 
@@ -314,15 +315,15 @@ export default function Expedition33Recap() {
                   onClick={handleNext}
                   disabled={currentChapter === chapters.length - 1}
                   className={`
-                    flex items-center gap-2 px-4 py-2 rounded-lg transition-all
+                    flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg transition-all
                     ${currentChapter === chapters.length - 1
                       ? 'opacity-50 cursor-not-allowed text-muted-foreground'
                       : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
                     }
                   `}
                 >
-                  <span className="text-sm font-light">Next</span>
-                  <ChevronRight size={20} />
+                  <span className="text-xs sm:text-sm font-light hidden xs:inline">Next</span>
+                  <ChevronRight size={16} className="sm:w-5 sm:h-5" />
                 </button>
               </div>
             </div>

@@ -1,13 +1,13 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
 import { ArrowLeft, Clock, TrendingUp, TrendingDown, Flag, Filter } from 'lucide-react'
 import { ChoiceHistoryEntry, StoryRouteId } from '@/lib/story/types'
 import { loadStoryState } from '@/lib/story/persistence'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import EnhancedBackground from '@/components/enhanced-background'
 import NavigationSidebar from '@/components/navigation-sidebar'
+import SmartBackButton from '@/components/smart-back-button'
 
 interface CombinedHistoryEntry extends ChoiceHistoryEntry {
   route: StoryRouteId
@@ -96,12 +96,12 @@ export default function HistoryPage() {
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <Link
-                  href="/dashboard"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <ArrowLeft size={24} />
-                </Link>
+                <div className="text-muted-foreground hover:text-primary transition-colors">
+                  <SmartBackButton
+                    fallbackLabel=""
+                    className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
+                  />
+                </div>
                 <div>
                   <h1 className="text-2xl font-light text-foreground flex items-center gap-2">
                     <Clock size={24} className="text-primary" />

@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
 import { ArrowLeft, GitMerge, Plus, Trash2, Play, Eye } from 'lucide-react'
 import {
   loadTimelines,
@@ -15,6 +14,7 @@ import { StoryRouteId } from '@/lib/story/types'
 import EnhancedBackground from '@/components/enhanced-background'
 import NavigationSidebar from '@/components/navigation-sidebar'
 import { toast } from 'sonner'
+import SmartBackButton from '@/components/smart-back-button'
 
 export default function TimelinesPage() {
   const [selectedRoute, setSelectedRoute] = useState<StoryRouteId>('verso')
@@ -84,12 +84,12 @@ export default function TimelinesPage() {
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <Link
-                  href="/dashboard"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <ArrowLeft size={24} />
-                </Link>
+                <div className="text-muted-foreground hover:text-primary transition-colors">
+                  <SmartBackButton
+                    fallbackLabel=""
+                    className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
+                  />
+                </div>
                 <div>
                   <h1 className="text-2xl font-light text-foreground flex items-center gap-2">
                     <GitMerge size={24} className="text-primary" />
