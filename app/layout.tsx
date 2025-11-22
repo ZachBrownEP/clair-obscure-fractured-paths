@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Cinzel, Cinzel_Decorative } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import BackgroundMusic from '@/components/background-music'
+import NavigationMenu from '@/components/navigation-menu'
+import SpoilersWarning from '@/components/spoilers-warning'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
@@ -55,6 +57,8 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${_geist.className} ${_cinzel.variable} ${_cinzelDecorative.variable} font-sans antialiased`}>
         <BackgroundMusic />
+        <NavigationMenu />
+        <SpoilersWarning />
         {children}
         <Analytics />
       </body>
