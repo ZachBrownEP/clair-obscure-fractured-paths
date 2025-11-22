@@ -7,8 +7,7 @@ import { loadStoryState, loadUnlockedEndings, getAllAchievementsWithProgress } f
 import EnhancedBackground from '@/components/enhanced-background'
 import NavigationSidebar from '@/components/navigation-sidebar'
 import PageHeader from '@/components/page-header'
-import SpoilerWarning from '@/components/spoiler-warning'
-import Expedition33Recap from '@/components/expedition-33-recap'
+import SmartBackButton from '@/components/smart-back-button'
 
 export default function ProgressPage() {
   const [stats, setStats] = useState({
@@ -79,12 +78,12 @@ export default function ProgressPage() {
         <header className="glass sticky top-20 z-20 border-b border-border/30">
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
             <div className="flex items-center gap-4">
-              <Link
-                href="/dashboard"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <ArrowLeft size={24} />
-              </Link>
+              <div className="text-muted-foreground hover:text-primary transition-colors">
+                <SmartBackButton
+                  fallbackLabel=""
+                  className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
+                />
+              </div>
               <div>
                 <h1 className="text-2xl font-light text-foreground flex items-center gap-2">
                   <BarChart3 size={24} className="text-primary" />
@@ -100,13 +99,6 @@ export default function ProgressPage() {
 
         {/* Content */}
         <main className="max-w-7xl mx-auto px-4 md:px-8 py-8">
-          {/* Spoiler Warning */}
-          <SpoilerWarning />
-
-          {/* Expedition 33 Recap */}
-          <div className="mb-8">
-            <Expedition33Recap />
-          </div>
           {/* Overall Completion */}
           <div className="glass rounded-xl p-8 mb-8 text-center">
             <h2 className="text-3xl font-light text-foreground mb-2">Overall Completion</h2>

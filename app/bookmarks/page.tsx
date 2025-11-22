@@ -1,11 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
 import { ArrowLeft, Bookmark as BookmarkIcon, Trash2, Edit2, Save, X } from 'lucide-react'
 import { loadBookmarks, removeBookmark, updateBookmarkNote, Bookmark } from '@/lib/story/persistence'
 import EnhancedBackground from '@/components/enhanced-background'
 import NavigationSidebar from '@/components/navigation-sidebar'
+import SmartBackButton from '@/components/smart-back-button'
 
 export default function BookmarksPage() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([])
@@ -69,12 +69,12 @@ export default function BookmarksPage() {
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <Link
-                  href="/dashboard"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <ArrowLeft size={24} />
-                </Link>
+                <div className="text-muted-foreground hover:text-primary transition-colors">
+                  <SmartBackButton
+                    fallbackLabel=""
+                    className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
+                  />
+                </div>
                 <div>
                   <h1 className="text-2xl font-light text-foreground flex items-center gap-2">
                     <BookmarkIcon size={24} className="text-amber-500" />

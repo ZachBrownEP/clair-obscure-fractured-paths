@@ -1,14 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { ChevronLeft, Lock, CheckCircle, Trophy, Sparkles } from 'lucide-react'
+import { Lock, CheckCircle, Trophy, Sparkles } from 'lucide-react'
 import { getAllAchievementsWithProgress, Achievement } from '@/lib/story/persistence'
 import NavigationSidebar from '@/components/navigation-sidebar'
 import PageHeader from '@/components/page-header'
-import SpoilerWarning from '@/components/spoiler-warning'
 import Expedition33Recap from '@/components/expedition-33-recap'
 import EnhancedBackground from '@/components/enhanced-background'
+import SmartBackButton from '@/components/smart-back-button'
 
 type AchievementCategory = 'all' | 'completion' | 'exploration' | 'alignment' | 'speed' | 'secret'
 
@@ -66,21 +65,15 @@ export default function AchievementsPage() {
       <EnhancedBackground />
       <NavigationSidebar />
       <main className="max-w-6xl mx-auto px-4 md:px-8 pt-24 pb-16 relative z-10">
-        <Link
-          href="/dashboard"
-          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
-        >
-          <ChevronLeft size={18} />
-          Back to Dashboard
-        </Link>
+        <div className="mb-8">
+          <SmartBackButton fallbackLabel="Back to Dashboard" />
+        </div>
 
         <PageHeader
           subtitle="Clair Obscur"
           title="Achievements"
           description="Track your accomplishments and milestones throughout your journey"
         />
-
-        <SpoilerWarning />
 
         <div className="mb-8">
           <Expedition33Recap />

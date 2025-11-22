@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import codexEntries from '@/data/codex/entries.json'
 import NavigationSidebar from '@/components/navigation-sidebar'
 import EnhancedBackground from '@/components/enhanced-background'
+import SmartBackButton from '@/components/smart-back-button'
 
 type Category = 'character' | 'location' | 'faction' | 'magic' | 'event'
 
@@ -133,13 +133,9 @@ export default function CodexPage() {
       <EnhancedBackground />
       <NavigationSidebar />
       <main className="max-w-5xl mx-auto px-4 md:px-8 pt-24 pb-16 relative z-10">
-        <Link
-          href="/dashboard"
-          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
-        >
-          <ChevronLeft size={18} />
-          Back to Dashboard
-        </Link>
+        <div className="mb-8">
+          <SmartBackButton fallbackLabel="Back to Dashboard" />
+        </div>
 
         <h1 className="text-4xl md:text-5xl font-light mb-2 text-foreground">
           Lore Codex

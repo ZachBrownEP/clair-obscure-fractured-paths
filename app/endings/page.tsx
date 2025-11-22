@@ -1,13 +1,12 @@
 'use client'
 
-import Link from 'next/link'
-import { ChevronLeft, Lock, CheckCircle } from 'lucide-react'
+import { Lock, CheckCircle } from 'lucide-react'
 import { useEndingsProgress } from '@/lib/hooks/useEndingsProgress'
 import NavigationSidebar from '@/components/navigation-sidebar'
 import PageHeader from '@/components/page-header'
-import SpoilerWarning from '@/components/spoiler-warning'
 import Expedition33Recap from '@/components/expedition-33-recap'
 import EnhancedBackground from '@/components/enhanced-background'
+import SmartBackButton from '@/components/smart-back-button'
 
 interface EndingMetadata {
   key: string
@@ -336,21 +335,15 @@ export default function EndingsPage() {
       <EnhancedBackground />
       <NavigationSidebar />
       <main className="max-w-6xl mx-auto px-4 md:px-8 pt-24 pb-16 relative z-10">
-        <Link
-          href="/dashboard"
-          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
-        >
-          <ChevronLeft size={18} />
-          Back to Dashboard
-        </Link>
+        <div className="mb-8">
+          <SmartBackButton fallbackLabel="Back to Dashboard" />
+        </div>
 
         <PageHeader
           subtitle="Clair Obscur"
           title="Endings Gallery"
           description="Discover all the fates that await across fractured paths"
         />
-
-        <SpoilerWarning />
 
         <div className="mb-8">
           <Expedition33Recap />

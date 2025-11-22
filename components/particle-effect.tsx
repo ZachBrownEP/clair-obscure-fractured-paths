@@ -11,18 +11,25 @@ interface Particle {
   delay: number
 }
 
+// Seeded random number generator for consistent particle positions
+function seededRandom(seed: number) {
+  let x = Math.sin(seed++) * 10000
+  return x - Math.floor(x)
+}
+
 export default function ParticleEffect() {
   const [particles, setParticles] = useState<Particle[]>([])
 
   useEffect(() => {
-    // Generate particles
+    // Generate particles with seeded randomness for consistency
+    const seed = 12345 // Fixed seed for consistent particle positions
     const newParticles: Particle[] = Array.from({ length: 20 }, (_, i) => ({
       id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 4 + 2,
-      duration: Math.random() * 3 + 2,
-      delay: Math.random() * 2,
+      x: seededRandom(seed + i * 4) * 100,
+      y: seededRandom(seed + i * 4 + 1) * 100,
+      size: seededRandom(seed + i * 4 + 2) * 4 + 2,
+      duration: seededRandom(seed + i * 4 + 3) * 3 + 2,
+      delay: seededRandom(seed + i * 4 + 4) * 2,
     }))
 
     setParticles(newParticles)
