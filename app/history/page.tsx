@@ -7,6 +7,7 @@ import { ChoiceHistoryEntry, StoryRouteId } from '@/lib/story/types'
 import { loadStoryState } from '@/lib/story/persistence'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import EnhancedBackground from '@/components/enhanced-background'
+import NavigationSidebar from '@/components/navigation-sidebar'
 
 interface CombinedHistoryEntry extends ChoiceHistoryEntry {
   route: StoryRouteId
@@ -88,14 +89,15 @@ export default function HistoryPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <div className="relative z-10">
+      <NavigationSidebar />
+      <div className="relative z-10 pt-20">
         {/* Header */}
-        <header className="glass sticky top-0 z-20 border-b border-border/30">
+        <header className="glass sticky top-20 z-20 border-b border-border/30">
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <Link
-                  href="/"
+                  href="/dashboard"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <ArrowLeft size={24} />
@@ -140,7 +142,7 @@ export default function HistoryPage() {
                 Your journey has just begun. Choices you make will appear here.
               </p>
               <Link
-                href="/"
+                href="/dashboard"
                 className="inline-block glass px-6 py-2 rounded-lg hover:bg-card/70 transition-all text-primary"
               >
                 Begin Your Journey

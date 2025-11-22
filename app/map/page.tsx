@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 import MapViewer from '@/components/map-viewer'
+import NavigationSidebar from '@/components/navigation-sidebar'
+import EnhancedBackground from '@/components/enhanced-background'
 
 interface Location {
   id: string
@@ -76,14 +78,16 @@ export default function MapPage() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null)
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="max-w-7xl mx-auto px-4 md:px-8 py-16">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <EnhancedBackground />
+      <NavigationSidebar />
+      <main className="max-w-7xl mx-auto px-4 md:px-8 pt-24 pb-16 relative z-10">
         <Link
-          href="/"
+          href="/dashboard"
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
         >
           <ChevronLeft size={18} />
-          Back to Home
+          Back to Dashboard
         </Link>
 
         <h1 className="text-4xl md:text-5xl font-light mb-2 text-foreground">

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArrowLeft, Download, GitBranch, Eye, EyeOff } from 'lucide-react'
 import { loadStoryState } from '@/lib/story/persistence'
 import EnhancedBackground from '@/components/enhanced-background'
+import NavigationSidebar from '@/components/navigation-sidebar'
 import { StoryNode, StoryRouteId } from '@/lib/story/types'
 
 interface TreeNode extends StoryNode {
@@ -102,14 +103,15 @@ export default function DecisionTreePage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <div className="relative z-10">
+      <NavigationSidebar />
+      <div className="relative z-10 pt-20">
         {/* Header */}
-        <header className="glass sticky top-0 z-20 border-b border-border/30">
+        <header className="glass sticky top-20 z-20 border-b border-border/30">
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <Link
-                  href="/"
+                  href="/dashboard"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <ArrowLeft size={24} />
@@ -247,7 +249,7 @@ export default function DecisionTreePage() {
 
             {/* Node Details */}
             <div className="md:col-span-1">
-              <div className="glass rounded-xl p-6 sticky top-24">
+              <div className="glass rounded-xl p-6 sticky top-28">
                 {selectedNode ? (
                   <div className="space-y-4">
                     <div>

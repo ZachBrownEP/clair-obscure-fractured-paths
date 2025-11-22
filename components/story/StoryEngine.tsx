@@ -21,6 +21,7 @@ import AlignmentIndicator from '@/components/alignment-indicator'
 import EnhancedBackground from '@/components/enhanced-background'
 import ChoiceHistoryModal from '@/components/choice-history-modal'
 import ParticleEffect from '@/components/particle-effect'
+import NavigationSidebar from '@/components/navigation-sidebar'
 import { toast } from 'sonner'
 
 interface StoryEngineProps {
@@ -240,8 +241,12 @@ export default function StoryEngine({
   const estimatedTimeRemaining = Math.max(1, Math.round((totalNodes - visitedNodes) * 0.5)) // ~30 seconds per node
 
   return (
-    <div className="min-h-screen bg-background py-8 md:py-16 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-background pt-24 pb-8 md:pb-16 px-4 relative overflow-hidden">
       <EnhancedBackground />
+      <NavigationSidebar
+        showBookmarkOption={true}
+        onBookmark={handleBookmark}
+      />
 
       <div className={`max-w-3xl mx-auto relative z-10 transition-opacity duration-300 ${isTransitioning ? 'opacity-50' : 'opacity-100'}`}>
         <div className="glass rounded-2xl p-8 md:p-12 transition-all duration-300">

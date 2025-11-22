@@ -5,6 +5,10 @@ import Link from 'next/link'
 import { ArrowLeft, BarChart3, Trophy, History, BookOpen } from 'lucide-react'
 import { loadStoryState, loadUnlockedEndings, getAllAchievementsWithProgress } from '@/lib/story/persistence'
 import EnhancedBackground from '@/components/enhanced-background'
+import NavigationSidebar from '@/components/navigation-sidebar'
+import PageHeader from '@/components/page-header'
+import SpoilerWarning from '@/components/spoiler-warning'
+import Expedition33Recap from '@/components/expedition-33-recap'
 
 export default function ProgressPage() {
   const [stats, setStats] = useState({
@@ -69,13 +73,14 @@ export default function ProgressPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <div className="relative z-10">
+      <NavigationSidebar />
+      <div className="relative z-10 pt-20">
         {/* Header */}
-        <header className="glass sticky top-0 z-20 border-b border-border/30">
+        <header className="glass sticky top-20 z-20 border-b border-border/30">
           <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
             <div className="flex items-center gap-4">
               <Link
-                href="/"
+                href="/dashboard"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <ArrowLeft size={24} />
@@ -95,6 +100,13 @@ export default function ProgressPage() {
 
         {/* Content */}
         <main className="max-w-7xl mx-auto px-4 md:px-8 py-8">
+          {/* Spoiler Warning */}
+          <SpoilerWarning />
+
+          {/* Expedition 33 Recap */}
+          <div className="mb-8">
+            <Expedition33Recap />
+          </div>
           {/* Overall Completion */}
           <div className="glass rounded-xl p-8 mb-8 text-center">
             <h2 className="text-3xl font-light text-foreground mb-2">Overall Completion</h2>
