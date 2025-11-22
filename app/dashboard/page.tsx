@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { BookOpen, Map, Trophy, ChevronRight, Award, History, BarChart3, GitBranch, Bookmark, GitMerge, Book } from 'lucide-react'
 import EnhancedBackground from '@/components/enhanced-background'
-import NavigationDropdown from '@/components/navigation-dropdown'
+import NavigationSidebar from '@/components/navigation-sidebar'
 import PageHeader from '@/components/page-header'
 import SpoilerWarning from '@/components/spoiler-warning'
 import Expedition33Recap from '@/components/expedition-33-recap'
@@ -11,7 +11,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationDropdown />
+      <NavigationSidebar />
       <main className="relative z-10">
         {/* Header */}
         <div className="px-4 md:px-8 pt-16 pb-8">
@@ -19,6 +19,7 @@ export default function DashboardPage() {
             subtitle="Clair Obscur"
             title="Fractured Paths"
             description="Your gateway to the stories beyond Expedition 33"
+            glowParticles={true}
           />
         </div>
 
@@ -59,7 +60,7 @@ export default function DashboardPage() {
                     <div className="space-y-2 mb-6 text-sm text-muted-foreground">
                       <p className="flex items-center justify-center gap-2">
                         <Trophy size={16} className="text-primary" />
-                        <span>24 Unique Endings</span>
+                        <span>25 Unique Endings</span>
                       </p>
                       <p className="flex items-center justify-center gap-2">
                         <GitBranch size={16} className="text-primary" />

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ArrowLeft, Bookmark as BookmarkIcon, Trash2, Edit2, Save, X } from 'lucide-react'
 import { loadBookmarks, removeBookmark, updateBookmarkNote, Bookmark } from '@/lib/story/persistence'
 import EnhancedBackground from '@/components/enhanced-background'
-import NavigationDropdown from '@/components/navigation-dropdown'
+import NavigationSidebar from '@/components/navigation-sidebar'
 
 export default function BookmarksPage() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([])
@@ -62,7 +62,7 @@ export default function BookmarksPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationDropdown />
+      <NavigationSidebar />
       <div className="relative z-10">
         {/* Header */}
         <header className="glass sticky top-0 z-20 border-b border-border/30">

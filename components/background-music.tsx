@@ -10,11 +10,8 @@ export default function BackgroundMusic() {
   const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
-    // Load mute preference from localStorage
-    const savedMuteState = localStorage.getItem('backgroundMusicMuted')
-    if (savedMuteState !== null) {
-      setIsMuted(savedMuteState === 'true')
-    }
+    // Always start unmuted (auto-play enabled)
+    setIsMuted(false)
     setIsLoaded(true)
   }, [])
 

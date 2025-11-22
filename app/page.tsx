@@ -110,7 +110,7 @@ export default function Home() {
                   47 Unique Endings
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed text-center">
-                  Discover 24 endings for Verso and 25 for Maelle. Each reflects your choices.
+                  Discover 25 endings for Verso and 25 for Maelle. Each reflects your choices.
                 </p>
               </div>
             </div>

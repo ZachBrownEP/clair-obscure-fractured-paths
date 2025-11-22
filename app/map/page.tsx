@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 import MapViewer from '@/components/map-viewer'
-import NavigationDropdown from '@/components/navigation-dropdown'
+import NavigationSidebar from '@/components/navigation-sidebar'
 import EnhancedBackground from '@/components/enhanced-background'
 
 interface Location {
@@ -80,7 +80,7 @@ export default function MapPage() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationDropdown />
+      <NavigationSidebar />
       <main className="max-w-7xl mx-auto px-4 md:px-8 py-16 relative z-10">
         <Link
           href="/dashboard"

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { ChevronLeft, Lock, CheckCircle } from 'lucide-react'
 import { useEndingsProgress } from '@/lib/hooks/useEndingsProgress'
-import NavigationDropdown from '@/components/navigation-dropdown'
+import NavigationSidebar from '@/components/navigation-sidebar'
 import PageHeader from '@/components/page-header'
 import SpoilerWarning from '@/components/spoiler-warning'
 import Expedition33Recap from '@/components/expedition-33-recap'
@@ -334,7 +334,7 @@ export default function EndingsPage() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationDropdown />
+      <NavigationSidebar />
       <main className="max-w-6xl mx-auto px-4 md:px-8 py-16 relative z-10">
         <Link
           href="/dashboard"

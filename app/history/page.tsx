@@ -7,7 +7,7 @@ import { ChoiceHistoryEntry, StoryRouteId } from '@/lib/story/types'
 import { loadStoryState } from '@/lib/story/persistence'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import EnhancedBackground from '@/components/enhanced-background'
-import NavigationDropdown from '@/components/navigation-dropdown'
+import NavigationSidebar from '@/components/navigation-sidebar'
 
 interface CombinedHistoryEntry extends ChoiceHistoryEntry {
   route: StoryRouteId
@@ -89,7 +89,7 @@ export default function HistoryPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationDropdown />
+      <NavigationSidebar />
       <div className="relative z-10">
         {/* Header */}
         <header className="glass sticky top-0 z-20 border-b border-border/30">

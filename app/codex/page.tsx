@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import codexEntries from '@/data/codex/entries.json'
-import NavigationDropdown from '@/components/navigation-dropdown'
+import NavigationSidebar from '@/components/navigation-sidebar'
 import EnhancedBackground from '@/components/enhanced-background'
 
 type Category = 'character' | 'location' | 'faction' | 'magic' | 'event'
@@ -55,7 +55,7 @@ export default function CodexPage() {
     return (
       <div className="min-h-screen bg-background relative overflow-hidden">
         <EnhancedBackground />
-        <NavigationDropdown />
+        <NavigationSidebar />
         <main className="max-w-4xl mx-auto px-4 md:px-8 py-16">
           <button
             onClick={() => setSelectedEntry(null)}
@@ -131,7 +131,7 @@ export default function CodexPage() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationDropdown />
+      <NavigationSidebar />
       <main className="max-w-5xl mx-auto px-4 md:px-8 py-16 relative z-10">
         <Link
           href="/dashboard"
