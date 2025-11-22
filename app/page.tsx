@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { ChevronRight, Book, Gamepad2, Trophy, Users, BarChart3, BookOpen } from 'lucide-react'
 import EnhancedBackground from '@/components/enhanced-background'
@@ -15,15 +17,15 @@ export default function Home() {
           <SubtleParticleEffect />
 
           <div className="relative max-w-5xl mx-auto text-center">
-            <p className="text-sm md:text-base tracking-[0.25em] text-foreground/70 mb-6 uppercase font-serif">
+            <p className="text-sm md:text-base tracking-[0.25em] text-foreground/70 mb-6 uppercase font-serif drop-shadow-[0_0_15px_rgba(212,175,55,0.2)]">
               Welcome to
             </p>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-decorative text-gold mb-8 leading-tight drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-decorative text-gold mb-8 leading-tight drop-shadow-[0_0_40px_rgba(212,175,55,0.5)] [text-shadow:_0_0_80px_rgba(212,175,55,0.3),_0_0_40px_rgba(212,175,55,0.4)]">
               Clair Obscur:<br />Fractured Paths
             </h1>
 
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed drop-shadow-[0_0_10px_rgba(212,175,55,0.1)]">
               An interactive companion experience that continues the story beyond Expedition 33
             </p>
 
