@@ -13,6 +13,7 @@ import {
 } from '@/lib/story/persistence'
 import { StoryRouteId } from '@/lib/story/types'
 import EnhancedBackground from '@/components/enhanced-background'
+import NavigationDropdown from '@/components/navigation-dropdown'
 import { toast } from 'sonner'
 
 export default function TimelinesPage() {
@@ -76,6 +77,7 @@ export default function TimelinesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
+      <NavigationDropdown />
       <div className="relative z-10">
         {/* Header */}
         <header className="glass sticky top-0 z-20 border-b border-border/30">

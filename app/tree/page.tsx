@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArrowLeft, Download, GitBranch, Eye, EyeOff } from 'lucide-react'
 import { loadStoryState } from '@/lib/story/persistence'
 import EnhancedBackground from '@/components/enhanced-background'
+import NavigationDropdown from '@/components/navigation-dropdown'
 import { StoryNode, StoryRouteId } from '@/lib/story/types'
 
 interface TreeNode extends StoryNode {
@@ -102,6 +103,7 @@ export default function DecisionTreePage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
+      <NavigationDropdown />
       <div className="relative z-10">
         {/* Header */}
         <header className="glass sticky top-0 z-20 border-b border-border/30">

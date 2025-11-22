@@ -3,6 +3,11 @@
 import Link from 'next/link'
 import { ChevronLeft, Lock, CheckCircle } from 'lucide-react'
 import { useEndingsProgress } from '@/lib/hooks/useEndingsProgress'
+import NavigationDropdown from '@/components/navigation-dropdown'
+import PageHeader from '@/components/page-header'
+import SpoilerWarning from '@/components/spoiler-warning'
+import Expedition33Recap from '@/components/expedition-33-recap'
+import EnhancedBackground from '@/components/enhanced-background'
 
 interface EndingMetadata {
   key: string
@@ -327,8 +332,10 @@ export default function EndingsPage() {
   const totalEndings = ENDINGS_METADATA.length
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="max-w-6xl mx-auto px-4 md:px-8 py-16">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <EnhancedBackground />
+      <NavigationDropdown />
+      <main className="max-w-6xl mx-auto px-4 md:px-8 py-16 relative z-10">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
@@ -337,14 +344,19 @@ export default function EndingsPage() {
           Back to Home
         </Link>
 
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-light mb-2 text-foreground">
-            Endings Gallery
-          </h1>
-          <p className="text-muted-foreground mb-4">
-            Discover all the fates that await across fractured paths.
-          </p>
+        <PageHeader
+          subtitle="Clair Obscur"
+          title="Endings Gallery"
+          description="Discover all the fates that await across fractured paths"
+        />
 
+        <SpoilerWarning />
+
+        <div className="mb-8">
+          <Expedition33Recap />
+        </div>
+
+        <div className="mb-12">
           <div className="glass inline-block px-6 py-3 rounded-lg">
             <span className="text-sm text-muted-foreground">
               Unlocked:{' '}

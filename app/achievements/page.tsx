@@ -4,6 +4,11 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ChevronLeft, Lock, CheckCircle, Trophy, Sparkles } from 'lucide-react'
 import { getAllAchievementsWithProgress, Achievement } from '@/lib/story/persistence'
+import NavigationDropdown from '@/components/navigation-dropdown'
+import PageHeader from '@/components/page-header'
+import SpoilerWarning from '@/components/spoiler-warning'
+import Expedition33Recap from '@/components/expedition-33-recap'
+import EnhancedBackground from '@/components/enhanced-background'
 
 type AchievementCategory = 'all' | 'completion' | 'exploration' | 'alignment' | 'speed' | 'secret'
 
@@ -57,8 +62,10 @@ export default function AchievementsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="max-w-6xl mx-auto px-4 md:px-8 py-16">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <EnhancedBackground />
+      <NavigationDropdown />
+      <main className="max-w-6xl mx-auto px-4 md:px-8 py-16 relative z-10">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm mb-8"
@@ -67,15 +74,19 @@ export default function AchievementsPage() {
           Back to Home
         </Link>
 
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-light mb-2 text-foreground flex items-center gap-3">
-            <Trophy className="text-primary" size={48} />
-            Achievements
-          </h1>
-          <p className="text-muted-foreground mb-6">
-            Track your progress through the fractured paths.
-          </p>
+        <PageHeader
+          subtitle="Clair Obscur"
+          title="Achievements"
+          description="Track your accomplishments and milestones throughout your journey"
+        />
 
+        <SpoilerWarning />
+
+        <div className="mb-8">
+          <Expedition33Recap />
+        </div>
+
+        <div className="mb-12">
           <div className="glass inline-block px-6 py-3 rounded-lg">
             <span className="text-sm text-muted-foreground">
               Unlocked:{' '}
