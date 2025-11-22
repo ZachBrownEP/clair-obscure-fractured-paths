@@ -149,6 +149,7 @@ const chapters: Chapter[] = [
 export default function Expedition33Recap() {
   const [isOpen, setIsOpen] = useState(false)
   const [currentChapter, setCurrentChapter] = useState(0)
+  const [visibleStartIndex, setVisibleStartIndex] = useState(0)
 
   const handlePrevious = () => {
     setCurrentChapter((prev) => Math.max(0, prev - 1))
@@ -157,6 +158,17 @@ export default function Expedition33Recap() {
   const handleNext = () => {
     setCurrentChapter((prev) => Math.min(chapters.length - 1, prev + 1))
   }
+
+  const handleChapterNavigationPrevious = () => {
+    setVisibleStartIndex((prev) => Math.max(0, prev - 1))
+  }
+
+  const handleChapterNavigationNext = () => {
+    setVisibleStartIndex((prev) => Math.min(chapters.length - 5, prev + 1))
+  }
+
+  // Show 5 chapter pills at a time
+  const visibleChapters = chapters.slice(visibleStartIndex, visibleStartIndex + 5)
 
   return (
     <>
@@ -171,112 +183,148 @@ export default function Expedition33Recap() {
 
       {/* Modal */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 overflow-y-auto">
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-background/95 backdrop-blur-md"
+            className="fixed inset-0 bg-background/95 backdrop-blur-md"
             onClick={() => setIsOpen(false)}
           />
 
           {/* Modal Content */}
-          <div className="relative w-full max-w-4xl max-h-[90vh] glass rounded-xl border border-primary/30 shadow-2xl flex flex-col overflow-hidden">
-            <SubtleParticleEffect />
+          <div className="relative min-h-screen flex items-center justify-center p-4">
+            <div className="relative w-full max-w-4xl glass rounded-xl border border-primary/30 shadow-2xl my-8">
+              <SubtleParticleEffect />
 
-            {/* Header */}
-            <div className="relative z-10 flex items-center justify-between p-6 border-b border-primary/20">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-decorative text-gold">
-                  Expedition 33: The Story
-                </h2>
-                <p className="text-sm text-muted-foreground mt-1">
-                  A recap of the events from the original game
-                </p>
-              </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-muted-foreground hover:text-foreground transition-colors p-2"
-                aria-label="Close recap"
-              >
-                <X size={24} />
-              </button>
-            </div>
-
-            {/* Chapter Navigation Pills */}
-            <div className="relative z-10 px-6 py-4 border-b border-primary/20 overflow-x-auto">
-              <div className="flex gap-2 min-w-max">
-                {chapters.map((chapter, index) => (
-                  <button
-                    key={chapter.number}
-                    onClick={() => setCurrentChapter(index)}
-                    className={`
-                      px-4 py-2 rounded-full text-xs font-light whitespace-nowrap transition-all
-                      ${currentChapter === index
-                        ? 'bg-primary/20 text-primary border border-primary/50'
-                        : 'bg-card/50 text-muted-foreground hover:text-foreground hover:bg-card/70'
-                      }
-                    `}
-                  >
-                    Chapter {chapter.number}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="relative z-10 flex-1 overflow-y-auto p-6 md:p-8">
-              <div className="max-w-3xl mx-auto">
-                <div className="mb-4">
-                  <p className="text-sm text-primary uppercase tracking-widest mb-2">
-                    Chapter {chapters[currentChapter].number}
+              {/* Header */}
+              <div className="relative z-10 flex items-center justify-between p-6 border-b border-primary/20">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-decorative text-gold">
+                    Expedition 33: The Story
+                  </h2>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    A recap of the events from the original game
                   </p>
-                  <h3 className="text-2xl md:text-3xl font-light text-foreground mb-6">
-                    {chapters[currentChapter].title}
-                  </h3>
                 </div>
-
-                <div className="space-y-4 text-foreground/90 leading-relaxed">
-                  {chapters[currentChapter].content.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Footer Navigation */}
-            <div className="relative z-10 flex items-center justify-between p-6 border-t border-primary/20">
-              <button
-                onClick={handlePrevious}
-                disabled={currentChapter === 0}
-                className={`
-                  flex items-center gap-2 px-4 py-2 rounded-lg transition-all
-                  ${currentChapter === 0
-                    ? 'opacity-50 cursor-not-allowed text-muted-foreground'
-                    : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
-                  }
-                `}
-              >
-                <ChevronLeft size={20} />
-                <span className="text-sm font-light">Previous</span>
-              </button>
-
-              <div className="text-sm text-muted-foreground">
-                {currentChapter + 1} / {chapters.length}
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="text-muted-foreground hover:text-foreground transition-colors p-2"
+                  aria-label="Close recap"
+                >
+                  <X size={24} />
+                </button>
               </div>
 
-              <button
-                onClick={handleNext}
-                disabled={currentChapter === chapters.length - 1}
-                className={`
-                  flex items-center gap-2 px-4 py-2 rounded-lg transition-all
-                  ${currentChapter === chapters.length - 1
-                    ? 'opacity-50 cursor-not-allowed text-muted-foreground'
-                    : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
-                  }
-                `}
-              >
-                <span className="text-sm font-light">Next</span>
-                <ChevronRight size={20} />
-              </button>
+              {/* Chapter Navigation Pills with Arrows */}
+              <div className="relative z-10 px-6 py-4 border-b border-primary/20">
+                <div className="flex items-center gap-2">
+                  {/* Left Arrow */}
+                  <button
+                    onClick={handleChapterNavigationPrevious}
+                    disabled={visibleStartIndex === 0}
+                    className={`p-2 rounded-lg transition-all flex-shrink-0 ${
+                      visibleStartIndex === 0
+                        ? 'opacity-30 cursor-not-allowed text-muted-foreground'
+                        : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
+                    }`}
+                    aria-label="Previous chapters"
+                  >
+                    <ChevronLeft size={16} />
+                  </button>
+
+                  {/* Chapter Pills */}
+                  <div className="flex gap-2 flex-1 justify-center">
+                    {visibleChapters.map((chapter) => {
+                      const index = chapters.indexOf(chapter)
+                      return (
+                        <button
+                          key={chapter.number}
+                          onClick={() => setCurrentChapter(index)}
+                          className={`
+                            px-4 py-2 rounded-full text-xs font-light whitespace-nowrap transition-all
+                            ${currentChapter === index
+                              ? 'bg-primary/20 text-primary border border-primary/50'
+                              : 'bg-card/50 text-muted-foreground hover:text-foreground hover:bg-card/70'
+                            }
+                          `}
+                        >
+                          Chapter {chapter.number}
+                        </button>
+                      )
+                    })}
+                  </div>
+
+                  {/* Right Arrow */}
+                  <button
+                    onClick={handleChapterNavigationNext}
+                    disabled={visibleStartIndex >= chapters.length - 5}
+                    className={`p-2 rounded-lg transition-all flex-shrink-0 ${
+                      visibleStartIndex >= chapters.length - 5
+                        ? 'opacity-30 cursor-not-allowed text-muted-foreground'
+                        : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
+                    }`}
+                    aria-label="Next chapters"
+                  >
+                    <ChevronRight size={16} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Content - Removed overflow-y-auto to scroll with page */}
+              <div className="relative z-10 p-6 md:p-8">
+                <div className="max-w-3xl mx-auto">
+                  <div className="mb-4">
+                    <p className="text-sm text-primary uppercase tracking-widest mb-2">
+                      Chapter {chapters[currentChapter].number}
+                    </p>
+                    <h3 className="text-2xl md:text-3xl font-light text-foreground mb-6">
+                      {chapters[currentChapter].title}
+                    </h3>
+                  </div>
+
+                  <div className="space-y-4 text-foreground/90 leading-relaxed">
+                    {chapters[currentChapter].content.map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer Navigation */}
+              <div className="relative z-10 flex items-center justify-between p-6 border-t border-primary/20">
+                <button
+                  onClick={handlePrevious}
+                  disabled={currentChapter === 0}
+                  className={`
+                    flex items-center gap-2 px-4 py-2 rounded-lg transition-all
+                    ${currentChapter === 0
+                      ? 'opacity-50 cursor-not-allowed text-muted-foreground'
+                      : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
+                    }
+                  `}
+                >
+                  <ChevronLeft size={20} />
+                  <span className="text-sm font-light">Previous</span>
+                </button>
+
+                <div className="text-sm text-muted-foreground">
+                  {currentChapter + 1} / {chapters.length}
+                </div>
+
+                <button
+                  onClick={handleNext}
+                  disabled={currentChapter === chapters.length - 1}
+                  className={`
+                    flex items-center gap-2 px-4 py-2 rounded-lg transition-all
+                    ${currentChapter === chapters.length - 1
+                      ? 'opacity-50 cursor-not-allowed text-muted-foreground'
+                      : 'glass hover:bg-card/70 text-foreground border border-primary/30 hover:border-primary/50'
+                    }
+                  `}
+                >
+                  <span className="text-sm font-light">Next</span>
+                  <ChevronRight size={20} />
+                </button>
+              </div>
             </div>
           </div>
         </div>
