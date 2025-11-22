@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Home, BookOpen, Map, Trophy, Award, History, BarChart3, GitBranch, Bookmark as BookmarkIcon, GitMerge, Book } from 'lucide-react'
+import { Menu, X, Home, BookOpen, Map, Trophy, Award, History, BarChart3, GitBranch, Bookmark as BookmarkIcon, GitMerge, Book, ArrowLeft } from 'lucide-react'
 
 interface NavigationSidebarProps {
   onBookmark?: () => void
@@ -15,6 +15,7 @@ export default function NavigationSidebar({ onBookmark, showBookmarkOption = fal
   const pathname = usePathname()
 
   const navigationLinks = [
+    { href: '/', label: 'Homepage', icon: ArrowLeft },
     { href: '/dashboard', label: 'Dashboard', icon: Home },
     { href: '/stories/verso', label: "Verso's Story", icon: Book },
     { href: '/stories/maelle', label: "Maelle's Story", icon: Book },

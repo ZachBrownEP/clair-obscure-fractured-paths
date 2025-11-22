@@ -2,11 +2,13 @@ import Link from 'next/link'
 import { ChevronRight, Book, Gamepad2, Trophy, Users, BarChart3, BookOpen } from 'lucide-react'
 import EnhancedBackground from '@/components/enhanced-background'
 import SubtleParticleEffect from '@/components/subtle-particle-effect'
+import BackgroundMusic from '@/components/background-music'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden flex items-center">
       <EnhancedBackground />
+      <BackgroundMusic />
       <main className="relative z-10 w-full">
         {/* Hero Section */}
         <section className="relative px-4 md:px-8 py-16 md:py-24 overflow-hidden">
@@ -45,14 +47,14 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-light text-foreground mb-6 text-center">
                 What is Fractured Paths?
               </h2>
-              <div className="space-y-6 text-foreground/90 leading-relaxed max-w-4xl mx-auto">
+              <div className="space-y-6 text-foreground/90 leading-relaxed max-w-4xl mx-auto text-center">
                 <p className="text-lg">
                   <strong className="text-primary">Clair Obscur: Expedition 33</strong> is a dark fantasy turn-based RPG where a group of warriors battles against the Painter—a mysterious entity who condemns people to erasure based on their age each year.
                 </p>
                 <p className="text-lg">
                   <strong className="text-primary">Fractured Paths</strong> is your companion to this world. This interactive experience lets you explore what happens <em>after</em> the events of Expedition 33, diving deeper into characters like <strong>Verso</strong> and <strong>Maelle</strong> through branching narratives shaped by your choices.
                 </p>
-                <p className="text-lg text-center">
+                <p className="text-lg">
                   This is a <strong className="text-gold">fan-made companion app</strong> designed to extend your journey beyond the main game.
                 </p>
               </div>
