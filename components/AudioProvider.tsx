@@ -58,6 +58,12 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
       audio.muted = true
       audio.preload = 'auto'
       globalAudioInstance = audio
+
+      // Expose on window for Safari unlock component
+      if (typeof window !== 'undefined') {
+        (window as any).globalAudioInstance = audio
+      }
+
       console.log('🎵 Global audio instance created')
     }
 
@@ -157,7 +163,7 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
       }
     }
 
-    // Listen to multiple interaction types
+    // Listen to multiple interaction types as fallback
     const events: Array<keyof WindowEventMap> = ['click', 'touchstart', 'keydown']
 
     const handlers: Array<() => void> = []
