@@ -12,7 +12,6 @@ import {
 } from '@/lib/story/persistence'
 import { StoryRouteId } from '@/lib/story/types'
 import EnhancedBackground from '@/components/enhanced-background'
-import NavigationSidebar from '@/components/navigation-sidebar'
 import { toast } from 'sonner'
 import SmartBackButton from '@/components/smart-back-button'
 
@@ -77,7 +76,6 @@ export default function TimelinesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationSidebar />
       <div className="relative z-10 pt-20">
         {/* Header */}
         <header className="glass sticky top-20 z-20 border-b border-border/30">

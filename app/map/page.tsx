@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import MapViewer from '@/components/map-viewer'
-import NavigationSidebar from '@/components/navigation-sidebar'
 import EnhancedBackground from '@/components/enhanced-background'
 import SmartBackButton from '@/components/smart-back-button'
 
@@ -79,7 +78,6 @@ export default function MapPage() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationSidebar />
       <main className="max-w-7xl mx-auto px-4 md:px-8 pt-24 pb-16 relative z-10">
         <div className="mb-8">
           <SmartBackButton fallbackLabel="Back to Dashboard" />

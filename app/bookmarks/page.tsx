@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { ArrowLeft, Bookmark as BookmarkIcon, Trash2, Edit2, Save, X } from 'lucide-react'
 import { loadBookmarks, removeBookmark, updateBookmarkNote, Bookmark } from '@/lib/story/persistence'
 import EnhancedBackground from '@/components/enhanced-background'
-import NavigationSidebar from '@/components/navigation-sidebar'
 import SmartBackButton from '@/components/smart-back-button'
 
 export default function BookmarksPage() {
@@ -62,7 +62,6 @@ export default function BookmarksPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationSidebar />
       <div className="relative z-10 pt-20">
         {/* Header */}
         <header className="glass sticky top-20 z-20 border-b border-border/30">

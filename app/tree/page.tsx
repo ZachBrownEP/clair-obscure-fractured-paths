@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { ArrowLeft, Download, GitBranch, Eye, EyeOff } from 'lucide-react'
 import { loadStoryState } from '@/lib/story/persistence'
 import EnhancedBackground from '@/components/enhanced-background'
-import NavigationSidebar from '@/components/navigation-sidebar'
 import { StoryNode, StoryRouteId } from '@/lib/story/types'
 import SmartBackButton from '@/components/smart-back-button'
 
@@ -103,7 +102,6 @@ export default function DecisionTreePage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationSidebar />
       <div className="relative z-10 pt-20">
         {/* Header */}
         <header className="glass sticky top-20 z-20 border-b border-border/30">

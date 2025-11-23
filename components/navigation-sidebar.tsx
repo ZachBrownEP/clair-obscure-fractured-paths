@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Home, BookOpen, Map, Trophy, Award, History, BarChart3, GitBranch, Bookmark as BookmarkIcon, GitMerge, Book, ArrowLeft } from 'lucide-react'
@@ -37,29 +37,46 @@ export default function NavigationSidebar({ onBookmark, showBookmarkOption = fal
     }
   }
 
+  // Close menu when pathname changes
+  useEffect(() => {
+    setIsOpen(false)
+  }, [pathname])
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isOpen])
+
   return (
     <>
       {/* Menu Button - Top Left */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-6 left-6 z-50 glass p-3 rounded-lg hover:bg-card/70 transition-all border border-primary/30 hover:border-primary/50"
+        className="fixed top-6 left-6 z-[100] glass p-3 rounded-lg hover:bg-card/70 transition-all duration-200 border border-primary/30 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20"
         aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
       >
         {isOpen ? <X size={24} className="text-primary" /> : <Menu size={24} className="text-primary" />}
       </button>
 
       {/* Backdrop with blur */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-background/60 backdrop-blur-md z-50 transition-opacity"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
+      <div
+        className={`fixed inset-0 bg-background/60 backdrop-blur-md z-[90] transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setIsOpen(false)}
+      />
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-80 glass border-r border-primary/30 shadow-2xl z-50 transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed top-0 left-0 h-full w-80 glass border-r border-primary/30 shadow-2xl z-[95] transition-all duration-300 ease-out ${
+          isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
         }`}
       >
         <div className="flex flex-col h-full">
@@ -68,7 +85,7 @@ export default function NavigationSidebar({ onBookmark, showBookmarkOption = fal
             <h2 className="text-xl font-decorative text-gold">Navigation</h2>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-muted-foreground hover:text-foreground transition-colors p-2"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200 p-2 rounded-lg hover:bg-card/50"
               aria-label="Close navigation"
             >
               <X size={24} />
@@ -80,7 +97,7 @@ export default function NavigationSidebar({ onBookmark, showBookmarkOption = fal
             <div className="p-4 border-b border-primary/20 bg-primary/5">
               <button
                 onClick={handleBookmark}
-                className="w-full glass px-4 py-3 rounded-lg hover:bg-primary/20 transition-all border border-primary/30 hover:border-primary/50 flex items-center gap-3"
+                className="w-full glass px-4 py-3 rounded-lg hover:bg-primary/20 transition-all duration-200 border border-primary/30 hover:border-primary/50 flex items-center gap-3"
               >
                 <BookmarkIcon size={20} className="text-amber-500" />
                 <span className="text-sm font-light text-foreground">Bookmark This Scene</span>
@@ -89,7 +106,7 @@ export default function NavigationSidebar({ onBookmark, showBookmarkOption = fal
           )}
 
           {/* Navigation Links */}
-          <nav className="flex-1 overflow-y-auto p-4">
+          <nav className="flex-1 overflow-y-auto p-4 scrollbar-thin scrollbar-thumb-primary/30 scrollbar-track-transparent">
             <div className="space-y-1">
               {navigationLinks.map((link) => {
                 const Icon = link.icon
@@ -101,10 +118,10 @@ export default function NavigationSidebar({ onBookmark, showBookmarkOption = fal
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={`
-                      flex items-center gap-3 px-4 py-3 rounded-lg transition-all
+                      flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200
                       ${isActive
-                        ? 'bg-primary/20 text-primary border border-primary/30'
-                        : 'hover:bg-card/50 text-foreground/80 hover:text-foreground'
+                        ? 'bg-primary/20 text-primary border border-primary/30 shadow-sm'
+                        : 'hover:bg-card/50 text-foreground/80 hover:text-foreground border border-transparent'
                       }
                     `}
                   >
