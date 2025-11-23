@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import codexEntries from '@/data/codex/entries.json'
-import NavigationSidebar from '@/components/navigation-sidebar'
 import EnhancedBackground from '@/components/enhanced-background'
 import SmartBackButton from '@/components/smart-back-button'
 
@@ -55,7 +54,6 @@ export default function CodexPage() {
     return (
       <div className="min-h-screen bg-background relative overflow-hidden">
         <EnhancedBackground />
-        <NavigationSidebar />
         <main className="max-w-4xl mx-auto px-4 md:px-8 pt-24 pb-16">
           <button
             onClick={() => setSelectedEntry(null)}
@@ -131,7 +129,6 @@ export default function CodexPage() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationSidebar />
       <main className="max-w-5xl mx-auto px-4 md:px-8 pt-24 pb-16 relative z-10">
         <div className="mb-8">
           <SmartBackButton fallbackLabel="Back to Dashboard" />

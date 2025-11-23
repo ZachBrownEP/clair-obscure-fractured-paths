@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { ArrowLeft, BarChart3, Trophy, History, BookOpen } from 'lucide-react'
 import { loadStoryState, loadUnlockedEndings, getAllAchievementsWithProgress } from '@/lib/story/persistence'
 import EnhancedBackground from '@/components/enhanced-background'
-import NavigationSidebar from '@/components/navigation-sidebar'
 import PageHeader from '@/components/page-header'
 import SmartBackButton from '@/components/smart-back-button'
 
@@ -72,7 +71,6 @@ export default function ProgressPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationSidebar />
       <div className="relative z-10 pt-20">
         {/* Header */}
         <header className="glass sticky top-20 z-20 border-b border-border/30">

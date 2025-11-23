@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { BookOpen, Map, Trophy, ChevronRight, Award, History, BarChart3, GitBranch, Bookmark, GitMerge, Book } from 'lucide-react'
 import EnhancedBackground from '@/components/enhanced-background'
-import NavigationSidebar from '@/components/navigation-sidebar'
 import PageHeader from '@/components/page-header'
 import SpoilerWarning from '@/components/spoiler-warning'
 import Expedition33Recap from '@/components/expedition-33-recap'
@@ -11,7 +10,6 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationSidebar />
       <main className="relative z-10">
         {/* Header */}
         <div className="px-4 md:px-8 pt-24 pb-8">

@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { Lock, CheckCircle, Trophy, Sparkles } from 'lucide-react'
 import { getAllAchievementsWithProgress, Achievement } from '@/lib/story/persistence'
-import NavigationSidebar from '@/components/navigation-sidebar'
 import PageHeader from '@/components/page-header'
 import Expedition33Recap from '@/components/expedition-33-recap'
 import EnhancedBackground from '@/components/enhanced-background'
@@ -63,7 +62,6 @@ export default function AchievementsPage() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <EnhancedBackground />
-      <NavigationSidebar />
       <main className="max-w-6xl mx-auto px-4 md:px-8 pt-24 pb-16 relative z-10">
         <div className="mb-8">
           <SmartBackButton fallbackLabel="Back to Dashboard" />

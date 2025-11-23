@@ -27,6 +27,10 @@ interface AudioProviderProps {
   volume?: number
 }
 
+// Global singleton to prevent multiple audio instances
+let globalAudioInstance: HTMLAudioElement | null = null
+let globalAudioStarted = false
+
 export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: AudioProviderProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -35,67 +39,92 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
   const audioStarted = useRef(false)
   const cleanupListenersRef = useRef<(() => void) | null>(null)
 
-  // Initialize audio element once on mount
+  // Initialize audio element and start playback
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    // Create audio element only if it doesn't exist
-    if (!audioRef.current) {
+    // Use global singleton to prevent multiple instances
+    if (!globalAudioInstance) {
       const audio = new Audio(src)
       audio.loop = true
-      audio.volume = initialVolume
+      audio.volume = 0
+      audio.muted = true
       audio.preload = 'auto'
-      audioRef.current = audio
-
-      // Add event listeners
-      audio.addEventListener('play', () => setIsPlaying(true))
-      audio.addEventListener('pause', () => setIsPlaying(false))
-      audio.addEventListener('ended', () => setIsPlaying(false))
+      globalAudioInstance = audio
+      console.log('🎵 Global audio instance created')
     }
 
+    // Set local ref to global instance
+    audioRef.current = globalAudioInstance
+
+    // Add event listeners for this component instance
+    const handlePlay = () => setIsPlaying(true)
+    const handlePause = () => setIsPlaying(false)
+    const handleEnded = () => setIsPlaying(false)
+
+    audioRef.current.addEventListener('play', handlePlay)
+    audioRef.current.addEventListener('pause', handlePause)
+    audioRef.current.addEventListener('ended', handleEnded)
+
+    // Attempt to start playback if not already started
+    const attemptAutoplay = async () => {
+      if (!audioRef.current || globalAudioStarted) return
+
+      try {
+        console.log('🔇 Attempting muted autoplay...')
+        await audioRef.current.play()
+        globalAudioStarted = true
+        audioStarted.current = true
+        console.log('✓ Audio playing (muted)')
+
+        // Unmute after a brief delay
+        setTimeout(() => {
+          if (audioRef.current && globalAudioStarted) {
+            audioRef.current.muted = false
+            audioRef.current.volume = initialVolume
+            console.log('✓ Audio unmuted and playing at volume:', initialVolume)
+          }
+        }, 200)
+      } catch (error) {
+        console.log('⏸ Autoplay blocked - waiting for user interaction', error)
+        attachInteractionListeners()
+      }
+    }
+
+    const timer = setTimeout(attemptAutoplay, 150)
+
     return () => {
+      clearTimeout(timer)
+      // Remove event listeners for this component instance
+      if (audioRef.current) {
+        audioRef.current.removeEventListener('play', handlePlay)
+        audioRef.current.removeEventListener('pause', handlePause)
+        audioRef.current.removeEventListener('ended', handleEnded)
+      }
       // Clean up interaction listeners if they exist
       if (cleanupListenersRef.current) {
         cleanupListenersRef.current()
         cleanupListenersRef.current = null
       }
-      // Do NOT destroy the audio element on unmount
-      // This ensures it persists across navigation
+      // Do NOT destroy the global audio instance - it persists
     }
   }, [src, initialVolume])
-
-  // Attempt autoplay on first mount
-  useEffect(() => {
-    if (!audioRef.current || audioStarted.current) return
-
-    const attemptAutoplay = async () => {
-      try {
-        // Try to play immediately
-        await audioRef.current?.play()
-        audioStarted.current = true
-        console.log('✓ Autoplay successful')
-      } catch (error) {
-        // Autoplay was blocked - set up user interaction listeners
-        // Suppress the error since we handle it gracefully
-        console.log('⏸ Autoplay blocked - waiting for user interaction')
-        attachInteractionListeners()
-      }
-    }
-
-    // Small delay to ensure DOM is ready
-    const timer = setTimeout(attemptAutoplay, 100)
-    return () => clearTimeout(timer)
-  }, [])
 
   // Attach interaction listeners to start audio on first user interaction
   const attachInteractionListeners = () => {
     if (!audioRef.current || cleanupListenersRef.current) return
 
     const handleInteraction = async (event: Event) => {
-      if (!audioRef.current || audioStarted.current) return
+      if (!audioRef.current || globalAudioStarted) return
 
       try {
+        console.log('👆 User interaction detected, starting audio...')
+        // Unmute and set volume before playing
+        audioRef.current.muted = false
+        audioRef.current.volume = initialVolume
+
         await audioRef.current.play()
+        globalAudioStarted = true
         audioStarted.current = true
         console.log('✓ Audio started after user interaction')
 
