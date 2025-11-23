@@ -34,7 +34,14 @@ let globalAudioStarted = false
 export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: AudioProviderProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [isMuted, setIsMuted] = useState(false)
+  const [isMuted, setIsMuted] = useState(() => {
+    // Load mute preference from localStorage on init
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('backgroundMusicMuted')
+      return saved === 'true'
+    }
+    return false
+  })
   const [volume, setVolumeState] = useState(initialVolume)
   const audioStarted = useRef(false)
   const cleanupListenersRef = useRef<(() => void) | null>(null)
@@ -77,12 +84,23 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
         audioStarted.current = true
         console.log('✓ Audio playing (muted)')
 
-        // Unmute after a brief delay
+        // Check localStorage preference before unmuting
+        const savedMuteState = localStorage.getItem('backgroundMusicMuted')
+        const shouldBeMuted = savedMuteState === 'true'
+
+        // Unmute after a brief delay, but only if user hasn't previously muted
         setTimeout(() => {
           if (audioRef.current && globalAudioStarted) {
-            audioRef.current.muted = false
-            audioRef.current.volume = initialVolume
-            console.log('✓ Audio unmuted and playing at volume:', initialVolume)
+            if (shouldBeMuted) {
+              // User previously muted - pause the audio
+              audioRef.current.pause()
+              console.log('⏸ Audio paused (user preference: muted)')
+            } else {
+              // User hasn't muted - unmute and play
+              audioRef.current.muted = false
+              audioRef.current.volume = initialVolume
+              console.log('✓ Audio unmuted and playing at volume:', initialVolume)
+            }
           }
         }, 200)
       } catch (error) {
@@ -173,6 +191,9 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
 
     const newMutedState = !isMuted
     setIsMuted(newMutedState)
+
+    // Save preference to localStorage
+    localStorage.setItem('backgroundMusicMuted', String(newMutedState))
 
     if (newMutedState) {
       audioRef.current.pause()
