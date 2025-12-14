@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import { StoryNode, StoryState, StoryRouteId, StoryChoice, ChoiceHistoryEntry } from '@/lib/story/types'
 import {
   loadStoryState,
@@ -79,6 +79,38 @@ export default function StoryEngine({
   const [lastSaveTime, setLastSaveTime] = useState<number>(Date.now())
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isBookmarked, setIsBookmarked] = useState(false)
+  const [sessionSeconds, setSessionSeconds] = useState(0)
+  const [timerRunning, setTimerRunning] = useState(true)
+
+  // Session timer - tracks reading time, stops at endings
+  useEffect(() => {
+    if (!timerRunning) return
+
+    const interval = setInterval(() => {
+      setSessionSeconds(s => s + 1)
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [timerRunning])
+
+  // Stop timer when reaching an ending
+  useEffect(() => {
+    const node = nodes.find(n => n.id === state.currentNodeId)
+    if (node?.isEnding) {
+      setTimerRunning(false)
+    }
+  }, [state.currentNodeId, nodes])
+
+  // Format session time as Xm Xs or Xh Xm
+  const formatSessionTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60)
+    const secs = seconds % 60
+    if (mins < 60) {
+      return `${mins}m ${secs}s`
+    }
+    const hours = Math.floor(mins / 60)
+    const remainingMins = mins % 60
+    return `${hours}h ${remainingMins}m`
+  }
 
   // Find current node whenever currentNodeId changes
   useEffect(() => {
@@ -206,6 +238,8 @@ export default function StoryEngine({
     clearStoryState(routeId)
     const initialState = getInitialState(routeId, startNodeId)
     setState(initialState)
+    setSessionSeconds(0) // Reset timer on restart
+    setTimerRunning(true) // Restart timer
   }
 
   const handleBookmark = () => {
@@ -262,12 +296,6 @@ export default function StoryEngine({
 
     return true
   })
-
-  // Calculate progress metrics
-  const totalNodes = nodes.length
-  const visitedNodes = state.seenNodes.length
-  const progressPercentage = Math.round((visitedNodes / totalNodes) * 100)
-  const estimatedTimeRemaining = Math.max(1, Math.round((totalNodes - visitedNodes) * 0.5)) // ~30 seconds per node
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-8 md:pb-16 px-4 relative overflow-hidden">
@@ -399,18 +427,23 @@ export default function StoryEngine({
 
           {/* Story Progress Indicators */}
           <div className="mb-6 glass rounded-lg p-4">
-            <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-2 gap-8 text-center">
               <div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Chapter</div>
-                <div className="text-lg font-light text-primary">{state.currentChapter} of {totalChapters}</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Time</div>
+                <div className="text-lg font-light text-primary">{formatSessionTime(sessionSeconds)}</div>
               </div>
               <div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Choices</div>
-                <div className="text-lg font-light text-primary">{state.choiceHistory.length}</div>
-              </div>
-              <div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Time Left</div>
-                <div className="text-lg font-light text-primary">~{estimatedTimeRemaining}m</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Alignment</div>
+                <div className="text-lg font-light text-primary">
+                  {(() => {
+                    const { painterAlignment, writerAlignment, balance } = state.stats
+                    const max = Math.max(painterAlignment, writerAlignment, balance)
+                    if (max === painterAlignment && painterAlignment > writerAlignment && painterAlignment > balance) return '🎨 Painter'
+                    if (max === writerAlignment && writerAlignment > painterAlignment && writerAlignment > balance) return '✍️ Writer'
+                    if (max === balance && balance > painterAlignment && balance > writerAlignment) return '⚖️ Balance'
+                    return '⚖️ Balance'
+                  })()}
+                </div>
               </div>
             </div>
           </div>

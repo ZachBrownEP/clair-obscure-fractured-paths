@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Lock, CheckCircle } from 'lucide-react'
 import { useEndingsProgress } from '@/lib/hooks/useEndingsProgress'
 import PageHeader from '@/components/page-header'

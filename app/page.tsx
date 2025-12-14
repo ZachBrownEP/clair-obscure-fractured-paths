@@ -101,7 +101,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 47 Endings */}
+            {/* 50 Endings */}
             <div className="glass rounded-xl p-8 relative overflow-hidden">
               <SubtleParticleEffect />
               <div className="relative z-10">
@@ -109,7 +109,7 @@ export default function Home() {
                   <Trophy size={32} />
                 </div>
                 <h3 className="text-xl font-light text-foreground mb-3 text-center">
-                  47 Unique Endings
+                  50 Unique Endings
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed text-center">
                   Discover 25 endings for Verso and 25 for Maelle. Each reflects your choices.

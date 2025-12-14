@@ -1811,6 +1811,322 @@
       "endingTitle": "The Self-Portrait",
       "text": "\"Teach me,\" you say, and something shifts in the Paintress's expression—not quite pride, but something deeper. Recognition, perhaps. The acknowledgment of a kindred spirit.\n\n\"To paint yourself is the most intimate art,\" she says, guiding you to a mirror that reflects not your body but your essence—swirling colors of memory, desire, fear, and hope. \"Most Painters spend their entire existence trying to reshape others. But you... you are already half-painted. You carry the canvas within you.\"\n\nShe hands you a brush that feels like an extension of your soul. \"Begin.\"\n\nYou paint yourself. Not in broad strokes of transformation, but in careful, deliberate touches. You strengthen the parts of yourself you want to keep. You gentle the edges that have grown too sharp. You add depth to your capacity for joy, texture to your ability to connect.\n\nThe process takes months. Years. Time becomes meaningless as you work on the most important canvas you'll ever touch—yourself.\n\nYou learn to paint away your grief without erasing the love beneath it. To transform your anger into determination. To reshape your fears into healthy caution rather than paralysis.\n\nWhen you finally step back from your self-portrait, you're someone new. Not a different person—still Verso, still carrying the memories of Aline and Expedition 33 and all that came before. But a better version. A chosen version.\n\nThe Paintress examines your work. \"Remarkable,\" she says. \"Most who attempt self-painting become narcissistic gods or hollow shells. But you've found the third way—you've painted yourself into someone who can still grow, still change, still choose.\"\n\n\"Because that's what I wanted,\" you say. \"Not perfection. Potential.\"\n\nYou leave the Paintress's tower with the brush still in your hand. You'll never stop painting yourself—adding new colors as you experience new things, adjusting shades as you learn, always becoming. But now it's your choice. Your hand. Your art.\n\nYou are your own masterpiece, forever in progress, and that's exactly how you want it.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Self-Portrait**\n*You learned to paint yourself, becoming an ever-evolving work of art guided by your own hand—not a finished masterpiece, but a canvas of infinite potential.*",
       "choices": []
+    },
+    {
+      "id": "verso_ch1_gallery_philosophy",
+      "route": "verso",
+      "chapter": 1,
+      "title": "The Weight of Witness",
+      "text": "Renoir's spiral eyes grow distant, contemplating something you cannot see.\n\n\"What happens if no one acknowledges the Gallery?\" It repeats your question slowly, savoring each word like a bitter memory. \"I have seen it happen. Districts where no one walks for too long. Buildings that forget they are buildings. Beings who dissolve into background noise because no one remembers they exist.\"\n\nThe curator gestures to a nearby alley. You see it shimmer, flicker—almost not there.\n\n\"Without witness, painted things unbecome. They return to raw potential, to pigment without purpose. The Gallery is not just art—it is art that knows it is seen. Remove the seeing, and...\"\n\nRenoir trails off. You understand. This place exists only because someone cares enough to look at it.\n\n\"That is why I maintain,\" Renoir continues. \"Not from duty. From necessity. If I stop witnessing, stop caring, this world dissolves. And everyone in it—the child by the fountain, your mother's ghost, you—would simply cease.\"\n\nThe weight of that truth settles on your shoulders like wet paint.",
+      "choices": [
+        {
+          "id": "accept_weight",
+          "label": "Then let me help carry that weight. Teach me to witness.",
+          "nextId": "verso_ch1_curator_apprentice",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "balance",
+              "delta": 8
+            }
+          ]
+        },
+        {
+          "id": "seek_escape_knowledge",
+          "label": "Is there a way to exist that doesn't depend on being witnessed?",
+          "nextId": "verso_ch1_canvas_ghost_path",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "confront_paintress_philosophy",
+          "label": "Does the Paintress know this? Does she care?",
+          "nextId": "verso_ch1_paintress_meeting",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "questions_paintress_care",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_child_paintress_lore",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Stories of the Creator",
+      "text": "The child's form shifts nervously—impressionist becoming cubist becoming something without a name.\n\n\"The Paintress,\" she says, voice lowered as if the name itself might summon attention. \"She made all of this. She made me. She made the fountain and the café and probably you, too, even the parts that used to be real.\"\n\n\"What is she?\"\n\n\"She used to be human. A painter in the world that's not painted. But she wanted more than paintings that hang on walls. She wanted paintings that breathe and think and feel.\" The child kicks at the ground, and ripples spread like water. \"So she became the brush. Or the brush became her. Nobody remembers which anymore.\"\n\n\"Is she dangerous?\"\n\nThe child considers this seriously. \"Not... exactly. She doesn't want to hurt anyone. She just wants to paint. Forever. Everything. Everyone.\" A pause. \"I think she's lonely. I think she paints people because she forgot how to talk to them any other way.\"\n\nThe child looks up at you with eyes that cycle through every artistic style ever conceived.\n\n\"She'd like you, I think. You're interesting. Most people she paints just... accept it. But you're still fighting. Still becoming. That's rare.\"",
+      "choices": [
+        {
+          "id": "seek_out_paintress",
+          "label": "Take me to her. I want to understand.",
+          "nextId": "verso_ch1_paintress_meeting",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "seeks_paintress_understanding",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "avoid_paintress",
+          "label": "I'd rather avoid her attention for now.",
+          "nextId": "verso_ch1_cafe",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 3
+            }
+          ]
+        },
+        {
+          "id": "ask_about_escape",
+          "label": "Do people ever escape her? Leave the Gallery?",
+          "nextId": "verso_ch1_doors_info"
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_paintress_observation",
+      "route": "verso",
+      "chapter": 1,
+      "title": "The Art of Creation",
+      "text": "You remain silent, watching the Paintress work. Her brush moves with inhuman precision—each stroke deliberate, loaded with meaning you can only partly grasp.\n\nShe paints a new building into the Gallery below. You watch it rise, brick by painted brick, from nothing to something. Windows appear. Doors manifest. And then, movement inside—beings coming into existence simply because she willed them there.\n\n\"Do you understand what you're seeing?\" she asks without turning.\n\n\"You're creating reality.\"\n\n\"I'm suggesting it,\" she corrects. \"The canvas decides what to accept. Sometimes I paint a masterpiece and the Gallery rejects it—too much, too different. Sometimes I make a simple sketch and it blooms into something I never imagined.\"\n\nShe sets down her brush and finally turns to face you. Her form is terrifying in its beauty—shifting between styles so quickly your eyes hurt trying to follow.\n\n\"You watched instead of speaking. Observed instead of demanding. That takes patience most painted beings never develop.\" She studies you with eyes that hold centuries of creation. \"What did you learn?\"",
+      "choices": [
+        {
+          "id": "learned_humility",
+          "label": "That creation is a conversation, not a command.",
+          "nextId": "verso_ch1_ending_apprentice",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 10
+            }
+          ]
+        },
+        {
+          "id": "learned_power",
+          "label": "That you have more power than anyone should.",
+          "nextId": "verso_ch1_paintress_confrontation",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "learned_self",
+          "label": "That I want to create too. Starting with myself.",
+          "nextId": "verso_ch1_ending_self_artist",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "balance",
+              "delta": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_paintress_freedom_test",
+      "route": "verso",
+      "chapter": 1,
+      "title": "The Proof of Freedom",
+      "text": "The Paintress tilts her head, a smile playing across her ever-shifting features.\n\n\"You want proof this isn't a prison? Very well.\" She gestures, and a door appears in the studio wall—simple wood, unremarkable. But you can feel the real world beyond it. Air that doesn't smell of pigment. Light that falls normally.\n\n\"The door is unlocked. Always has been. Walk through it, and you return to flesh—fully, permanently. Your painted portions will dissolve. Your memories of this place will fade. You'll be human again, in the city of Lumière, with no knowledge of the Gallery.\"\n\nShe pauses, letting the offer sink in.\n\n\"But,\" she continues, \"you'll also lose everything you've gained here. The ability to shift between states. The memories that were painted into you—including your clearest recollections of your mother. The Paintress painted those to save them from Expedition 33's chaos. Remove her work, and they dissolve too.\"\n\nThe door waits. The choice is yours.\n\n\"Freedom always costs something,\" the Paintress says softly. \"The only question is whether the price is worth paying.\"",
+      "choices": [
+        {
+          "id": "take_the_door",
+          "label": "Walk through. I choose reality over painted existence.",
+          "nextId": "verso_ch1_ending_escape",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "chose_escape_door",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "refuse_the_door",
+          "label": "The price is too high. I'll stay.",
+          "nextId": "verso_ch1_paintress_examination",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "question_the_door",
+          "label": "Is there no way to leave and keep what I've become?",
+          "nextId": "verso_ch1_canvas_ghost_path",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "balance",
+              "delta": 5
+            },
+            {
+              "type": "flag",
+              "key": "seeks_third_option",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_paintress_philosophy",
+      "route": "verso",
+      "chapter": 1,
+      "title": "The Artist's Purpose",
+      "text": "The Paintress's form stills—the first time you've seen her hold a single shape for more than a moment. She looks almost human like this. Almost like someone's mother.\n\n\"Why do I paint people into existence?\" She laughs, but it's not cruel. It's tired. \"Because I remember what it was like to lose them.\"\n\nShe moves to the window overlooking the Gallery. \"I was a painter once. In the real world. I had a family—a daughter who loved to watch me work. A husband who didn't understand art but understood me.\" Her voice catches. \"They died. Fire. Like your story, Verso. Fire takes so much.\"\n\n\"I couldn't save them. But I could paint them. Over and over. Different versions. Better versions. Versions where the fire never happened.\" She turns back to you. \"The Gallery began as my grief. A place to keep everyone I couldn't keep in the real world.\"\n\n\"And now?\"\n\n\"Now it's grown beyond me. Other beings have come. Been painted. Made lives here. The Gallery isn't just my grief anymore—it's a world. And I...\" She sighs. \"I'm not sure if I'm its creator or its prisoner. Perhaps both.\"\n\nShe reaches out, brushing painted fingers against your half-real cheek.\n\n\"I painted you because I saw myself in you. Someone who lost a mother and couldn't let go. I thought maybe, here, you could have what I never could—a chance to say goodbye properly.\"",
+      "choices": [
+        {
+          "id": "forgive_paintress",
+          "label": "I understand. I forgive you.",
+          "nextId": "verso_ch1_paintress_examination",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "balance",
+              "delta": 10
+            },
+            {
+              "type": "flag",
+              "key": "forgave_paintress",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "reject_paintress_reasons",
+          "label": "Your pain doesn't justify trapping others in it.",
+          "nextId": "verso_ch1_revolution_path",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 8
+            }
+          ]
+        },
+        {
+          "id": "find_common_ground",
+          "label": "Maybe we can help each other heal.",
+          "nextId": "verso_ch1_ending_apprentice",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 8
+            },
+            {
+              "type": "flag",
+              "key": "chose_healing_together",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_awaken_patrons",
+      "route": "verso",
+      "chapter": 1,
+      "title": "Accelerating Time",
+      "text": "You reach out to the nearest patron—a woman frozen mid-laugh—and focus your will. Your painted portions pulse with effort as you try to push time back into her.\n\nFor a moment, nothing happens. Then her eyes flicker. Her laugh completes. She looks at you with confusion.\n\n\"What... where am I? I was just...\" She looks around at the other frozen patrons. \"Why can't they move?\"\n\n\"They're experiencing time slowly. You were too, until I woke you.\"\n\nShe stands, wobbling. \"How long was I...?\"\n\n\"I don't know. Maybe years. Maybe centuries.\"\n\nHer face crumples. \"My family. My shop. Are they...?\"\n\nYou don't have answers for her. She stumbles toward the door, desperate to find what remains of her life. Other patrons are stirring now too—your intervention has spread, accelerating time across the café.\n\nSome weep. Some scream. Some simply stand, lost, unable to process what they've missed.\n\nYou've freed them from frozen time. But freedom isn't always kindness. Some of them might have been happier preserved in that perfect moment.\n\nA hand grips your arm. Not-Aline—your mother's ghost—stands beside you, watching the chaos.\n\n\"You changed things,\" she says. \"For better or worse, you changed things. That's what Writers do.\"",
+      "choices": [
+        {
+          "id": "accept_consequences",
+          "label": "I had to try. Frozen isn't the same as living.",
+          "nextId": "verso_ch1_aline_conversation",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "writerAlignment",
+              "delta": 8
+            },
+            {
+              "type": "flag",
+              "key": "awakened_patrons",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "regret_action",
+          "label": "Maybe I shouldn't have interfered.",
+          "nextId": "verso_ch1_aline_conversation",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "balance",
+              "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "help_awakened",
+          "label": "I need to help them adjust. It's my responsibility now.",
+          "nextId": "verso_ch1_ending_community_builder",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "chose_responsibility",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verso_ch1_mediation_trial",
+      "route": "verso",
+      "chapter": 1,
+      "title": "A Test of Balance",
+      "text": "The Canvas Ghost's formless face might be smiling. \"You wish to test yourself? Very well. A conflict has arisen that requires mediation.\"\n\nIt gestures, and reality folds around you. You find yourself in a marketplace where two beings argue—one purely painted, one half-real like yourself.\n\n\"She's fading!\" the painted being cries. \"She's becoming too real, and it's pulling her apart!\"\n\n\"I don't want to be just paint!\" the half-real being weeps. \"I remember being flesh. I want to feel that way again!\"\n\nThey both turn to you, desperate. The painted one wants you to paint their companion more solidly into the Gallery. The half-real one wants you to help them become more flesh.\n\nYou sense that either extreme will destroy them. The painted one is right—too much reality will tear the half-real apart in this painted world. But the half-real one's desires matter too.\n\nThis is the mediator's burden: finding balance when both sides want absolutes.\n\nYou reach out with both flesh and painted hands, touching each being gently. You don't push toward paint or flesh. Instead, you show them the third way—the threshold. The space between.\n\n\"Neither one nor the other,\" you say. \"Both. That's what you can be. That's what I am.\"\n\nSlowly, their forms stabilize. Not fully painted. Not fully real. Something in between. Something sustainable.\n\nThe Canvas Ghost appears beside you. \"Well done,\" it says. \"You found the balance. You are ready.\"",
+      "choices": [
+        {
+          "id": "complete_training",
+          "label": "I'm ready to become a true Mediator.",
+          "nextId": "verso_ch1_ending_mediator",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "balance",
+              "delta": 10
+            }
+          ]
+        },
+        {
+          "id": "question_mediation",
+          "label": "Is this what I'll do forever? Solve others' conflicts?",
+          "nextId": "verso_ch1_solo_mediator",
+          "effects": [
+            {
+              "type": "flag",
+              "key": "questions_mediator_role",
+              "value": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
