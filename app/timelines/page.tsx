@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { ArrowLeft, GitMerge, Plus, Trash2, Play, Eye } from 'lucide-react'
 import {
   loadTimelines,

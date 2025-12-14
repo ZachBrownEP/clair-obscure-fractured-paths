@@ -1,6 +1,15 @@
 'use client'
 
 import { createContext, useContext, useEffect, useRef, useState, ReactNode } from 'react'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog'
+import { Music2, Volume2, VolumeX } from 'lucide-react'
 
 interface AudioContextType {
   isPlaying: boolean
@@ -34,21 +43,26 @@ let globalAudioStarted = false
 export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: AudioProviderProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [isMuted, setIsMuted] = useState(() => {
-    // Load mute preference from localStorage on init
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('backgroundMusicMuted')
-      return saved === 'true'
-    }
-    return false
-  })
+  const [showPreferenceModal, setShowPreferenceModal] = useState(false)
+  const [isMuted, setIsMuted] = useState(true) // Always start as muted to avoid hydration mismatch
   const [volume, setVolumeState] = useState(initialVolume)
+  const [isClient, setIsClient] = useState(false)
   const audioStarted = useRef(false)
   const cleanupListenersRef = useRef<(() => void) | null>(null)
+  const preferenceChecked = useRef(false)
+
+  // Load preference from localStorage after hydration
+  useEffect(() => {
+    setIsClient(true)
+    const savedMuteState = localStorage.getItem('backgroundMusicMuted')
+    if (savedMuteState !== null) {
+      setIsMuted(savedMuteState === 'true')
+    }
+  }, [])
 
   // Initialize audio element and start playback
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined' || !isClient) return
 
     // Use global singleton to prevent multiple instances
     if (!globalAudioInstance) {
@@ -79,43 +93,53 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
     audioRef.current.addEventListener('pause', handlePause)
     audioRef.current.addEventListener('ended', handleEnded)
 
+    // Check if user has set a preference
+    const checkPreference = () => {
+      if (preferenceChecked.current) return
+
+      const musicPreferenceSet = localStorage.getItem('musicPreferenceSet')
+      const savedMuteState = localStorage.getItem('backgroundMusicMuted')
+
+      if (musicPreferenceSet !== 'true') {
+        // First time visitor - show the modal (don't set preferenceChecked yet)
+        setShowPreferenceModal(true)
+      } else if (savedMuteState !== 'true') {
+        // User has enabled music - proceed with autoplay
+        preferenceChecked.current = true
+        attemptAutoplay()
+      } else {
+        // User has disabled music - don't play
+        preferenceChecked.current = true
+        console.log('⏸ Music disabled by user preference')
+      }
+    }
+
     // Attempt to start playback if not already started
     const attemptAutoplay = async () => {
       if (!audioRef.current || globalAudioStarted) return
 
+      // Only attempt autoplay if user wants music
+      const savedMuteState = localStorage.getItem('backgroundMusicMuted')
+      if (savedMuteState === 'true') {
+        console.log('⏸ Music disabled by user preference, not autoplaying')
+        return
+      }
+
       try {
-        console.log('🔇 Attempting muted autoplay...')
+        console.log('🎵 Attempting autoplay...')
+        audioRef.current.muted = false
+        audioRef.current.volume = initialVolume
         await audioRef.current.play()
         globalAudioStarted = true
         audioStarted.current = true
-        console.log('✓ Audio playing (muted)')
-
-        // Check localStorage preference before unmuting
-        const savedMuteState = localStorage.getItem('backgroundMusicMuted')
-        const shouldBeMuted = savedMuteState === 'true'
-
-        // Unmute after a brief delay, but only if user hasn't previously muted
-        setTimeout(() => {
-          if (audioRef.current && globalAudioStarted) {
-            if (shouldBeMuted) {
-              // User previously muted - pause the audio
-              audioRef.current.pause()
-              console.log('⏸ Audio paused (user preference: muted)')
-            } else {
-              // User hasn't muted - unmute and play
-              audioRef.current.muted = false
-              audioRef.current.volume = initialVolume
-              console.log('✓ Audio unmuted and playing at volume:', initialVolume)
-            }
-          }
-        }, 200)
+        console.log('✓ Audio playing at volume:', initialVolume)
       } catch (error) {
         console.log('⏸ Autoplay blocked - waiting for user interaction', error)
         attachInteractionListeners()
       }
     }
 
-    const timer = setTimeout(attemptAutoplay, 150)
+    const timer = setTimeout(checkPreference, 150)
 
     return () => {
       clearTimeout(timer)
@@ -132,7 +156,7 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
       }
       // Do NOT destroy the global audio instance - it persists
     }
-  }, [src, initialVolume])
+  }, [src, initialVolume, isClient])
 
   // Attach interaction listeners to start audio on first user interaction
   const attachInteractionListeners = () => {
@@ -140,6 +164,13 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
 
     const handleInteraction = async (event: Event) => {
       if (!audioRef.current || globalAudioStarted) return
+
+      // Check if user wants music enabled
+      const savedMuteState = localStorage.getItem('backgroundMusicMuted')
+      if (savedMuteState === 'true') {
+        console.log('⏸ User has disabled music, not starting on interaction')
+        return
+      }
 
       try {
         console.log('👆 User interaction detected, starting audio...')
@@ -218,6 +249,46 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
     audioRef.current.volume = clampedVolume
   }
 
+  const handleMusicChoice = async (enableMusic: boolean) => {
+    // Store the preference
+    localStorage.setItem('musicPreferenceSet', 'true')
+    localStorage.setItem('backgroundMusicMuted', String(!enableMusic))
+
+    // Update state
+    setIsMuted(!enableMusic)
+    setShowPreferenceModal(false)
+
+    // Mark preference as checked
+    preferenceChecked.current = true
+
+    if (enableMusic && audioRef.current) {
+      // User enabled music, start playback
+      try {
+        console.log('🎵 User enabled music, starting playback...')
+        audioRef.current.muted = false
+        audioRef.current.volume = initialVolume
+        await audioRef.current.play()
+        globalAudioStarted = true
+        audioStarted.current = true
+        console.log('✓ Music playing')
+      } catch (error) {
+        console.log('⏸ Autoplay blocked - waiting for user interaction', error)
+        attachInteractionListeners()
+      }
+    } else if (!enableMusic && audioRef.current) {
+      // User disabled music, make sure it's stopped
+      console.log('🔇 User disabled music')
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
+      audioRef.current.muted = true
+      // Remove any pending interaction listeners
+      if (cleanupListenersRef.current) {
+        cleanupListenersRef.current()
+        cleanupListenersRef.current = null
+      }
+    }
+  }
+
   const value: AudioContextType = {
     isPlaying,
     isMuted,
@@ -230,6 +301,56 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
   return (
     <AudioContext.Provider value={value}>
       {children}
+      <Dialog open={showPreferenceModal} onOpenChange={setShowPreferenceModal}>
+        <DialogContent
+          showCloseButton={false}
+          className="glass border-2 border-gold/60 shadow-2xl max-w-md backdrop-blur-xl bg-background/95"
+        >
+          <DialogHeader className="space-y-4">
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-gold/20 to-amber-400/20 rounded-full blur-xl animate-pulse" />
+                <div className="relative glass p-4 rounded-full border-2 border-gold/50">
+                  <Music2 className="w-12 h-12 text-gold" />
+                </div>
+              </div>
+            </div>
+            <DialogTitle className="text-3xl text-center font-bold bg-gradient-to-r from-gold via-amber-400 to-gold bg-clip-text text-transparent">
+              Sound On?
+            </DialogTitle>
+            <DialogDescription className="text-center text-base leading-relaxed px-2 text-foreground/80">
+              For a more interactive experience, would you like to turn on the sound?
+              <br />
+              <span className="text-sm text-muted-foreground mt-2 block">
+                You can change this anytime using the{' '}
+                <Volume2 className="inline w-4 h-4 mx-1" />
+                button
+              </span>
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="flex-col sm:flex-col gap-3 pt-6">
+            <button
+              onClick={() => handleMusicChoice(true)}
+              className="w-full group relative glass px-8 py-4 rounded-xl transition-all duration-300 border-2 border-gold/60 hover:border-gold hover:bg-gold/10 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/10 to-gold/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+              <div className="relative flex items-center justify-center gap-2 text-lg font-semibold">
+                <Volume2 className="w-5 h-5 text-gold" />
+                <span className="text-gold">Yes, Turn On Sound</span>
+              </div>
+            </button>
+            <button
+              onClick={() => handleMusicChoice(false)}
+              className="w-full glass px-8 py-4 rounded-xl transition-all duration-300 border border-muted-foreground/30 hover:border-muted-foreground/50 hover:bg-muted/30"
+            >
+              <div className="flex items-center justify-center gap-2 text-base font-medium text-muted-foreground">
+                <VolumeX className="w-4 h-4" />
+                <span>No Thanks</span>
+              </div>
+            </button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </AudioContext.Provider>
   )
 }
