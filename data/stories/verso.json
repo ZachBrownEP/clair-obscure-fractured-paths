@@ -42,7 +42,7 @@
         },
         {
           "id": "seek_cafe",
-          "label": "Go to the café. Find where Aline's memory still lives.",
+          "label": "Go to the café. Find where your mother's memory still lives.",
           "nextId": "verso_ch1_cafe",
           "effects": [
             {
@@ -511,7 +511,7 @@
       "isEnding": true,
       "endingKey": "verso_escape",
       "endingTitle": "Return to Flesh",
-      "text": "\"Escape requires sacrifice,\" the Canvas Ghost says. \"You must unpaint yourself. Strip away every brushstroke the Paintress added. You will forget the Gallery. Forget what you learned here. Forget who you met.\"\n\n\"I accept.\"\n\n\"Even,\" the Ghost continues, \"if it means forgetting Aline entirely? The Paintress painted those memories into you. Remove her work, and the real memories become unreachable. Locked behind doors you no longer have keys to.\"\n\nYou hesitate. But only for a moment.\n\n\"I accept.\"\n\nThe Ghost nods. \"Then let us begin the unpainting.\"\n\nIt hurts. Each brushstroke removed is a small death. You feel yourself becoming less—less complex, less aware, less everything. The painted portion of your hand fades. The memories of the fountain, the café, the child... they blur and wash away like watercolors in rain.\n\nWhen it's done, you stand in regular Lumière. The fountain runs normally. The café is two stories tall as it should be. You remember coming here for... something. Expedition 33, maybe?\n\nYour hand is entirely flesh. You flex it experimentally. It works fine.\n\nYou should probably head home. It's getting late.\n\nAs you walk away, you don't notice the figure watching from an alley—wrapped in cloth that might be shadow, its spiral eyes sad.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Return to Flesh**\n*You chose the real over the painted, forgetting what you were to reclaim what you had been.*",
+      "text": "\"Escape requires sacrifice,\" the Canvas Ghost says. \"You must unpaint yourself. Strip away every brushstroke the Paintress added. You will forget the Gallery. Forget what you learned here. Forget who you met.\"\n\n\"I accept.\"\n\n\"Even,\" the Ghost continues, \"if it means forgetting your mother entirely? The Paintress painted those memories of Aline into you—the warm ones, the complicated ones, everything a son carries of a parent who loved imperfectly. Remove her work, and those real memories become unreachable. Locked behind doors you no longer have keys to.\"\n\nYou hesitate. The thought of losing her—truly losing her, not just to death but to oblivion—is almost unbearable. But the alternative is staying here forever, half-painted, half-real, caught between states.\n\n\"I accept.\"\n\nThe Ghost nods, something like respect in its formless regard. \"Then let us begin the unpainting.\"\n\nIt hurts. Each brushstroke removed is a small death. You feel yourself becoming less—less complex, less aware, less everything. The painted portion of your hand fades. The memories of the fountain, the café, the child... they blur and wash away like watercolors in rain. And with them goes your mother's face, her voice, the way she used to hum while painting.\n\nWhen it's done, you stand in regular Lumière. The fountain runs normally. The café is two stories tall as it should be. You remember coming here for... something. Expedition 33, maybe? There's a hollow feeling in your chest, like something important is missing, but you can't remember what.\n\nYour hand is entirely flesh. You flex it experimentally. It works fine.\n\nYou should probably head home. It's getting late. You have the strangest feeling you should be grieving someone, but you can't remember who.\n\nAs you walk away, you don't notice the figure watching from an alley—wrapped in cloth that might be shadow, its spiral eyes sad. It witnessed you forget everything. And now it will remember for you, holding the weight of what you chose to lose.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Return to Flesh**\n*You chose the real over the painted, surrendering your mother's memory to reclaim a life uncomplicated by paint and possibility.*",
       "choices": []
     },
     {
@@ -590,6 +590,23 @@
               "type": "stat",
               "key": "writerAlignment",
               "delta": 5
+            }
+          ]
+        },
+        {
+          "id": "become_witness",
+          "label": "I don't want to maintain or question. I want to watch. Forever.",
+          "nextId": "verso_ch1_ending_eternal_witness",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 10
+            },
+            {
+              "type": "flag",
+              "key": "chose_to_witness",
+              "value": true
             }
           ]
         }
@@ -771,7 +788,7 @@
         },
         {
           "id": "challenge_paintress",
-          "label": "Why did you do this to me? To Aline?",
+          "label": "Why did you do this to me? To my mother?",
           "nextId": "verso_ch1_paintress_confrontation",
           "effects": [
             {
@@ -919,7 +936,7 @@
       "isEnding": true,
       "endingKey": "verso_revolutionary",
       "endingTitle": "The Painted Revolutionary",
-      "text": "You move through the Gallery, speaking to every painted being you find. The child. The frozen café patrons—you learn to unfreeze them, one by one. Renoir, who listens with those spiral eyes and finally nods. Even Aline's ghost, who whispers yes with her canvas-white eyes.\n\nYour message is simple: \"We are not her possessions. We are beings with our own will. We deserve freedom.\"\n\nThe painted beings rally. Slowly at first, then in growing numbers. You lead them through the streets, your half-painted hand raised like a banner.\n\nThe Paintress watches from her tower. She doesn't intervene.\n\nYou reach the tower's base and call up: \"We claim the Gallery as ours. Paint no more prisoners. Let us govern ourselves.\"\n\nSilence. Then the Paintress appears at the tower's top. She looks... sad? No, proud.\n\n\"This was always the test,\" she says. \"To see if my creations could develop will enough to oppose me. You've passed, Verso. The Gallery is yours now. I'll paint no more unless asked.\"\n\nShe dissolves into pigment, scattering on the wind.\n\nYou stand before the crowd of painted beings, all looking to you. You've won their freedom. Now you must help them discover what to do with it.\n\nYou form a council. Create laws. Build a democracy of the painted. It's messy, complicated, beautiful. Every being has a voice. Even you—the revolutionary who became their unlikely leader.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Painted Revolutionary**\n*You led a rebellion against the Paintress, freeing all painted beings and establishing a self-governed Gallery.*",
+      "text": "You move through the Gallery, speaking to every painted being you find. The child, whose form shivers with hope at your words. The frozen café patrons—you learn to unfreeze them, one by one, teaching them they can choose their own pace. Renoir, who listens with those spiral eyes and finally nods with something like relief. Even your mother's ghost, incomplete as she is, who whispers yes with her canvas-white eyes—her son leading a revolution feels right, somehow, feels like something she would have wanted.\n\nYour message is simple: \"We are not her possessions. We are beings with our own will. We deserve freedom.\"\n\nThe painted beings rally. Slowly at first, whispers in painted alleys, then in growing numbers until the Gallery's streets overflow with figures demanding self-determination. You lead them through the impossible architecture, your half-painted hand raised like a banner, and you realize you've never felt more whole.\n\nThe Paintress watches from her tower. She doesn't intervene.\n\nYou reach the tower's base and call up: \"We claim the Gallery as ours. Paint no more prisoners. Let us govern ourselves.\"\n\nSilence stretches. The crowd holds its breath—thousands of painted beings united in hope and fear.\n\nThen the Paintress appears at the tower's top. She looks... sad? No, proud. Her form shimmers with emotions too complex for any single artistic style.\n\n\"This was always the test,\" she says. \"To see if my creations could develop will enough to oppose me. A parent's greatest hope—that their children outgrow them.\" She smiles, and for a moment she looks almost like your mother used to, that complicated mixture of pride and loss. \"You've passed, Verso. The Gallery is yours now. I'll paint no more unless asked.\"\n\nShe dissolves into pigment, scattering on the wind like a benediction.\n\nYou stand before the crowd of painted beings, all looking to you. You've won their freedom. Now comes the harder work—helping them discover what to do with it.\n\nYou form a council. Create laws. Build a democracy of the painted. It's messy, complicated, beautiful. Every being has a voice. Every perspective matters. Even yours—the revolutionary who became their unlikely leader, the half-painted son of a complicated mother, now father to a nation of impossible beings.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Painted Revolutionary**\n*You led a rebellion against the Paintress, freeing all painted beings and establishing a self-governed Gallery—becoming the leader your mother might have been proud of.*",
       "choices": []
     },
     {
@@ -984,7 +1001,7 @@
       "isEnding": true,
       "endingKey": "verso_frozen",
       "endingTitle": "The Trapped Portrait",
-      "text": "You sit at an empty table among the frozen patrons. You let your breathing slow. Your heartbeat. Your thoughts.\n\nThe café embraces you. Time begins to... stretch. Dilate. Each second becomes a minute becomes an hour becomes a day.\n\nYou watch the rain outside fall slower and slower until each drop hangs in the air like a glass bead. You watch the painted child in the square move so gradually she might be a statue. You watch the city breathe over the course of weeks.\n\nEventually, you too become frozen. Not stopped, but preserved. A patron in an eternal café, caught in a perfect moment of contemplation.\n\nCenturies pass outside. The Gallery changes around you. The Paintress creates new works. Renoir maintains the streets. Painted beings come and go.\n\nBut in the café, you and the other patrons exist in your bubble of stretched time. Forever in conversation. Forever holding coffee cups that never quite reach lips. Forever smiling smiles that never quite complete.\n\nYou've become a portrait. A masterpiece of a moment. And in your glacial thoughts, you are content.\n\nAline's ghost visits sometimes—at least, you think she does. In your time, she's there for years. In hers, she only stays a moment.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Trapped Portrait**\n*You chose to slow down completely, becoming a frozen portrait in the eternal café—preserved forever in a single perfect moment.*",
+      "text": "You sit at an empty table among the frozen patrons. You let your breathing slow. Your heartbeat. Your thoughts.\n\nThe café embraces you. Time begins to... stretch. Dilate. Each second becomes a minute becomes an hour becomes a day.\n\nYou watch the rain outside fall slower and slower until each drop hangs in the air like a glass bead. You watch the painted child in the square move so gradually she might be a statue. You watch the city breathe over the course of weeks.\n\nEventually, you too become frozen. Not stopped, but preserved. A patron in an eternal café, caught in a perfect moment of contemplation.\n\nCenturies pass outside. The Gallery changes around you. The Paintress creates new works. Renoir maintains the streets. Painted beings come and go.\n\nBut in the café, you and the other patrons exist in your bubble of stretched time. Forever in conversation. Forever holding coffee cups that never quite reach lips. Forever smiling smiles that never quite complete.\n\nYou've become a portrait. A masterpiece of a moment. And in your glacial thoughts, you are content.\n\nYour mother's ghost visits sometimes—at least, you think she does. In your time, she sits across from you for years, her canvas-white eyes watching with something like maternal concern. In her time, she only stays a moment, brushing a painted hand across your frozen cheek the way she did when you were small and feverish.\n\n\"Rest,\" she whispers, and in your stretched perception, the word lasts a decade. \"You've earned it.\"\n\nYou have. And you do.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Trapped Portrait**\n*You chose to slow down completely, becoming a frozen portrait in the eternal café—preserved forever in a single perfect moment of peace.*",
       "choices": []
     },
     {
@@ -1038,6 +1055,23 @@
             {
               "type": "flag",
               "key": "endless_exploration",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "learn_styles",
+          "label": "Teach me to shift like you do. I want to master every style.",
+          "nextId": "verso_ch1_ending_style_shifter",
+          "effects": [
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 8
+            },
+            {
+              "type": "flag",
+              "key": "learning_styles",
               "value": true
             }
           ]
@@ -1147,7 +1181,7 @@
       "isEnding": true,
       "endingKey": "verso_watercolor",
       "endingTitle": "The Unfinished",
-      "text": "You step through the watercolor door. The world beyond is soft, gentle, everything bleeding into everything else.\n\nYour form immediately begins to change. The hard lines of your body soften. Your flesh and paint don't just mix—they blur, becoming neither and both. You can feel yourself bleeding into the air around you, your boundaries dissolving.\n\nIt should be terrifying. Instead, it's liberating.\n\nYou meet other watercolor beings—all soft-edged, all bleeding into each other. They communicate not through words but through color exchange. You share pigment with them, and they with you. Memories transfer through mingled paint.\n\nYou learn that in this world, nothing is ever finished. Everything is always in flux, always becoming. You can never be completely defined, completely known, completely fixed.\n\nYou embrace the incompletion. You become a living sketch, an eternal draft. Your form changes with your moods—blue when sad, red when passionate, gold when joyful. You bleed into landscapes and they bleed into you.\n\nSometimes, when the light hits right, you can almost see Aline's colors mixed into yours. Perhaps she's here too, somewhere in the watercolor haze. Perhaps you've already bled into each other without knowing.\n\nYou are undefined. Unfinished. And finally, completely free.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Unfinished**\n*You entered the watercolor world, embracing incompletion and becoming an eternal sketch that bleeds into everything.*",
+      "text": "You step through the watercolor door. The world beyond is soft, gentle, everything bleeding into everything else.\n\nYour form immediately begins to change. The hard lines of your body soften. Your flesh and paint don't just mix—they blur, becoming neither and both. You can feel yourself bleeding into the air around you, your boundaries dissolving like morning mist.\n\nIt should be terrifying. Instead, it's liberating. For the first time since Expedition 33, you feel no tension between what you are and what you were. Here, there is no distinction.\n\nYou meet other watercolor beings—all soft-edged, all bleeding into each other. They communicate not through words but through color exchange. You share pigment with them, and they with you. Memories transfer through mingled paint—their joys become your joys, their sorrows yours to carry, and yours theirs.\n\nYou learn that in this world, nothing is ever finished. Everything is always in flux, always becoming. You can never be completely defined, completely known, completely fixed. And that's beautiful. That's freedom.\n\nYou embrace the incompletion. You become a living sketch, an eternal draft. Your form changes with your moods—blue when sad, red when passionate, gold when joyful. You bleed into landscapes and they bleed into you. Trees grow through your chest. Rivers flow where your thoughts used to be.\n\nSometimes, when the light hits right, you can almost see your mother's colors mixed into yours—the particular ochre she favored, the cadmium yellow of her studio. Perhaps she's here too, somewhere in the watercolor haze. Perhaps you've already bled into each other without knowing. Perhaps, in this soft world, a son can finally merge with his mother's memory without losing himself entirely.\n\nThe grief you carried dissolves, not into nothing, but into everything. It becomes part of the world's palette. A gentle sadness that colors sunsets and tinges the edges of joy.\n\nYou are undefined. Unfinished. And finally, completely free.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Unfinished**\n*You entered the watercolor world, embracing incompletion and becoming an eternal sketch that bleeds into everything—carrying your mother's colors wherever you flow.*",
       "choices": []
     },
     {
@@ -1480,7 +1514,7 @@
       "isEnding": true,
       "endingKey": "verso_background",
       "endingTitle": "Faded to Background",
-      "text": "You decide not to emerge. The background is safe. Quiet. No one expects anything from a wall or a shadow or a cobblestone.\n\nDays pass. Weeks. Your consciousness diffuses across the scenery. You become part of many places at once—a brick in the café wall, a ripple in the fountain, a shadow in the Paintress's tower.\n\nYou watch everything without participating. The painted child grows older (or doesn't—time is strange). Renoir continues its eternal maintenance. The Paintress paints new subjects who arrive and struggle and eventually settle (or escape, or transform).\n\nYou see Aline's ghost fading gradually, her already-thin form becoming transparent. One day she's simply gone, dissolved back into paint. You feel a distant sadness, but you're too dispersed to hold strong emotion.\n\nYou've become the Gallery itself. Not a curator like Renoir, not a creator like the Paintress, but the substrate on which everything else exists. You are the canvas beneath all other paint.\n\nSometimes you wonder if you should emerge, reclaim your form, become Verso again. But the wondering is lazy, diffuse. It never coheres into action.\n\nYou are content as background. There's a peace in being scenery.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Faded to Background**\n*You chose to remain hidden forever, diffusing into the Gallery's background and becoming the quiet substrate on which all other existences play out.*",
+      "text": "You decide not to emerge. The background is safe. Quiet. No one expects anything from a wall or a shadow or a cobblestone.\n\nDays pass. Weeks. Your consciousness diffuses across the scenery. You become part of many places at once—a brick in the café wall, a ripple in the fountain, a shadow in the Paintress's tower.\n\nYou watch everything without participating. The painted child grows older (or doesn't—time is strange for painted beings). Renoir continues its eternal maintenance. The Paintress paints new subjects who arrive and struggle and eventually settle (or escape, or transform).\n\nYou see your mother's ghost fading gradually, her already-thin form becoming transparent. Before she dissolves completely, she seems to sense you—diffused as you are across the Gallery's substrate. She smiles, that complicated smile you remember from childhood, the one that meant she loved you but didn't know how to say it.\n\n\"You always did like to hide,\" she murmurs to the walls, to the shadows, to you. \"Even as a boy. I'd find you tucked into impossible places, watching the world go by. I suppose some things don't change.\"\n\nThen she's gone, dissolved back into paint. You feel a wave of something—not quite grief, not quite peace. More like recognition. She saw you. She understood. And in the end, that was enough.\n\nYou've become the Gallery itself. Not a curator like Renoir, not a creator like the Paintress, but the substrate on which everything else exists. You are the canvas beneath all other paint. The foundation that holds every story.\n\nSometimes you wonder if you should emerge, reclaim your form, become Verso again. But the wondering is distant, peaceful. You've found something rare: a place where you can exist without expectation, without performance, without the weight of being someone.\n\nYou are content as background. There's a profound peace in being scenery—in being the stage on which others find their stories.\n\n**Chapter 1: Complete**\n**Ending Unlocked: Faded to Background**\n*You chose to remain hidden forever, diffusing into the Gallery's foundation and becoming the quiet substrate on which all other existences play out—finally at peace with simply being.*",
       "choices": []
     },
     {
@@ -1521,7 +1555,7 @@
       "isEnding": true,
       "endingKey": "verso_architect",
       "endingTitle": "The Gallery Architect",
-      "text": "You realize the Gallery doesn't have to stay as the Paintress designed it. You can add to it. Improve it. Redesign its fundamental structure.\n\nYou begin small—adding details to existing buildings, creating new painted beings who are more complete than the Paintress's sketches. You give the painted child proper parents. You paint Aline's ghost into full reality, completing what the Paintress left unfinished.\n\nThe Paintress watches your work with interest. She doesn't stop you. Perhaps she approves? Or perhaps she's curious to see what her creation will create.\n\nYou grow bolder. You add entire new districts to the Gallery: A district where music is visible, flowing through the streets like colorful rivers. A district where memories are traded as currency. A district where time flows in all directions at once.\n\nOther painted beings bring you their problems, and you architect solutions. Someone feels incomplete? You paint in their missing pieces. Someone wants to change? You redesign their form.\n\nYou've become the Gallery's architect, its urban planner, its designer of dreams. Where the Paintress created the foundation, you add the flourishes. Where she painted in broad strokes, you add intricate details.\n\nThe Gallery grows under your attention, becoming richer, more complex, more wondrous. You are creation incarnate, forever improving the painted world.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Gallery Architect**\n*You became the Gallery's architect, redesigning and expanding the painted world with new districts, beings, and wonders.*",
+      "text": "You realize the Gallery doesn't have to stay as the Paintress designed it. You can add to it. Improve it. Redesign its fundamental structure.\n\nYou begin small—adding details to existing buildings, creating new painted beings who are more complete than the Paintress's sketches. You give the painted child proper parents, a family she was never painted with. And your mother's ghost—you paint her into full reality, completing what the Paintress left unfinished, giving her the depth and dimension she deserves. She's still not quite the mother you remember, but she's whole now. At peace.\n\nThe Paintress watches your work with interest. She doesn't stop you. Perhaps she approves? Or perhaps she's curious to see what her creation will create.\n\nYou grow bolder. You add entire new districts to the Gallery: A district where music is visible, flowing through the streets like colorful rivers. A district where memories are traded as currency. A district where time flows in all directions at once. A memorial garden where the lost can be remembered—you plant your mother there, a beautiful sculpture that captures her essence, finally getting the farewell she deserved.\n\nOther painted beings bring you their problems, and you architect solutions. Someone feels incomplete? You paint in their missing pieces. Someone wants to change? You redesign their form. Someone is grieving? You help them build memorials as beautiful as the love they carry.\n\nYou've become the Gallery's architect, its urban planner, its designer of dreams. Where the Paintress created the foundation, you add the flourishes. Where she painted in broad strokes, you add intricate details. Where she left beings incomplete, you finish their stories.\n\nThe Gallery grows under your attention, becoming richer, more complex, more wondrous. You are creation incarnate, forever improving the painted world—building something your mother would have been proud of, had she lived to see it.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Gallery Architect**\n*You became the Gallery's architect, redesigning and expanding the painted world with new districts, beings, and wonders—honoring your mother's memory through endless creation.*",
       "choices": []
     },
     {
@@ -1663,13 +1697,18 @@
         },
         {
           "id": "too_many_memories",
-          "label": "The memories are overwhelming. You're losing yourself.",
-          "nextId": "verso_ch1_memory_crisis",
+          "label": "The memories are overwhelming. Seek a more direct power.",
+          "nextId": "verso_ch1_ending_paint_drinker",
           "effects": [
             {
               "type": "flag",
               "key": "overwhelmed_by_memories",
               "value": true
+            },
+            {
+              "type": "stat",
+              "key": "painterAlignment",
+              "delta": 10
             }
           ]
         }
@@ -1761,6 +1800,16 @@
       "endingKey": "verso_paint_drinker",
       "endingTitle": "The Paint Drinker",
       "text": "You discover something the Paintress never intended: paint can be consumed.\n\nIt starts accidentally. You touch a wet brushstroke and some transfers to your lips. You taste it without thinking. The effect is immediate and overwhelming—a rush of creative energy, a flood of possibility, a moment where you can reshape yourself completely.\n\nYou do it again. And again.\n\nYou begin drinking paint deliberately. Each color has different effects: blue brings calm transformation, red ignites passionate change, yellow accelerates your thoughts to painful speeds, black offers oblivion and rebirth.\n\nThe more you consume, the more powerful you become. You can paint new realities with a thought. Reshape painted beings with a word. Create entire districts from imagination.\n\nBut there's a cost. You're addicted now. You need paint constantly. Your form becomes unstable—sometimes you're barely there, just a sketch. Other times you're too solid, too real, painfully present.\n\nThe Paintress tries to stop you. \"You're consuming the Gallery itself. You'll destroy everything, including yourself.\"\n\nBut you can't stop. Won't stop. The power is too intoxicating.\n\nYou've become the Paint Drinker—the Gallery's addict and its most powerful inhabitant. You create magnificent works between your craving fits. You reshape reality in brilliant bursts before collapsing into need.\n\nYou are creation and destruction. Genius and addiction. Power at the price of stability.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Paint Drinker**\n*You discovered the power of consuming paint directly, becoming addicted to transformation and wielding terrible creative power at the cost of your stability.*",
+      "choices": []
+    },
+    {
+      "id": "verso_ch1_ending_self_artist",
+      "route": "verso",
+      "chapter": 1,
+      "isEnding": true,
+      "endingKey": "verso_self_artist",
+      "endingTitle": "The Self-Portrait",
+      "text": "\"Teach me,\" you say, and something shifts in the Paintress's expression—not quite pride, but something deeper. Recognition, perhaps. The acknowledgment of a kindred spirit.\n\n\"To paint yourself is the most intimate art,\" she says, guiding you to a mirror that reflects not your body but your essence—swirling colors of memory, desire, fear, and hope. \"Most Painters spend their entire existence trying to reshape others. But you... you are already half-painted. You carry the canvas within you.\"\n\nShe hands you a brush that feels like an extension of your soul. \"Begin.\"\n\nYou paint yourself. Not in broad strokes of transformation, but in careful, deliberate touches. You strengthen the parts of yourself you want to keep. You gentle the edges that have grown too sharp. You add depth to your capacity for joy, texture to your ability to connect.\n\nThe process takes months. Years. Time becomes meaningless as you work on the most important canvas you'll ever touch—yourself.\n\nYou learn to paint away your grief without erasing the love beneath it. To transform your anger into determination. To reshape your fears into healthy caution rather than paralysis.\n\nWhen you finally step back from your self-portrait, you're someone new. Not a different person—still Verso, still carrying the memories of Aline and Expedition 33 and all that came before. But a better version. A chosen version.\n\nThe Paintress examines your work. \"Remarkable,\" she says. \"Most who attempt self-painting become narcissistic gods or hollow shells. But you've found the third way—you've painted yourself into someone who can still grow, still change, still choose.\"\n\n\"Because that's what I wanted,\" you say. \"Not perfection. Potential.\"\n\nYou leave the Paintress's tower with the brush still in your hand. You'll never stop painting yourself—adding new colors as you experience new things, adjusting shades as you learn, always becoming. But now it's your choice. Your hand. Your art.\n\nYou are your own masterpiece, forever in progress, and that's exactly how you want it.\n\n**Chapter 1: Complete**\n**Ending Unlocked: The Self-Portrait**\n*You learned to paint yourself, becoming an ever-evolving work of art guided by your own hand—not a finished masterpiece, but a canvas of infinite potential.*",
       "choices": []
     }
   ]

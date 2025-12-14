@@ -16,27 +16,35 @@ export function SafariAudioUnlock() {
     const unlockAudio = async (eventType: string) => {
       if (unlockedRef.current) return
 
+      // Check if user has granted permission
+      const permissionAsked = localStorage.getItem('audioPermissionAsked')
+      if (!permissionAsked) {
+        // First visit - let the modal handle it
+        return
+      }
+
+      // Check localStorage preference before unmuting
+      const savedMuteState = localStorage.getItem('backgroundMusicMuted')
+      const shouldBeMuted = savedMuteState === 'true'
+
+      if (shouldBeMuted) {
+        console.log('⏸ User preference: muted - not unlocking audio')
+        return
+      }
+
       console.log(`🔓 Safari unlock: ${eventType} detected, attempting to unlock audio...`)
 
       // Try to access the global AudioProvider instance (programmatically created)
       if (typeof window !== 'undefined' && (window as any).globalAudioInstance) {
         const audio = (window as any).globalAudioInstance
         try {
-          // Check localStorage preference before unmuting
-          const savedMuteState = localStorage.getItem('backgroundMusicMuted')
-          const shouldBeMuted = savedMuteState === 'true'
-
-          if (!shouldBeMuted) {
-            // Unmute and set volume
-            audio.muted = false
-            audio.volume = 0.3
-            await audio.play()
-            console.log(`✓ Safari unlock SUCCESS via ${eventType}!`)
-            unlockedRef.current = true
-            cleanup()
-          } else {
-            console.log('⏸ User previously muted - not unlocking audio')
-          }
+          // Unmute and set volume
+          audio.muted = false
+          audio.volume = 0.3
+          await audio.play()
+          console.log(`✓ Safari unlock SUCCESS via ${eventType}!`)
+          unlockedRef.current = true
+          cleanup()
         } catch (error) {
           console.log(`⚠ Safari unlock failed via ${eventType}:`, error)
         }

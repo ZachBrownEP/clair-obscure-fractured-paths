@@ -191,7 +191,7 @@ export default function TimelinesPage() {
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">
-                      Nodes Visited
+                      Scenes Visited
                     </div>
                     <div className="text-lg font-light text-foreground">
                       {mainTimeline.state.seenNodes.length}

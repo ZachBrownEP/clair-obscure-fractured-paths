@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from 'sonner'
 import { AudioProvider } from '@/components/AudioProvider'
 import { SafariAudioUnlock } from '@/components/SafariAudioUnlock'
+import { AudioPermissionModal } from '@/components/AudioPermissionModal'
 import MusicControls from '@/components/MusicControls'
 import NavigationSidebar from '@/components/navigation-sidebar'
 import './globals.css'
@@ -63,6 +64,7 @@ export default function RootLayout({
           volume={0.3}
         >
           <SafariAudioUnlock />
+          <AudioPermissionModal />
           <NavigationSidebar />
           <MusicControls />
           <Toaster

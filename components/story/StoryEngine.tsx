@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { StoryNode, StoryState, StoryRouteId, StoryChoice, ChoiceHistoryEntry } from '@/lib/story/types'
 import {
   loadStoryState,
@@ -23,6 +23,35 @@ import ChoiceHistoryModal from '@/components/choice-history-modal'
 import ParticleEffect from '@/components/particle-effect'
 import NavigationSidebar from '@/components/navigation-sidebar'
 import { toast } from 'sonner'
+
+// Process story text: remove chapter complete/ending unlocked lines, render italic effects
+function processStoryText(text: string): React.ReactNode[] {
+  // Remove "**Chapter X: Complete**" and "**Ending Unlocked: ...**" lines
+  let processedText = text
+    .replace(/\*\*Chapter \d+:?\s*Complete\*\*\n?/gi, '')
+    .replace(/\*\*Ending Unlocked:.*?\*\*\n?/gi, '')
+    .trim()
+
+  // Split into segments, handling *italic text*
+  const segments: React.ReactNode[] = []
+  const parts = processedText.split(/(\*[^*]+\*)/g)
+
+  parts.forEach((part, index) => {
+    if (part.startsWith('*') && part.endsWith('*') && part.length > 2) {
+      // This is italic text - render as styled span
+      const italicText = part.slice(1, -1)
+      segments.push(
+        <span key={index} className="italic text-muted-foreground">
+          {italicText}
+        </span>
+      )
+    } else if (part) {
+      segments.push(part)
+    }
+  })
+
+  return segments
+}
 
 interface StoryEngineProps {
   routeId: StoryRouteId
@@ -368,20 +397,20 @@ export default function StoryEngine({
             </div>
           )}
 
-          {/* Enhanced Progress Indicators */}
+          {/* Story Progress Indicators */}
           <div className="mb-6 glass rounded-lg p-4">
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Progress</div>
-                <div className="text-lg font-light text-primary">{progressPercentage}%</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Chapter</div>
+                <div className="text-lg font-light text-primary">{state.currentChapter} of {totalChapters}</div>
               </div>
               <div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Nodes</div>
-                <div className="text-lg font-light text-primary">{visitedNodes}/{totalNodes}</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Choices</div>
+                <div className="text-lg font-light text-primary">{state.choiceHistory.length}</div>
               </div>
               <div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Est. Time</div>
-                <div className="text-lg font-light text-primary">{estimatedTimeRemaining}m</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Time Left</div>
+                <div className="text-lg font-light text-primary">~{estimatedTimeRemaining}m</div>
               </div>
             </div>
           </div>
@@ -402,7 +431,7 @@ export default function StoryEngine({
 
             <div className="prose prose-invert max-w-none">
               <p className="text-lg leading-relaxed text-foreground whitespace-pre-wrap">
-                {currentNode.text}
+                {processStoryText(currentNode.text)}
               </p>
             </div>
           </div>

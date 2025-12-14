@@ -56,18 +56,20 @@ export default function NavigationSidebar({ onBookmark, showBookmarkOption = fal
 
   return (
     <>
-      {/* Menu Button - Top Left */}
+      {/* Menu Button - Top Left (hidden when sidebar is open) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-6 left-6 z-[100] glass p-3 rounded-lg hover:bg-card/70 transition-all duration-200 border border-primary/30 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20"
-        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+        className={`fixed top-6 left-6 z-[100] glass p-3 rounded-lg hover:bg-card/70 transition-all duration-150 border border-primary/30 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 ${
+          isOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
+        aria-label="Open navigation menu"
       >
-        {isOpen ? <X size={24} className="text-primary" /> : <Menu size={24} className="text-primary" />}
+        <Menu size={24} className="text-primary" />
       </button>
 
       {/* Backdrop with blur */}
       <div
-        className={`fixed inset-0 bg-background/60 backdrop-blur-md z-[90] transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-background/60 backdrop-blur-md z-[90] transition-opacity duration-150 ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setIsOpen(false)}
@@ -75,8 +77,8 @@ export default function NavigationSidebar({ onBookmark, showBookmarkOption = fal
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-80 glass border-r border-primary/30 shadow-2xl z-[95] transition-all duration-300 ease-out ${
-          isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
+        className={`fixed top-0 left-0 h-full w-80 glass border-r border-primary/30 shadow-2xl z-[95] transition-transform duration-150 ease-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="flex flex-col h-full">

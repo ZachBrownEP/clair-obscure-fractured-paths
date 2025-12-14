@@ -193,7 +193,7 @@ export default function ProgressPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <div className="text-3xl font-light text-primary mb-1">{stats.totalNodesVisited}</div>
-                <div className="text-sm text-muted-foreground">Unique Nodes Visited</div>
+                <div className="text-sm text-muted-foreground">Unique Scenes Visited</div>
               </div>
               <div>
                 <div className="text-sm text-muted-foreground mb-2">Journey Status</div>

@@ -34,17 +34,31 @@ let globalAudioStarted = false
 export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: AudioProviderProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [isMuted, setIsMuted] = useState(() => {
-    // Load mute preference from localStorage on init
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('backgroundMusicMuted')
-      return saved === 'true'
-    }
-    return false
-  })
+  // Initialize with consistent default for SSR, then sync from localStorage in useEffect
+  const [isMuted, setIsMuted] = useState(false)
+  const [isHydrated, setIsHydrated] = useState(false)
   const [volume, setVolumeState] = useState(initialVolume)
   const audioStarted = useRef(false)
   const cleanupListenersRef = useRef<(() => void) | null>(null)
+
+  // Sync mute state from localStorage after hydration
+  useEffect(() => {
+    const saved = localStorage.getItem('backgroundMusicMuted')
+    if (saved === 'true') {
+      setIsMuted(true)
+    }
+    setIsHydrated(true)
+
+    // Listen for audio permission changes from modal
+    const handleAudioPermission = (event: CustomEvent<{ muted: boolean }>) => {
+      setIsMuted(event.detail.muted)
+    }
+
+    window.addEventListener('audioPermissionChanged', handleAudioPermission as EventListener)
+    return () => {
+      window.removeEventListener('audioPermissionChanged', handleAudioPermission as EventListener)
+    }
+  }, [])
 
   // Initialize audio element and start playback
   useEffect(() => {
@@ -83,6 +97,23 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
     const attemptAutoplay = async () => {
       if (!audioRef.current || globalAudioStarted) return
 
+      // Check if user has been asked about audio permission
+      const permissionAsked = localStorage.getItem('audioPermissionAsked')
+      if (!permissionAsked) {
+        // First visit - wait for permission modal instead of autoplaying
+        console.log('⏸ First visit - waiting for user permission via modal')
+        return
+      }
+
+      // Check if user wants audio muted
+      const savedMuteState = localStorage.getItem('backgroundMusicMuted')
+      const shouldBeMuted = savedMuteState === 'true'
+
+      if (shouldBeMuted) {
+        console.log('⏸ User preference: muted - not autoplaying')
+        return
+      }
+
       try {
         console.log('🔇 Attempting muted autoplay...')
         await audioRef.current.play()
@@ -90,23 +121,12 @@ export function AudioProvider({ children, src, volume: initialVolume = 0.3 }: Au
         audioStarted.current = true
         console.log('✓ Audio playing (muted)')
 
-        // Check localStorage preference before unmuting
-        const savedMuteState = localStorage.getItem('backgroundMusicMuted')
-        const shouldBeMuted = savedMuteState === 'true'
-
-        // Unmute after a brief delay, but only if user hasn't previously muted
+        // Unmute after a brief delay
         setTimeout(() => {
           if (audioRef.current && globalAudioStarted) {
-            if (shouldBeMuted) {
-              // User previously muted - pause the audio
-              audioRef.current.pause()
-              console.log('⏸ Audio paused (user preference: muted)')
-            } else {
-              // User hasn't muted - unmute and play
-              audioRef.current.muted = false
-              audioRef.current.volume = initialVolume
-              console.log('✓ Audio unmuted and playing at volume:', initialVolume)
-            }
+            audioRef.current.muted = false
+            audioRef.current.volume = initialVolume
+            console.log('✓ Audio unmuted and playing at volume:', initialVolume)
           }
         }, 200)
       } catch (error) {
