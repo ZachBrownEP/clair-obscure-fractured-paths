@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { ArrowLeft, Clock, TrendingUp, TrendingDown, Flag, Filter } from 'lucide-react'
 import { ChoiceHistoryEntry, StoryRouteId } from '@/lib/story/types'
 import { loadStoryState } from '@/lib/story/persistence'
